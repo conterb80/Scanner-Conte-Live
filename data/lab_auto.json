@@ -1,0 +1,16 @@
+{
+  "schema": "scanner-conte-lab-v1",
+  "version": "0.4",
+  "status": "pilot",
+  "last_run": null,
+  "last_fixture_snapshot": null,
+  "history_quality": "In attesa della prima rilevazione quote.",
+  "stats": {
+    "total": 0,
+    "pending": 0,
+    "won": 0,
+    "lost": 0,
+    "pnl": 0
+  },
+  "records": []
+}
