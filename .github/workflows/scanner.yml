@@ -45,4 +45,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/fixtures_latest.json data/lab_auto.json data/odds_latest.json
           git commit -m "Aggiorna feed e test virtuali Scanner Conte"
+          git fetch origin main
+          git rebase origin/main
           git push
