@@ -37,6 +37,84 @@ root('add-record').addEventListener('click',()=>root('record-dialog').showModal(
 root('record-form').addEventListener('submit',e=>{e.preventDefault();let f=new FormData(e.target),v=k=>String(f.get(k)||'').trim(),od=Number(v('odds')),st=Number(v('stake')),rs=v('result'),date=v('date');if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!v('match')||!v('selection')||od<1.01||st<=0){alert('Compila tutti i campi correttamente.');return}if(v('book')==='real'&&!confirm('Confermi che questa è una scommessa REAL già effettivamente piazzata?'))return;
 let pnl=rs==='won'?round((od-1)*st):rs==='lost'?-st:rs==='push'?0:null;
 let r={id:'manual-'+Date.now(),date,book:v('book'),category:v('category'),match:v('match'),selection:v('selection'),odds:od,stake:st,result:rs,pnl,score:'',quality:'manuale',source:'Inserimento manuale V0.1',note:v('note'),manual:true,recorded_before_kickoff:null};db.records.push(r);persist();root('record-dialog').close();e.target.reset();renderAll();toast('Registrazione salvata sul dispositivo')});
+
+/* V0.7 — verifica esiti delle registrazioni locali, soltanto su risultato FT
+   e coincidenza esatta della partita/data. NON trasferisce i record a GitHub. */
+const normalizeTeamName=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+  .toLowerCase().replace(/\bgiuliano\b/g,'giugliano')
+  .replace(/[^a-z0-9]+/g,' ').trim().replace(/\s+/g,' ');
+function localDateInRome(iso){
+ try{return new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(iso))}
+ catch{return ''}
+}
+function scoreSelection(selection,home,away){
+ const name=String(selection??'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+   .replace(/,/g,'.').replace(/\s+/g,' ').trim();
+ const total=home+away;
+ let m;
+ if((m=name.match(/^over\s*(\d+(?:\.5)?)(?:\s*(?:gol|goal|goals|reti))?$/)))return total>Number(m[1]);
+ if((m=name.match(/^under\s*(\d+(?:\.5)?)(?:\s*(?:gol|goal|goals|reti))?$/)))return total<Number(m[1]);
+ if(['1','casa','home','vittoria casa','vittoria catania'].includes(name))return home>away;
+ if(['2','trasferta','away','vittoria ospite'].includes(name))return away>home;
+ if(['x','pareggio','draw'].includes(name))return home===away;
+ if(name==='1x')return home>=away;
+ if(name==='x2')return away>=home;
+ if(name==='12')return home!==away;
+ if(['gg','goal','gol','entrambe segnano','entrambe segnano si'].includes(name))return home>0&&away>0;
+ if(['ng','nogol','no gol','no goal','entrambe segnano no'].includes(name))return home===0||away===0;
+ return null;
+}
+let resultSyncBusy=false;
+async function reconcilePendingFixtures(){
+ if(resultSyncBusy)return;
+ const status=root('settle-status');
+ const btn=root('settle-refresh');
+ const pending=db.records.filter(r=>r.manual&&r.result==='pending'&&['real','main','lab'].includes(r.book));
+ if(!pending.length){if(status)status.textContent='Nessuna registrazione locale in attesa.';return}
+ resultSyncBusy=true;if(btn)btn.disabled=true;
+ if(status)status.textContent='Verifica risultati delle '+pending.length+' giocate in attesa…';
+ try{
+  const response=await fetch('./data/fixtures_latest.json?settle='+Date.now(),{cache:'no-store'});
+  if(!response.ok)throw Error('HTTP '+response.status);
+  const feed=await response.json();
+  if(feed.schema!=='scanner-conte-fixtures-v1'||feed.status!=='ready'||!Array.isArray(feed.fixtures))throw Error('Feed non valido');
+  let updated=0,unsupported=0,ready=0;
+  for(const record of pending){
+   const match=normalizeTeamName(record.match).replace(/\bvs\b/g,' ');
+   const found=feed.fixtures.filter(m=>m.kickoff&&localDateInRome(m.kickoff)===record.date&&
+      normalizeTeamName(m.home+' '+m.away)===match);
+   if(found.length!==1)continue;
+   const fixture=found[0];
+   if(fixture.status!=='FT'||!Number.isInteger(fixture.home_goals)||!Number.isInteger(fixture.away_goals))continue;
+   ready++;
+   const won=scoreSelection(record.selection,fixture.home_goals,fixture.away_goals);
+   if(won===null){unsupported++;continue}
+   // Non sovrascrivere mai un risultato gia aggiornato, manualmente o automaticamente.
+   if(record.result!=='pending')continue;
+   record.result=won?'won':'lost';
+   record.score=fixture.home_goals+'-'+fixture.away_goals;
+   record.pnl=won?round((Number(record.odds)-1)*Number(record.stake)):-Number(record.stake);
+   record.settlement_source='API-Football · risultato FT';
+   record.settlement_fixture_id=String(fixture.id);
+   record.settled_at=new Date().toISOString();
+   updated++;
+  }
+  if(updated){persist();renderAll()}
+  if(status){
+    const feedDate=feed.last_result_refresh||feed.collected_at;
+    const stamp=feedDate?new Date(feedDate).toLocaleString('it-IT',{timeZone:'Europe/Rome',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}):'—';
+    status.textContent=updated?updated+' esito/i aggiornato/i automaticamente. Feed '+stamp+'.':
+      'Nessun nuovo esito verificabile. Ultimo feed: '+stamp+'.'+(unsupported?' '+unsupported+' mercati da controllare manualmente.':'');
+  }
+ }catch(e){if(status)status.textContent='Verifica non disponibile: '+e.message+'. Le registrazioni sono intatte.'}
+ finally{resultSyncBusy=false;if(btn)btn.disabled=false}
+}
+
 function renderAll(){renderHome();renderArchive();renderLab();renderScanner();renderMigration();window.dispatchEvent(new Event('scanner-conte:records-changed'))}
-renderAll();if('serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
+renderAll();
+root('settle-refresh')?.addEventListener('click',reconcilePendingFixtures);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)reconcilePendingFixtures()});
+window.addEventListener('focus',reconcilePendingFixtures);
+reconcilePendingFixtures();
+if('serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
 })();
