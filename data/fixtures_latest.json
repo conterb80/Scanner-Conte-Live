@@ -14,10 +14,10 @@
     "provided_matches": 3021,
     "eligible_matches": 1081,
     "eligible_competitions": 133,
-    "scheduled": 81,
-    "finished": 968
+    "scheduled": 80,
+    "finished": 975
   },
-  "api_remaining": 48,
+  "api_remaining": 36,
   "note": "Solo partite e risultati. Quote, probabilita, LAB automatico e REAL non sono attivi.",
   "fixtures": [
     {
@@ -12587,7 +12587,7 @@
     {
       "id": "1570796",
       "kickoff": "2026-10-25T18:45:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Primera División RFEF - Group 1",
       "league_id": 435,
       "country": "Spain",
@@ -12599,7 +12599,7 @@
     {
       "id": "1571180",
       "kickoff": "2026-10-25T18:45:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Primera División RFEF - Group 2",
       "league_id": 436,
       "country": "Spain",
@@ -12611,7 +12611,7 @@
     {
       "id": "1573019",
       "kickoff": "2026-10-25T19:00:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Segunda División RFEF - Group 4",
       "league_id": 878,
       "country": "Spain",
@@ -12635,43 +12635,43 @@
     {
       "id": "1575523",
       "kickoff": "2026-10-25T19:00:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Primeira Liga",
       "league_id": 94,
       "country": "Portugal",
       "home": "Rio Ave",
       "away": "Famalicao",
       "home_goals": 0,
-      "away_goals": 1
+      "away_goals": 4
     },
     {
       "id": "1597797",
       "kickoff": "2026-10-25T19:00:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Liga 3",
       "league_id": 865,
       "country": "Portugal",
       "home": "Varzim",
       "away": "Guimaraes B",
       "home_goals": 2,
-      "away_goals": 3
+      "away_goals": 4
     },
     {
       "id": "1607705",
       "kickoff": "2026-10-25T19:00:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "FA WSL",
       "league_id": 44,
       "country": "England",
       "home": "Manchester United W",
       "away": "Manchester City W",
-      "home_goals": 0,
+      "home_goals": 1,
       "away_goals": 1
     },
     {
       "id": "1617053",
       "kickoff": "2026-10-25T19:00:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 15",
       "league_id": 453,
       "country": "Spain",
@@ -12689,7 +12689,7 @@
       "country": "Belgium",
       "home": "Union St. Gilloise",
       "away": "Cercle Brugge",
-      "home_goals": 2,
+      "home_goals": 3,
       "away_goals": 2
     },
     {
@@ -12713,13 +12713,13 @@
       "country": "Germany",
       "home": "Waldhof Mannheim",
       "away": "Hoffenheim II",
-      "home_goals": 0,
+      "home_goals": 1,
       "away_goals": 1
     },
     {
       "id": "1552206",
       "kickoff": "2026-10-25T20:00:00+01:00",
-      "status": "1H",
+      "status": "HT",
       "league": "Eredivisie",
       "league_id": 88,
       "country": "Netherlands",
@@ -12731,14 +12731,14 @@
     {
       "id": "1550166",
       "kickoff": "2026-10-25T20:45:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Serie A",
       "league_id": 135,
       "country": "Italy",
       "home": "Udinese",
       "away": "AC Milan",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 1
     },
     {
       "id": "1570426",
@@ -12992,5 +12992,6 @@
       "home_goals": null,
       "away_goals": null
     }
-  ]
+  ],
+  "last_result_refresh": "2026-10-25T19:55:52.287Z"
 }
