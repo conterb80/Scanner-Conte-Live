@@ -1,0 +1,45 @@
+name: Scanner Conte - Esiti automatici
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/results.yml'
+      - 'scripts/collect-results.mjs'
+  schedule:
+    - cron: "43 14-23 * * *"
+      timezone: "Europe/Rome"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scanner-conte-feed
+  cancel-in-progress: false
+
+jobs:
+  results:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Aggiorna risultati FT e laboratorio virtuale
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: node scripts/collect-results.mjs
+      - name: Pubblica feed risultati e LAB senza dati REAL
+        run: |
+          if git diff --quiet -- data/fixtures_latest.json data/lab_auto.json; then
+            echo "Nessuna modifica agli esiti"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fixtures_latest.json data/lab_auto.json
+          git commit -m "Aggiorna risultati e test virtuali Scanner Conte"
+          git fetch origin main
+          git rebase origin/main
+          git push
