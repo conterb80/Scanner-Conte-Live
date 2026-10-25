@@ -1,0 +1,37 @@
+name: Scanner Conte - Raccolta dati
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6,17 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scanner-conte-feed
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Recupera il palinsesto pubblico
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: node scripts/collect-fixtures.mjs
+      - name: Pubblica solo il feed pubblico
+        run: |
+          if git diff --quiet -- data/fixtures_latest.json; then
+            echo "Nessuna modifica al palinsesto"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fixtures_latest.json
+          git commit -m "Aggiorna palinsesto Scanner Conte"
+          git push
