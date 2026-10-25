@@ -1,13 +1,223 @@
 {
   "schema": "scanner-conte-odds-v1",
-  "generated_at": null,
-  "fixture_snapshot": null,
-  "requested": 0,
-  "with_odds": 0,
-  "api_remaining": null,
+  "generated_at": "2026-10-25T12:03:10.132Z",
+  "fixture_snapshot": "2026-10-25T12:01:33.893Z",
+  "requested": 12,
+  "with_odds": 9,
+  "api_remaining": 95,
   "errors": [],
   "notes": [
-    "Pilota non ancora eseguito; nessuna quota inventata."
+    "Dati pubblici: non comprendono le REAL personali.",
+    "Quote da bookmaker indicato, non necessariamente Bet365.",
+    "Non si dichiara alcun margine/value statistico."
   ],
-  "samples": []
+  "samples": [
+    {
+      "fixture_id": "1561952",
+      "match": "Sturm Graz - Ried",
+      "league": "Bundesliga",
+      "country": "Austria",
+      "kickoff": "2026-10-25T14:30:00+01:00",
+      "bookmaker": "Bet365",
+      "markets": [
+        {
+          "strategy": "FAVORITA_1X2_CONTROLLO",
+          "selection": "Home",
+          "price": 1.65,
+          "market_probability": 56.83
+        }
+      ],
+      "captured_at": "2026-10-25T12:01:49.219Z",
+      "coverage": true
+    },
+    {
+      "fixture_id": "1558654",
+      "match": "Club Brugge KV - St. Truiden",
+      "league": "Jupiler Pro League",
+      "country": "Belgium",
+      "kickoff": "2026-10-25T16:00:00+01:00",
+      "bookmaker": null,
+      "markets": [],
+      "captured_at": "2026-10-25T12:01:56.514Z",
+      "coverage": false
+    },
+    {
+      "fixture_id": "1557441",
+      "match": "Crystal Palace - Newcastle",
+      "league": "Premier League",
+      "country": "England",
+      "kickoff": "2026-10-25T15:00:00+01:00",
+      "bookmaker": "1xBet",
+      "markets": [
+        {
+          "strategy": "OVER25_CONTROLLO",
+          "selection": "Over 2.5",
+          "price": 1.63,
+          "market_probability": 60.44
+        }
+      ],
+      "captured_at": "2026-10-25T12:02:03.819Z",
+      "coverage": true
+    },
+    {
+      "fixture_id": "1552797",
+      "match": "Monaco - Lille",
+      "league": "Ligue 1",
+      "country": "France",
+      "kickoff": "2026-10-25T15:00:00+01:00",
+      "bookmaker": "Bet365",
+      "markets": [
+        {
+          "strategy": "FAVORITA_1X2_CONTROLLO",
+          "selection": "Home",
+          "price": 1.95,
+          "market_probability": 48.91
+        },
+        {
+          "strategy": "OVER25_CONTROLLO",
+          "selection": "Over 2.5",
+          "price": 1.8,
+          "market_probability": 52.63
+        }
+      ],
+      "captured_at": "2026-10-25T12:02:11.175Z",
+      "coverage": true
+    },
+    {
+      "fixture_id": "1575197",
+      "match": "1899 Hoffenheim - Bayer Leverkusen",
+      "league": "Bundesliga",
+      "country": "Germany",
+      "kickoff": "2026-10-25T15:30:00+01:00",
+      "bookmaker": "BetVictor",
+      "markets": [
+        {
+          "strategy": "FAVORITA_1X2_CONTROLLO",
+          "selection": "Away",
+          "price": 2.1,
+          "market_probability": 44.86
+        }
+      ],
+      "captured_at": "2026-10-25T12:02:18.778Z",
+      "coverage": true
+    },
+    {
+      "fixture_id": "1608334",
+      "match": "Desenzano Calvina - Giana Erminio",
+      "league": "Serie C - Girone A",
+      "country": "Italy",
+      "kickoff": "2026-10-25T14:30:00+01:00",
+      "bookmaker": "Bet365",
+      "markets": [
+        {
+          "strategy": "OVER25_CONTROLLO",
+          "selection": "Over 2.5",
+          "price": 1.95,
+          "market_probability": 48.68
+        }
+      ],
+      "captured_at": "2026-10-25T12:02:26.174Z",
+      "coverage": true
+    },
+    {
+      "fixture_id": "1552203",
+      "match": "NEC Nijmegen - Groningen",
+      "league": "Eredivisie",
+      "country": "Netherlands",
+      "kickoff": "2026-10-25T14:30:00+01:00",
+      "bookmaker": null,
+      "markets": [],
+      "captured_at": "2026-10-25T12:02:33.470Z",
+      "coverage": false
+    },
+    {
+      "fixture_id": "1576508",
+      "match": "Felgueiras 1932 - Lusitânia Lourosa",
+      "league": "Segunda Liga",
+      "country": "Portugal",
+      "kickoff": "2026-10-25T15:00:00+01:00",
+      "bookmaker": null,
+      "markets": [],
+      "captured_at": "2026-10-25T12:02:40.759Z",
+      "coverage": false
+    },
+    {
+      "fixture_id": "1556685",
+      "match": "Motherwell - Heart Of Midlothian",
+      "league": "Premiership",
+      "country": "Scotland",
+      "kickoff": "2026-10-25T15:00:00+01:00",
+      "bookmaker": "Bet365",
+      "markets": [
+        {
+          "strategy": "FAVORITA_1X2_CONTROLLO",
+          "selection": "Away",
+          "price": 2.05,
+          "market_probability": 45.97
+        },
+        {
+          "strategy": "OVER25_CONTROLLO",
+          "selection": "Over 2.5",
+          "price": 1.67,
+          "market_probability": 56.85
+        }
+      ],
+      "captured_at": "2026-10-25T12:02:48.088Z",
+      "coverage": true
+    },
+    {
+      "fixture_id": "1569991",
+      "match": "Sabadell - Tenerife",
+      "league": "Segunda División",
+      "country": "Spain",
+      "kickoff": "2026-10-25T14:00:00+01:00",
+      "bookmaker": "Bet365",
+      "markets": [
+        {
+          "strategy": "FAVORITA_1X2_CONTROLLO",
+          "selection": "Home",
+          "price": 1.9,
+          "market_probability": 49.14
+        }
+      ],
+      "captured_at": "2026-10-25T12:02:55.543Z",
+      "coverage": true
+    },
+    {
+      "fixture_id": "1555410",
+      "match": "FC Thun - FC Lugano",
+      "league": "Super League",
+      "country": "Switzerland",
+      "kickoff": "2026-10-25T14:00:00+01:00",
+      "bookmaker": "Bet365",
+      "markets": [
+        {
+          "strategy": "FAVORITA_1X2_CONTROLLO",
+          "selection": "Away",
+          "price": 1.8,
+          "market_probability": 52
+        }
+      ],
+      "captured_at": "2026-10-25T12:03:02.840Z",
+      "coverage": true
+    },
+    {
+      "fixture_id": "1561950",
+      "match": "Lask Linz - Red Bull Salzburg",
+      "league": "Bundesliga",
+      "country": "Austria",
+      "kickoff": "2026-10-25T17:00:00+01:00",
+      "bookmaker": "Betfair",
+      "markets": [
+        {
+          "strategy": "FAVORITA_1X2_CONTROLLO",
+          "selection": "Home",
+          "price": 2.1,
+          "market_probability": 44.36
+        }
+      ],
+      "captured_at": "2026-10-25T12:03:10.131Z",
+      "coverage": true
+    }
+  ]
 }
