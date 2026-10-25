@@ -37,6 +37,6 @@ root('add-record').addEventListener('click',()=>root('record-dialog').showModal(
 root('record-form').addEventListener('submit',e=>{e.preventDefault();let f=new FormData(e.target),v=k=>String(f.get(k)||'').trim(),od=Number(v('odds')),st=Number(v('stake')),rs=v('result'),date=v('date');if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!v('match')||!v('selection')||od<1.01||st<=0){alert('Compila tutti i campi correttamente.');return}if(v('book')==='real'&&!confirm('Confermi che questa è una scommessa REAL già effettivamente piazzata?'))return;
 let pnl=rs==='won'?round((od-1)*st):rs==='lost'?-st:rs==='push'?0:null;
 let r={id:'manual-'+Date.now(),date,book:v('book'),category:v('category'),match:v('match'),selection:v('selection'),odds:od,stake:st,result:rs,pnl,score:'',quality:'manuale',source:'Inserimento manuale V0.1',note:v('note'),manual:true,recorded_before_kickoff:null};db.records.push(r);persist();root('record-dialog').close();e.target.reset();renderAll();toast('Registrazione salvata sul dispositivo')});
-function renderAll(){renderHome();renderArchive();renderLab();renderScanner();renderMigration()}
+function renderAll(){renderHome();renderArchive();renderLab();renderScanner();renderMigration();window.dispatchEvent(new Event('scanner-conte:records-changed'))}
 renderAll();if('serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
 })();
