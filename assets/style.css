@@ -87,3 +87,9 @@
  .analytic-bar-row>span,.analytic-rate-row>span{font-size:10px}
  .analytic-bar-row>b{font-size:11px}
 }
+
+/* V0.7: controllo esiti senza occupare spazio nella Home */
+.settle-control{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:10px 0 4px}
+.settle-control span{font-size:10px;line-height:1.45;color:var(--soft);flex:1}
+.settle-control button{font-size:11px;flex:none}
+@media(max-width:440px){.settle-control{align-items:flex-start}.settle-control button{padding:8px 9px}}
