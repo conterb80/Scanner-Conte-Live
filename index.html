@@ -46,7 +46,8 @@
   </section>
   <section id="view-scanner" class="view">
    <div class="pagelead compact"><div class="eyebrow">RADAR / CANDIDATE</div><h1>Prima i dati.<br><em>Poi la quota.</em></h1><p>Lista di proposte archiviate, non quote aggiornate in tempo reale.</p></div>
-   <div class="notice amber"><span class="notice-icon">⌁</span><div><b>Motore live non ancora collegato.</b><br>Queste candidate provengono dalla chat del 25 ottobre. Non sono scommesse registrate né pronostici aggiornati.</div></div>
+   <div class="notice amber"><span class="notice-icon">⌁</span><div><b>Raccolta automatica in preparazione.</b><br>Le candidate del 25 ottobre sono storiche: non sono scommesse registrate né pronostici aggiornati.</div></div>
+   <div class="sectionbar"><h2>Palinsesto automatico · V0.2</h2><button class="button secondary" type="button" id="feed-refresh">Aggiorna</button></div><div id="feed-summary" class="surface pad" role="status" aria-live="polite">Verifica del feed…</div><div id="feed-fixtures" class="candidates"></div>
    <div id="scanner-meta" class="surface pad scanner-summary"></div>
    <div class="sectionbar"><h2>Candidate storiche · 25 ottobre</h2></div><div id="candidate-list" class="candidates"></div>
    <div class="sectionbar"><h2>Prossima integrazione</h2></div><div class="surface pad method"><span class="method-icon">⚙️</span><div><strong>Feed partite + quote + modello probabilistico</strong><p>Lo sviluppo prevede API dati, scansione programmata, registrazione dei segnali prima degli incontri e risultati automatici. Nessuna chiave API è necessaria per usare l'archivio V0.1.</p></div></div>
@@ -67,6 +68,6 @@
  </nav>
  <dialog id="record-dialog"><form id="record-form" class="modal" method="dialog"><div class="modalhead"><h2>Nuova registrazione</h2><button id="close-dialog" type="button" class="close" aria-label="Chiudi">✕</button></div><p class="muted small">La nuova operazione verrà aggiunta a parte, senza alterare i bilanci consolidati del 24/10.</p><div class="formgrid"><label>Data<input type="date" name="date" required value="2026-10-25"></label><label>Archivio<select name="book"><option value="lab">LAB virtuale</option><option value="main">Principale virtuale</option><option value="real">REAL (solo già piazzata)</option></select></label><label>Categoria<select name="category"><option>TEST</option><option>CORE</option><option>VALUE</option><option>EXTRA</option></select></label><label>Partita<input name="match" required placeholder="Es. Squadra A – Squadra B"></label><label>Mercato<input name="selection" required placeholder="Es. Over 2,5"></label><label>Quota decimale<input name="odds" required inputmode="decimal" type="number" min="1.01" max="1000" step="0.01"></label><label>Importo €<input name="stake" required inputmode="decimal" type="number" min="0.01" max="10000" step="0.01"></label><label>Esito<select name="result"><option value="pending">In attesa</option><option value="won">Vinta</option><option value="lost">Persa</option><option value="push">Rimborsata</option></select></label><label class="full">Nota / motivazione<input name="note" placeholder="Registrare prima del via, se possibile"></label></div><button type="submit" class="button">Salva registrazione</button></form></dialog>
  <div id="toast" role="status" aria-live="polite"></div>
- <script src="data/seed.js"></script><script src="assets/app.js"></script>
+ <script src="data/seed.js"></script><script src="assets/app.js"></script><script src="assets/feed.js"></script>
 </body>
 </html>
