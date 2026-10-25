@@ -1,6 +1,12 @@
 name: Scanner Conte - Raccolta dati
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/scanner.yml'
+      - 'scripts/collect-fixtures.mjs'
+      - 'scripts/lab-pilot.mjs'
   schedule:
     - cron: "17 7,18 * * *"
       timezone: "Europe/Rome"
