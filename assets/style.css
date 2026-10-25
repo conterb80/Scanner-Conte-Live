@@ -7,3 +7,10 @@
 .feed-filters select:focus-visible{outline:2px solid #60dcb5;outline-offset:2px;}
 .feed-count{padding:2px 1px 4px;}
 @media(max-width:370px){.feed-filters{grid-template-columns:1fr;}}
+
+/* LAB automatico V0.4 — solo dati virtuali pubblici */
+.lab-auto-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.lab-auto-stats>div{background:#111f2c;border:1px solid #304457;padding:11px 8px;border-radius:12px;min-width:0}
+.lab-auto-stats span{font-size:10px;letter-spacing:.01em;color:#a3b6c8;display:block;line-height:1.25}
+.lab-auto-stats strong{font-size:19px;display:block;margin-top:8px;line-height:1.25;color:#e5f7ef}
+@media(max-width:530px){.lab-auto-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
