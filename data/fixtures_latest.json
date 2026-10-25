@@ -1,0 +1,19 @@
+{
+  "schema": "scanner-conte-fixtures-v1",
+  "phase": "raccolta_palinsesto",
+  "status": "awaiting_api",
+  "source": "API-Football",
+  "collected_at": null,
+  "timezone": "Europe/Rome",
+  "dates": [],
+  "coverage": {
+    "provided_matches": 0,
+    "eligible_matches": 0,
+    "eligible_competitions": 0,
+    "scheduled": 0,
+    "finished": 0
+  },
+  "api_remaining": null,
+  "note": "Motore predisposto. In attesa del secret API_FOOTBALL_KEY e del primo avvio.",
+  "fixtures": []
+}
