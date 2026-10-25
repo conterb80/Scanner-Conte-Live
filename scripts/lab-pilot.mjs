@@ -62,6 +62,21 @@ function choices(book){
  }
  return result;
 }
+// Estrae esclusivamente i prezzi attribuiti da API-Football al bookmaker Bet365.
+function bet365Prices(book){
+ if(!book)return null;
+ const markets=[];
+ const add=(name,selection,odd)=>{const price=validOdds(odd);if(price)markets.push({market:name,selection,odds:price});};
+ const w=market(book,1),g=market(book,5),b=market(book,8);
+ add('1X2','1',findValue(w,['home','1']));
+ add('1X2','X',findValue(w,['draw','x']));
+ add('1X2','2',findValue(w,['away','2']));
+ add('Under/Over 2,5','Over 2,5',findValue(g,['over 2.5','over 2,5']));
+ add('Under/Over 2,5','Under 2,5',findValue(g,['under 2.5','under 2,5']));
+ add('Goal/No Goal','Goal',findValue(b,['yes','goal','btts yes']));
+ add('Goal/No Goal','No Goal',findValue(b,['no','no goal','btts no']));
+ return markets.length?{bookmaker:'Bet365',markets}:null;
+}
 function selectUpcoming(fixtures){
  const now=Date.now(),byCountry=new Map();
  for(const m of fixtures){
@@ -128,10 +143,11 @@ async function main(){
    return rank(a)-rank(b)||String(a.name).localeCompare(String(b.name));
   });
   const book=bookmakers.find(b=>choices(b).length>0);
+  const bet365=bet365Prices(bookmakers.find(b=>/bet365/i.test(b.name)));
   const now=new Date().toISOString();
   samples.push({fixture_id:String(fixture.id),match:fixture.home+' - '+fixture.away,league:fixture.league,
    country:fixture.country,kickoff:fixture.kickoff,bookmaker:book?.name||null,
-   markets:book?choices(book):[],captured_at:now,coverage:!!book});
+   markets:book?choices(book):[],bet365,captured_at:now,coverage:!!book});
   if(!book)continue;
   const leagueKey=fixture.country+' / '+fixture.league;
   for(const selection of choices(book)){
@@ -162,9 +178,9 @@ async function main(){
  };
  const snapshot={
   schema:'scanner-conte-odds-v1',generated_at:new Date().toISOString(),fixture_snapshot:feed.collected_at,
-  requested:candidates.length,with_odds:samples.filter(s=>s.coverage).length,
+  requested:candidates.length,with_odds:samples.filter(s=>s.coverage).length,with_bet365:samples.filter(s=>s.bet365?.markets?.length).length,
   api_remaining:Number.isFinite(remaining)?remaining:null,errors:errors.slice(0,15),
-  notes:['Dati pubblici: non comprendono le REAL personali.', 'Quote da bookmaker indicato, non necessariamente Bet365.','Non si dichiara alcun margine/value statistico.'],
+  notes:['Dati pubblici: non comprendono le REAL personali.', 'Quote Bet365 mostrate solo quando esplicitamente attribuite a Bet365 dal provider; non sono quote garantite sul conto.','Non si dichiara alcun margine/value statistico.'],
   samples
  };
  await writeFile(filepath,JSON.stringify(lab,null,2)+'\n');
