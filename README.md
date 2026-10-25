@@ -1,42 +1,42 @@
-# Scanner Conte LIVE · V0.2
+# Scanner Conte LIVE · V0.4 — LAB virtuale pilota
 
-PWA pubblica: https://conterb80.github.io/Scanner-Conte-Live/
+App: https://conterb80.github.io/Scanner-Conte-Live/
 
-## Obiettivo
-Laboratorio virtuale di osservazione delle partite. Poche eventuali scommesse REAL scelte manualmente, senza alcun automatismo di puntata.
+## Stato
+- V0.1: archivio REAL, virtuale principale e LAB importato **localmente** dal backup personale.
+- V0.2: raccolta automatica di calendari e risultati da API-Football.
+- V0.3: filtro per campionati, paese e giorno.
+- **V0.4: motore pilota per quote prepartita e simulazioni virtuali**, ancora da validare con la prima esecuzione reale.
 
-## Dati storici e privacy
-Il registro REAL / principale / LAB viene conservato nel browser (localStorage).
-**Non caricare sul repository backup, giocate REAL, file storico_iniziale.json o chiavi API.**
-Esportare backup JSON dall'app dopo ogni aggiornamento importante. Questa versione non sincronizza i dati tra dispositivi.
+## Sicurezza e dati personali
+- Il repository è PUBBLICO. Non aggiungere backup del telefono, storico REAL, chiavi API o segreti.
+- Lo storico personale rimane in localStorage del dispositivo e nel backup JSON esportato.
+- `data/lab_auto.json` contiene **soltanto esperimenti virtuali generati automaticamente dal motore** e può essere pubblico.
+- Non è prevista alcuna puntata reale automatica.
 
-## Attivazione della raccolta automatica
+## Avviare
+Il secret `API_FOOTBALL_KEY` è richiesto su GitHub: Settings → Secrets and variables → Actions.
+Actions → **Scanner Conte - Raccolta dati** → **Run workflow** su `main`.
+Il workflow è previsto alle 07:17 e 18:17 ora italiana e può subire ritardi.
 
-1. Registrarsi su https://dashboard.api-football.com/ e scegliere il piano gratuito, se disponibile.
-2. Copiare la propria API key dalla dashboard del servizio.
-3. In questo repository: Settings → Secrets and variables → Actions → New repository secret.
-4. Name = `API_FOOTBALL_KEY`. Value = la chiave privata. Non inserirla in chat, nei file o nella PWA.
-5. Aprire Actions → Scanner Conte - Raccolta dati → Run workflow (branch main).
-6. Se l'azione termina con esito positivo, nell'app selezionare Scanner → Aggiorna.
+Sequenza:
+1. `scripts/collect-fixtures.mjs`: 3 richieste al palinsesto (ieri, oggi, domani).
+2. `scripts/lab-pilot.mjs`: fino a 12 richieste per quote pre-match di partite prioritarie future; 7,1 s tra richieste per tutelare il rate limit gratuito; salva dati pubblici.
+3. Aggiorna `data/fixtures_latest.json`, `data/odds_latest.json`, `data/lab_auto.json`.
 
-Il workflow gira anche automaticamente alle 07:17 e 18:17 (Europe/Rome), salvo ritardi della piattaforma. Usa fino a **3 chiamate API per esecuzione** per le date ieri, oggi e domani; verifica separatamente la quota disponibile.
+Il piano gratuito API-Football attualmente include 100 richieste al giorno, con accesso al catalogo quote, ma la copertura dipende da campionato, partita e bookmaker. Non abbiamo 100 partite *analizzate* automaticamente: la raccolta ampia di eventi è diversa dal pilot con 12 richieste quote per esecuzione.
 
-### Quali dati pubblica
-Solo calendario e risultati dei campionati per i paesi configurati, in `data/fixtures_latest.json`. Indica quante partite sono state effettivamente restituite dall'API; non dichiara copertura esaustiva. Il livello gratuito può limitare stagioni, mercati o incontri.
+## Regole di registrazione del pilot
+- Nessun ingresso virtuale senza **quota vera** da API-Football rilevata almeno 45 minuti prima del calcio d'inizio.
+- `FAVORITA_1X2_CONTROLLO`: quota favorita home/away compresa tra 1,45 e 2,10 con mercato 1X2 completo.
+- `OVER25_CONTROLLO`: quota Over 2,5 compresa tra 1,60 e 2,20 con entrambi Over e Under.
+- 1 € **virtuale** per test; nessun bankroll reale.
+- Registrazione `fixture ID + strategia` unica, con bookmaker, quota e `captured_at` **immutabili**. Se un evento non presenta quote, nessuna scommessa è inventata.
+- Esito calcolato solo su partite `FT` con reti disponibili. AET/PEN, rinvii o partite non presenti nel feed restano non concluse.
+- La probabilità normalizzata del bookmaker è un **riferimento di mercato**, non un modello predittivo validato né una prova di value betting.
+- Gli esperimenti dell'app V0.4 sono **separati** dalle 75 schede storiche locali.
 
-### Funzioni NON ancora abilitate
-- Quote Bet365 verificate, scanner probabilistico, punteggi/value
-- Piazzamenti REAL (mai automatici)
-- LAB simulato e settlement automatizzato
-- Backup cloud privato
+## Ulteriori miglioramenti
+Serviranno uno storico più affidabile delle quote, controlli su rinvii e casi particolari, filtri di copertura, un modello probabilistico indipendente e soprattutto valutazioni fuori campione prima di promuovere candidate REAL.
 
-La PWA presenta quindi la raccolta come **palinsesto automatico**, non come segnale di scommessa. Le vecchie candidate di ottobre restano separate e storiche.
-
-## Struttura
-- `index.html`, `assets/`, `manifest.webmanifest`, `service-worker.js`: app Android/PWA
-- `data/seed.js`: archivio iniziale vuoto (pubblico)
-- `data/fixtures_latest.json`: feed pubblico aggiornato dal workflow
-- `scripts/collect-fixtures.mjs`: raccolta dati in Node 22
-- `.github/workflows/scanner.yml`: pianificazione GitHub Actions
-
-**Sicurezza:** la chiave è letta esclusivamente dal Secret in GitHub Actions, non viene salvata nei file pubblici né esposta in console.
+Non utilizzare il progetto per mettere scommesse automatiche su Bet365.
