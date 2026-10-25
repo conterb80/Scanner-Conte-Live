@@ -1,4 +1,4 @@
-const CACHE='scanner-conte-v0.2.0';
+const CACHE='scanner-conte-v0.3.0';
 const STATIC=['./','./index.html','./assets/style.css','./assets/app.js','./assets/feed.js','./assets/icon.svg','./data/seed.js','./manifest.webmanifest'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(STATIC)).then(()=>self.skipWaiting()));
