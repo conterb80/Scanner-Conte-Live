@@ -27,7 +27,7 @@ async function fetchDay(day) {
   url.searchParams.set('date', day);
   url.searchParams.set('timezone', TZ);
   const response = await fetch(url, {
-    headers: {'x-apisports-key':key,'Accept':'application/json'},
+    headers: {'x-apisports-key':key},
     signal: AbortSignal.timeout(25000)
   });
   if (!response.ok) throw new Error('API HTTP '+response.status+' per '+day);
