@@ -3,7 +3,7 @@
   "phase": "raccolta_palinsesto",
   "status": "ready",
   "source": "API-Football",
-  "collected_at": "2026-10-25T12:01:33.893Z",
+  "collected_at": "2026-10-25T13:05:00.635Z",
   "timezone": "Europe/Rome",
   "dates": [
     "2026-10-24",
@@ -14,10 +14,10 @@
     "provided_matches": 3021,
     "eligible_matches": 1081,
     "eligible_competitions": 133,
-    "scheduled": 427,
-    "finished": 561
+    "scheduled": 401,
+    "finished": 626
   },
-  "api_remaining": 94,
+  "api_remaining": 65,
   "note": "Solo partite e risultati. Quote, probabilita, LAB automatico e REAL non sono attivi.",
   "fixtures": [
     {
@@ -6959,14 +6959,14 @@
     {
       "id": "1566395",
       "kickoff": "2026-10-25T10:45:00+01:00",
-      "status": "NS",
+      "status": "FT",
       "league": "Oberliga - Hamburg",
       "league_id": 745,
       "country": "Germany",
       "home": "HEBC",
       "away": "Sasel",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 2,
+      "away_goals": 3
     },
     {
       "id": "1569407",
@@ -7007,38 +7007,38 @@
     {
       "id": "1595723",
       "kickoff": "2026-10-25T11:00:00+01:00",
-      "status": "NS",
+      "status": "FT",
       "league": "U19 Bundesliga",
       "league_id": 488,
       "country": "Germany",
       "home": "Borussia M'bach U19",
       "away": "Viktoria Köln U19",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 1,
+      "away_goals": 2
     },
     {
       "id": "1595733",
       "kickoff": "2026-10-25T11:00:00+01:00",
-      "status": "NS",
+      "status": "FT",
       "league": "U19 Bundesliga",
       "league_id": 488,
       "country": "Germany",
       "home": "Heidenheim U19",
       "away": "Ulm U19",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 7,
+      "away_goals": 0
     },
     {
       "id": "1595736",
       "kickoff": "2026-10-25T11:00:00+01:00",
-      "status": "NS",
+      "status": "FT",
       "league": "U19 Bundesliga",
       "league_id": 488,
       "country": "Germany",
       "home": "Mainz 05 U19",
       "away": "Kaiserslautern U19",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 3
     },
     {
       "id": "1595741",
@@ -7067,7 +7067,7 @@
     {
       "id": "1613691",
       "kickoff": "2026-10-25T11:15:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 4",
       "league_id": 442,
       "country": "Spain",
@@ -7079,43 +7079,43 @@
     {
       "id": "1572713",
       "kickoff": "2026-10-25T11:30:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Segunda División RFEF - Group 3",
       "league_id": 877,
       "country": "Spain",
       "home": "Ucam Murcia",
       "away": "Cieza",
       "home_goals": 2,
-      "away_goals": 3
+      "away_goals": 4
     },
     {
       "id": "1573018",
       "kickoff": "2026-10-25T11:30:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Segunda División RFEF - Group 4",
       "league_id": 878,
       "country": "Spain",
       "home": "Sevilla Atletico",
       "away": "Tenerife II",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 0
     },
     {
       "id": "1573321",
       "kickoff": "2026-10-25T11:30:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Segunda División RFEF - Group 5",
       "league_id": 879,
       "country": "Spain",
       "home": "Getafe II",
       "away": "Calvo Sotelo",
-      "home_goals": 1,
-      "away_goals": 1
+      "home_goals": 2,
+      "away_goals": 2
     },
     {
       "id": "1605593",
       "kickoff": "2026-10-25T11:30:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Campeonato de Portugal Prio - Group B",
       "league_id": 458,
       "country": "Portugal",
@@ -7127,7 +7127,7 @@
     {
       "id": "1614301",
       "kickoff": "2026-10-25T11:30:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 6",
       "league_id": 444,
       "country": "Spain",
@@ -7139,7 +7139,7 @@
     {
       "id": "1614302",
       "kickoff": "2026-10-25T11:30:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 6",
       "league_id": 444,
       "country": "Spain",
@@ -7151,7 +7151,7 @@
     {
       "id": "1614603",
       "kickoff": "2026-10-25T11:30:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 7",
       "league_id": 445,
       "country": "Spain",
@@ -7163,67 +7163,67 @@
     {
       "id": "1614604",
       "kickoff": "2026-10-25T11:30:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 7",
       "league_id": 445,
       "country": "Spain",
       "home": "Galapagar",
       "away": "RC Alcobendas",
-      "home_goals": 3,
-      "away_goals": 0
+      "home_goals": 4,
+      "away_goals": 1
     },
     {
       "id": "1614610",
       "kickoff": "2026-10-25T11:30:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 7",
       "league_id": 445,
       "country": "Spain",
       "home": "Villanueva Pardillo",
       "away": "Móstoles",
       "home_goals": 1,
-      "away_goals": 3
+      "away_goals": 6
     },
     {
       "id": "1616441",
       "kickoff": "2026-10-25T11:30:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 13",
       "league_id": 451,
       "country": "Spain",
       "home": "SFC Minerva",
       "away": "Cotillas CD",
       "home_goals": 1,
-      "away_goals": 2
+      "away_goals": 3
     },
     {
       "id": "1617358",
       "kickoff": "2026-10-25T11:30:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 16",
       "league_id": 454,
       "country": "Spain",
       "home": "Casalarreina",
       "away": "Anguiano",
       "home_goals": 1,
-      "away_goals": 1
+      "away_goals": 2
     },
     {
       "id": "1613993",
       "kickoff": "2026-10-25T11:45:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 5",
       "league_id": 443,
       "country": "Spain",
       "home": "Grama",
       "away": "Atlètic Lleida",
       "home_goals": 0,
-      "away_goals": 0
+      "away_goals": 1
     },
     {
       "id": "1614608",
       "kickoff": "2026-10-25T11:45:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 7",
       "league_id": 445,
       "country": "Spain",
@@ -7235,79 +7235,79 @@
     {
       "id": "1616442",
       "kickoff": "2026-10-25T11:45:00+01:00",
-      "status": "2H",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 13",
       "league_id": 451,
       "country": "Spain",
       "home": "Unión Molinense",
       "away": "Bala Azul",
-      "home_goals": 0,
+      "home_goals": 1,
       "away_goals": 1
     },
     {
       "id": "1571176",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "2H",
       "league": "Primera División RFEF - Group 2",
       "league_id": 436,
       "country": "Spain",
       "home": "Alcorcon",
       "away": "Ibiza",
-      "home_goals": 2,
-      "away_goals": 1
+      "home_goals": 3,
+      "away_goals": 3
     },
     {
       "id": "1571178",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Primera División RFEF - Group 2",
       "league_id": 436,
       "country": "Spain",
       "home": "Atlético Madrid II",
       "away": "Real Jaén",
       "home_goals": 1,
-      "away_goals": 0
+      "away_goals": 1
     },
     {
       "id": "1572705",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Segunda División RFEF - Group 3",
       "league_id": 877,
       "country": "Spain",
       "home": "Atlético Baleares",
       "away": "Alcoyano",
-      "home_goals": 0,
+      "home_goals": 2,
       "away_goals": 0
     },
     {
       "id": "1572708",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Segunda División RFEF - Group 3",
       "league_id": 877,
       "country": "Spain",
       "home": "Castellón II",
       "away": "La Nucía",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 1
     },
     {
       "id": "1572711",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Segunda División RFEF - Group 3",
       "league_id": 877,
       "country": "Spain",
       "home": "Poblense",
       "away": "Peña Deportiva",
-      "home_goals": 0,
+      "home_goals": 1,
       "away_goals": 0
     },
     {
       "id": "1573011",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Segunda División RFEF - Group 4",
       "league_id": 878,
       "country": "Spain",
@@ -7319,7 +7319,7 @@
     {
       "id": "1573012",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Segunda División RFEF - Group 4",
       "league_id": 878,
       "country": "Spain",
@@ -7331,62 +7331,62 @@
     {
       "id": "1573017",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Segunda División RFEF - Group 4",
       "league_id": 878,
       "country": "Spain",
       "home": "Sanluqueño",
       "away": "Las Palmas II",
-      "home_goals": 2,
-      "away_goals": 0
+      "home_goals": 4,
+      "away_goals": 1
     },
     {
       "id": "1573317",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Segunda División RFEF - Group 5",
       "league_id": 879,
       "country": "Spain",
       "home": "Albacete II",
       "away": "A Madrid III",
-      "home_goals": 0,
-      "away_goals": 0
+      "home_goals": 2,
+      "away_goals": 1
     },
     {
       "id": "1573318",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Segunda División RFEF - Group 5",
       "league_id": 879,
       "country": "Spain",
       "home": "Real Madrid III",
       "away": "Conquense",
       "home_goals": 0,
-      "away_goals": 1
+      "away_goals": 2
     },
     {
       "id": "1576504",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Segunda Liga",
       "league_id": 95,
       "country": "Portugal",
       "home": "AVS",
       "away": "Tondela",
-      "home_goals": 1,
-      "away_goals": 0
+      "home_goals": 2,
+      "away_goals": 1
     },
     {
       "id": "1592043",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Júniores U19",
       "league_id": 1041,
       "country": "Portugal",
       "home": "Sporting CP U19",
       "away": "Santa Clara U19",
       "home_goals": 2,
-      "away_goals": 0
+      "away_goals": 2
     },
     {
       "id": "1595743",
@@ -7403,7 +7403,7 @@
     {
       "id": "1597788",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Liga 3",
       "league_id": 865,
       "country": "Portugal",
@@ -7415,7 +7415,7 @@
     {
       "id": "1605596",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Campeonato de Portugal Prio - Group B",
       "league_id": 458,
       "country": "Portugal",
@@ -7427,43 +7427,43 @@
     {
       "id": "1605948",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Campeonato de Portugal Prio - Group D",
       "league_id": 460,
       "country": "Portugal",
       "home": "Lagoa",
       "away": "Lajense",
       "home_goals": 1,
-      "away_goals": 1
+      "away_goals": 2
     },
     {
       "id": "1612771",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 1",
       "league_id": 439,
       "country": "Spain",
       "home": "Estradense",
       "away": "Viveiro",
-      "home_goals": 2,
+      "home_goals": 3,
       "away_goals": 2
     },
     {
       "id": "1612773",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 1",
       "league_id": 439,
       "country": "Spain",
       "home": "Villalbés",
       "away": "Alondras",
-      "home_goals": 0,
-      "away_goals": 0
+      "home_goals": 1,
+      "away_goals": 1
     },
     {
       "id": "1613072",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 2",
       "league_id": 440,
       "country": "Spain",
@@ -7475,19 +7475,19 @@
     {
       "id": "1613075",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 2",
       "league_id": 440,
       "country": "Spain",
       "home": "Colunga",
       "away": "Lealtad",
       "home_goals": 0,
-      "away_goals": 1
+      "away_goals": 4
     },
     {
       "id": "1613077",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 2",
       "league_id": 440,
       "country": "Spain",
@@ -7499,127 +7499,127 @@
     {
       "id": "1613379",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 3",
       "league_id": 441,
       "country": "Spain",
       "home": "Cayón",
       "away": "Laredo",
-      "home_goals": 0,
+      "home_goals": 1,
       "away_goals": 0
     },
     {
       "id": "1613381",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 3",
       "league_id": 441,
       "country": "Spain",
       "home": "Escobedo",
       "away": "Tropezón",
-      "home_goals": 1,
-      "away_goals": 0
+      "home_goals": 2,
+      "away_goals": 2
     },
     {
       "id": "1613990",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 5",
       "league_id": 443,
       "country": "Spain",
       "home": "Europa II",
       "away": "Vilanova",
-      "home_goals": 1,
+      "home_goals": 4,
       "away_goals": 1
     },
     {
       "id": "1613994",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 5",
       "league_id": 443,
       "country": "Spain",
       "home": "Martinenc",
       "away": "San Cristóbal",
-      "home_goals": 3,
-      "away_goals": 0
+      "home_goals": 5,
+      "away_goals": 1
     },
     {
       "id": "1613995",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 5",
       "league_id": 443,
       "country": "Spain",
       "home": "Montañesa",
       "away": "Vilassar Mar",
-      "home_goals": 0,
+      "home_goals": 2,
       "away_goals": 2
     },
     {
       "id": "1613997",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 5",
       "league_id": 443,
       "country": "Spain",
       "home": "Pobla Mafumet",
       "away": "Mollerussa",
-      "home_goals": 1,
-      "away_goals": 0
+      "home_goals": 2,
+      "away_goals": 1
     },
     {
       "id": "1614303",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 6",
       "league_id": 444,
       "country": "Spain",
       "home": "Torrent",
       "away": "Acero",
-      "home_goals": 0,
-      "away_goals": 0
+      "home_goals": 1,
+      "away_goals": 2
     },
     {
       "id": "1614606",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 7",
       "league_id": 445,
       "country": "Spain",
       "home": "Leganés II",
       "away": "Trival Valderas",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 2
     },
     {
       "id": "1614607",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 7",
       "league_id": 445,
       "country": "Spain",
       "home": "Pozuelo Alarcón",
       "away": "Torrejón",
-      "home_goals": 0,
+      "home_goals": 1,
       "away_goals": 0
     },
     {
       "id": "1614909",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 8",
       "league_id": 446,
       "country": "Spain",
       "home": "Burgos Promesas",
       "away": "Salamanca II",
-      "home_goals": 2,
+      "home_goals": 3,
       "away_goals": 0
     },
     {
       "id": "1614915",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 8",
       "league_id": 446,
       "country": "Spain",
@@ -7631,31 +7631,31 @@
     {
       "id": "1615214",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 9",
       "league_id": 447,
       "country": "Spain",
       "home": "Almería II",
       "away": "Atletico de Marbella",
-      "home_goals": 1,
-      "away_goals": 1
+      "home_goals": 2,
+      "away_goals": 2
     },
     {
       "id": "1615215",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 9",
       "league_id": 447,
       "country": "Spain",
       "home": "Arenas Armilla",
       "away": "UD San Pedro",
-      "home_goals": 0,
+      "home_goals": 1,
       "away_goals": 0
     },
     {
       "id": "1615217",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 9",
       "league_id": 447,
       "country": "Spain",
@@ -7667,7 +7667,7 @@
     {
       "id": "1615218",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 9",
       "league_id": 447,
       "country": "Spain",
@@ -7679,7 +7679,7 @@
     {
       "id": "1615523",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 10",
       "league_id": 448,
       "country": "Spain",
@@ -7691,19 +7691,19 @@
     {
       "id": "1615525",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 10",
       "league_id": 448,
       "country": "Spain",
       "home": "Portuense",
       "away": "Pozoblanco",
-      "home_goals": 1,
-      "away_goals": 0
+      "home_goals": 3,
+      "away_goals": 1
     },
     {
       "id": "1615527",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 10",
       "league_id": 448,
       "country": "Spain",
@@ -7727,7 +7727,7 @@
     {
       "id": "1616744",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 14",
       "league_id": 452,
       "country": "Spain",
@@ -7739,7 +7739,7 @@
     {
       "id": "1616751",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 14",
       "league_id": 452,
       "country": "Spain",
@@ -7751,43 +7751,43 @@
     {
       "id": "1616752",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 14",
       "league_id": 452,
       "country": "Spain",
       "home": "Villanovense",
       "away": "Jerez",
-      "home_goals": 2,
-      "away_goals": 0
+      "home_goals": 5,
+      "away_goals": 1
     },
     {
       "id": "1617058",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 15",
       "league_id": 453,
       "country": "Spain",
       "home": "Subiza",
       "away": "Cortes",
-      "home_goals": 0,
+      "home_goals": 3,
       "away_goals": 1
     },
     {
       "id": "1617360",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 16",
       "league_id": 454,
       "country": "Spain",
       "home": "Comillas",
       "away": "Calasancio",
       "home_goals": 0,
-      "away_goals": 0
+      "away_goals": 2
     },
     {
       "id": "1617363",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 16",
       "league_id": 454,
       "country": "Spain",
@@ -7799,19 +7799,19 @@
     {
       "id": "1617665",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 17",
       "league_id": 455,
       "country": "Spain",
       "home": "CD Sietamo",
       "away": "Andorra CF",
-      "home_goals": 1,
-      "away_goals": 1
+      "home_goals": 2,
+      "away_goals": 2
     },
     {
       "id": "1617970",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 18",
       "league_id": 456,
       "country": "Spain",
@@ -7823,19 +7823,19 @@
     {
       "id": "1617972",
       "kickoff": "2026-10-25T12:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Tercera División RFEF - Group 18",
       "league_id": 456,
       "country": "Spain",
       "home": "Socuéllamos",
       "away": "Quintanar del Rey",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 1
     },
     {
       "id": "1552202",
       "kickoff": "2026-10-25T12:15:00+01:00",
-      "status": "1H",
+      "status": "2H",
       "league": "Eredivisie",
       "league_id": 88,
       "country": "Netherlands",
@@ -7859,55 +7859,55 @@
     {
       "id": "1613689",
       "kickoff": "2026-10-25T12:15:00+01:00",
-      "status": "HT",
+      "status": "2H",
       "league": "Tercera División RFEF - Group 4",
       "league_id": 442,
       "country": "Spain",
       "home": "Real Sociedad III",
       "away": "Deportivo Alavés III",
-      "home_goals": 0,
-      "away_goals": 0
+      "home_goals": 1,
+      "away_goals": 2
     },
     {
       "id": "1616745",
       "kickoff": "2026-10-25T12:15:00+01:00",
-      "status": "1H",
+      "status": "2H",
       "league": "Tercera División RFEF - Group 14",
       "league_id": 452,
       "country": "Spain",
       "home": "CD Zafra",
       "away": "Azuaga",
-      "home_goals": 0,
-      "away_goals": 0
+      "home_goals": 1,
+      "away_goals": 1
     },
     {
       "id": "1616748",
       "kickoff": "2026-10-25T12:15:00+01:00",
-      "status": "1H",
+      "status": "2H",
       "league": "Tercera División RFEF - Group 14",
       "league_id": 452,
       "country": "Spain",
       "home": "Puebla Calzada",
       "away": "Villafranca",
-      "home_goals": 0,
+      "home_goals": 2,
       "away_goals": 0
     },
     {
       "id": "1550161",
       "kickoff": "2026-10-25T12:30:00+01:00",
-      "status": "1H",
+      "status": "2H",
       "league": "Serie A",
       "league_id": 135,
       "country": "Italy",
       "home": "Inter",
       "away": "Fiorentina",
       "home_goals": 0,
-      "away_goals": 0
+      "away_goals": 1
     },
     {
       "id": "1601269",
       "kickoff": "2026-10-25T12:30:00+01:00",
-      "status": "1H",
+      "status": "2H",
       "league": "Serie A Women",
       "league_id": 139,
       "country": "Italy",
@@ -7919,7 +7919,7 @@
     {
       "id": "1608338",
       "kickoff": "2026-10-25T12:30:00+01:00",
-      "status": "1H",
+      "status": "2H",
       "league": "Serie C - Girone A",
       "league_id": 138,
       "country": "Italy",
@@ -7931,31 +7931,31 @@
     {
       "id": "1608339",
       "kickoff": "2026-10-25T12:30:00+01:00",
-      "status": "1H",
+      "status": "2H",
       "league": "Serie C - Girone A",
       "league_id": 138,
       "country": "Italy",
       "home": "Trento",
       "away": "Juventus U23",
-      "home_goals": 0,
-      "away_goals": 0
+      "home_goals": 2,
+      "away_goals": 1
     },
     {
       "id": "1609097",
       "kickoff": "2026-10-25T12:30:00+01:00",
-      "status": "1H",
+      "status": "2H",
       "league": "Serie C - Girone C",
       "league_id": 943,
       "country": "Italy",
       "home": "SS Monopoli",
       "away": "Audace Cerignola",
-      "home_goals": 0,
+      "home_goals": 1,
       "away_goals": 0
     },
     {
       "id": "1612768",
       "kickoff": "2026-10-25T12:30:00+01:00",
-      "status": "1H",
+      "status": "2H",
       "league": "Tercera División RFEF - Group 1",
       "league_id": 439,
       "country": "Spain",
@@ -7979,19 +7979,19 @@
     {
       "id": "1615216",
       "kickoff": "2026-10-25T12:30:00+01:00",
-      "status": "NS",
+      "status": "2H",
       "league": "Tercera División RFEF - Group 9",
       "league_id": 447,
       "country": "Spain",
       "home": "Churriana Vega",
       "away": "Granada II",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 0
     },
     {
       "id": "1616134",
       "kickoff": "2026-10-25T12:30:00+01:00",
-      "status": "1H",
+      "status": "LIVE",
       "league": "Tercera División RFEF - Group 12",
       "league_id": 450,
       "country": "Spain",
@@ -8003,38 +8003,38 @@
     {
       "id": "1617971",
       "kickoff": "2026-10-25T12:30:00+01:00",
-      "status": "1H",
+      "status": "LIVE",
       "league": "Tercera División RFEF - Group 18",
       "league_id": 456,
       "country": "Spain",
       "home": "San Clemente",
       "away": "Marchamalo",
-      "home_goals": 0,
+      "home_goals": 2,
       "away_goals": 0
     },
     {
       "id": "1573619",
       "kickoff": "2026-10-25T12:45:00+01:00",
-      "status": "1H",
+      "status": "2H",
       "league": "Primera División Femenina",
       "league_id": 142,
       "country": "Spain",
       "home": "Deportivo de La Coruña W",
       "away": "Deportivo Alavés W",
       "home_goals": 0,
-      "away_goals": 0
+      "away_goals": 1
     },
     {
       "id": "1556684",
       "kickoff": "2026-10-25T13:00:00+01:00",
-      "status": "1H",
+      "status": "2H",
       "league": "Premiership",
       "league_id": 179,
       "country": "Scotland",
       "home": "Hibernian",
       "away": "Celtic",
-      "home_goals": 0,
-      "away_goals": 0
+      "home_goals": 1,
+      "away_goals": 2
     },
     {
       "id": "1569413",
@@ -8051,26 +8051,26 @@
     {
       "id": "1572709",
       "kickoff": "2026-10-25T13:00:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Segunda División RFEF - Group 3",
       "league_id": 877,
       "country": "Spain",
       "home": "Mallorca II",
       "away": "Elche II",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 1,
+      "away_goals": 0
     },
     {
       "id": "1593158",
       "kickoff": "2026-10-25T13:00:00+01:00",
-      "status": "NS",
+      "status": "2H",
       "league": "Frauen Bundesliga",
       "league_id": 82,
       "country": "Germany",
       "home": "1899 Hoffenheim W",
       "away": "Mainz 05 W",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 1,
+      "away_goals": 1
     },
     {
       "id": "1595717",
@@ -8159,25 +8159,25 @@
     {
       "id": "1607708",
       "kickoff": "2026-10-25T13:00:00+01:00",
-      "status": "1H",
+      "status": "2H",
       "league": "FA WSL",
       "league_id": 44,
       "country": "England",
       "home": "Crystal Palace W",
       "away": "Chelsea W",
-      "home_goals": 0,
+      "home_goals": 1,
       "away_goals": 0
     },
     {
       "id": "1609401",
       "kickoff": "2026-10-25T13:00:00+01:00",
-      "status": "1H",
+      "status": "2H",
       "league": "Women's Championship",
       "league_id": 699,
       "country": "England",
       "home": "Watford W",
       "away": "Durham W",
-      "home_goals": 0,
+      "home_goals": 1,
       "away_goals": 0
     },
     {
@@ -8195,62 +8195,62 @@
     {
       "id": "1558655",
       "kickoff": "2026-10-25T13:30:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Jupiler Pro League",
       "league_id": 144,
       "country": "Belgium",
       "home": "Genk",
       "away": "Standard Liege",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 1,
+      "away_goals": 0
     },
     {
       "id": "1576207",
       "kickoff": "2026-10-25T13:30:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "2. Bundesliga",
       "league_id": 79,
       "country": "Germany",
       "home": "Eintracht Braunschweig",
       "away": "Hannover 96",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 1,
+      "away_goals": 0
     },
     {
       "id": "1576211",
       "kickoff": "2026-10-25T13:30:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "2. Bundesliga",
       "league_id": 79,
       "country": "Germany",
       "home": "Holstein Kiel",
       "away": "Dynamo Dresden",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 1,
+      "away_goals": 0
     },
     {
       "id": "1576214",
       "kickoff": "2026-10-25T13:30:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "2. Bundesliga",
       "league_id": 79,
       "country": "Germany",
       "home": "VfL Osnabrück",
       "away": "SpVgg Greuther Fürth",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 0
     },
     {
       "id": "1584051",
       "kickoff": "2026-10-25T13:30:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "3. Liga",
       "league_id": 80,
       "country": "Germany",
       "home": "Havelse",
       "away": "FC Saarbrücken",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 1
     },
     {
       "id": "1604282",
@@ -8267,38 +8267,38 @@
     {
       "id": "1616135",
       "kickoff": "2026-10-25T13:30:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Tercera División RFEF - Group 12",
       "league_id": 450,
       "country": "Spain",
       "home": "Mensajero",
       "away": "UD San Fernando",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 1
     },
     {
       "id": "1621072",
       "kickoff": "2026-10-25T13:30:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Premier League 2 Division One",
       "league_id": 702,
       "country": "England",
       "home": "Middlesbrough U21",
       "away": "Tottenham Hotspur U21",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 1,
+      "away_goals": 0
     },
     {
       "id": "1555410",
       "kickoff": "2026-10-25T14:00:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Super League",
       "league_id": 207,
       "country": "Switzerland",
       "home": "FC Thun",
       "away": "FC Lugano",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 0
     },
     {
       "id": "1566396",
@@ -8315,26 +8315,26 @@
     {
       "id": "1569991",
       "kickoff": "2026-10-25T14:00:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Segunda División",
       "league_id": 141,
       "country": "Spain",
       "home": "Sabadell",
       "away": "Tenerife",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 0
     },
     {
       "id": "1570424",
       "kickoff": "2026-10-25T14:00:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "La Liga",
       "league_id": 140,
       "country": "Spain",
       "home": "Athletic Club",
       "away": "Getafe",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 0
     },
     {
       "id": "1574397",
@@ -8351,14 +8351,14 @@
     {
       "id": "1574642",
       "kickoff": "2026-10-25T14:00:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Frauenliga",
       "league_id": 484,
       "country": "Austria",
       "home": "Südburgenland W",
       "away": "First Vienna W",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 0
     },
     {
       "id": "1577025",
@@ -8459,14 +8459,14 @@
     {
       "id": "1586278",
       "kickoff": "2026-10-25T14:00:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Regionalliga - Bayern",
       "league_id": 83,
       "country": "Germany",
       "home": "Eichstätt",
       "away": "TSV 1860 München",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 0
     },
     {
       "id": "1586608",
@@ -8483,14 +8483,14 @@
     {
       "id": "1586612",
       "kickoff": "2026-10-25T14:00:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Regionalliga - Nord",
       "league_id": 84,
       "country": "Germany",
       "home": "Phönix Lübeck",
       "away": "Atlas Delmenhorst",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 0
     },
     {
       "id": "1586613",
@@ -8519,62 +8519,62 @@
     {
       "id": "1586907",
       "kickoff": "2026-10-25T14:00:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Regionalliga - Nordost",
       "league_id": 85,
       "country": "Germany",
       "home": "BSG Chemie Leipzig",
       "away": "Hertha BSC II",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 0
     },
     {
       "id": "1586910",
       "kickoff": "2026-10-25T14:00:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Regionalliga - Nordost",
       "league_id": 85,
       "country": "Germany",
       "home": "Hallescher FC",
       "away": "Lokomotive Leipzig",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 0
     },
     {
       "id": "1587208",
       "kickoff": "2026-10-25T14:00:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Regionalliga - SudWest",
       "league_id": 86,
       "country": "Germany",
       "home": "SSV Ulm 1846",
       "away": "FC 08 Homburg",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 0
     },
     {
       "id": "1587523",
       "kickoff": "2026-10-25T14:00:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Regionalliga - West",
       "league_id": 87,
       "country": "Germany",
       "home": "Rot-weiss Oberhausen",
       "away": "SG Wattenscheid 09",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 0
     },
     {
       "id": "1593161",
       "kickoff": "2026-10-25T14:00:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Frauen Bundesliga",
       "league_id": 82,
       "country": "Germany",
       "home": "Werder Bremen W",
       "away": "SC Freiburg W",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 0
     },
     {
       "id": "1595721",
@@ -8687,14 +8687,14 @@
     {
       "id": "1608000",
       "kickoff": "2026-10-25T14:00:00+01:00",
-      "status": "NS",
+      "status": "1H",
       "league": "Regionalliga - South",
       "league_id": 1238,
       "country": "Austria",
       "home": "Wolfsberger AC II",
       "away": "Völkermarkt",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 0
     },
     {
       "id": "1618432",
