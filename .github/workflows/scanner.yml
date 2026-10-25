@@ -2,7 +2,8 @@ name: Scanner Conte - Raccolta dati
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 6,17 * * *"
+    - cron: "17 7,18 * * *"
+      timezone: "Europe/Rome"
 
 permissions:
   contents: write
