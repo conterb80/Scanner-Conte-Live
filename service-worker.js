@@ -1,5 +1,5 @@
-const CACHE='scanner-conte-v0.4.0';
-const STATIC=['./','./index.html','./assets/style.css','./assets/app.js','./assets/feed.js','./assets/lab-pilot.js','./assets/icon.svg','./data/seed.js','./manifest.webmanifest'];
+const CACHE='scanner-conte-v0.5.0';
+const STATIC=['./','./index.html','./assets/style.css','./assets/app.js','./assets/feed.js','./assets/lab-pilot.js','./assets/install.js','./assets/bet365.js','./assets/icon.svg','./assets/icon-192.png','./assets/icon-512.png','./data/seed.js','./manifest.webmanifest'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(STATIC)).then(()=>self.skipWaiting()));
 });
