@@ -40,3 +40,12 @@ Il piano gratuito API-Football attualmente include 100 richieste al giorno, con 
 Serviranno uno storico più affidabile delle quote, controlli su rinvii e casi particolari, filtri di copertura, un modello probabilistico indipendente e soprattutto valutazioni fuori campione prima di promuovere candidate REAL.
 
 Non utilizzare il progetto per mettere scommesse automatiche su Bet365.
+
+## V0.5 — Installazione Android e quote Bet365
+
+- Manifest PWA con `assets/icon-192.png` e `assets/icon-512.png`, ID stabile, HTTPS tramite GitHub Pages e Service Worker cache `v0.5.0`.
+- Per installare: aprire il link **direttamente in Chrome Android**, non nel browser integrato di ChatGPT; premere **Installa app** nell'Home dell'app oppure menu ⋮ → Installa app / Aggiungi alla schermata Home. Se la vecchia pagina resta in cache, chiudere e riaprire il sito in Chrome.
+- Scheda Scanner: sezione **Quote Bet365 rilevate**. La fonte è API-Football, con orario di acquisizione; il motore conserva prezzi 1X2, Over/Under 2,5 e Goal/No Goal quando esplicitamente disponibili per bookmaker Bet365.
+- **Non è un collegamento al conto Bet365**: l'API pre-match può aggiornarsi ogni 3 ore e mancare per eventi/mercati; non è un quotatore Bet365 in tempo reale. Prima di una puntata reale verificare sempre il prezzo effettivo nell'app Bet365.
+- Le simulazioni LAB e lo storico privato non sono modificate dagli aggiornamenti. Nessun piazzamento reale automatico.
+- Il workflow si avvia anche a seguito di modifiche tecniche ai due script del motore o al workflow; i commit dei feed non lo riattivano per evitare loop.
