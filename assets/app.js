@@ -115,6 +115,9 @@ renderAll();
 root('settle-refresh')?.addEventListener('click',reconcilePendingFixtures);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)reconcilePendingFixtures()});
 window.addEventListener('focus',reconcilePendingFixtures);
+// Se l'app resta aperta, ricontrolla il feed pubblico ogni 5 minuti.
+// Non richiama API-Football dal telefono e non consuma quote del piano API.
+setInterval(()=>{if(!document.hidden)reconcilePendingFixtures()},5*60*1000);
 reconcilePendingFixtures();
 if('serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
 })();
