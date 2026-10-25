@@ -57,8 +57,7 @@ function normalized(x) {
 
 async function main() {
   if (!key) {
-    console.log('CONFIGURAZIONE ATTESA: manca il secret API_FOOTBALL_KEY. Nessun dato pubblicato.');
-    return;
+    throw new Error('Manca API_FOOTBALL_KEY: controlla il nome esatto del repository secret in Settings > Secrets and variables > Actions.');
   }
   const dates=[dateInRome(-1),dateInRome(0),dateInRome(1)];
   const collected=[];
