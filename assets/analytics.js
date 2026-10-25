@@ -89,6 +89,46 @@
   return [{label:'CORE',s:combined(snapStats(s.core),statsFromRows(recent.filter(r=>String(r.category||'').toUpperCase()==='CORE')))},
   {label:'VALUE',s:combined(snapStats(s.value),statsFromRows(recent.filter(r=>String(r.category||'').toUpperCase()==='VALUE')))}];
  }
+ function realSplit(d){
+  if(!d?.snapshots?.real)return[];
+  const snap=d.snapshots.real,prior=d.records.filter(r=>r.book==='real'&&!r.manual&&r.date<=d.snapshots.as_of);
+  const recent=d.records.filter(r=>r.book==='real'&&r.manual&&r.date>d.snapshots.as_of);
+  const cats=['CORE','VALUE'];
+  // Se tutti gli esiti storici sono ricostruiti e conciliati, calcoliamo il dettaglio.
+  const ok=prior.length===num(snap.total)&&prior.every(r=>cats.includes(String(r.category||'').toUpperCase())&&
+    ['won','lost','push'].includes(r.result)&&valid(r.pnl)&&valid(r.stake))&&
+    Math.abs(round(prior.reduce((n,r)=>n+r.pnl,0))-num(snap.pnl))<0.015;
+  if(ok)return cats.map(label=>({label,s:{
+    ...statsFromRows(prior.filter(r=>String(r.category||'').toUpperCase()===label)
+      .concat(recent.filter(r=>String(r.category||'').toUpperCase()===label))),
+    bankroll:null
+  }}));
+  // Se esistono riepiloghi di categoria espliciti, utilizziamoli senza deduzioni.
+  const split=snap.core_value_split;
+  if(!split||typeof split!=='object')return[];
+  const first=split.core||split.CORE,second=split.value||split.VALUE;
+  if(!first||!second||!valid(first.total)||!valid(second.total))return[];
+  return [{label:'CORE',s:combined(snapStats(first),statsFromRows(recent.filter(r=>String(r.category||'').toUpperCase()==='CORE')))},
+  {label:'VALUE',s:combined(snapStats(second),statsFromRows(recent.filter(r=>String(r.category||'').toUpperCase()==='VALUE')))}];
+ }
+ function autoSplit(){
+  const rows=Array.isArray(auto?.records)?auto.records:[];
+  return [
+   {label:'Favorita 1X2',strategy:'FAVORITA_1X2_CONTROLLO'},
+   {label:'Over 2,5',strategy:'OVER25_CONTROLLO'}
+  ].map(({label,strategy})=>{
+   const selected=rows.filter(r=>r.strategy===strategy);
+   const closed=selected.filter(r=>['won','lost','push'].includes(r.status));
+   return {label,s:{
+    total:selected.length,wins:selected.filter(r=>r.status==='won').length,
+    losses:selected.filter(r=>r.status==='lost').length,pushes:selected.filter(r=>r.status==='push').length,
+    pending:selected.filter(r=>r.status==='pending').length,
+    pnl:round(closed.reduce((x,r)=>x+num(r.pnl),0)),
+    stake:closed.every(r=>valid(r.stake_virtual))?round(closed.reduce((x,r)=>x+r.stake_virtual,0)):null,
+    bankroll:null
+   }};
+  });
+ }
  function trend(d,book){
   if(book==='auto'){
    const closed=(auto?.records||[]).filter(r=>valid(r.pnl)&&r.settled_at).sort((a,b)=>String(a.settled_at).localeCompare(String(b.settled_at)));
@@ -140,10 +180,13 @@
    card('ROI',pct(roi(s)),Number.isFinite(roi(s))?'Su puntate con esito chiuso':'Puntate totali non verificabili')+
    '</div>'+rateBars([{label:title,s}]);
   if(s.bankroll!==null)html+='<p class="muted small">Bankroll di riferimento: <b>'+escape(eur(s.bankroll))+'</b>. I movimenti nuovi con esito vengono aggiunti al dato consolidato.</p>';
-  if(selection==='main'){
-   const split=mainSplit(d);
-   if(split.length)html+='<div class="analytic-divider"></div><div class="analytic-chart-label">CORE e VALUE · virtuale principale</div>'+
-   pnlBars(split.map(x=>({...x,pnl:x.s.pnl})))+rateBars(split);
+  const breakdown=selection==='main'?mainSplit(d):selection==='real'?realSplit(d):selection==='auto'?autoSplit():[];
+  if(breakdown.length){
+   html+='<div class="analytic-divider"></div><div class="analytic-chart-label">'+
+     (selection==='main'?'CORE e VALUE · principale':selection==='real'?'CORE e VALUE · REAL':'Confronto strategie · LAB automatico')+'</div>'+
+     pnlBars(breakdown.map(x=>({...x,pnl:x.s.pnl})))+rateBars(breakdown);
+  }else if(selection==='real'){
+   html+='<p class="muted small">Dettaglio CORE/VALUE non ancora riconciliato nei record storici: non mostro percentuali parziali come definitive.</p>';
   }
   html+='<div class="analytic-divider"></div>'+trend(d,selection);
   if(selection==='lab')html+='<p class="muted small">Il LAB storico è separato dai test del motore automatico.</p>';
