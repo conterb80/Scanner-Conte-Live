@@ -46,8 +46,10 @@
   </section>
   <section id="view-scanner" class="view">
    <div class="pagelead compact"><div class="eyebrow">RADAR / CANDIDATE</div><h1>Prima i dati.<br><em>Poi la quota.</em></h1><p>Lista di proposte archiviate, non quote aggiornate in tempo reale.</p></div>
-   <div class="notice amber"><span class="notice-icon">⌁</span><div><b>Raccolta automatica in preparazione.</b><br>Le candidate del 25 ottobre sono storiche: non sono scommesse registrate né pronostici aggiornati.</div></div>
-   <div class="sectionbar"><h2>Palinsesto automatico · V0.2</h2><button class="button secondary" type="button" id="feed-refresh">Aggiorna</button></div><div id="feed-summary" class="surface pad" role="status" aria-live="polite">Verifica del feed…</div><div id="feed-fixtures" class="candidates"></div>
+   <div class="notice amber"><span class="notice-icon">⌁</span><div><b>Raccolta automatica attiva.</b><br>Le candidate del 25 ottobre sono storiche: non sono scommesse registrate né pronostici aggiornati.</div></div>
+   <div class="sectionbar"><h2>Palinsesto automatico · V0.3</h2><button class="button secondary" type="button" id="feed-refresh">Aggiorna</button></div><div id="feed-summary" class="surface pad" role="status" aria-live="polite">Verifica del feed…</div>
+   <div class="feed-filters surface pad" aria-label="Filtri del palinsesto"><label>Copertura<select id="feed-scope"><option value="main" selected>Campionati prioritari</option><option value="all">Tutte le competizioni</option></select></label><label>Giorno<select id="feed-day"><option value="today" selected>Oggi</option><option value="tomorrow">Domani</option><option value="all">Tutti i giorni disponibili</option></select></label><label>Paese<select id="feed-country"><option value="all">Tutti i paesi</option></select></label><label>Campionato<select id="feed-league"><option value="all">Tutte le leghe</option></select></label></div>
+   <div id="feed-fixtures" class="candidates"></div>
    <div id="scanner-meta" class="surface pad scanner-summary"></div>
    <div class="sectionbar"><h2>Candidate storiche · 25 ottobre</h2></div><div id="candidate-list" class="candidates"></div>
    <div class="sectionbar"><h2>Prossima integrazione</h2></div><div class="surface pad method"><span class="method-icon">⚙️</span><div><strong>Feed partite + quote + modello probabilistico</strong><p>Lo sviluppo prevede API dati, scansione programmata, registrazione dei segnali prima degli incontri e risultati automatici. Nessuna chiave API è necessaria per usare l'archivio V0.1.</p></div></div>
