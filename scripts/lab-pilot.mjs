@@ -112,6 +112,9 @@ async function main(){
    if(previous==='pending'&&record.status!=='pending')closed++;
  }
  const candidates=selectUpcoming(feed.fixtures),samples=[],newRows=[],errors=[];
+ // Il palinsesto ha consumato 3 richieste poco prima: lasciamo spazio
+ // al limite gratuito di 10 richieste al minuto.
+ if(candidates.length)await pause(15000);
  for(let i=0;i<candidates.length;i++){
   const fixture=candidates[i];
   if(Number.isFinite(remaining)&&remaining<12){errors.push('Interrotto per proteggere la quota API.');break;}
