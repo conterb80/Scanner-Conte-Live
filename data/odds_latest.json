@@ -1,0 +1,13 @@
+{
+  "schema": "scanner-conte-odds-v1",
+  "generated_at": null,
+  "fixture_snapshot": null,
+  "requested": 0,
+  "with_odds": 0,
+  "api_remaining": null,
+  "errors": [],
+  "notes": [
+    "Pilota non ancora eseguito; nessuna quota inventata."
+  ],
+  "samples": []
+}
