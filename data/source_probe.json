@@ -1,0 +1,105 @@
+{
+  "schema": "scanner-conte-open-source-probe-v1",
+  "mode": "DIAGNOSTIC_ONLY",
+  "day": "2026-10-26",
+  "checked_at": "2026-10-26T19:55:46.185Z",
+  "description": "Non sono scommesse o consigli; test tecnico della copertura di quote pubbliche prima del calcio d’inizio.",
+  "changes_to_lab": 0,
+  "real_bets": 0,
+  "sources": {
+    "tipsaudit": {
+      "provider": "TipsAudit",
+      "reference": "https://tipsaudit.com/api",
+      "attribution": "Data: TipsAudit — https://tipsaudit.com",
+      "auth": "none",
+      "license": "Free with visible attribution",
+      "status": "ok",
+      "generated_at": "2026-10-26T19:55:46+00:00",
+      "feed_fresh_90m": true,
+      "predictions_returned": 327,
+      "future_matches_48h": 63,
+      "odds_observed_48h": 13,
+      "usable_fresh_1x2_quotes_48h": 13,
+      "distinct_bookmakers": [
+        "Unibet (SE)",
+        "GTbets",
+        "Unibet (NL)",
+        "1xBet",
+        "Coolbet"
+      ],
+      "sample": [
+        {
+          "home": "Union Santa Fe",
+          "away": "Estudiantes L.P.",
+          "kickoff_utc": "2026-10-26T22:00:00+00:00",
+          "market": "1X2",
+          "selection": "2",
+          "quote": 2.88,
+          "bookmaker": "Unibet (SE)",
+          "captured_by_probe_at": "2026-10-26T19:55:46.185Z",
+          "provider_generated_at": "2026-10-26T19:55:46+00:00",
+          "provider_reference": "https://tipsaudit.com/match/11874/union-santa-fe-vs-estudiantes-lp-2026-10-26"
+        },
+        {
+          "home": "Flamengo",
+          "away": "Atletico-MG",
+          "kickoff_utc": "2026-10-26T23:00:00+00:00",
+          "market": "1X2",
+          "selection": "1",
+          "quote": 1.28,
+          "bookmaker": "GTbets",
+          "captured_by_probe_at": "2026-10-26T19:55:46.185Z",
+          "provider_generated_at": "2026-10-26T19:55:46+00:00",
+          "provider_reference": "https://tipsaudit.com/match/11877/flamengo-vs-atletico-mg-2026-10-26"
+        },
+        {
+          "home": "AIK Stockholm",
+          "away": "IF Elfsborg",
+          "kickoff_utc": "2026-10-27T18:00:00+00:00",
+          "market": "1X2",
+          "selection": "1",
+          "quote": 3.35,
+          "bookmaker": "Unibet (SE)",
+          "captured_by_probe_at": "2026-10-26T19:55:46.185Z",
+          "provider_generated_at": "2026-10-26T19:55:46+00:00",
+          "provider_reference": "https://tipsaudit.com/match/11958/aik-stockholm-vs-if-elfsborg-2026-10-27"
+        },
+        {
+          "home": "Ascoli",
+          "away": "Sampdoria",
+          "kickoff_utc": "2026-10-27T19:00:00+00:00",
+          "market": "1X2",
+          "selection": "1",
+          "quote": 2.28,
+          "bookmaker": "Unibet (NL)",
+          "captured_by_probe_at": "2026-10-26T19:55:46.185Z",
+          "provider_generated_at": "2026-10-26T19:55:46+00:00",
+          "provider_reference": "https://tipsaudit.com/match/11962/ascoli-vs-sampdoria-2026-10-27"
+        },
+        {
+          "home": "Padova",
+          "away": "Sudtirol",
+          "kickoff_utc": "2026-10-27T19:00:00+00:00",
+          "market": "1X2",
+          "selection": "2",
+          "quote": 3.2,
+          "bookmaker": "Unibet (NL)",
+          "captured_by_probe_at": "2026-10-26T19:55:46.185Z",
+          "provider_generated_at": "2026-10-26T19:55:46+00:00",
+          "provider_reference": "https://tipsaudit.com/match/11965/padova-vs-sudtirol-2026-10-27"
+        }
+      ]
+    },
+    "open_matchday": {
+      "provider": "open-matchday",
+      "reference": "https://github.com/oladeeayo/open-matchday",
+      "attribution": "open-matchday — https://github.com/oladeeayo/open-matchday",
+      "auth": "none",
+      "status": "ok",
+      "metadata_readable": true,
+      "advertised_competitions": 75,
+      "updated_at": null
+    }
+  },
+  "conclusion": "CANDIDATE_SOURCE_FOR_PAPER_TESTS"
+}
