@@ -50,7 +50,7 @@ async function main(){
   const observations=upcoming.filter(x=>{
    const v=x.value;
    return v&&finitePrice(v.best_soft_odds)&&typeof v.bookmaker==='string'&&v.bookmaker.trim()&&
-    ['1','X','2','home','draw','away'].includes(String(v.selection||'').toLowerCase().replace('home','home').replace('away','away'))&&
+    ['1','x','2','home','draw','away'].includes(String(v.selection||'').trim().toLowerCase())&&
     ['actionable','monitor'].includes(String(x.status));
   });
   // Snapshot valido solo se l'intero feed e aggiornato di recente.
