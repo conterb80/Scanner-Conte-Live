@@ -1,12 +1,17 @@
 {
   "schema": "scanner-conte-football-data-v1",
   "provider": "Football-Data.co.uk",
-  "updated_at": "2026-10-26T13:28:20.699Z",
-  "test_only": true,
-  "published": false,
+  "updated_at": "2026-10-26T13:29:48.104Z",
+  "test_only": false,
+  "published": true,
   "fixture_rows": 194,
   "result_rows": 755,
   "leagues_ok": 9,
-  "new_paper_tests_uncommitted": 3,
-  "note": "Test fetch riuscito, commit respinto da conflitto. Nessuna nuova simulazione considerata acquisita. Stop download per 36 ore."
+  "note": "Source CSV tested through GitHub; three new paper bets saved before kickoff. No RAW CSV redistributed.",
+  "week_monday": "2026-10-26",
+  "weekly_download_sessions": 2,
+  "total_paper_tests": 33,
+  "pending": 17,
+  "new_paper_tests_saved": 3,
+  "info": "Entrambe le prove CSV sono avvenute il 26/10; nuovo download consentito dalla prossima settimana (max due alla settimana)."
 }
