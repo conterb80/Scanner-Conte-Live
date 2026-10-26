@@ -46,7 +46,7 @@ const parseScore=s=>/^\d+$/.test(String(s??''))?Number(s):null;
 async function collect(slug,dates){
  const url=new URL(BASE+slug+'/scoreboard');
  url.searchParams.set('dates',dates);
- url.searchParams.set('limit','100');
+ url.searchParams.set('limit','150');
  const res=await fetch(url,{headers:{'Accept':'application/json','User-Agent':'ScannerConteResearch/1.0 (noncommercial, results-only)'},signal:AbortSignal.timeout(18000)});
  if(!res.ok)throw Error('ESPN '+slug+' HTTP '+res.status);
  const data=await res.json();
@@ -86,7 +86,9 @@ async function main(){
  if(feed.schema!=='scanner-conte-fixtures-v1'||lab.schema!=='scanner-conte-lab-v1')throw Error('Archivi esistenti non validi');
  // La finestra comprende fino a due giorni: nessuna nuova quota, limitati solo agli eventi di interesse.
  const now=new Date(),utcNow=now.toISOString().slice(0,10);
- const dates=[new Date(now.valueOf()-48*3600000).toISOString().slice(0,10),utcNow].map(s=>s.replaceAll('-','')).join('-');
+ // ESPN ha smesso di accettare gli intervalli YYYYMMDD-YYYYMMDD nel 2026.
+ // Per un mese sono sufficienti <=100 partite per la maggior parte delle leghe.
+ const dates=utcNow.slice(0,7).replaceAll('-','');
  const wanted=[...new Set(feed.fixtures.filter(m=>{
   const t=Date.parse(m.kickoff);return Number.isFinite(t)&&t<=Date.now()&&t>=Date.now()-72*3600000
  }).map(m=>LEAGUES[m.country+'|'+m.league]).filter(Boolean))].sort();
