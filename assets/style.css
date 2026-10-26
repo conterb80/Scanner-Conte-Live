@@ -93,3 +93,6 @@
 .settle-control span{font-size:10px;line-height:1.45;color:var(--soft);flex:1}
 .settle-control button{font-size:11px;flex:none}
 @media(max-width:440px){.settle-control{align-items:flex-start}.settle-control button{padding:8px 9px}}
+
+/* Stato provider V0.8 */
+.data-source-strip{margin:10px 0 0;padding:9px 11px;border:1px solid var(--line);border-radius:9px;color:var(--soft);font-size:10px;line-height:1.55;background:#10202b;}
