@@ -198,7 +198,17 @@ async function main(){
   const id='fd-'+row.Div+'-'+gameDate(row).replaceAll('-','')+'-'+slug(row.HomeTeam)+'-'+slug(row.AwayTeam);
   for(const pick of suggested){
    const recId=id+':'+pick.strategy;
-   if(lab.records.some(x=>x.id===recId))continue;
+   // Stessa partita/data/strategia non deve essere testata due volte
+   // neppure quando cambia il provider e quindi cambia fixture_id.
+   const duplicate=lab.records.some(existing=>{
+     if(existing.id===recId)return true;
+     if(existing.strategy!==pick.strategy)return false;
+     const teams=String(existing.match).split(/\s+-\s+/);
+     if(teams.length!==2||!existing.kickoff)return false;
+     const existingDate=new Intl.DateTimeFormat('sv-SE',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(existing.kickoff));
+     return existingDate===gameDate(row)&&team(teams[0])===team(row.HomeTeam)&&team(teams[1])===team(row.AwayTeam);
+   });
+   if(duplicate)continue;
    // Never create entries from a match already started (no hindsight).
    if(Date.parse(kickoff)<=Date.now()+45*60000)continue;
    const record={id:recId,fixture_id:id,kickoff,match:row.HomeTeam+' - '+row.AwayTeam,
