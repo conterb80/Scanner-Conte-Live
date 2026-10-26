@@ -14,10 +14,11 @@ const humanStrategy=s=>s==='FAVORITA_1X2_CONTROLLO'?'Favorita 1X2 (controllo)':s
 async function refresh(){
  reload.disabled=true;info.textContent='Leggo gli esperimenti del motore…';list.innerHTML='';
  try{
-  const [labReq,oddsReq,openReq]=await Promise.all([
+  const [labReq,oddsReq,openReq,historicalReq]=await Promise.all([
     fetch('./data/lab_auto.json?t='+Date.now(),{cache:'no-store'}),
     fetch('./data/odds_latest.json?t='+Date.now(),{cache:'no-store'}),
-    fetch('./data/fallback_status.json?t='+Date.now(),{cache:'no-store'}).catch(()=>null)
+    fetch('./data/fallback_status.json?t='+Date.now(),{cache:'no-store'}).catch(()=>null),
+    fetch('./data/historical_baselines.json?t='+Date.now(),{cache:'no-store'}).catch(()=>null)
   ]);
   if(!labReq.ok||!oddsReq.ok)throw Error('File LAB o quote non disponibile');
   const lab=await labReq.json(),odds=await oddsReq.json();
@@ -27,6 +28,12 @@ async function refresh(){
    try{
     const candidate=await openReq.json();
     if(candidate?.schema==='scanner-conte-fallback-v1')open=candidate;
+   }catch{}
+  }
+  let retrospective=null;
+  if(historicalReq?.ok){
+   try{const candidate=await historicalReq.json();
+    if(candidate?.schema==='scanner-conte-historical-baselines-v1'&&candidate.kind==='RETROSPECTIVE_ONLY')retrospective=candidate;
    }catch{}
   }
   const records=Array.isArray(lab.records)?lab.records:[];
@@ -40,8 +47,15 @@ async function refresh(){
     ' · Campione: '+esc(odds.with_odds||0)+' / '+esc(odds.requested||0)+' incontri.</p>'+
     (open?'<p class="muted small"><b>Risultati ESPN senza chiave:</b> ultima verifica '+esc(date(open.checked_at))+
      ' · '+esc(open.leagues_success)+' campionati risposti su '+esc(open.leagues_requested)+
-     '. Nuove quote e nuove simulazioni sospese finché manca una fonte prepartita affidabile.</p>':
+     '. Nuovi test prepartita solo quando la fonte quote fornisce dati validi; raccolta Football-Data limitata a due sessioni settimanali.</p>':
      '<p class="muted small">Controllo risultati alternativo non ancora disponibile.</p>')+
+    (retrospective?'<p class="muted small"><b>Confronto storico retrospettivo · NON LAB prepartita:</b> '+
+     ['FAVORITA_1X2_CONTROLLO','OVER25_CONTROLLO'].map((k,i)=>{
+      const x=retrospective.by_strategy?.[k]?.all;
+      if(!x)return '';
+      return (i?' · ':'')+(i?'Over 2,5':'Favorita 1X2')+': '+esc(x.tests)+' casi, ROI teorico '+(x.roi_pct===null?'—':esc(String(x.roi_pct).replace('.',',')+'%'));
+     }).join('')+'. Risultati esplorativi su quote archiviate, non una strategia validata.</p>':
+     '<p class="muted small">Confronto storico: disponibile dopo la prossima raccolta settimanale consentita.</p>')+
     '<p class="muted small">ROI sperimentale '+roi+'. *Risultato su stake virtuale 1 € per test chiuso; non un guadagno reale. Quote della fonte indicata, non necessariamente Bet365.</p>'+
     '<p class="muted small">Le strategie sono baseline di confronto. Le probabilità derivano dal mercato e non rappresentano un vantaggio dimostrato.</p>';
   if(!records.length){list.innerHTML='<div class="surface pad muted small">Il LAB pilota è pronto ma non ha ancora registrato esperimenti. I test partiranno solo quando il motore trova quote valide prima del calcio d’inizio.</div>';return;}
