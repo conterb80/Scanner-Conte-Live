@@ -7,11 +7,12 @@
   "fixture_rows": 194,
   "result_rows": 755,
   "leagues_ok": 9,
-  "note": "Source CSV tested through GitHub; three new paper bets saved before kickoff. No RAW CSV redistributed.",
+  "note": "Sono state osservate tre quote alternative su incontri già presenti nel LAB. Le quote sono conservate per confronto, ma non creano test doppi. Due sessioni CSV usate questa settimana.",
   "week_monday": "2026-10-26",
   "weekly_download_sessions": 2,
-  "total_paper_tests": 33,
-  "pending": 17,
-  "new_paper_tests_saved": 3,
-  "info": "Entrambe le prove CSV sono avvenute il 26/10; nuovo download consentito dalla prossima settimana (max due alla settimana)."
+  "total_paper_tests": 30,
+  "pending": 14,
+  "new_paper_tests_saved": 0,
+  "info": "Sorgente CSV verificata con 194 fixture e 755 risultati. Prossimi download dalla settimana del 2 novembre per rispettare il limite di due sessioni settimanali.",
+  "duplicate_quote_observations": 3
 }
