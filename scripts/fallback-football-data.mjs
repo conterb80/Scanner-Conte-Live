@@ -133,12 +133,21 @@ function matchRow(fixture,rows){
 }
 async function main(){
  const now=new Date(),captured_at=now.toISOString();
- // Fair use: non ripetere i download entro 36 ore anche se avviato manualmente.
- // La fonte consente massimo due sessioni automatiche settimanali.
+ // Fair use: al massimo due sessioni automatiche per settimana.
+ const day=today();
+ const t=new Date(day+'T12:00:00Z');
+ t.setUTCDate(t.getUTCDate()-(t.getUTCDay()+6)%7);
+ const week=t.toISOString().slice(0,10);
+ let used=0;
  try{
   const previous=JSON.parse(await readFile(FILES.status,'utf8'));
+  used=previous.week_monday===week?Number(previous.weekly_download_sessions||0):0;
+  if(used>=2){
+   console.log('SKIP: limite di due sessioni settimanali raggiunto.');
+   return;
+  }
   if(previous.updated_at&&Date.now()-Date.parse(previous.updated_at)<36*3600000){
-   console.log('SKIP: fonte scaricata da meno di 36 ore; rispetto frequenza fornitore.');
+   console.log('SKIP: fonte scaricata da meno di 36 ore.');
    return;
   }
  }catch{}
@@ -211,7 +220,8 @@ async function main(){
  feed.last_result_refresh=captured_at;
  feed.fallback_source='Football-Data.co.uk (league limited, two updates/week)';
  const status={schema:'scanner-conte-fallback-v1',provider:'Football-Data.co.uk',mode:'PERSONAL_FALLBACK',
-  updated_at:captured_at,feed_date:today(),next_update_policy:'Tuesday and Friday only',
+  updated_at:captured_at,feed_date:today(),week_monday:week,weekly_download_sessions:used+1,
+  next_update_policy:'Tuesday and Friday only',
   fixture_rows:fixtureRows.length,result_rows:results.length,leagues_ok:LEAGUES.length-failed.length,
   leagues_failed:failed,matched_existing:matched,settled_existing:closed,new_paper_tests:picks.length,
   total_paper_tests:lab.stats.total,pending:lab.stats.pending,
