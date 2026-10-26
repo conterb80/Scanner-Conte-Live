@@ -1,0 +1,12 @@
+{
+  "schema": "scanner-conte-football-data-v1",
+  "provider": "Football-Data.co.uk",
+  "updated_at": "2026-10-26T13:28:20.699Z",
+  "test_only": true,
+  "published": false,
+  "fixture_rows": 194,
+  "result_rows": 755,
+  "leagues_ok": 9,
+  "new_paper_tests_uncommitted": 3,
+  "note": "Test fetch riuscito, commit respinto da conflitto. Nessuna nuova simulazione considerata acquisita. Stop download per 36 ore."
+}
