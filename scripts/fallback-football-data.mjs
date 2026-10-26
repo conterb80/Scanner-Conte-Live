@@ -131,6 +131,51 @@ function matchRow(fixture,rows){
  const matches=rows.filter(r=>gameDate(r)===date&&team(r.HomeTeam)===team(fixture.home)&&team(r.AwayTeam)===team(fixture.away));
  return matches.length===1?matches[0]:null;
 }
+
+/** Analisi retrospettiva separata dal LAB prepartita.
+ * Usa esclusivamente CSV gia scaricati in questa sessione: zero richieste aggiuntive.
+ * Le quote archiviate NON diventano pronostici piazzati nel passato.
+ */
+function historicalBaselines(rows,capturedAt){
+ const data=[],seen=new Set();
+ for(const row of rows){
+  const score=completed(row),day=gameDate(row);
+  if(!score||!day)continue;
+  const fixtureKey=[row.Div,day,team(row.HomeTeam),team(row.AwayTeam)].join('|');
+  if(seen.has(fixtureKey))continue;seen.add(fixtureKey);
+  for(const pick of oddsPicks(row)){
+   let hit=null;
+   if(pick.strategy==='OVER25_CONTROLLO')hit=score.h+score.a>2;
+   if(pick.strategy==='FAVORITA_1X2_CONTROLLO')
+    hit=pick.selection==='Home'?score.h>score.a:score.a>score.h;
+   if(hit===null)continue;
+   data.push({day,division:row.Div,strategy:pick.strategy,odds:pick.odds,won:hit,
+    pnl:hit?pick.odds-1:-1});
+  }
+ }
+ const summarise=items=>{
+  const n=items.length,wins=items.filter(x=>x.won).length,pnl=rounded(items.reduce((a,x)=>a+x.pnl,0));
+  return {tests:n,wins,losses:n-wins,win_rate_pct:n?rounded(wins/n*100):null,
+   virtual_stake_eur:n,virtual_pnl_eur:pnl,roi_pct:n?rounded(pnl/n*100):null,
+   mean_odds:n?rounded(items.reduce((a,x)=>a+x.odds,0)/n):null};
+ };
+ const strategies=['FAVORITA_1X2_CONTROLLO','OVER25_CONTROLLO'];
+ const byStrategy=Object.fromEntries(strategies.map(s=>{
+  const subset=data.filter(x=>x.strategy===s).sort((a,b)=>a.day.localeCompare(b.day));
+  const boundary=Math.floor(subset.length*0.7);
+  return [s,{all:summarise(subset),early_70pct:summarise(subset.slice(0,boundary)),
+   recent_30pct:summarise(subset.slice(boundary))}];
+ }));
+ const byLeague=Object.fromEntries([...new Set(data.map(x=>x.division))].sort()
+  .map(div=>[div,Object.fromEntries(strategies.map(s=>[s,summarise(data.filter(x=>x.division===div&&x.strategy===s))]))]));
+ return {schema:'scanner-conte-historical-baselines-v1',calculated_at:capturedAt,
+  provider:'Football-Data.co.uk historical CSV',kind:'RETROSPECTIVE_ONLY',
+  disclaimer:'Analisi storica esplorativa con quote archiviate. Non sono test registrati prima delle partite, non sono giocate reali e non dimostrano un vantaggio futuro.',
+  methodology:'Regole fisse del LAB: favorite 1X2 quota 1,45-2,10 e Over 2,5 quota 1,60-2,20. Una puntata virtuale teorica di 1 euro per selezione. Nessuna commissione. Segmentazione temporale 70/30 descrittiva, NON validazione fuori campione.',
+  source_completed_matches:seen.size,retrospective_selections:data.length,
+  by_strategy:byStrategy,by_league:byLeague};
+}
+
 async function main(){
  const now=new Date(),captured_at=now.toISOString();
  // Fair use: al massimo due sessioni automatiche per settimana.
@@ -162,6 +207,7 @@ async function main(){
   }catch(e){failed.push(div+': '+e.message)}
  }
  if(!results.length)throw Error('Nessun campionato storico disponibile. '+failed.join('; '));
+ const historical=historicalBaselines(results,captured_at);
  const lab=JSON.parse(await readFile(FILES.lab,'utf8'));
  const feed=JSON.parse(await readFile(FILES.feed,'utf8'));
  if(lab.schema!=='scanner-conte-lab-v1'||!Array.isArray(lab.records)||feed.schema!=='scanner-conte-fixtures-v1')throw Error('Dati esistenti non validi');
@@ -239,6 +285,7 @@ async function main(){
  await writeFile(FILES.lab,JSON.stringify(lab,null,2)+'\n');
  await writeFile(FILES.feed,JSON.stringify(feed,null,2)+'\n');
  await writeFile(FILES.status,JSON.stringify(status,null,2)+'\n');
+ await writeFile('data/historical_baselines.json',JSON.stringify(historical,null,2)+'\n');
  console.log('Fallback OK: '+JSON.stringify(status));
 }
 main().catch(e=>{console.error('FALLBACK FAILED: '+e.message);process.exitCode=1});
