@@ -1,0 +1,49 @@
+name: Scanner Conte - Prova fonti aperte (isolata)
+# Test diagnostico: nessun cambiamento al LAB, nessuna nuova scommessa.
+# Un tentativo per sorgente al giorno; prova limitata al 02/11/2026.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/probe-open-sources.mjs'
+      - '.github/workflows/probe-open-sources.yml'
+  schedule:
+    - cron: "27 8 * * *"
+      timezone: "Europe/Rome"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scanner-conte-open-sources-probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verifica disponibilita e freschezza delle fonti senza chiavi
+        run: node scripts/probe-open-sources.mjs
+      - name: Pubblica solo lo stato diagnostico, non le scommesse
+        run: |
+          if [ ! -f data/source_probe.json ]; then
+            echo "Nessuno stato nuovo (prova gia eseguita oggi oppure conclusa)"
+            exit 0
+          fi
+          git add data/source_probe.json
+          if git diff --cached --quiet; then
+            echo "Nessun cambiamento"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Registra diagnosi giornaliera fonti pubbliche senza chiavi"
+          git fetch origin main
+          git rebase origin/main
+          git push
