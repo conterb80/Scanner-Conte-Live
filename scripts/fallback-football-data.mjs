@@ -9,7 +9,7 @@ import { readFile,writeFile } from 'node:fs/promises';
 const FIXTURES='https://www.football-data.co.uk/fixtures.csv';
 const BASE='https://www.football-data.co.uk/mmz4281';
 const LEAGUES=['I1','I2','E0','E1','E2','D1','SP1','F1','N1'];
-const FILES={feed:'data/fixtures_latest.json',lab:'data/lab_auto.json',status:'data/fallback_status.json'};
+const FILES={feed:'data/fixtures_latest.json',lab:'data/lab_auto.json',status:'data/football_data_status.json'};
 const TZ='Europe/Rome';
 function today(){return new Intl.DateTimeFormat('sv-SE',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
 function dateCode(date=new Date()){
@@ -133,6 +133,16 @@ function matchRow(fixture,rows){
 }
 async function main(){
  const now=new Date(),captured_at=now.toISOString();
+ // Fair use: non ripetere i download entro 36 ore anche se avviato manualmente.
+ // La fonte consente massimo due sessioni automatiche settimanali.
+ try{
+  const previous=JSON.parse(await readFile(FILES.status,'utf8'));
+  if(previous.updated_at&&Date.now()-Date.parse(previous.updated_at)<36*3600000){
+   console.log('SKIP: fonte scaricata da meno di 36 ore; rispetto frequenza fornitore.');
+   return;
+  }
+ }catch{}
+
  const fixtureRows=await getCSV(FIXTURES);
  const season=dateCode(now);
  const results=[],failed=[];
