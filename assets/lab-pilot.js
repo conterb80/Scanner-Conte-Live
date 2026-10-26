@@ -14,13 +14,21 @@ const humanStrategy=s=>s==='FAVORITA_1X2_CONTROLLO'?'Favorita 1X2 (controllo)':s
 async function refresh(){
  reload.disabled=true;info.textContent='Leggo gli esperimenti del motore…';list.innerHTML='';
  try{
-  const [labReq,oddsReq]=await Promise.all([
+  const [labReq,oddsReq,openReq]=await Promise.all([
     fetch('./data/lab_auto.json?t='+Date.now(),{cache:'no-store'}),
-    fetch('./data/odds_latest.json?t='+Date.now(),{cache:'no-store'})
+    fetch('./data/odds_latest.json?t='+Date.now(),{cache:'no-store'}),
+    fetch('./data/fallback_status.json?t='+Date.now(),{cache:'no-store'}).catch(()=>null)
   ]);
   if(!labReq.ok||!oddsReq.ok)throw Error('File LAB o quote non disponibile');
   const lab=await labReq.json(),odds=await oddsReq.json();
   if(lab.schema!=='scanner-conte-lab-v1'||odds.schema!=='scanner-conte-odds-v1')throw Error('Formato LAB non valido');
+  let open=null;
+  if(openReq?.ok){
+   try{
+    const candidate=await openReq.json();
+    if(candidate?.schema==='scanner-conte-fallback-v1')open=candidate;
+   }catch{}
+  }
   const records=Array.isArray(lab.records)?lab.records:[];
   const won=records.filter(x=>x.status==='won'),lost=records.filter(x=>x.status==='lost');
   const pending=records.filter(x=>x.status==='pending');
@@ -28,8 +36,12 @@ async function refresh(){
   const settled=won.length+lost.length;
   const roi=settled?((pnl/settled)*100).toFixed(1).replace('.',',')+'%':'—';
   info.innerHTML='<div class="lab-auto-stats"><div><span>Test virtuali</span><strong>'+records.length+'</strong></div><div><span>In attesa</span><strong>'+pending.length+'</strong></div><div><span>Chiusi</span><strong>'+settled+'</strong></div><div><span>Risultato*</span><strong>'+money(pnl)+'</strong></div></div>'+
-    '<p class="muted small">Ultimo controllo: '+esc(lab.last_run?date(lab.last_run):'non ancora eseguito')+
-    ' · Campione quote: '+esc(odds.with_odds||0)+' / '+esc(odds.requested||0)+' incontri esaminati.</p>'+
+    '<p class="muted small">Ultima acquisizione quote: '+esc(lab.last_run?date(lab.last_run):'non ancora eseguita')+
+    ' · Campione: '+esc(odds.with_odds||0)+' / '+esc(odds.requested||0)+' incontri.</p>'+
+    (open?'<p class="muted small"><b>Risultati ESPN senza chiave:</b> ultima verifica '+esc(date(open.checked_at))+
+     ' · '+esc(open.leagues_success)+' campionati risposti su '+esc(open.leagues_requested)+
+     '. Nuove quote e nuove simulazioni sospese finché manca una fonte prepartita affidabile.</p>':
+     '<p class="muted small">Controllo risultati alternativo non ancora disponibile.</p>')+
     '<p class="muted small">ROI sperimentale '+roi+'. *Risultato su stake virtuale 1 € per test chiuso; non un guadagno reale. Quote della fonte indicata, non necessariamente Bet365.</p>'+
     '<p class="muted small">Le strategie sono baseline di confronto. Le probabilità derivano dal mercato e non rappresentano un vantaggio dimostrato.</p>';
   if(!records.length){list.innerHTML='<div class="surface pad muted small">Il LAB pilota è pronto ma non ha ancora registrato esperimenti. I test partiranno solo quando il motore trova quote valide prima del calcio d’inizio.</div>';return;}
