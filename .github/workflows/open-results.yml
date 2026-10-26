@@ -1,0 +1,43 @@
+name: Scanner Conte - Risultati senza chiave
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/open-results.yml'
+      - 'scripts/collect-open-results.mjs'
+  schedule:
+    - cron: "37 7,23 * * *"
+      timezone: "Europe/Rome"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scanner-conte-feed
+  cancel-in-progress: false
+
+jobs:
+  collect-open-results:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verifica finali da fonte pubblica senza API key
+        run: node scripts/collect-open-results.mjs
+      - name: Pubblica solo risultati verificati e test LAB
+        run: |
+          if git diff --quiet -- data/fixtures_latest.json data/lab_auto.json && [ ! -f data/fallback_status.json ]; then
+            echo "Nessun nuovo esito"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fixtures_latest.json data/lab_auto.json data/fallback_status.json
+          git commit -m "Verifica esiti virtuali con fonte gratuita alternativa"
+          git fetch origin main
+          git rebase origin/main
+          git push
