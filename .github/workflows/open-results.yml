@@ -30,13 +30,14 @@ jobs:
         run: node scripts/collect-open-results.mjs
       - name: Pubblica solo risultati verificati e test LAB
         run: |
-          if git diff --quiet -- data/fixtures_latest.json data/lab_auto.json && [ ! -f data/fallback_status.json ]; then
+          # Stage first, then exit successfully if there is nothing to publish.
+          git add data/fixtures_latest.json data/lab_auto.json data/fallback_status.json
+          if git diff --cached --quiet; then
             echo "Nessun nuovo esito"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/fixtures_latest.json data/lab_auto.json data/fallback_status.json
           git commit -m "Verifica esiti virtuali con fonte gratuita alternativa"
           git fetch origin main
           git rebase origin/main
