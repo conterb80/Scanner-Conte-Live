@@ -4,7 +4,11 @@ name: Scanner Conte - Fonte alternativa gratuita
 on:
   workflow_dispatch:
   schedule:
-    - cron: "12 10 * * 2,5"
+    # Football-Data pubblica quote martedi entro le 13 UK e venerdi entro le 17 UK.
+    # Download DOPO la pubblicazione: al massimo una volta martedi e una venerdi.
+    - cron: "15 16 * * 2"
+      timezone: "Europe/Rome"
+    - cron: "15 19 * * 5"
       timezone: "Europe/Rome"
 
 permissions:
