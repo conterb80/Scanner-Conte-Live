@@ -12999,6 +12999,7 @@
       "away_goals": null
     }
   ],
-  "last_result_refresh": "2026-10-25T19:55:52.287Z",
-  "last_open_result_check": "2026-10-26T13:28:10.502Z"
+  "last_result_refresh": "2026-10-26T13:29:48.104Z",
+  "last_open_result_check": "2026-10-26T13:28:10.502Z",
+  "fallback_source": "Football-Data.co.uk (league limited, two updates/week)"
 }
