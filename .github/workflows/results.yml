@@ -1,14 +1,9 @@
 name: Scanner Conte - Esiti automatici
+# PAUSA TEMPORANEA 26/10/2026: API-Football segnala account sospeso.
+# Ripristinare schedule e push solo dopo conferma riattivazione.
+# Precedente cron: 43 14-23 * * * (Europe/Rome).
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/results.yml'
-      - 'scripts/collect-results.mjs'
-  schedule:
-    - cron: "43 14-23 * * *"
-      timezone: "Europe/Rome"
 
 permissions:
   contents: write
