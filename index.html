@@ -13,13 +13,14 @@
 <body>
  <header class="topbar">
   <div class="brand"><div class="brandmark">SC</div><div><strong>SCANNER CONTE</strong><span>LIVE <i class="onlinepoint"></i> ARCHIVIO LOCALE</span></div></div>
-  <div class="top-actions"><span class="version">V0.7 · ESITI AUTOMATICI</span><button type="button" id="export-top" class="round" aria-label="Esporta backup" title="Esporta backup">↧</button></div>
+  <div class="top-actions"><span class="version">V0.8 · FONTI ALTERNATIVE</span><button type="button" id="export-top" class="round" aria-label="Esporta backup" title="Esporta backup">↧</button></div>
  </header>
  <main id="app">
   <section id="view-home" class="view active">
    <div class="home-head"><span>QUADRO GENERALE</span><span>Storico locale + LAB automatico</span></div>
    <div class="sectionbar home-section"><h2>Bilanci</h2><span class="muted small">REAL e virtuali separati</span></div>
    <div class="stats" id="summary-cards"></div>
+   <div id="data-sources-status" class="data-source-strip" role="status">Verifica fonti dati alternative…</div>
    <div class="settle-control"><span id="settle-status" role="status" aria-live="polite">Controllo esiti delle giocate registrate…</span><button id="settle-refresh" class="button secondary thin" type="button">Verifica esiti</button></div>
    <div class="sectionbar"><h2>Statistiche e grafici</h2><button id="analytics-refresh" class="button secondary thin" type="button">Aggiorna</button></div>
    <div class="analytics-tabs" role="group" aria-label="Seleziona archivio delle statistiche">
@@ -63,7 +64,7 @@
    <div class="surface pad settings-panel"><h2>Salvataggio e trasferimento</h2><p class="muted">L'app salva le modifiche in questo browser. Se cancelli i dati del browser senza backup, puoi perderle. Su GitHub Pages servirà poi la sincronizzazione cloud.</p><button id="export-json" class="button">↓ Esporta backup JSON</button><button id="export-csv" class="button secondary">↓ Esporta storico CSV</button><label for="import-file" class="button secondary upload">↑ Importa backup JSON<input type="file" id="import-file" accept="application/json,.json" hidden></label><button id="reset-local" class="button danger-outline">Ripristina il dataset iniziale</button></div>
    <div class="sectionbar"><h2>Recupero archivio storico</h2></div><div class="surface pad" id="coverage"></div>
    <div class="surface pad settings-panel"><h2>Stato migrazione</h2><div id="migration-stats"></div><p class="muted tiny">I dati mancanti non vengono completati automaticamente. L'estrazione integrale della vecchia chat permetterà il controllo delle giocate residue e dei conflitti.</p></div>
-   <div class="surface pad settings-panel"><h2>Priorità del progetto</h2><p class="muted">1. Archivio affidabile. 2. Alimentazione automatica dei campionati. 3. Modelli e backtest separati. 4. Conferma manuale delle poche eventuali REAL.</p><div class="version-note">Scanner Conte LIVE · V0.7 · 25/10/2026</div></div>
+   <div class="surface pad settings-panel"><h2>Priorità del progetto</h2><p class="muted">1. Archivio affidabile. 2. Alimentazione automatica dei campionati. 3. Modelli e backtest separati. 4. Conferma manuale delle poche eventuali REAL.</p><div class="version-note">Scanner Conte LIVE · V0.8 · 26/10/2026</div></div>
   </section>
  </main>
  <nav class="bottomnav" aria-label="Navigazione principale">
@@ -75,6 +76,6 @@
  </nav>
  <dialog id="record-dialog"><form id="record-form" class="modal" method="dialog"><div class="modalhead"><h2>Nuova registrazione</h2><button id="close-dialog" type="button" class="close" aria-label="Chiudi">✕</button></div><p class="muted small">La nuova operazione verrà aggiunta a parte, senza alterare i bilanci consolidati del 24/10.</p><div class="formgrid"><label>Data<input type="date" name="date" required value="2026-10-25"></label><label>Archivio<select name="book"><option value="lab">LAB virtuale</option><option value="main">Principale virtuale</option><option value="real">REAL (solo già piazzata)</option></select></label><label>Categoria<select name="category"><option>TEST</option><option>CORE</option><option>VALUE</option><option>EXTRA</option></select></label><label>Partita<input name="match" required placeholder="Es. Squadra A – Squadra B"></label><label>Mercato<input name="selection" required placeholder="Es. Over 2,5"></label><label>Quota decimale<input name="odds" required inputmode="decimal" type="number" min="1.01" max="1000" step="0.01"></label><label>Importo €<input name="stake" required inputmode="decimal" type="number" min="0.01" max="10000" step="0.01"></label><label>Esito<select name="result"><option value="pending">In attesa</option><option value="won">Vinta</option><option value="lost">Persa</option><option value="push">Rimborsata</option></select></label><label class="full">Nota / motivazione<input name="note" placeholder="Registrare prima del via, se possibile"></label></div><button type="submit" class="button">Salva registrazione</button></form></dialog>
  <div id="toast" role="status" aria-live="polite"></div>
- <script src="data/seed.js"></script><script src="assets/app.js"></script><script src="assets/feed.js"></script><script src="assets/lab-pilot.js"></script><script src="assets/install.js"></script><script src="assets/bet365.js"></script><script src="assets/analytics.js"></script>
+ <script src="data/seed.js"></script><script src="assets/app.js"></script><script src="assets/feed.js"></script><script src="assets/lab-pilot.js"></script><script src="assets/install.js"></script><script src="assets/bet365.js"></script><script src="assets/analytics.js"></script><script src="assets/provider-status.js"></script>
 </body>
 </html>
