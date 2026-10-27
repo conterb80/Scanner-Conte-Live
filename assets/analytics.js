@@ -13,8 +13,8 @@
  const formatInt=n=>new Intl.NumberFormat('it-IT').format(n);
  const pct=n=>Number.isFinite(n)?n.toLocaleString('it-IT',{maximumFractionDigits:1,minimumFractionDigits:1})+'%':'—';
  const readableDate=s=>{try{return new Date(s).toLocaleString('it-IT',{timeZone:'Europe/Rome',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});}catch{return '—';}};
- const titles={real:'REAL · Bet365',main:'Virtuale principale',lab:'LAB storico',auto:'LAB automatico'};
- let selection='all',auto=null,autoError=null;
+ const titles={real:'REAL · Bet365',main:'Virtuale principale',lab:'LAB storico',auto:'LAB automatico',daily:'LAB 1X2 quotidiano'};
+ let selection='all',auto=null,autoError=null,daily=null,dailyError=null;
  const snapStats=(s={})=>({
   total:num(s.total),wins:num(s.wins),losses:num(s.losses),pushes:num(s.pushes),pnl:num(s.pnl),
   stake:valid(s.stake_total)?s.stake_total:null,bankroll:valid(s.bankroll)?s.bankroll:null
@@ -46,8 +46,8 @@
   const newer=d.records.filter(r=>r.book===book&&r.manual&&r.date>d.snapshots.as_of);
   return combined(base,statsFromRows(newer));
  }
- function fromAuto(){
-  const rows=Array.isArray(auto?.records)?auto.records:[];
+ function fromAuto(source=auto){
+  const rows=Array.isArray(source?.records)?source.records:[];
   const done=rows.filter(r=>r.status==='won'||r.status==='lost'||r.status==='push');
   return {
    total:rows.length,wins:rows.filter(r=>r.status==='won').length,
@@ -59,7 +59,7 @@
   };
  }
  function summary(d){
-  return {real:historical(d,'real'),main:historical(d,'main'),lab:historical(d,'lab'),auto:fromAuto()};
+  return {real:historical(d,'real'),main:historical(d,'main'),lab:historical(d,'lab'),auto:fromAuto(),daily:fromAuto(daily)};
  }
  function winRate(s){const n=s.wins+s.losses;return n?100*s.wins/n:NaN;}
  function roi(s){return s.stake!==null&&s.stake>0?100*s.pnl/s.stake:NaN;}
@@ -130,9 +130,10 @@
   });
  }
  function trend(d,book){
-  if(book==='auto'){
-   const closed=(auto?.records||[]).filter(r=>valid(r.pnl)&&r.settled_at).sort((a,b)=>String(a.settled_at).localeCompare(String(b.settled_at)));
-   return trendMarkup(closed.map(r=>num(r.pnl)),'Andamento LAB automatico (solo test chiusi)',0,closed.length);
+  if(book==='auto'||book==='daily'){
+   const source=book==='daily'?daily:auto;
+   const closed=(source?.records||[]).filter(r=>valid(r.pnl)&&r.settled_at).sort((a,b)=>String(a.settled_at).localeCompare(String(b.settled_at)));
+   return trendMarkup(closed.map(r=>num(r.pnl)),book==='daily'?'Andamento LAB 1X2 (solo test chiusi)':'Andamento LAB automatico (solo test chiusi)',0,closed.length);
   }
   if(!d)return '';
   const rows=d.records.filter(r=>r.book===book&&r.manual&&r.date>d.snapshots.as_of&&['won','lost','push'].includes(r.result))
@@ -160,15 +161,17 @@
   });
   const d=readDB(),all=summary(d),autoStats=all.auto;
   if(selection==='all'){
-   const items=['real','main','lab','auto'].map(k=>({key:k,label:titles[k],s:all[k],pnl:all[k].pnl}));
+   const items=['real','main','lab','auto','daily'].map(k=>({key:k,label:titles[k],s:all[k],pnl:all[k].pnl}));
    box.innerHTML='<div class="analytic-compact-note">Archivi separati: i profitti non si sommano perché REAL e virtuali hanno capitali diversi.</div>'+
    '<div class="analytic-grid">'+
     card('REAL · concluse',formatInt(all.real.wins+all.real.losses+all.real.pushes),all.real.pending+' in attesa')+
     card('Principale · concluse',formatInt(all.main.wins+all.main.losses+all.main.pushes),all.main.pending+' in attesa')+
     card('LAB storico · concluse',formatInt(all.lab.wins+all.lab.losses+all.lab.pushes),all.lab.pending+' in attesa')+
     card('LAB auto · test',formatInt(autoStats.total),autoStats.pending+' in attesa')+
+    card('LAB 1X2 · test',formatInt(all.daily.total),all.daily.pending+' in attesa')+
    '</div>'+pnlBars(items)+rateBars(items);
    if(autoError)box.innerHTML+='<p class="muted small">Impossibile aggiornare il LAB automatico: '+escape(autoError)+'. I dati locali restano disponibili.</p>';
+   if(dailyError)box.innerHTML+='<p class="muted small">LAB 1X2 quotidiano non leggibile: '+escape(dailyError)+'. Gli altri archivi restano disponibili.</p>';
    return;
   }
   const s=all[selection],closed=s.wins+s.losses+s.pushes;
@@ -191,6 +194,7 @@
   html+='<div class="analytic-divider"></div>'+trend(d,selection);
   if(selection==='lab')html+='<p class="muted small">Il LAB storico è separato dai test del motore automatico.</p>';
   if(selection==='auto')html+='<p class="muted small">Dati del motore pubblico, solo test virtuali; aggiornamento '+escape(auto?.last_run?readableDate(auto.last_run):'non disponibile')+'.</p>';
+  if(selection==='daily')html+='<p class="muted small">Fonte: TipsAudit (quote pubbliche 1X2, non necessariamente Bet365). Solo simulazioni virtuali, separate dai 30 test precedenti. Ultima scansione: '+escape(daily?.last_check?readableDate(daily.last_check):'non disponibile')+'. I test in attesa non incidono sul profitto o sul ROI.</p>';
   box.innerHTML=html;
  }
  async function fetchAuto(){
@@ -202,9 +206,19 @@
   }catch(e){autoError=e.message;}
   render();
  }
+ async function fetchDaily(){
+  try{
+   const res=await fetch('./data/daily_virtual_lab.json?fresh='+Date.now(),{cache:'no-store'});
+   if(!res.ok)throw Error('HTTP '+res.status);
+   const d=await res.json();if(d.schema!=='scanner-conte-daily-virtual-v1'||!Array.isArray(d.records))throw Error('Formato non riconosciuto');
+   daily=d;dailyError=null;
+  }catch(e){dailyError=e.message;}
+  render();
+ }
+ async function refreshAll(){await Promise.all([fetchAuto(),fetchDaily()]);}
  document.querySelectorAll('[data-analytics-tab]').forEach(b=>b.addEventListener('click',()=>{selection=b.dataset.analyticsTab;render();}));
  window.addEventListener('scanner-conte:records-changed',render);
- window.addEventListener('focus',()=>{fetchAuto();});
- const btn=$('analytics-refresh');if(btn)btn.addEventListener('click',fetchAuto);
- render();fetchAuto();
+ window.addEventListener('focus',refreshAll);
+ const btn=$('analytics-refresh');if(btn)btn.addEventListener('click',refreshAll);
+ render();refreshAll();
 })();
