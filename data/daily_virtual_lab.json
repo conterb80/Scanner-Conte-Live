@@ -516,6 +516,33 @@
       "pnl": null,
       "score": null,
       "settled_at": null
+    },
+    {
+      "id": "tipsaudit-12131:TIPSAUDIT_VALUE_1X2",
+      "source_id": "12131",
+      "strategy": "TIPSAUDIT_VALUE_1X2",
+      "match": "Santos - Palmeiras",
+      "league": "Brazil Serie A",
+      "kickoff": "2026-10-28T22:30:00+00:00",
+      "selection": "Away",
+      "market": "1X2",
+      "bookmaker": "GTbets",
+      "odds": 2.37,
+      "fair_odds": 2.31,
+      "edge": 0.0249,
+      "bookmaker_quote_status": "source actionable, not guaranteed executable",
+      "captured_at": "2026-10-27T13:37:03.232Z",
+      "capture_day": "2026-10-27",
+      "provider_generated_at": "2026-10-27T13:37:03+00:00",
+      "benchmark_read_at": "2026-10-27T12:34:57+00:00",
+      "provider": "TipsAudit (external signal, NOT our own betting model)",
+      "reference": "https://tipsaudit.com/match/12131/santos-vs-palmeiras-2026-10-28",
+      "origin": "live bookmaker observation via TipsAudit public feed",
+      "stake_virtual": 1,
+      "status": "pending",
+      "pnl": null,
+      "score": null,
+      "settled_at": null
     }
   ],
   "checks": [
@@ -528,12 +555,22 @@
       "created": 19,
       "source": "TipsAudit",
       "test_only": true
+    },
+    {
+      "day": "2026-10-27",
+      "checked_at": "2026-10-27T13:37:03.232Z",
+      "source_generated_at": "2026-10-27T13:37:03+00:00",
+      "scanned_predictions": 377,
+      "eligible_actionable": 16,
+      "created": 1,
+      "source": "TipsAudit",
+      "test_only": true
     }
   ],
-  "last_check": "2026-10-27T07:24:48.268Z",
+  "last_check": "2026-10-27T13:37:03.232Z",
   "stats": {
-    "total": 19,
-    "pending": 19,
+    "total": 20,
+    "pending": 20,
     "won": 0,
     "lost": 0,
     "pnl": 0
