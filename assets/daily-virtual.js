@@ -4,15 +4,17 @@
 (()=>{
 'use strict';
 const box=document.getElementById('daily-virtual-panel');
+const home=document.getElementById('daily-home-status');
 if(!box)return;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]));
 const fmt=s=>{try{return new Date(s).toLocaleString('it-IT',{timeZone:'Europe/Rome',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});}catch{return '—';}};
 const eur=n=>(n>0?'+':'')+Number(n).toFixed(2).replace('.',',')+' €';
 async function refresh(){
  box.innerHTML='<div class="muted small">Aggiorno i test virtuali quotidiani…</div>';
+ if(home)home.textContent='LAB 1X2 quotidiano: verifica dati aggiornati…';
  try{
   const r=await fetch('./data/daily_virtual_lab.json?t='+Date.now(),{cache:'no-store'});
-  if(r.status===404){box.innerHTML='<p class="muted small">Raccolta giornaliera appena configurata: nessuna quota ancora registrata. Storico precedente invariato.</p>';return;}
+  if(r.status===404){box.innerHTML='<p class="muted small">Raccolta giornaliera appena configurata: nessuna quota ancora registrata. Storico precedente invariato.</p>';if(home)home.textContent='LAB 1X2 quotidiano: prima acquisizione non ancora pubblicata.';return;}
   if(!r.ok)throw Error('HTTP '+r.status);
   const d=await r.json();
   if(d.schema!=='scanner-conte-daily-virtual-v1'||!Array.isArray(d.records))throw Error('Formato archivio non compatibile');
@@ -20,6 +22,10 @@ async function refresh(){
    done=records.filter(x=>['won','lost'].includes(x.status));
   const pnl=done.reduce((n,x)=>n+Number(x.pnl||0),0);
   const latest=d.checks?.[d.checks.length-1];
+  if(home){
+   const scanned=latest?.checked_at?fmt(latest.checked_at):'non disponibile';
+   home.textContent='LAB 1X2 QUOTIDIANO · '+records.length+' simulazioni · '+pending+' in attesa · '+done.length+' concluse · '+eur(pnl)+' teorici · Ultima raccolta '+scanned+'. Apri LAB per vedere le singole partite.';
+  }
   let html='<p class="muted small"><b>1X2 — benchmark esterno TipsAudit</b> · Solo virtuali, indipendenti dai 30 test precedenti. '+
    'Dati: <a href="https://tipsaudit.com/api" target="_blank" rel="noopener noreferrer">TipsAudit</a> (attribuzione). Le quote mostrate potrebbero non essere disponibili su Bet365.</p>'+
    '<div class="lab-auto-stats"><div><span>Test registrati</span><strong>'+records.length+'</strong></div>'+
@@ -40,8 +46,10 @@ async function refresh(){
    ' · <a href="'+(String(x.reference||'').startsWith('https://tipsaudit.com/')?esc(x.reference):'https://tipsaudit.com/api')+'" target="_blank" rel="noopener noreferrer">Fonte</a></p></article>'
   ).join('');
   box.innerHTML=html;
- }catch(e){box.innerHTML='<p class="muted small">Nuovo laboratorio momentaneamente non leggibile: '+esc(e.message)+'. Lo storico resta disponibile.</p>';}
+ }catch(e){box.innerHTML='<p class="muted small">Nuovo laboratorio momentaneamente non leggibile: '+esc(e.message)+'. Lo storico resta disponibile.</p>';if(home)home.textContent='LAB 1X2 quotidiano: aggiornamento non disponibile ('+e.message+'). Gli archivi locali sono conservati.';}
 }
 document.getElementById('lab-auto-refresh')?.addEventListener('click',refresh);
+window.addEventListener('focus',refresh);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)refresh();});
 refresh();
 })();
