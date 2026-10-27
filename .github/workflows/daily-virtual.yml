@@ -1,0 +1,48 @@
+name: Scanner Conte - Test virtuali quotidiani 1X2 (fonti pubbliche)
+# Quote 1X2 con bookmaker e timestamp prima del via. Nessuna REAL.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/collect-daily-virtual.mjs'
+      - '.github/workflows/daily-virtual.yml'
+  schedule:
+    - cron: "50 8,15 * * *"
+      timezone: "Europe/Rome"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scanner-conte-feed
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Registra solo prove 1X2 future con quote pubbliche verificate
+        run: node scripts/collect-daily-virtual.mjs
+      - name: Pubblica unicamente il nuovo LAB forward separato
+        run: |
+          if [ ! -f data/daily_virtual_lab.json ]; then
+            echo "Nessun dato valido: archivio invariato"
+            exit 0
+          fi
+          git add data/daily_virtual_lab.json
+          if git diff --cached --quiet; then
+            echo "Nessuna modifica"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Nuove simulazioni virtuali forward 1X2 con fonte documentata"
+          git fetch origin main
+          git rebase origin/main
+          git push
