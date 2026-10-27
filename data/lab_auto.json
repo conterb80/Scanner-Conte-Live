@@ -7,10 +7,10 @@
   "history_quality": "Quote fotografate prima dell’inizio. Controllo su campione, non sistema validato.",
   "stats": {
     "total": 30,
-    "pending": 14,
-    "won": 7,
-    "lost": 9,
-    "pnl": -3.47
+    "pending": 6,
+    "won": 13,
+    "lost": 11,
+    "pnl": -0.58
   },
   "records": [
     {
@@ -359,13 +359,14 @@
       "odds": 2.1,
       "market_probability_pct": 44.37,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "won",
+      "pnl": 1.1,
+      "score": "2-4",
       "captured_at": "2026-10-25T19:38:32.968Z",
-      "settled_at": null,
+      "settled_at": "2026-10-27T01:37:15.483Z",
       "origin": "API-Football prematch, campione limitato",
-      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo."
+      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo.",
+      "settlement_source": "ESPN scoreboard pubblico (non ufficiale), FT"
     },
     {
       "id": "1563837:OVER25_CONTROLLO",
@@ -379,13 +380,14 @@
       "odds": 1.73,
       "market_probability_pct": 54.59,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "won",
+      "pnl": 0.73,
+      "score": "2-4",
       "captured_at": "2026-10-25T19:38:32.968Z",
-      "settled_at": null,
+      "settled_at": "2026-10-27T01:37:15.483Z",
       "origin": "API-Football prematch, campione limitato",
-      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo."
+      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo.",
+      "settlement_source": "ESPN scoreboard pubblico (non ufficiale), FT"
     },
     {
       "id": "1552800:FAVORITA_1X2_CONTROLLO",
@@ -399,13 +401,14 @@
       "odds": 1.46,
       "market_probability_pct": 67.33,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "won",
+      "pnl": 0.46,
+      "score": "2-0",
       "captured_at": "2026-10-25T19:38:40.206Z",
-      "settled_at": null,
+      "settled_at": "2026-10-27T01:37:15.483Z",
       "origin": "API-Football prematch, campione limitato",
-      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo."
+      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo.",
+      "settlement_source": "ESPN scoreboard pubblico (non ufficiale), FT"
     },
     {
       "id": "1609094:FAVORITA_1X2_CONTROLLO",
@@ -459,13 +462,14 @@
       "odds": 2.15,
       "market_probability_pct": 43.72,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "lost",
+      "pnl": -1,
+      "score": "1-1",
       "captured_at": "2026-10-25T19:39:09.197Z",
-      "settled_at": null,
+      "settled_at": "2026-10-27T01:37:15.483Z",
       "origin": "API-Football prematch, campione limitato",
-      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo."
+      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo.",
+      "settlement_source": "ESPN scoreboard pubblico (non ufficiale), FT"
     },
     {
       "id": "1609098:FAVORITA_1X2_CONTROLLO",
@@ -519,13 +523,14 @@
       "odds": 1.85,
       "market_probability_pct": 51.32,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "won",
+      "pnl": 0.85,
+      "score": "1-2",
       "captured_at": "2026-10-25T19:39:23.680Z",
-      "settled_at": null,
+      "settled_at": "2026-10-27T01:37:15.483Z",
       "origin": "API-Football prematch, campione limitato",
-      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo."
+      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo.",
+      "settlement_source": "ESPN scoreboard pubblico (non ufficiale), FT"
     },
     {
       "id": "1570431:FAVORITA_1X2_CONTROLLO",
@@ -539,13 +544,14 @@
       "odds": 1.9,
       "market_probability_pct": 50.05,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "won",
+      "pnl": 0.9,
+      "score": "2-0",
       "captured_at": "2026-10-25T19:39:30.924Z",
-      "settled_at": null,
+      "settled_at": "2026-10-27T01:37:15.483Z",
       "origin": "API-Football prematch, campione limitato",
-      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo."
+      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo.",
+      "settlement_source": "ESPN scoreboard pubblico (non ufficiale), FT"
     },
     {
       "id": "1570431:OVER25_CONTROLLO",
@@ -559,13 +565,14 @@
       "odds": 2.2,
       "market_probability_pct": 43.15,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "lost",
+      "pnl": -1,
+      "score": "2-0",
       "captured_at": "2026-10-25T19:39:30.924Z",
-      "settled_at": null,
+      "settled_at": "2026-10-27T01:37:15.483Z",
       "origin": "API-Football prematch, campione limitato",
-      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo."
+      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo.",
+      "settlement_source": "ESPN scoreboard pubblico (non ufficiale), FT"
     },
     {
       "id": "1552508:OVER25_CONTROLLO",
@@ -579,13 +586,14 @@
       "odds": 1.85,
       "market_probability_pct": 51.32,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "won",
+      "pnl": 0.85,
+      "score": "2-1",
       "captured_at": "2026-10-25T19:39:38.160Z",
-      "settled_at": null,
+      "settled_at": "2026-10-27T01:37:15.483Z",
       "origin": "API-Football prematch, campione limitato",
-      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo."
+      "note": "Strategia baseline di confronto: la probabilita deriva dal mercato, NON dimostra valore atteso positivo.",
+      "settlement_source": "ESPN scoreboard pubblico (non ufficiale), FT"
     },
     {
       "id": "1576511:FAVORITA_1X2_CONTROLLO",
@@ -629,5 +637,5 @@
     }
   ],
   "last_result_check": "2026-10-25T19:55:52.287Z",
-  "last_open_result_check": "2026-10-26T16:35:22.749Z"
+  "last_open_result_check": "2026-10-27T01:37:15.483Z"
 }

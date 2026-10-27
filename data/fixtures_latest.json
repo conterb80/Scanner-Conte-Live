@@ -14,8 +14,8 @@
     "provided_matches": 3021,
     "eligible_matches": 1081,
     "eligible_competitions": 133,
-    "scheduled": 79,
-    "finished": 978
+    "scheduled": 72,
+    "finished": 985
   },
   "api_remaining": 36,
   "note": "Solo partite e risultati. Quote, probabilita, LAB automatico e REAL non sono attivi.",
@@ -12821,14 +12821,16 @@
     {
       "id": "1575524",
       "kickoff": "2026-10-26T19:45:00+01:00",
-      "status": "NS",
+      "status": "FT",
       "league": "Primeira Liga",
       "league_id": 94,
       "country": "Portugal",
       "home": "Santa Clara",
       "away": "Benfica",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 1,
+      "away_goals": 2,
+      "result_source": "ESPN scoreboard pubblico, non ufficiale",
+      "result_external_id": "401885414"
     },
     {
       "id": "1621068",
@@ -12893,26 +12895,30 @@
     {
       "id": "1552800",
       "kickoff": "2026-10-26T20:30:00+01:00",
-      "status": "NS",
+      "status": "FT",
       "league": "Ligue 1",
       "league_id": 61,
       "country": "France",
       "home": "Paris Saint Germain",
       "away": "Lyon",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 2,
+      "away_goals": 0,
+      "result_source": "ESPN scoreboard pubblico, non ufficiale",
+      "result_external_id": "401876422"
     },
     {
       "id": "1569983",
       "kickoff": "2026-10-26T20:30:00+01:00",
-      "status": "NS",
+      "status": "FT",
       "league": "Segunda División",
       "league_id": 141,
       "country": "Spain",
       "home": "FC Andorra",
       "away": "Burgos",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 2,
+      "away_goals": 3,
+      "result_source": "ESPN scoreboard pubblico, non ufficiale",
+      "result_external_id": "401883131"
     },
     {
       "id": "1609094",
@@ -12941,50 +12947,58 @@
     {
       "id": "1552504",
       "kickoff": "2026-10-26T20:45:00+01:00",
-      "status": "NS",
+      "status": "FT",
       "league": "Ligue 2",
       "league_id": 62,
       "country": "France",
       "home": "Boulogne",
       "away": "Reims",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 1,
+      "away_goals": 1,
+      "result_source": "ESPN scoreboard pubblico, non ufficiale",
+      "result_external_id": "401876718"
     },
     {
       "id": "1552508",
       "kickoff": "2026-10-26T20:45:00+01:00",
-      "status": "NS",
+      "status": "FT",
       "league": "Ligue 2",
       "league_id": 62,
       "country": "France",
       "home": "Montpellier",
       "away": "RED Star FC 93",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 2,
+      "away_goals": 1,
+      "result_source": "ESPN scoreboard pubblico, non ufficiale",
+      "result_external_id": "401876714"
     },
     {
       "id": "1563837",
       "kickoff": "2026-10-26T21:00:00+01:00",
-      "status": "NS",
+      "status": "FT",
       "league": "League Two",
       "league_id": 42,
       "country": "England",
       "home": "Walsall",
       "away": "Salford City",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 2,
+      "away_goals": 4,
+      "result_source": "ESPN scoreboard pubblico, non ufficiale",
+      "result_external_id": "401881290"
     },
     {
       "id": "1570431",
       "kickoff": "2026-10-26T21:00:00+01:00",
-      "status": "NS",
+      "status": "FT",
       "league": "La Liga",
       "league_id": 140,
       "country": "Spain",
       "home": "Sevilla",
       "away": "Osasuna",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 2,
+      "away_goals": 0,
+      "result_source": "ESPN scoreboard pubblico, non ufficiale",
+      "result_external_id": "401882828"
     },
     {
       "id": "1576511",
@@ -13000,6 +13014,6 @@
     }
   ],
   "last_result_refresh": "2026-10-26T13:29:48.104Z",
-  "last_open_result_check": "2026-10-26T16:35:22.749Z",
+  "last_open_result_check": "2026-10-27T01:37:15.483Z",
   "fallback_source": "Football-Data.co.uk (league limited, two updates/week)"
 }
