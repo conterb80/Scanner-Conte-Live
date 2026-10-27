@@ -14,8 +14,8 @@
     "provided_matches": 3021,
     "eligible_matches": 1081,
     "eligible_competitions": 133,
-    "scheduled": 72,
-    "finished": 985
+    "scheduled": 69,
+    "finished": 988
   },
   "api_remaining": 36,
   "note": "Solo partite e risultati. Quote, probabilita, LAB automatico e REAL non sono attivi.",
@@ -12923,26 +12923,32 @@
     {
       "id": "1609094",
       "kickoff": "2026-10-26T20:30:00+01:00",
-      "status": "NS",
+      "status": "FT",
       "league": "Serie C - Girone C",
       "league_id": 943,
       "country": "Italy",
       "home": "Crotone",
       "away": "Casarano",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 0,
+      "away_goals": 1,
+      "result_source": "F.C. Crotone (sito ufficiale)",
+      "result_reference": "https://www.fccrotone.it/news/crotone-casarano-0-1/",
+      "result_verified_at": "2026-10-27T07:07:39.609Z"
     },
     {
       "id": "1609098",
       "kickoff": "2026-10-26T20:30:00+01:00",
-      "status": "NS",
+      "status": "FT",
       "league": "Serie C - Girone C",
       "league_id": 943,
       "country": "Italy",
       "home": "AZ Picerno",
       "away": "Salernitana",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 3,
+      "away_goals": 0,
+      "result_source": "AZ Picerno (sito ufficiale)",
+      "result_reference": "https://www.azpicerno.com/2026/10/26/azp-vs-salernitana-3-0-il-tabellino/",
+      "result_verified_at": "2026-10-27T07:07:39.609Z"
     },
     {
       "id": "1552504",
@@ -13003,17 +13009,22 @@
     {
       "id": "1576511",
       "kickoff": "2026-10-26T21:45:00+01:00",
-      "status": "NS",
+      "status": "FT",
       "league": "Segunda Liga",
       "league_id": 95,
       "country": "Portugal",
       "home": "Torreense",
       "away": "Amarante",
-      "home_goals": null,
-      "away_goals": null
+      "home_goals": 1,
+      "away_goals": 0,
+      "result_source": "Zerozero e Kadario (risultato FT concordante)",
+      "result_reference": "https://kadario.com/pt/football/matches/2604584/torreense-vs-amarante",
+      "result_reference_secondary": "https://zerozero.football/live-ao-minuto/2026-10-26-torreense-amarante-fc/12278317",
+      "result_verified_at": "2026-10-27T07:07:39.609Z"
     }
   ],
   "last_result_refresh": "2026-10-26T13:29:48.104Z",
   "last_open_result_check": "2026-10-27T01:37:15.483Z",
-  "fallback_source": "Football-Data.co.uk (league limited, two updates/week)"
+  "fallback_source": "Football-Data.co.uk (league limited, two updates/week)",
+  "last_verified_result_audit": "2026-10-27T07:07:39.609Z"
 }
