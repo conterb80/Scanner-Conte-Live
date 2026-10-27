@@ -1,0 +1,34 @@
+name: Scanner Conte - Verifica struttura registro pubblico risultati
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/public-result-schema.yml'
+permissions:
+  contents: write
+concurrency:
+  group: scanner-conte-feed
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Ispeziona soltanto struttura risultati, senza aggiungere puntate
+        run: node scripts/public-result-schema.mjs
+      - name: Archivia verifica tecnica
+        run: |
+          test -f data/public_result_schema.json || exit 0
+          git add data/public_result_schema.json
+          git diff --cached --quiet && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Documenta schema fonte pubblica per esiti LAB quotidiano"
+          git fetch origin main
+          git rebase origin/main
+          git push
