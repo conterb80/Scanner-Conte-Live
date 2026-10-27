@@ -1,0 +1,47 @@
+name: Scanner Conte - Chiudi esiti LAB quotidiano 1X2
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/settle-daily-virtual.yml'
+      - 'scripts/settle-daily-virtual.mjs'
+  schedule:
+    - cron: "18 9,23 * * *"
+      timezone: "Europe/Rome"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scanner-conte-feed
+  cancel-in-progress: false
+
+jobs:
+  settle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Controlla FT via registro pubblico, non forzare esiti sconosciuti
+        run: node scripts/settle-daily-virtual.mjs
+      - name: Pubblica unicamente lo storico virtuale aggiornato
+        run: |
+          if [ ! -f data/daily_virtual_lab.json ]; then
+            echo "Nessun archivio pubblico ancora"
+            exit 0
+          fi
+          git add data/daily_virtual_lab.json
+          if git diff --cached --quiet; then
+            echo "Nessun risultato sicuro disponibile"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Chiudi nuovi test 1X2 con risultati ufficiali registrati dal fornitore"
+          git fetch origin main
+          git rebase origin/main
+          git push
