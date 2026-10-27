@@ -1,13 +1,13 @@
 {
   "schema": "scanner-conte-fallback-v1",
-  "checked_at": "2026-10-27T01:37:15.483Z",
+  "checked_at": "2026-10-27T12:39:37.879Z",
   "provider": "ESPN public scoreboard (unofficial, no API key)",
   "quotes_available": false,
   "leagues_requested": 20,
   "leagues_success": 20,
   "finished_events_found": 584,
-  "fixtures_updated": 7,
-  "lab_closed": 8,
+  "fixtures_updated": 0,
+  "lab_closed": 0,
   "errors": [],
   "note": "La mancata corrispondenza non equivale a uno 0-0. Campionati senza copertura non aggiornati."
 }
