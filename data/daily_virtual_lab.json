@@ -26,10 +26,14 @@
       "reference": "https://tipsaudit.com/match/11957/sassuolo-vs-lazio-2026-10-27",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.23,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-28T01:24:12.338Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-28T01:20:15+00:00"
     },
     {
       "id": "tipsaudit-11958:TIPSAUDIT_VALUE_1X2",
@@ -53,10 +57,14 @@
       "reference": "https://tipsaudit.com/match/11958/aik-stockholm-vs-if-elfsborg-2026-10-27",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-28T01:24:12.338Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-28T01:20:15+00:00"
     },
     {
       "id": "tipsaudit-11965:TIPSAUDIT_VALUE_1X2",
@@ -80,10 +88,14 @@
       "reference": "https://tipsaudit.com/match/11965/padova-vs-sudtirol-2026-10-27",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-28T01:24:12.338Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-28T01:20:15+00:00"
     },
     {
       "id": "tipsaudit-11968:TIPSAUDIT_VALUE_1X2",
@@ -107,10 +119,14 @@
       "reference": "https://tipsaudit.com/match/11968/as-roma-vs-cagliari-2026-10-27",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.38,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-28T01:24:12.338Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-28T01:20:15+00:00"
     },
     {
       "id": "tipsaudit-11464:TIPSAUDIT_VALUE_1X2",
@@ -134,10 +150,14 @@
       "reference": "https://tipsaudit.com/match/11464/argentinos-jrs-vs-independ-rivadavia-2026-10-27",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-28T01:24:12.338Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-28T01:20:15+00:00"
     },
     {
       "id": "tipsaudit-12093:TIPSAUDIT_VALUE_1X2",
@@ -570,9 +590,10 @@
   "last_check": "2026-10-27T13:37:03.232Z",
   "stats": {
     "total": 20,
-    "pending": 20,
-    "won": 0,
-    "lost": 0,
-    "pnl": 0
-  }
+    "pending": 15,
+    "won": 2,
+    "lost": 3,
+    "pnl": -1.39
+  },
+  "last_settlement_check": "2026-10-28T01:24:12.338Z"
 }
