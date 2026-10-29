@@ -398,10 +398,14 @@
       "reference": "https://tipsaudit.com/match/12133/toronto-fc-vs-dc-united-2026-10-28",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.01,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-29T15:14:50.793Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-29T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-12136:TIPSAUDIT_VALUE_1X2",
@@ -425,10 +429,14 @@
       "reference": "https://tipsaudit.com/match/12136/inter-miami-vs-fc-cincinnati-2026-10-28",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-29T15:14:50.793Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-29T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-12137:TIPSAUDIT_VALUE_1X2",
@@ -452,10 +460,14 @@
       "reference": "https://tipsaudit.com/match/12137/charlotte-vs-cf-montreal-2026-10-28",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.55,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-29T15:14:50.793Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-29T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-12141:TIPSAUDIT_VALUE_1X2",
@@ -479,10 +491,14 @@
       "reference": "https://tipsaudit.com/match/12141/chicago-fire-vs-orlando-city-sc-2026-10-29",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-29T15:14:50.793Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-29T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-12142:TIPSAUDIT_VALUE_1X2",
@@ -506,10 +522,14 @@
       "reference": "https://tipsaudit.com/match/12142/minnesota-united-fc-vs-sporting-kansas-city-2026-10-29",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.47,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-29T15:14:50.793Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-29T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-12144:TIPSAUDIT_VALUE_1X2",
@@ -533,10 +553,14 @@
       "reference": "https://tipsaudit.com/match/12144/austin-vs-real-salt-lake-2026-10-29",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.59,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-29T15:14:50.793Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-29T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-12146:TIPSAUDIT_VALUE_1X2",
@@ -560,10 +584,14 @@
       "reference": "https://tipsaudit.com/match/12146/seattle-sounders-vs-houston-dynamo-2026-10-29",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-29T15:14:50.793Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-29T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-12131:TIPSAUDIT_VALUE_1X2",
@@ -711,10 +739,14 @@
       "reference": "https://tipsaudit.com/match/12138/bahia-vs-sao-paulo-2026-10-29",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.02,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-29T15:14:50.793Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-29T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-12139:TIPSAUDIT_VALUE_1X2",
@@ -738,10 +770,14 @@
       "reference": "https://tipsaudit.com/match/12139/remo-vs-botafogo-2026-10-29",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.86,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-29T15:14:50.793Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-29T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-12140:TIPSAUDIT_VALUE_1X2",
@@ -765,10 +801,14 @@
       "reference": "https://tipsaudit.com/match/12140/fc-dallas-vs-columbus-crew-2026-10-29",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 2.3,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-29T15:14:50.793Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-29T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-12143:TIPSAUDIT_VALUE_1X2",
@@ -792,10 +832,14 @@
       "reference": "https://tipsaudit.com/match/12143/nashville-sc-vs-philadelphia-union-2026-10-29",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-29T15:14:50.793Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-29T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-12259:TIPSAUDIT_VALUE_1X2",
@@ -900,10 +944,14 @@
       "reference": "https://tipsaudit.com/match/12135/new-england-revolution-vs-new-york-red-bulls-2026-10-28",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-29T15:14:50.793Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-29T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-12147:TIPSAUDIT_VALUE_1X2",
@@ -927,10 +975,14 @@
       "reference": "https://tipsaudit.com/match/12147/san-jose-earthquakes-vs-colorado-rapids-2026-10-29",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-29T15:14:50.793Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-29T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-12265:TIPSAUDIT_VALUE_1X2",
@@ -1447,10 +1499,10 @@
   "last_check": "2026-10-29T14:40:22.272Z",
   "stats": {
     "total": 49,
-    "pending": 33,
-    "won": 5,
-    "lost": 11,
-    "pnl": -4.65
+    "pending": 20,
+    "won": 12,
+    "lost": 17,
+    "pnl": -1.85
   },
-  "last_settlement_check": "2026-10-29T01:49:02.597Z"
+  "last_settlement_check": "2026-10-29T15:14:50.793Z"
 }
