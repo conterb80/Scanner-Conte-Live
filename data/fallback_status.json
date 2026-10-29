@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-fallback-v1",
-  "checked_at": "2026-10-29T01:56:21.278Z",
+  "checked_at": "2026-10-29T13:42:05.982Z",
   "provider": "ESPN public scoreboard (unofficial, no API key)",
   "quotes_available": false,
   "leagues_requested": 6,
