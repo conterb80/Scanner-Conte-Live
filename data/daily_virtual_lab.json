@@ -1103,10 +1103,14 @@
       "reference": "https://tipsaudit.com/match/12269/gremio-vs-atletico-paranaense-2026-10-30",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.43,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-30T15:03:50.917Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-30T15:00:15+00:00"
     },
     {
       "id": "tipsaudit-12493:TIPSAUDIT_VALUE_1X2",
@@ -2129,10 +2133,10 @@
   "last_check": "2026-10-30T14:32:10.469Z",
   "stats": {
     "total": 71,
-    "pending": 38,
-    "won": 14,
+    "pending": 37,
+    "won": 15,
     "lost": 19,
-    "pnl": -1.91
+    "pnl": -0.48
   },
-  "last_settlement_check": "2026-10-30T01:58:02.790Z"
+  "last_settlement_check": "2026-10-30T15:03:50.917Z"
 }
