@@ -1297,10 +1297,14 @@
       "reference": "https://tipsaudit.com/match/12541/fagiano-okayama-vs-fc-tokyo-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.06,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-31T14:33:01.239Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-31T14:30:17+00:00"
     },
     {
       "id": "tipsaudit-12815:TIPSAUDIT_VALUE_1X2",
@@ -1324,10 +1328,14 @@
       "reference": "https://tipsaudit.com/match/12815/melbourne-city-vs-sydney-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.12,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-10-31T14:33:01.240Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-10-31T14:30:17+00:00"
     },
     {
       "id": "tipsaudit-12863:TIPSAUDIT_VALUE_1X2",
@@ -2756,10 +2764,10 @@
   "last_check": "2026-10-31T13:54:13.386Z",
   "stats": {
     "total": 92,
-    "pending": 49,
-    "won": 20,
+    "pending": 47,
+    "won": 22,
     "lost": 23,
-    "pnl": 1.17
+    "pnl": 3.35
   },
-  "last_settlement_check": "2026-10-31T01:36:37.062Z"
+  "last_settlement_check": "2026-10-31T14:33:01.240Z"
 }
