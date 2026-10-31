@@ -22,6 +22,16 @@ async function refresh(){
    done=records.filter(x=>['won','lost'].includes(x.status));
   const pnl=done.reduce((n,x)=>n+Number(x.pnl||0),0);
   const latest=d.checks?.[d.checks.length-1];
+  // Agenda puramente informativa dalle osservazioni LAB pre-partita.
+  // Non suggerisce puntate REAL e non calcola nuovi pronostici.
+  const inRome=s=>{try{return new Intl.DateTimeFormat('en-US',{timeZone:'Europe/Rome',weekday:'short'}).format(new Date(s));}catch{return '';}};
+  const now=Date.now();
+  const scheduled=records.filter(x=>x.status==='pending'&&
+    Number.isFinite(Date.parse(x.kickoff))&&Date.parse(x.kickoff)>now+20*60000&&
+    ['Sat','Sun'].includes(inRome(x.kickoff))).
+    sort((a,b)=>Date.parse(a.kickoff)-Date.parse(b.kickoff));
+  const sourceLink=x=>String(x.reference||'').startsWith('https://tipsaudit.com/')?esc(x.reference):'https://tipsaudit.com/api';
+  const pick=x=>x.selection==='Home'?'1':x.selection==='Away'?'2':x.selection==='Draw'?'X':String(x.selection||'—');
   if(home){
    const scanned=latest?.checked_at?fmt(latest.checked_at):'non disponibile';
    home.textContent='LAB 1X2 QUOTIDIANO · '+records.length+' simulazioni · '+pending+' in attesa · '+done.length+' concluse · '+eur(pnl)+' teorici · Ultima raccolta '+scanned+'. Apri LAB per vedere le singole partite.';
@@ -34,6 +44,17 @@ async function refresh(){
    '<p class="muted small">Ultimo controllo: '+esc(latest?fmt(latest.checked_at):'—')+
    ' · Candidati verificabili: '+esc(latest?.eligible_actionable??'—')+
    ' · Nuovi test: '+esc(latest?.created??'—')+'.</p>';
+  html+='<div class="sectionbar"><h2>Agenda LAB · eventi futuri del weekend</h2><span class="muted small">'+scheduled.length+' registrati</span></div>'+
+    '<p class="muted small">Queste sono osservazioni virtuali registrate prima degli eventi: non sono giocate REAL, non sono selezioni CORE/VALUE validate e non sono necessariamente quote Bet365. La lista segue le nuove scansioni senza richiedere la chat.</p>';
+  if(!scheduled.length)html+='<p class="surface pad muted small">Nessun evento futuro del weekend ancora osservato dal LAB. Il motore non crea partite o quote artificiali.</p>';
+  else html+=scheduled.slice(0,12).map(x=>
+    '<article class="candidate"><div class="ctop"><span class="tag lab">OSSERVAZIONE LAB</span><span class="muted small">'+esc(fmt(x.kickoff))+'</span></div>'+
+    '<h3>'+esc(x.match)+'</h3><p class="muted small">'+esc(x.league)+' · '+esc(x.bookmaker)+'</p>'+
+    '<div class="csel">Mercato 1X2 · '+esc(pick(x))+' @'+esc(x.odds)+' (quota storica)</div>'+
+    '<p class="muted small">Acquisita: '+esc(fmt(x.captured_at))+' · <a href="'+sourceLink(x)+'" target="_blank" rel="noopener noreferrer">Fonte</a></p></article>'
+  ).join('');
+  if(scheduled.length>12)html+='<p class="muted small">Altri '+(scheduled.length-12)+' eventi visibili in Storico → LAB 1X2 → In attesa.</p>';
+  html+='<div class="sectionbar"><h2>Ultimi test del laboratorio</h2></div>';
   if(!records.length){html+='<p class="muted small">Nessuna quota idonea registrata prima del via. Non sono state create simulazioni inventate.</p>';}
   else html+=records.slice().reverse().slice(0,15).map(x=>
    '<article class="candidate"><div class="ctop"><span class="tag lab">TEST · '+esc(x.status==='pending'?'IN ATTESA':x.status==='won'?'VINTA':'PERSA')+
