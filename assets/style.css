@@ -140,3 +140,32 @@
  .archive-public-controls .button{width:100%}
  .register-heading-actions .button{padding:7px 9px;font-size:10px}
 }
+
+
+/* V0.8.6 — taccuino quote manuale, evidente nella Home */
+#quote-notebook{margin:5px 0 19px}
+#quote-notebook>p:first-child{line-height:1.55;margin-top:0}
+.quote-notebook-editor{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}
+.quote-notebook-editor>summary{cursor:pointer;color:var(--mint);font-size:12px;font-weight:750;padding:3px 0 8px}
+.quote-notebook-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:10px 0}
+.quote-notebook-fields label,.quote-note-odds{display:flex;flex-direction:column;gap:6px;font-size:11px;color:var(--soft);min-width:0}
+.quote-notebook-fields input,.quote-note-odds input{width:100%;min-width:0}
+.quote-notebook-fields label:first-child,.quote-notebook-fields label:last-child{grid-column:1/-1}
+.quote-note-row{border:1px solid #365161;border-radius:12px;padding:13px;margin-top:10px;background:#132633}
+.quote-note-heading{display:flex;justify-content:space-between;gap:9px;align-items:flex-start}
+.quote-note-heading>b{font-size:14px;line-height:1.35}
+.quote-note-heading>span{font-size:10px;white-space:nowrap}
+.quote-note-details{display:flex;gap:9px 16px;flex-wrap:wrap;margin:10px 0;color:#cad9e1;font-size:12px}
+.quote-note-odds{margin:12px 0}
+.quote-note-odds input{max-width:180px}
+.quote-note-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:9px}
+.quote-note-bottom>span{flex:1;min-width:180px;line-height:1.4}
+.quote-note-bottom>div{display:flex;gap:6px}
+@media(max-width:480px){
+ .quote-notebook-fields{grid-template-columns:1fr}
+ .quote-notebook-fields label:first-child,.quote-notebook-fields label:last-child{grid-column:auto}
+ .quote-note-heading{flex-direction:column;gap:3px}
+ .quote-note-heading>span{white-space:normal}
+ .quote-note-bottom>div{width:100%}
+ .quote-note-bottom button{flex:1}
+}
