@@ -18,6 +18,26 @@
  <main id="app">
   <section id="view-home" class="view active">
    <div class="home-head"><span>QUADRO GENERALE</span><span>Storico locale + LAB automatico</span></div>
+   <div class="sectionbar home-section"><h2>Partite in osservazione</h2><span class="muted small">Appunti sul tuo dispositivo</span></div>
+   <section id="quote-notebook" class="surface pad">
+    <p class="muted small">Tieni in evidenza le partite che stai valutando. Confronta una quota di riferimento con quella che annoti dal tuo bookmaker; il confronto non è una previsione di vincita e non registra scommesse effettuate.</p>
+    <div id="quote-notebook-list" aria-live="polite">Caricamento appunti…</div>
+    <details class="quote-notebook-editor">
+     <summary>Aggiungi una partita da osservare</summary>
+     <form id="quote-notebook-form">
+      <div class="quote-notebook-fields">
+       <label>Partita<input name="match" required maxlength="130" placeholder="Squadra A – Squadra B"></label>
+       <label>Inizio<input name="kickoff" type="datetime-local" required></label>
+       <label>Mercato<input name="market" maxlength="80" required placeholder="Es. 1, X, 2 o Over 2,5"></label>
+       <label>Quota di riferimento<input name="reference" type="number" step="0.01" min="1.01" max="200" required placeholder="Es. 2,00"></label>
+       <label>Quota Bet365 annotata<input name="observed" type="number" step="0.01" min="1.01" max="200" placeholder="La inserisci tu"></label>
+       <label>Note<input name="notes" maxlength="220" placeholder="Motivo dell'osservazione"></label>
+      </div>
+      <button class="button secondary thin" type="submit">Salva tra le osservazioni</button>
+     </form>
+    </details>
+    <p class="muted tiny">Salvataggio esclusivamente su questo browser. Le osservazioni non sono giocate REAL e non influiscono sui bilanci.</p>
+   </section>
    <div class="sectionbar home-section"><h2>Bilanci</h2><span class="muted small">REAL e virtuali separati</span></div>
    <div class="stats" id="summary-cards"></div>
    <div id="data-sources-status" class="data-source-strip" role="status">Verifica fonti dati alternative…</div>
@@ -110,6 +130,6 @@
  </nav>
  <dialog id="record-dialog"><form id="record-form" class="modal" method="dialog"><div class="modalhead"><h2>Nuova registrazione</h2><button id="close-dialog" type="button" class="close" aria-label="Chiudi">✕</button></div><p class="muted small">La nuova operazione verrà aggiunta a parte, senza alterare i bilanci consolidati del 24/10.</p><div class="formgrid"><label>Data<input type="date" name="date" required value="2026-10-25"></label><label>Archivio<select name="book"><option value="lab">LAB virtuale</option><option value="main">Principale virtuale</option><option value="real">REAL (solo già piazzata)</option></select></label><label>Categoria<select name="category"><option>TEST</option><option>CORE</option><option>VALUE</option><option>EXTRA</option></select></label><label>Partita<input name="match" required placeholder="Es. Squadra A – Squadra B"></label><label>Mercato<input name="selection" required placeholder="Es. Over 2,5"></label><label>Quota decimale<input name="odds" required inputmode="decimal" type="number" min="1.01" max="1000" step="0.01"></label><label>Importo €<input name="stake" required inputmode="decimal" type="number" min="0.01" max="10000" step="0.01"></label><label>Esito<select name="result"><option value="pending">In attesa</option><option value="won">Vinta</option><option value="lost">Persa</option><option value="push">Rimborsata</option></select></label><label class="full">Nota / motivazione<input name="note" placeholder="Registrare prima del via, se possibile"></label></div><button type="submit" class="button">Salva registrazione</button></form></dialog>
  <div id="toast" role="status" aria-live="polite"></div>
- <script src="data/seed.js"></script><script src="assets/app.js"></script><script src="assets/feed.js"></script><script src="assets/lab-pilot.js"></script><script src="assets/daily-virtual.js"></script><script src="assets/archive-public.js"></script><script src="assets/install.js"></script><script src="assets/bet365.js"></script><script src="assets/analytics.js"></script><script src="assets/provider-status.js"></script>
+ <script src="data/seed.js"></script><script src="assets/app.js"></script><script src="assets/feed.js"></script><script src="assets/lab-pilot.js"></script><script src="assets/daily-virtual.js"></script><script src="assets/archive-public.js"></script><script src="assets/install.js"></script><script src="assets/bet365.js"></script><script src="assets/quote-notebook.js"></script><script src="assets/analytics.js"></script><script src="assets/provider-status.js"></script>
 </body>
 </html>
