@@ -1,8 +1,8 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-01T19:13:21.236Z",
-  "status": "PRELIMINARY_CANDIDATES",
+  "generated_at": "2026-11-01T20:37:13.820Z",
+  "status": "NO_ELIGIBLE_OBSERVATIONS",
   "source_last_check": "2026-11-01T19:13:20.442Z",
   "source_max_age_hours": 36,
   "scope": "Solo eventi futuri di sabato e domenica, entro 72 ore.",
@@ -17,49 +17,12 @@
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
     "paper_records": 105,
-    "eligible_observations": 1,
+    "eligible_observations": 0,
     "eligible_core": 0,
-    "eligible_value": 1,
+    "eligible_value": 0,
     "settled_paper_samples": 75,
     "settled_paper_roi_pct": 4.2
   },
-  "shortlist": [
-    {
-      "id": "tipsaudit-13704:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "Atlanta United FC - Toronto FC",
-      "league": "MLS",
-      "kickoff": "2026-11-01T21:30:00+00:00",
-      "market": "1X2",
-      "selection": "Home",
-      "category": "VALUE",
-      "reference_odds": 2.28,
-      "reference_bookmaker": "LeoVegas (SE)",
-      "external_fair_odds": 2.2,
-      "external_benchmark_probability_pct": 45.5,
-      "external_reference_gap_pct": 3.64,
-      "relative_screening_score": 57,
-      "captured_at": "2026-11-01T11:58:16.424Z",
-      "reference_link": "https://tipsaudit.com/match/13704/atlanta-united-fc-vs-toronto-fc-2026-11-01",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 2.28 contro quota equa 2.2 stimata dalla fonte esterna (+ 3.6% di scostamento).",
-        "Dato osservato da LeoVegas (SE) e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 57 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 44,
-        "observed_roi_pct": 13.3,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    }
-  ],
+  "shortlist": [],
   "alternatives": []
 }
