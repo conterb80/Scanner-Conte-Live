@@ -2103,10 +2103,14 @@
       "reference": "https://tipsaudit.com/match/13571/pec-zwolle-vs-ado-den-haag-2026-11-01",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T15:11:55.460Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-13572:TIPSAUDIT_VALUE_1X2",
@@ -2130,10 +2134,14 @@
       "reference": "https://tipsaudit.com/match/13572/como-vs-venezia-2026-11-01",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.34,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T15:11:55.460Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-13601:TIPSAUDIT_VALUE_1X2",
@@ -2335,10 +2343,14 @@
       "reference": "https://tipsaudit.com/match/13565/amed-vs-eyupspor-2026-11-01",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.3,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T15:11:55.460Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-13611:TIPSAUDIT_VALUE_1X2",
@@ -2794,10 +2806,14 @@
       "reference": "https://tipsaudit.com/match/13079/melbourne-victory-vs-central-coast-mariners-2026-11-01",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T15:11:55.460Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T15:10:13+00:00"
     },
     {
       "id": "tipsaudit-13992:TIPSAUDIT_VALUE_1X2",
@@ -3146,10 +3162,10 @@
   "last_check": "2026-11-01T11:58:16.424Z",
   "stats": {
     "total": 99,
-    "pending": 28,
-    "won": 35,
-    "lost": 36,
-    "pnl": 4.52
+    "pending": 24,
+    "won": 37,
+    "lost": 38,
+    "pnl": 3.16
   },
-  "last_settlement_check": "2026-11-01T01:12:11.850Z"
+  "last_settlement_check": "2026-11-01T15:11:55.460Z"
 }
