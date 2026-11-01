@@ -234,3 +234,39 @@
  .candidate-review-record .button{width:100%}
  .candidate-review-inputrow input{min-width:80px}
 }
+
+
+/* V0.9.2 — registro scansioni LAB: contatori e campionati verificabili */
+.scan-audit-home{margin:12px 0 15px;line-height:1.5}
+.scan-audit-home-top{display:flex;align-items:flex-start;justify-content:space-between;gap:7px 14px;flex-wrap:wrap}
+.scan-audit-home-top strong{font-size:12px}
+.scan-audit-home-top>span{font-size:11px}
+.scan-audit-home-stats{display:flex;gap:7px;flex-wrap:wrap;margin:11px 0}
+.scan-audit-home-stats span{font-size:11px;padding:7px 9px;border-radius:9px;background:#112833;border:1px solid #345060}
+.scan-audit-home .tiny,.scan-audit-home p{margin:8px 0 0;line-height:1.55}
+.scan-audit-warn{color:#f0c58b}
+.scan-audit-status{display:flex;gap:5px 10px;flex-wrap:wrap;align-items:center;font-size:12px;line-height:1.6;margin-bottom:10px}
+.scan-audit-status a{color:#94e3c3}
+.scan-audit-status p{flex-basis:100%;margin:3px 0}
+.scan-audit-day-label{display:flex;flex-direction:column;gap:6px;color:var(--soft);font-size:12px;max-width:360px}
+.scan-audit-day-label select{width:100%}
+.scan-audit-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:15px}
+.scan-audit-stat{min-width:0;background:#112631;border:1px solid #2a4652;border-radius:10px;padding:12px 10px}
+.scan-audit-stat span{display:block;color:#adc0ca;font-size:10px;line-height:1.4;min-height:29px}
+.scan-audit-stat strong{display:block;font-size:22px;margin-top:6px;line-height:1.2}
+.scan-audit-subhead{margin:22px 0 11px}
+.scan-audit-subhead h3{font-size:13px;margin:0}
+.scan-audit-scroll{max-width:100%;overflow-x:auto}
+.scan-audit-table{width:100%;border-collapse:collapse;font-size:12px;text-align:left}
+.scan-audit-table th{color:#c0d5df;font-size:10px;text-align:left;white-space:nowrap}
+.scan-audit-table th,.scan-audit-table td{border-bottom:1px solid #2a3a48;padding:10px 8px}
+.scan-audit-league-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.scan-audit-league{min-width:0;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px;border:1px solid #2a3d4b;background:#112530;border-radius:9px;font-size:12px}
+.scan-audit-league span{overflow-wrap:anywhere}
+.scan-audit-league strong{color:var(--mint);font-variant-numeric:tabular-nums}
+.scan-audit-note{line-height:1.6;margin-top:19px}
+@media(max-width:600px){
+ .scan-audit-summary{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .scan-audit-stat strong{font-size:20px}
+ .scan-audit-league-list{grid-template-columns:1fr}
+}
