@@ -1,6 +1,7 @@
-/* Scanner Conte LIVE V0.9.2 — registro trasparente delle acquisizioni LAB.
- * Le scansioni riportano SEGNALAZIONI del feed (possono ripetersi), mentre i
- * campionati si riferiscono ai TEST acquisiti e salvati, non all'intero feed.
+/* Scanner Conte LIVE V0.9.3 — registro trasparente delle acquisizioni LAB.
+ * Le scansioni riportano SEGNALAZIONI del feed (possono ripetersi). I dati
+ * storici mostrano le leghe dei TEST; le prossime acquisizioni registreranno
+ * anche l'elenco completo dei campionati del feed per ciascun passaggio.
  * Non esegue ricerche di quote, non altera il LAB e non registra scommesse REAL.
  * Fonte dati: TipsAudit — https://tipsaudit.com/api
  */
@@ -28,7 +29,20 @@ function filterDay(day){
  for(const x of records){const league=String(x.league||'Campionato non indicato').trim()||'Campionato non indicato';
   leagueCounts.set(league,(leagueCounts.get(league)||0)+1);}
  const leagues=[...leagueCounts].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'it'));
- return {checks,records,uniqueFixtures:uniqueFixtures.size,leagues,
+ const feedCounts=new Map();
+ let fullFeedCheckCount=0;
+ for(const c of checks){
+  if(c.scanned_league_counts&&typeof c.scanned_league_counts==='object'&&!Array.isArray(c.scanned_league_counts)){
+   fullFeedCheckCount++;
+   for(const [league,count] of Object.entries(c.scanned_league_counts)){
+    if(typeof count==='number'&&Number.isFinite(count)&&count>=0){
+     feedCounts.set(league,(feedCounts.get(league)||0)+count);
+    }
+   }
+  }
+ }
+ const feedLeagues=[...feedCounts].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'it'));
+ return {checks,records,uniqueFixtures:uniqueFixtures.size,leagues,feedLeagues,fullFeedCheckCount,
   scanSignals:checks.reduce((a,c)=>a+n(c.scanned_predictions),0),
   eligible:checks.reduce((a,c)=>a+n(c.eligible_actionable),0),
   created:checks.reduce((a,c)=>a+n(c.created),0)};
@@ -63,15 +77,25 @@ function render(){
  '<div class="scan-audit-stat"><span>Segnalazioni lette (somma)</span><strong>'+number(d.scanSignals)+'</strong></div>'+
  '<div class="scan-audit-stat"><span>Idonee nei singoli passaggi</span><strong>'+number(d.eligible)+'</strong></div>'+
  '<div class="scan-audit-stat"><span>Partite LAB registrate</span><strong>'+number(d.uniqueFixtures)+'</strong></div>'+
- '<div class="scan-audit-stat"><span>Campionati dei test registrati</span><strong>'+number(d.leagues.length)+'</strong></div>';
- const rows=d.checks.map((x,i)=>'<tr><td>'+escape(localTime(x.checked_at))+'</td>'+
-  '<td>'+number(x.scanned_predictions)+'</td><td>'+number(x.eligible_actionable)+'</td><td>'+number(x.created)+'</td></tr>').join('');
+ '<div class="scan-audit-stat"><span>Campionati dei test registrati</span><strong>'+number(d.leagues.length)+'</strong></div>'+ 
+ '<div class="scan-audit-stat"><span>Campionati nel feed completo</span><strong>'+(d.fullFeedCheckCount?number(d.feedLeagues.length):'—')+'</strong></div>';
+ const rows=d.checks.map(x=>'<tr><td>'+escape(localTime(x.checked_at))+'</td>'+ 
+  '<td>'+number(x.scanned_predictions)+'</td>'+ 
+  '<td>'+(typeof x.scanned_unique_matches==='number'?number(x.scanned_unique_matches):'—')+'</td>'+ 
+  '<td>'+number(x.eligible_actionable)+'</td><td>'+number(x.created)+'</td></tr>').join('');
  checksBox.innerHTML=d.checks.length?
-  '<div class="scan-audit-scroll"><table class="scan-audit-table"><thead><tr><th>Ora</th><th>Segnali letti</th><th>Idonei</th><th>Nuovi test</th></tr></thead><tbody>'+rows+'</tbody></table></div>':
+  '<div class="scan-audit-scroll"><table class="scan-audit-table"><thead><tr><th>Ora</th><th>Segnali letti</th><th>Partite distinte*</th><th>Idonei</th><th>Nuovi test</th></tr></thead><tbody>'+rows+'</tbody></table></div>':
   '<p class="muted small">Nessun passaggio registrato per questa data.</p>';
- leaguesBox.innerHTML=d.leagues.length?
-  '<div class="scan-audit-league-list">'+d.leagues.map(([league,count])=>'<div class="scan-audit-league"><span>'+escape(league)+'</span><strong>'+number(count)+'</strong></div>').join('')+'</div>':
-  '<p class="muted small">Nessun campionato disponibile: non sono stati registrati nuovi test in questa data.</p>';
+ const fullLeagues=d.fullFeedCheckCount?
+  '<h4 class="scan-audit-listtitle">Campionati nel feed consultato</h4>'+
+  '<p class="muted tiny">Disponibili in '+d.fullFeedCheckCount+' di '+d.checks.length+' scansioni. I conteggi sono segnalazioni sommate e possono ripetersi tra un passaggio e l’altro.</p>'+
+  '<div class="scan-audit-league-list">'+d.feedLeagues.map(([league,count])=>'<div class="scan-audit-league"><span>'+escape(league)+'</span><strong>'+number(count)+'</strong></div>').join('')+'</div>':
+  '<p class="muted small">Campionati del feed completo: non archiviati per le scansioni di questa data. Verranno mostrati dalle prossime acquisizioni.</p>';
+ const testLeagues='<h4 class="scan-audit-listtitle">Campionati delle partite salvate nel LAB</h4>'+
+   (d.leagues.length?
+   '<div class="scan-audit-league-list">'+d.leagues.map(([league,count])=>'<div class="scan-audit-league"><span>'+escape(league)+'</span><strong>'+number(count)+'</strong></div>').join('')+'</div>':
+   '<p class="muted small">Nessun test registrato in questa data.</p>');
+ leaguesBox.innerHTML=fullLeagues+testLeagues;
  homeRender();
 }
 async function load(){
