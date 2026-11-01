@@ -33,10 +33,78 @@ root('export-top').addEventListener('click',exportJson);root('export-json').addE
 root('export-csv').addEventListener('click',()=>{let fields=['id','date','book','category','match','selection','odds','stake','result','pnl','score','quality','source','note'];let quote=x=>'"'+String(x??'').replaceAll('"','""')+'"';let csv='\uFEFF'+fields.map(quote).join(';')+'\n'+db.records.map(r=>fields.map(k=>quote(r[k])).join(';')).join('\n');download('ScannerConteLIVE-storico.csv',csv,'text/csv;charset=utf-8')});
 root('import-file').addEventListener('change',async e=>{let file=e.target.files[0];if(!file)return;try{let obj=JSON.parse(await file.text());if(!obj.snapshots||!Array.isArray(obj.records)||!Array.isArray(obj.candidates)||!obj.notes||!obj.snapshots.real||!obj.snapshots.main||!obj.snapshots.lab)throw Error('Struttura backup non riconosciuta');if(confirm(`Il backup contiene ${obj.records.length} registrazioni. Sostituire i dati attuali? Prima esporta un backup se hai aggiunto informazioni.`)){db=obj;persist();renderAll();toast('Backup importato correttamente')}}catch(err){alert('Impossibile importare: '+err.message)}finally{e.target.value=''}});
 root('reset-local').addEventListener('click',()=>{if(confirm('Ripristinare la versione iniziale? Le modifiche locali andranno perse se non hai un backup.')){db=clone(SEED);persist();renderAll();toast('Storico iniziale ripristinato')}});
-root('add-record').addEventListener('click',()=>root('record-dialog').showModal());root('close-dialog').addEventListener('click',()=>root('record-dialog').close());
-root('record-form').addEventListener('submit',e=>{e.preventDefault();let f=new FormData(e.target),v=k=>String(f.get(k)||'').trim(),od=Number(v('odds')),st=Number(v('stake')),rs=v('result'),date=v('date');if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!v('match')||!v('selection')||od<1.01||st<=0){alert('Compila tutti i campi correttamente.');return}if(v('book')==='real'&&!confirm('Confermi che questa è una scommessa REAL già effettivamente piazzata?'))return;
-let pnl=rs==='won'?round((od-1)*st):rs==='lost'?-st:rs==='push'?0:null;
-let r={id:'manual-'+Date.now(),date,book:v('book'),category:v('category'),match:v('match'),selection:v('selection'),odds:od,stake:st,result:rs,pnl,score:'',quality:'manuale',source:'Inserimento manuale V0.1',note:v('note'),manual:true,recorded_before_kickoff:null};db.records.push(r);persist();root('record-dialog').close();e.target.reset();renderAll();toast('Registrazione salvata sul dispositivo')});
+/* Preparazione della registrazione REAL da shortlist oppure alternative.
+   I dati del LAB non scrivono mai da soli nello Storico: serve la conferma dell'utente. */
+let candidatePrefill=null;
+root('add-record').addEventListener('click',()=>{
+ candidatePrefill=null;
+ const form=root('record-form');form.reset();delete form.dataset.candidateId;
+ root('record-dialog').showModal();
+});
+root('close-dialog').addEventListener('click',()=>root('record-dialog').close());
+window.addEventListener('scanner-conte:prefill-real',event=>{
+ const d=event.detail;
+ if(!d||typeof d.id!=='string'||!d.id.startsWith('tipsaudit-')||
+    typeof d.match!=='string'||d.match.length>150||!['CORE','VALUE'].includes(d.category)||
+    !['Home','Away','Draw'].includes(d.selection)||!Number.isFinite(Number(d.odds))||
+    Number(d.odds)<1.01||Number(d.odds)>200)return;
+ const kickoff=new Date(d.kickoff);
+ if(!Number.isFinite(kickoff.getTime()))return;
+ if(db.records.some(r=>r.book==='real'&&r.origin_candidate_id===d.id)){
+   alert('Questa candidata risulta già registrata nello Storico REAL. Controlla la scheda prima di inserirla di nuovo.');
+   return;
+ }
+ const form=root('record-form');
+ form.reset();
+ const field=name=>form.elements.namedItem(name);
+ const matchDay=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).format(kickoff);
+ field('date').value=matchDay;
+ field('book').value='real';
+ field('category').value=d.category;
+ field('match').value=d.match;
+ field('selection').value=d.selection==='Home'?'1':d.selection==='Away'?'2':'X';
+ field('odds').value=String(d.odds);
+ field('result').value='pending';
+ const reference=Number(d.reference_odds);
+ field('note').value='Da screening LAB prepartita · riferimento '+(Number.isFinite(reference)?reference:'non disponibile')+
+   ' ('+String(d.reference_bookmaker||'fonte esterna').slice(0,70)+'). Quota Bet365 e importo confermati dall’utente.';
+ form.dataset.candidateId=d.id;
+ candidatePrefill={id:d.id,reference_odds:Number.isFinite(reference)?reference:null,
+   reference_link:String(d.reference_link||'').startsWith('https://tipsaudit.com/')?d.reference_link:null,
+   source_bookmaker:String(d.reference_bookmaker||'').slice(0,70)};
+ root('record-dialog').showModal();
+});
+root('record-form').addEventListener('submit',e=>{
+ e.preventDefault();
+ let f=new FormData(e.target),v=k=>String(f.get(k)||'').trim(),
+ od=Number(v('odds')),st=Number(v('stake')),rs=v('result'),date=v('date');
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!v('match')||!v('selection')||
+    !Number.isFinite(od)||od<1.01||!Number.isFinite(st)||st<=0){
+  alert('Compila tutti i campi correttamente.');return;
+ }
+ const candidateId=e.target.dataset.candidateId||null;
+ if(candidateId&&v('book')==='real'&&db.records.some(r=>r.book==='real'&&r.origin_candidate_id===candidateId)){
+  alert('Questa candidata è già registrata nello Storico REAL: nessun duplicato creato.');return;
+ }
+ if(v('book')==='real'&&!confirm('Confermi di avere GIÀ effettivamente piazzato questa scommessa REAL su Bet365, alla quota e all’importo inseriti?'))return;
+ let pnl=rs==='won'?round((od-1)*st):rs==='lost'?-st:rs==='push'?0:null;
+ let r={
+  id:'manual-'+Date.now(),date,book:v('book'),category:v('category'),match:v('match'),
+  selection:v('selection'),odds:od,stake:st,result:rs,pnl,score:'',
+  quality:'manuale',source:candidateId&&v('book')==='real'?'Da scanner LAB, inserimento manuale REAL':'Inserimento manuale V0.1',
+  note:v('note'),manual:true,recorded_before_kickoff:null
+ };
+ if(candidateId&&v('book')==='real'&&candidatePrefill?.id===candidateId){
+   r.origin_candidate_id=candidateId;
+   r.reference_odds=candidatePrefill.reference_odds;
+   r.reference_link=candidatePrefill.reference_link;
+   r.reference_bookmaker=candidatePrefill.source_bookmaker;
+ }
+ db.records.push(r);persist();
+ root('record-dialog').close();e.target.reset();delete e.target.dataset.candidateId;candidatePrefill=null;
+ renderAll();toast('REAL registrata manualmente sul dispositivo');
+});
+
 
 /* V0.7 — verifica esiti delle registrazioni locali, soltanto su risultato FT
    e coincidenza esatta della partita/data. NON trasferisce i record a GitHub. */
