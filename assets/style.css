@@ -169,3 +169,56 @@
  .quote-note-bottom>div{width:100%}
  .quote-note-bottom button{flex:1}
 }
+
+
+/* V0.9.0 — screening LAB automatico in evidenza nella Home; SOLO osservazioni */
+.candidate-review-heading{margin-top:15px}
+.candidate-review-heading h2{font-size:16px}
+#candidate-review-status{font-size:11px;line-height:1.6;margin-bottom:12px}
+#candidate-review-status p{margin:7px 0 0}
+.candidate-review-panel{margin-bottom:23px}
+.candidate-review-emphasis{padding:12px 14px;background:#152b36;border:1px solid #315164;border-radius:12px;margin-bottom:12px}
+.candidate-review-emphasis strong{font-size:12px;color:#d9ecf0}
+.candidate-review-emphasis p{line-height:1.6;margin:7px 0 0}
+.candidate-review-empty{padding:17px;border:1px solid var(--line);border-radius:13px;background:#14232e}
+.candidate-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.candidate-review-card{min-width:0}
+.candidate-review-cardtop{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
+.candidate-review-cardtop .tag{font-size:9px}
+.candidate-review-card h3{font-size:16px;line-height:1.35;margin:13px 0 7px}
+.candidate-review-card>p{line-height:1.55;margin:7px 0}
+.candidate-review-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:14px 0 12px}
+.candidate-review-stats>div{min-width:0;background:#10232f;border:1px solid #2a3e4b;padding:10px 8px;border-radius:9px}
+.candidate-review-stats span{display:block;font-size:10px;color:#a9bcca;line-height:1.3}
+.candidate-review-stats strong{display:block;font-size:19px;margin-top:7px;overflow-wrap:anywhere}
+.candidate-review-stats .candidate-bookmaker{font-size:11px;line-height:1.35}
+.candidate-review-why{padding:8px 0 12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:12px}
+.candidate-review-why summary{color:#a6e3d1;cursor:pointer;font-size:12px;font-weight:700}
+.candidate-review-why ul{font-size:11px;line-height:1.6;margin:9px 0;padding-left:18px;color:#c1d0db}
+.candidate-review-why li{margin:6px 0}
+.candidate-review-why a{color:#91e4c5;font-size:11px}
+.candidate-review-manual{padding-top:12px}
+.candidate-review-manual>label{display:block;color:#c1d5df;font-size:11px;margin-bottom:6px}
+.candidate-review-inputrow{display:flex;gap:8px;align-items:center}
+.candidate-review-inputrow input{flex:1;width:0;min-width:0}
+.candidate-review-inputrow .button{min-height:39px}
+.candidate-review-comparison{margin-top:10px;line-height:1.5}
+.candidate-review-comparison p{margin:6px 0 0}
+.candidate-compare{display:flex;flex-direction:column;gap:6px;font-size:11px;color:#c6d3db}
+.candidate-review-others{border-top:1px solid var(--line);padding-top:14px;margin-top:14px}
+.candidate-review-others summary{cursor:pointer;font-size:12px;font-weight:750;color:var(--mint)}
+.candidate-review-others>.candidate-review-grid{margin-top:12px}
+.candidate-review-panel>.muted.tiny{line-height:1.5}
+@media(max-width:700px){
+ .candidate-review-grid{grid-template-columns:1fr}
+ .candidate-review-stats strong{font-size:17px}
+ .candidate-review-heading h2{font-size:14px}
+}
+@media(max-width:380px){
+ .candidate-review-stats{gap:4px}
+ .candidate-review-stats>div{padding:9px 6px}
+ .candidate-review-stats span{font-size:9px}
+ .candidate-review-stats strong{font-size:15px}
+ .candidate-review-inputrow{flex-wrap:wrap}
+ .candidate-review-inputrow input{flex:1;min-width:115px}
+}
