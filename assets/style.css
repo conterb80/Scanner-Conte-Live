@@ -270,3 +270,9 @@
  .scan-audit-stat strong{font-size:20px}
  .scan-audit-league-list{grid-template-columns:1fr}
 }
+
+/* V0.9.3 — distinzione audit feed completo / sole schede LAB */
+.scan-audit-listtitle{font-size:12px;margin:15px 0 9px;color:#d6e5ed}
+#scan-audit-leagues>p{line-height:1.6;margin:10px 0}
+#scan-audit-leagues>.scan-audit-league-list{margin-bottom:16px}
+.scan-audit-table{min-width:440px}
