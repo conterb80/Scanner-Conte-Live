@@ -1,0 +1,44 @@
+name: Scanner Conte - Screening sperimentale weekend da LAB
+# SOLO osservazioni virtuali; nessuna puntata REAL o modifica al registro locale.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build-candidate-review.mjs'
+      - '.github/workflows/candidate-review.yml'
+  schedule:
+    - cron: "25 10,17,21 * * *"
+      timezone: "Europe/Rome"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scanner-conte-candidate-review
+  cancel-in-progress: false
+
+jobs:
+  screening:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Analizza soltanto dati LAB gia registrati prima delle partite
+        run: node scripts/build-candidate-review.mjs
+      - name: Pubblica rapporto sperimentale senza scommesse REAL
+        run: |
+          git add data/candidate_review.json
+          if git diff --cached --quiet; then
+            echo "Nessuna variazione del rapporto"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Aggiorna analisi preliminare osservazioni weekend"
+          git fetch origin main
+          git rebase origin/main
+          git push
