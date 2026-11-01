@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-01T14:32:08.533Z",
+  "generated_at": "2026-11-01T16:08:48.575Z",
   "status": "PRELIMINARY_CANDIDATES",
   "source_last_check": "2026-11-01T11:58:16.424Z",
   "source_max_age_hours": 36,
@@ -17,87 +17,13 @@
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
     "paper_records": 99,
-    "eligible_observations": 6,
-    "eligible_core": 2,
-    "eligible_value": 4,
-    "settled_paper_samples": 71,
-    "settled_paper_roi_pct": 6.4
+    "eligible_observations": 3,
+    "eligible_core": 0,
+    "eligible_value": 3,
+    "settled_paper_samples": 75,
+    "settled_paper_roi_pct": 4.2
   },
   "shortlist": [
-    {
-      "id": "tipsaudit-13643:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "Panetolikos - OFI",
-      "league": "Greek Super League",
-      "kickoff": "2026-11-01T16:00:00+00:00",
-      "market": "1X2",
-      "selection": "Draw",
-      "category": "VALUE",
-      "reference_odds": 3.15,
-      "reference_bookmaker": "Unibet (NL)",
-      "external_fair_odds": 2.94,
-      "external_benchmark_probability_pct": 34,
-      "external_reference_gap_pct": 7.14,
-      "relative_screening_score": 68,
-      "captured_at": "2026-10-31T13:54:13.386Z",
-      "reference_link": "https://tipsaudit.com/match/13643/panetolikos-vs-ofi-2026-11-01",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 3.15 contro quota equa 2.94 stimata dalla fonte esterna (+ 7.1% di scostamento).",
-        "Dato osservato da Unibet (NL) e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 68 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 43,
-        "observed_roi_pct": 15.9,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    },
-    {
-      "id": "tipsaudit-13647:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "Eintracht Frankfurt - Hamburger SV",
-      "league": "Bundesliga",
-      "kickoff": "2026-11-01T16:30:00+00:00",
-      "market": "1X2",
-      "selection": "Home",
-      "category": "CORE",
-      "reference_odds": 1.64,
-      "reference_bookmaker": "1xBet",
-      "external_fair_odds": 1.61,
-      "external_benchmark_probability_pct": 62.1,
-      "external_reference_gap_pct": 1.86,
-      "relative_screening_score": 30,
-      "captured_at": "2026-10-31T13:54:13.386Z",
-      "reference_link": "https://tipsaudit.com/match/13647/eintracht-frankfurt-vs-hamburger-sv-2026-11-01",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 1.64 contro quota equa 1.61 stimata dalla fonte esterna (+ 1.9% di scostamento).",
-        "Dato osservato da 1xBet e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 30 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 25,
-        "observed_roi_pct": -13.4,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    }
-  ],
-  "alternatives": [
     {
       "id": "tipsaudit-13681:TIPSAUDIT_VALUE_1X2",
       "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
@@ -112,7 +38,7 @@
       "external_fair_odds": 2,
       "external_benchmark_probability_pct": 50,
       "external_reference_gap_pct": 3.5,
-      "relative_screening_score": 61,
+      "relative_screening_score": 60,
       "captured_at": "2026-11-01T11:58:16.424Z",
       "reference_link": "https://tipsaudit.com/match/13681/athletic-club-vs-real-sociedad-2026-11-01",
       "source": "TipsAudit public pre-match paper signals",
@@ -124,16 +50,18 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 61 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 60 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
-        "settled": 43,
-        "observed_roi_pct": 15.9,
+        "settled": 44,
+        "observed_roi_pct": 13.3,
         "reliable_edge_validation": false,
         "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
       }
-    },
+    }
+  ],
+  "alternatives": [
     {
       "id": "tipsaudit-13704:TIPSAUDIT_VALUE_1X2",
       "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
@@ -148,7 +76,7 @@
       "external_fair_odds": 2.2,
       "external_benchmark_probability_pct": 45.5,
       "external_reference_gap_pct": 3.64,
-      "relative_screening_score": 60,
+      "relative_screening_score": 59,
       "captured_at": "2026-11-01T11:58:16.424Z",
       "reference_link": "https://tipsaudit.com/match/13704/atlanta-united-fc-vs-toronto-fc-2026-11-01",
       "source": "TipsAudit public pre-match paper signals",
@@ -160,12 +88,12 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 60 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 59 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
-        "settled": 43,
-        "observed_roi_pct": 15.9,
+        "settled": 44,
+        "observed_roi_pct": 13.3,
         "reliable_edge_validation": false,
         "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
       }
@@ -184,7 +112,7 @@
       "external_fair_odds": 2.19,
       "external_benchmark_probability_pct": 45.7,
       "external_reference_gap_pct": 2.74,
-      "relative_screening_score": 41,
+      "relative_screening_score": 40,
       "captured_at": "2026-10-31T13:54:13.386Z",
       "reference_link": "https://tipsaudit.com/match/13682/tenerife-vs-fc-andorra-2026-11-01",
       "source": "TipsAudit public pre-match paper signals",
@@ -196,48 +124,12 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 41 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 40 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
-        "settled": 43,
-        "observed_roi_pct": 15.9,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    },
-    {
-      "id": "tipsaudit-13641:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "Kasımpaşa - Beşiktaş",
-      "league": "Süper Lig",
-      "kickoff": "2026-11-01T16:00:00+00:00",
-      "market": "1X2",
-      "selection": "Away",
-      "category": "CORE",
-      "reference_odds": 1.66,
-      "reference_bookmaker": "1xBet",
-      "external_fair_odds": 1.63,
-      "external_benchmark_probability_pct": 61.3,
-      "external_reference_gap_pct": 1.84,
-      "relative_screening_score": 29,
-      "captured_at": "2026-10-31T13:54:13.386Z",
-      "reference_link": "https://tipsaudit.com/match/13641/kasimpasa-vs-besiktas-2026-11-01",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 1.66 contro quota equa 1.63 stimata dalla fonte esterna (+ 1.8% di scostamento).",
-        "Dato osservato da 1xBet e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 29 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 25,
-        "observed_roi_pct": -13.4,
+        "settled": 44,
+        "observed_roi_pct": 13.3,
         "reliable_edge_validation": false,
         "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
       }
