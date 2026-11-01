@@ -13,7 +13,7 @@
 <body>
  <header class="topbar">
   <div class="brand"><div class="brandmark">SC</div><div><strong>SCANNER CONTE</strong><span>LIVE <i class="onlinepoint"></i> ARCHIVIO LOCALE</span></div></div>
-  <div class="top-actions"><span class="version">V0.9.1 · QUOTE MANUALI</span><button type="button" id="export-top" class="round" aria-label="Esporta backup" title="Esporta backup">↧</button></div>
+  <div class="top-actions"><span class="version">V0.9.2 · QUOTE MANUALI</span><button type="button" id="export-top" class="round" aria-label="Esporta backup" title="Esporta backup">↧</button></div>
  </header>
  <main id="app">
   <section id="view-home" class="view active">
@@ -45,6 +45,7 @@
    <div class="stats" id="summary-cards"></div>
    <div id="data-sources-status" class="data-source-strip" role="status">Verifica fonti dati alternative…</div>
    <div id="daily-home-status" class="data-source-strip" role="status" aria-live="polite">LAB 1X2 quotidiano: controllo raccolta in corso…</div>
+   <div id="scan-audit-home" class="surface pad scan-audit-home" role="status" aria-live="polite">Verifica scansioni giornaliere…</div>
    <div class="settle-control"><span id="settle-status" role="status" aria-live="polite">Controllo esiti delle giocate registrate…</span><button id="settle-refresh" class="button secondary thin" type="button">Verifica esiti</button></div>
    <div class="sectionbar"><h2>Statistiche e grafici</h2><button id="analytics-refresh" class="button secondary thin" type="button">Aggiorna</button></div>
    <div class="analytics-tabs" role="group" aria-label="Seleziona archivio delle statistiche">
@@ -100,6 +101,19 @@
    <div class="pagelead compact"><div class="eyebrow">RICERCA / LABORATORIO</div><h1>Testare tutto.<br><em>Forzare niente.</em></h1><p>I bilanci restano distinti. Un test non diventa REAL automaticamente.</p></div>
    <div class="sectionbar"><h2>LAB pilota automatico · V0.4</h2><div class="register-heading-actions"><button class="button secondary thin" type="button" data-open-register="auto">Registro completo</button><button class="button secondary" type="button" id="lab-auto-refresh">Aggiorna</button></div></div><div id="lab-auto-info" class="surface pad">Verifica archivio LAB…</div><div id="lab-auto-list" class="candidates"></div>
    <div class="sectionbar"><h2>LAB quotidiano · quote 1X2 pubbliche</h2><button class="button secondary thin" type="button" data-open-register="daily">Registro completo</button></div><div id="daily-virtual-panel" class="surface pad">Verifica nuovi test quotidiani…</div>
+   <div class="sectionbar"><h2>Registro scansioni · giorno per giorno</h2><button id="scan-audit-refresh" class="button secondary thin" type="button">Aggiorna</button></div>
+   <div id="scan-audit-status" class="surface pad scan-audit-status" role="status" aria-live="polite">Verifica storico delle scansioni…</div>
+   <div class="surface pad scan-audit-box">
+    <label class="scan-audit-day-label" for="scan-audit-day">Giorno da analizzare
+     <select id="scan-audit-day" aria-label="Seleziona data delle scansioni"></select>
+    </label>
+    <div id="scan-audit-summary" class="scan-audit-summary">Preparazione riepilogo…</div>
+    <div class="sectionbar scan-audit-subhead"><h3>Passaggi effettuati</h3></div>
+    <div id="scan-audit-checks"></div>
+    <div class="sectionbar scan-audit-subhead"><h3>Campionati dei test registrati</h3></div>
+    <div id="scan-audit-leagues"></div>
+    <p class="muted tiny scan-audit-note">I segnali letti e quelli idonei possono comparire più volte nelle scansioni dello stesso giorno. I campionati elencati sono quelli dei test effettivamente salvati: non rappresentano necessariamente tutti quelli consultati dal fornitore. Nessuna giocata REAL viene registrata qui.</p>
+   </div>
    <div class="sectionbar"><h2>Strategie consolidate</h2></div><div id="strategy-cards" class="strategy-grid"></div>
    <div class="sectionbar"><h2>Regole di validazione</h2></div>
    <div class="surface pad rules"><div><b>01</b><span>Registra quota, probabilità e motivo prima del calcio d'inizio.</span></div><div><b>02</b><span>Separa il campione di costruzione da quello di verifica su partite nuove.</span></div><div><b>03</b><span>Misura ROI, calibrazione e confronto con quote di chiusura quando disponibili.</span></div><div><b>04</b><span>Una serie di vincite non prova che il metodo funzioni.</span></div></div>
@@ -121,7 +135,7 @@
    <div class="surface pad settings-panel"><h2>Salvataggio e trasferimento</h2><p class="muted">L'app salva le modifiche in questo browser. Se cancelli i dati del browser senza backup, puoi perderle. Su GitHub Pages servirà poi la sincronizzazione cloud.</p><button id="export-json" class="button">↓ Esporta backup JSON</button><button id="export-csv" class="button secondary">↓ Esporta storico CSV</button><label for="import-file" class="button secondary upload">↑ Importa backup JSON<input type="file" id="import-file" accept="application/json,.json" hidden></label><button id="reset-local" class="button danger-outline">Ripristina il dataset iniziale</button></div>
    <div class="sectionbar"><h2>Recupero archivio storico</h2></div><div class="surface pad" id="coverage"></div>
    <div class="surface pad settings-panel"><h2>Stato migrazione</h2><div id="migration-stats"></div><p class="muted tiny">I dati mancanti non vengono completati automaticamente. L'estrazione integrale della vecchia chat permetterà il controllo delle giocate residue e dei conflitti.</p></div>
-   <div class="surface pad settings-panel"><h2>Priorità del progetto</h2><p class="muted">1. Archivio affidabile. 2. Alimentazione automatica dei campionati. 3. Modelli e backtest separati. 4. Conferma manuale delle poche eventuali REAL.</p><div class="version-note">Scanner Conte LIVE · V0.9.1 · 01/11/2026</div></div>
+   <div class="surface pad settings-panel"><h2>Priorità del progetto</h2><p class="muted">1. Archivio affidabile. 2. Alimentazione automatica dei campionati. 3. Modelli e backtest separati. 4. Conferma manuale delle poche eventuali REAL.</p><div class="version-note">Scanner Conte LIVE · V0.9.2 · 01/11/2026</div></div>
   </section>
  </main>
  <nav class="bottomnav" aria-label="Navigazione principale">
@@ -133,6 +147,6 @@
  </nav>
  <dialog id="record-dialog"><form id="record-form" class="modal" method="dialog"><div class="modalhead"><h2>Nuova registrazione</h2><button id="close-dialog" type="button" class="close" aria-label="Chiudi">✕</button></div><p class="muted small">Registra soltanto una giocata già effettivamente piazzata. Se arrivi dalle candidate dello Scanner, partita, pronostico e quota sono precompilati: controllali, inserisci l’importo effettivo e conferma. Il LAB rimane separato.</p><div class="formgrid"><label>Data<input type="date" name="date" required value="2026-10-25"></label><label>Archivio<select name="book"><option value="lab">LAB virtuale</option><option value="main">Principale virtuale</option><option value="real">REAL (solo già piazzata)</option></select></label><label>Categoria<select name="category"><option>TEST</option><option>CORE</option><option>VALUE</option><option>EXTRA</option></select></label><label>Partita<input name="match" required placeholder="Es. Squadra A – Squadra B"></label><label>Mercato<input name="selection" required placeholder="Es. Over 2,5"></label><label>Quota decimale<input name="odds" required inputmode="decimal" type="number" min="1.01" max="1000" step="0.01"></label><label>Importo €<input name="stake" required inputmode="decimal" type="number" min="0.01" max="10000" step="0.01"></label><label>Esito<select name="result"><option value="pending">In attesa</option><option value="won">Vinta</option><option value="lost">Persa</option><option value="push">Rimborsata</option></select></label><label class="full">Nota / motivazione<input name="note" placeholder="Registrare prima del via, se possibile"></label></div><button type="submit" class="button">Salva registrazione</button></form></dialog>
  <div id="toast" role="status" aria-live="polite"></div>
- <script src="data/seed.js"></script><script src="assets/app.js"></script><script src="assets/feed.js"></script><script src="assets/lab-pilot.js"></script><script src="assets/daily-virtual.js"></script><script src="assets/archive-public.js"></script><script src="assets/install.js"></script><script src="assets/bet365.js"></script><script src="assets/candidate-review.js"></script><script src="assets/quote-notebook.js"></script><script src="assets/analytics.js"></script><script src="assets/provider-status.js"></script>
+ <script src="data/seed.js"></script><script src="assets/app.js"></script><script src="assets/feed.js"></script><script src="assets/lab-pilot.js"></script><script src="assets/daily-virtual.js"></script><script src="assets/scan-audit.js"></script><script src="assets/archive-public.js"></script><script src="assets/install.js"></script><script src="assets/bet365.js"></script><script src="assets/candidate-review.js"></script><script src="assets/quote-notebook.js"></script><script src="assets/analytics.js"></script><script src="assets/provider-status.js"></script>
 </body>
 </html>
