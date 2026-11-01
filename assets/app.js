@@ -21,7 +21,7 @@ const round=n=>Math.round((n+Number.EPSILON)*100)/100;
 function renderHome(){const sc=root('summary-cards');sc.innerHTML=['real','main','lab'].map(k=>{let s=db.snapshots[k],x=freshStats(k),current=round(s.pnl+x.pnl),str=k==='real'?'REAL · BET365':k==='main'?'VIRTUALE PRINCIPALE':'LAB · ESPERIMENTI';return `<div class="stat-card"><div class="stat-top">${str}</div><div class="stat-value ${current>=0?'positive':'negative'}">${current>0?'+':''}${money(current)}</div><div class="stat-bottom">${s.total+x.n} giocate · ${x.n?'incluse '+x.n+' nuove':'bilancio consolidato'}</div></div>`}).join('');
 root('coverage').innerHTML=['real','main','lab'].map(k=>{let s=db.snapshots[k],n=db.records.filter(r=>r.book===k&&!r.manual).length,p=s.total?100*Math.min(1,n/s.total):0;return `<div class="coverage-row"><div class="covline"><strong>${escape(s.label)}</strong><span>${n}/${s.total} schede recuperate</span></div><div class="track"><div class="trackfill" style="width:${p}%"></div></div></div>`}).join('')+'<p class="muted tiny" style="margin:13px 0 0">Copertura delle schede, non grado di verifica degli esiti. Alcune righe sono incomplete o discordanti.</p>';
 const newest=[...db.records].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,6);root('home-latest').innerHTML=newest.map(rowHtml).join('')}
-function rowHtml(r){const pl=r.pnl===null||r.pnl===undefined?'Da verificare':`${r.pnl>0?'+':''}${money(r.pnl)}`;let extra=r.quality==='conflitto'?'<span class="tag conflitto">CONFLITTO</span>':r.quality==='parziale'?'<span class="tag parziale">PARZIALE</span>':'';return `<div class="rowitem"><div><div class="rowtitle">${escape(r.match)}</div><div class="rowsub">${dateStr(r.date)} · ${escape(r.selection)} · @${dec(r.odds)} · ${money(r.stake)}<br><span class="tag ${r.book}">${books[r.book]||r.book}</span> <span class="tag">${escape(r.category)}</span> ${extra}</div></div><div class="rightr"><div class="profit ${resultClass[r.result]||'push'}">${escape(labelResults[r.result]||'—')}</div><div class="rowsub">${pl}</div></div></div>`}
+function rowHtml(r){const pl=r.pnl===null||r.pnl===undefined?'Da verificare':`${r.pnl>0?'+':''}${money(r.pnl)}`;let extra=r.quality==='conflitto'?'<span class="tag conflitto">CONFLITTO</span>':r.quality==='parziale'?'<span class="tag parziale">PARZIALE</span>':'';if(r.origin_candidate_id)extra+=' <span class="tag real">DA SCANNER</span>';return `<div class="rowitem"><div><div class="rowtitle">${escape(r.match)}</div><div class="rowsub">${dateStr(r.date)} · ${escape(r.selection)} · @${dec(r.odds)} · ${money(r.stake)}<br><span class="tag ${r.book}">${books[r.book]||r.book}</span> <span class="tag">${escape(r.category)}</span> ${extra}</div></div><div class="rightr"><div class="profit ${resultClass[r.result]||'push'}">${escape(labelResults[r.result]||'—')}</div><div class="rowsub">${pl}</div></div></div>`}
 function renderArchive(){let book=root('book-filter').value,qual=root('quality-filter').value,q=root('archive-search').value.toLowerCase().trim(),status=root('archive-local-status')?.value||'all';let a=db.records.filter(r=>(book==='all'||r.book===book)&&(qual==='all'||r.quality===qual)&&(status==='all'||(status==='pending'&&r.result==='pending')||(status==='closed'&&['won','lost','push'].includes(r.result)))&&(!q||[r.match,r.selection,r.note,r.category].join(' ').toLowerCase().includes(q))).sort((x,y)=>y.date.localeCompare(x.date)||y.id.localeCompare(x.id));const name={real:'REAL Bet365',main:'Virtuale principale',lab:'LAB storico',all:'Archivio locale'};root('archive-label').textContent=`${name[book]||'Archivio'} · ${a.length} schede`;root('archive-list').innerHTML=a.length?a.map(rowHtml).join(''):'<div class="empty">Nessuna scheda con questi filtri.</div>'}
 ['book-filter','quality-filter','archive-search','archive-local-status'].forEach(i=>root(i).addEventListener(i==='archive-search'?'input':'change',renderArchive));
 function renderLab(){const s=db.snapshots;let strats=[{name:'CORE',s:s.main.core,caption:'Virtuale principale'},{name:'VALUE',s:s.main.value,caption:'Virtuale principale'},{name:'LAB',s:s.lab,caption:'Laboratorio separato'}];root('strategy-cards').innerHTML=strats.map(x=>`<div class="surface"><div class="st-label">${x.caption} · ${x.name}</div><div class="st-title" style="color:${x.s.pnl>=0?'var(--mint)':'var(--red)'}">${x.s.pnl>0?'+':''}${money(x.s.pnl)}</div><div class="st-foot">${x.s.total} giocate · ${x.s.wins}V / ${x.s.losses}P${x.s.pushes?' / '+x.s.pushes+'R':''}</div></div>`).join('');root('audit-list').innerHTML=db.notes.audit.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<div class="audit-row"><span>${dateStr(x.date)}</span><div>${escape(x.text)}</div></div>`).join('')}
@@ -39,6 +39,8 @@ let candidatePrefill=null;
 root('add-record').addEventListener('click',()=>{
  candidatePrefill=null;
  const form=root('record-form');form.reset();delete form.dataset.candidateId;
+ const today=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+ form.elements.namedItem('date').value=today;
  root('record-dialog').showModal();
 });
 root('close-dialog').addEventListener('click',()=>root('record-dialog').close());
@@ -103,6 +105,10 @@ root('record-form').addEventListener('submit',e=>{
  db.records.push(r);persist();
  root('record-dialog').close();e.target.reset();delete e.target.dataset.candidateId;candidatePrefill=null;
  renderAll();toast('REAL registrata manualmente sul dispositivo');
+ if(r.book==='real'&&candidateId){
+   document.querySelector('[data-register-tab="real"]')?.click();
+   goto('archive');
+ }
 });
 
 
