@@ -57,13 +57,14 @@ function row(record,secondary=false){
    '<ul>'+evidence.map(x=>'<li>'+esc(readable(x))+'</li>').join('')+'</ul>'+
    '<p class="muted small">Il punteggio tecnico ordina le osservazioni; non indica la probabilità di vincita. I risultati passati non provano che il metodo funzioni.</p>'+
    '<a href="'+(String(record.reference_link||'').startsWith('https://tipsaudit.com/')?esc(record.reference_link):'https://tipsaudit.com/api')+'" target="_blank" rel="noopener noreferrer">Fonte della quota</a></details>'+
-  (secondary?'':'<div class="candidate-review-manual">'+
+  '<div class="candidate-review-manual">'+
    '<label for="review-quote-'+esc(record.id)+'">Quota Bet365 osservata da te</label>'+
    '<div class="candidate-review-inputrow"><input id="review-quote-'+esc(record.id)+'" type="number" min="1.01" max="200" step="0.01" inputmode="decimal" '+
     'data-review-input="'+esc(record.id)+'" value="'+(savedValue!==null?esc(String(savedValue)):'')+'" placeholder="Es. 1,90" '+(!before?'disabled':'')+'/>'+
     '<button type="button" class="button secondary thin" data-review-save="'+esc(record.id)+'" '+(!before?'disabled':'')+'>Salva quota</button></div>'+
    '<div class="candidate-review-comparison" data-review-comparison="'+esc(record.id)+'">'+comparison(record)+'</div>'+
-  '</div>')+
+   '<div class="candidate-review-record"><button type="button" class="button secondary thin" data-review-register="'+esc(record.id)+'" '+(!before?'disabled':'')+'>Ho già piazzato · registra REAL</button>'+ 
+   '<p class="muted tiny">Apre il modulo precompilato. Non salva alcuna puntata senza la tua conferma.</p></div></div>'+
   (!before?'<p class="muted small">Partita iniziata o imminente: confronto bloccato per evitare l’uso di riferimenti prepartita non più validi.</p>':'')+
  '</article>';
 }
@@ -84,6 +85,7 @@ function show(){
   '<p class="muted small">Ultima raccolta LAB: '+esc(feed.source_last_check?date(feed.source_last_check):'non disponibile')+
   '. Mercato coperto: 1X2. I gruppi CORE e VALUE sono fasce di quota, non garanzie di sicurezza.</p>'+
   (error?'<p class="muted small">Visualizzo l’ultima copia caricata. Aggiornamento fallito: '+esc(error)+'</p>':'');
+ const alternativesWereOpen=Boolean(panel.querySelector('.candidate-review-others')?.open);
  let html='<div class="candidate-review-emphasis"><strong>Analisi automatica preliminare, nessuna giocata REAL.</strong>'+
   '<p class="muted small">Il motore usa quote LAB prepartita e il benchmark della fonte. Per ora NON confronta ancora forma, infortuni o formazioni: non è una raccomandazione validata.</p></div>';
  if(!allShort.length)html+='<p class="muted small candidate-review-empty">Nessuna candidata attiva in questo momento. Non vengono mostrate partite iniziate o dati scaduti.</p>';
@@ -93,6 +95,7 @@ function show(){
   '<div class="candidate-review-grid">'+alternatives.slice(0,6).map(x=>row(x,true)).join('')+'</div></details>';
  html+='<p class="muted tiny">I confronti inseriti qui rimangono solo in questo browser. Le REAL restano separate nello Storico e richiedono registrazione esplicita dopo un’eventuale puntata effettuata.</p>';
  panel.innerHTML=html;
+ if(alternativesWereOpen)panel.querySelector('.candidate-review-others')?.setAttribute('open','');
 }
 async function load(){
  btn.disabled=true;status.textContent='Lettura nuova analisi del motore…';
@@ -106,14 +109,27 @@ async function load(){
  finally{btn.disabled=false;show();}
 }
 panel.addEventListener('click',event=>{
- const b=event.target.closest('[data-review-save]');
- if(!b||!feed)return;
- const id=b.getAttribute('data-review-save'),candidate=feed.shortlist.find(r=>r.id===id);
+ const button=event.target.closest('[data-review-save],[data-review-register]');
+ if(!button||!feed)return;
+ const registration=button.hasAttribute('data-review-register');
+ const id=button.getAttribute(registration?'data-review-register':'data-review-save');
+ const candidate=[...feed.shortlist,...feed.alternatives].find(r=>r.id===id);
  if(!candidate||minutesUntil(candidate.kickoff)<=15)return;
  const i=[...panel.querySelectorAll('[data-review-input]')].find(el=>el.getAttribute('data-review-input')===id);
  if(!i)return;
- const raw=String(i.value??'').trim();const price=raw?validOdds(raw):null;
- if(raw&&price===null){window.alert('Inserisci una quota compresa tra 1,01 e 200, oppure svuota il campo.');return;}
+ const raw=String(i.value??'').trim();
+ const price=raw?validOdds(raw):null;
+ if(raw&&price===null){window.alert('Inserisci una quota Bet365 valida tra 1,01 e 200.');return;}
+ if(registration){
+  if(price===null){window.alert('Prima di registrare una REAL già piazzata, inserisci la quota effettiva Bet365.');return;}
+  window.dispatchEvent(new CustomEvent('scanner-conte:prefill-real',{
+   detail:{id:candidate.id,match:candidate.match,category:candidate.category,
+    kickoff:candidate.kickoff,selection:candidate.selection,market:candidate.market,
+    odds:price,reference_odds:candidate.reference_odds,
+    reference_bookmaker:candidate.reference_bookmaker,reference_link:candidate.reference_link}
+  }));
+  return;
+ }
  if(price===null)delete saved[id];else saved[id]={quote:price,updated_at:new Date().toISOString()};
  if(store())show();
 });
