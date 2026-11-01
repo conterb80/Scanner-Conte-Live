@@ -83,8 +83,24 @@ async function main(){
     status:'pending',pnl:null,score:null,settled_at:null};
   store.records.push(rec);existing.add(id);created++;
  }
+ // Audit completo della singola risposta del fornitore. Non inventare metadati
+ // per le scansioni storiche, che non conservavano la lista dei campionati letti.
+ const feedLeagues={};
+ const distinctIds=new Set();
+ for(const pred of data.predictions){
+  const league=clean(pred.league)||'Campionato non indicato';
+  feedLeagues[league]=(feedLeagues[league]||0)+1;
+  if(pred.id!==null&&pred.id!==undefined)distinctIds.add(String(pred.id));
+  else if(pred.home&&pred.away&&pred.kickoff_utc)
+   distinctIds.add(key(pred.home+'-'+pred.away+'-'+pred.kickoff_utc));
+ }
+ const sortedLeagues=Object.fromEntries(Object.entries(feedLeagues).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'it')));
  const check={day:today,checked_at:capturedAt,source_generated_at:sourceDate,
-  scanned_predictions:data.predictions.length,eligible_actionable:candidates.length,
+  scanned_predictions:data.predictions.length,
+  scanned_unique_matches:distinctIds.size,
+  scanned_league_counts:sortedLeagues,
+  scanned_league_total:Object.keys(sortedLeagues).length,
+  eligible_actionable:candidates.length,
   created,source:'TipsAudit',test_only:true};
  store.checks.push(check);
  store.last_check=capturedAt;store.stats=stats(store.records);
