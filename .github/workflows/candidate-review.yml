@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/build-candidate-review.mjs'
+      - 'scripts/test-candidate-review.mjs'
       - '.github/workflows/candidate-review.yml'
   schedule:
     - cron: "25 10,17,21 * * *"
@@ -27,6 +28,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Verifica filtri e separazione dalle giocate REAL
+        run: node scripts/test-candidate-review.mjs
       - name: Analizza soltanto dati LAB gia registrati prima delle partite
         run: node scripts/build-candidate-review.mjs
       - name: Pubblica rapporto sperimentale senza scommesse REAL
