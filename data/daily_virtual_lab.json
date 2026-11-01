@@ -1359,10 +1359,14 @@
       "reference": "https://tipsaudit.com/match/12863/chelsea-vs-manchester-united-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.9,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.849Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-12864:TIPSAUDIT_VALUE_1X2",
@@ -1386,10 +1390,14 @@
       "reference": "https://tipsaudit.com/match/12864/ssv-jahn-regensburg-vs-hansa-rostock-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 2.1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.849Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-12870:TIPSAUDIT_VALUE_1X2",
@@ -1413,10 +1421,14 @@
       "reference": "https://tipsaudit.com/match/12870/annecy-vs-montpellier-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.849Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-12878:TIPSAUDIT_VALUE_1X2",
@@ -1440,10 +1452,14 @@
       "reference": "https://tipsaudit.com/match/12878/levante-vs-atletico-madrid-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.65,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.849Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-12882:TIPSAUDIT_VALUE_1X2",
@@ -1467,10 +1483,14 @@
       "reference": "https://tipsaudit.com/match/12882/bologna-vs-monza-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.79,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.849Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-12902:TIPSAUDIT_VALUE_1X2",
@@ -1494,10 +1514,14 @@
       "reference": "https://tipsaudit.com/match/12902/werder-bremen-vs-1899-hoffenheim-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 2.05,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.849Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-12499:TIPSAUDIT_VALUE_1X2",
@@ -1583,10 +1607,14 @@
       "reference": "https://tipsaudit.com/match/12892/cremonese-vs-benevento-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.849Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-12904:TIPSAUDIT_VALUE_1X2",
@@ -1610,10 +1638,14 @@
       "reference": "https://tipsaudit.com/match/12904/al-fayha-vs-al-faisaly-fc-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-12910:TIPSAUDIT_VALUE_1X2",
@@ -1637,10 +1669,14 @@
       "reference": "https://tipsaudit.com/match/12910/millwall-vs-derby-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.78,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-12943:TIPSAUDIT_VALUE_1X2",
@@ -1664,10 +1700,14 @@
       "reference": "https://tipsaudit.com/match/12943/rayo-vallecano-vs-celta-vigo-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-12944:TIPSAUDIT_VALUE_1X2",
@@ -1691,10 +1731,14 @@
       "reference": "https://tipsaudit.com/match/12944/eibar-vs-almeria-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-13004:TIPSAUDIT_VALUE_1X2",
@@ -1718,10 +1762,14 @@
       "reference": "https://tipsaudit.com/match/13004/real-betis-vs-malaga-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.39,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-13019:TIPSAUDIT_VALUE_1X2",
@@ -1745,10 +1793,14 @@
       "reference": "https://tipsaudit.com/match/13019/new-york-city-fc-vs-cf-montreal-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-13021:TIPSAUDIT_VALUE_1X2",
@@ -1772,10 +1824,14 @@
       "reference": "https://tipsaudit.com/match/13021/columbus-crew-vs-dc-united-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.4,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-13551:TIPSAUDIT_VALUE_1X2",
@@ -1799,10 +1855,14 @@
       "reference": "https://tipsaudit.com/match/13551/sampdoria-vs-virtus-entella-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-13020:TIPSAUDIT_VALUE_1X2",
@@ -1826,10 +1886,14 @@
       "reference": "https://tipsaudit.com/match/13020/sporting-kansas-city-vs-fc-dallas-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-13030:TIPSAUDIT_VALUE_1X2",
@@ -1853,10 +1917,14 @@
       "reference": "https://tipsaudit.com/match/13030/fc-luzern-vs-fc-sion-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-13552:TIPSAUDIT_VALUE_1X2",
@@ -1880,10 +1948,14 @@
       "reference": "https://tipsaudit.com/match/13552/ac-milan-vs-inter-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-13051:TIPSAUDIT_VALUE_1X2",
@@ -1907,10 +1979,14 @@
       "reference": "https://tipsaudit.com/match/13051/albacete-vs-sabadell-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-13052:TIPSAUDIT_VALUE_1X2",
@@ -1934,10 +2010,14 @@
       "reference": "https://tipsaudit.com/match/13052/aston-villa-vs-fulham-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-13068:TIPSAUDIT_VALUE_1X2",
@@ -1961,10 +2041,14 @@
       "reference": "https://tipsaudit.com/match/13068/los-angeles-galaxy-vs-austin-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.56,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-13070:TIPSAUDIT_VALUE_1X2",
@@ -1988,10 +2072,14 @@
       "reference": "https://tipsaudit.com/match/13070/nautico-recife-vs-avai-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-13571:TIPSAUDIT_VALUE_1X2",
@@ -2123,10 +2211,14 @@
       "reference": "https://tipsaudit.com/match/12853/norwich-vs-watford-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.6,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-13548:TIPSAUDIT_VALUE_1X2",
@@ -2150,10 +2242,14 @@
       "reference": "https://tipsaudit.com/match/13548/sudtirol-vs-cesena-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 2.4,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-12911:TIPSAUDIT_VALUE_1X2",
@@ -2177,10 +2273,14 @@
       "reference": "https://tipsaudit.com/match/12911/bolton-vs-bristol-city-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.45,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-13006:TIPSAUDIT_VALUE_1X2",
@@ -2204,10 +2304,14 @@
       "reference": "https://tipsaudit.com/match/13006/celta-de-vigo-ii-vs-cordoba-2026-10-31",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-01T01:12:11.850Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-01T01:10:12+00:00"
     },
     {
       "id": "tipsaudit-13565:TIPSAUDIT_VALUE_1X2",
@@ -2828,10 +2932,10 @@
   "last_check": "2026-10-31T18:46:28.424Z",
   "stats": {
     "total": 94,
-    "pending": 49,
-    "won": 22,
-    "lost": 23,
-    "pnl": 3.35
+    "pending": 23,
+    "won": 35,
+    "lost": 36,
+    "pnl": 4.52
   },
-  "last_settlement_check": "2026-10-31T14:33:01.240Z"
+  "last_settlement_check": "2026-11-01T01:12:11.850Z"
 }
