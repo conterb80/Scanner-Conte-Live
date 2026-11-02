@@ -72,7 +72,14 @@ export function mergeResults(previous,received,now=new Date()){
  if(previous?.schema!==SCHEMA||!Array.isArray(previous.fixtures))throw Error('Archivio risultati precedente non compatibile');
  const keepAfter=now.getTime()-21*86400000;
  // Due fonti per lo stesso incontro: priorita alla verifica ufficiale.
- const key=r=>r.league_code+'|'+r.kickoff.slice(0,10)+'|'+String(r.home).toLowerCase()+'|'+String(r.away).toLowerCase();
+ const team=s=>{
+  const norm=String(s||'').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'')
+    .replace(/[^a-z0-9]+/g,' ').trim();
+  const map={'hamburg sv':'hamburger sv','hamburg':'hamburger sv','hsv':'hamburger sv',
+    'frankfurt':'eintracht frankfurt','cd tenerife':'tenerife','andorra':'fc andorra'};
+  return map[norm]||norm;
+ };
+ const key=r=>r.league_code+'|'+r.kickoff.slice(0,10)+'|'+team(r.home)+'|'+team(r.away);
  const m=new Map();
  for(const r of [...previous.fixtures,...received]){
   if(!r?.id||!r.kickoff||!r.home||!r.away)continue;
