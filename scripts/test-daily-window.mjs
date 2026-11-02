@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {romeDay, isSameRomeDay} from './daily-window.mjs';
+assert.equal(romeDay('2026-11-02T23:10:00.000Z'),'2026-11-03');
+assert.equal(romeDay('2026-11-02T22:30:00.000Z'),'2026-11-02');
+assert.equal(romeDay('2026-03-29T00:30:00.000Z'),'2026-03-29');
+assert.equal(romeDay('2026-03-29T01:30:00.000Z'),'2026-03-29');
+assert.equal(isSameRomeDay('2026-11-02T20:00:00.000Z','2026-11-02T12:00:00.000Z'),true);
+assert.equal(isSameRomeDay('2026-11-03T01:00:00.000Z','2026-11-02T12:00:00.000Z'),false);
+assert.equal(isSameRomeDay('not-a-date','2026-11-02T12:00:00.000Z'),false);
+console.log('Finestra quotidiana Europe/Rome: test OK.');
