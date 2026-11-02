@@ -17,6 +17,22 @@
       "source": "Eintracht Frankfurt (official match report)",
       "source_url": "https://profis.eintracht.de/news/heimsieg-gegen-hamburg-180166/",
       "verification": "official"
+    },
+    {
+      "id": "official-esp2-20261101-tenerife-andorra-postponed",
+      "kickoff": "2026-11-01T20:00:00Z",
+      "original_local_date": "2026-11-01",
+      "rescheduled_for": "2026-11-02T13:00:00Z",
+      "status": "PST",
+      "league": "LaLiga Hypermotion",
+      "league_code": "esp.2",
+      "home": "CD Tenerife",
+      "away": "FC Andorra",
+      "home_goals": null,
+      "away_goals": null,
+      "source": "CD Tenerife (official postponement notice)",
+      "source_url": "https://www.clubdeportivotenerife.es/noticias/aplazado-el-cd-tenerife-fc-andorra-de-este-domingo",
+      "verification": "official"
     }
   ]
 }
