@@ -395,3 +395,108 @@
 .ui-scanner .candidate-review-empty strong{display:block;font-size:12px;margin-bottom:6px;color:#e0eaf0}
 .ui-scanner .candidate-review-empty span{display:block;font-size:11px;color:var(--soft);line-height:1.6}
 .ui-scanner .candidate-review-emphasis{margin-top:11px}
+
+
+/* Scanner Conte LIVE V0.9.6 — Restyling fase 2: Storico + LAB senza cambiare i dati */
+.ui-subpage-head{padding:15px 0 9px}
+.ui-subpage-head h1{font-size:clamp(29px,5vw,37px);letter-spacing:-.8px;margin:0 0 7px;line-height:1.2}
+.ui-subpage-head p{margin:0;color:var(--soft);font-size:12px;line-height:1.55;max-width:640px}
+.ui-subpage-bar{margin:19px 0 10px}
+.ui-subpage-bar h2{font-size:15px;letter-spacing:-.2px}
+.ui-archive .ui-register-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin:10px 0 12px}
+.ui-archive .ui-register-tabs button{font-size:11px;min-height:44px;border-radius:11px;line-height:1.2;padding:9px 5px}
+.ui-archive .ui-register-tabs button.active{background:rgba(86,232,176,.14);border-color:#56d5a5;box-shadow:inset 0 0 0 1px rgba(86,232,176,.18)}
+.ui-archive-active-note{margin:0 0 14px;font-size:11px;line-height:1.55;color:#bed2da;border-left:3px solid var(--mint);background:#11242f;padding:10px 12px;border-radius:0 9px 9px 0}
+.ui-archive-filters{display:grid;grid-template-columns:minmax(0,1fr) 170px;gap:11px 13px;padding:14px;border-radius:13px}
+.ui-archive-filters label{display:flex;min-width:0;flex-direction:column;gap:7px;color:#b9cbd6;font-size:11px;font-weight:650;line-height:1.3}
+.ui-archive-filters input,.ui-archive-filters select{width:100%;max-width:100%;min-width:0}
+.ui-archive-search input{font-size:13px;min-height:42px}
+.ui-archive-status select{min-height:42px}
+.ui-small-drawer{grid-column:1/-1;border-top:1px solid #2e434f;padding-top:10px;margin-top:0}
+.ui-small-drawer>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;cursor:pointer;list-style:none;font-size:11px;font-weight:750;color:#95dec1;padding:4px 0}
+.ui-small-drawer>summary::-webkit-details-marker{display:none}
+.ui-small-drawer>summary span{font-size:16px}
+.ui-small-drawer[open]>summary span{transform:rotate(180deg)}
+.ui-small-drawer label{max-width:360px;margin:13px 0 4px}
+.ui-archive-list-head{margin:20px 0 9px}
+.ui-archive-list-head h2{font-size:14px}
+.ui-archive-list .rowitem{padding:12px 14px;align-items:flex-start;gap:9px}
+.ui-archive-list .rowitem>div:first-child{flex:1;min-width:0}
+.ui-archive-list .rowtitle{font-size:13px;font-weight:750;line-height:1.4;overflow-wrap:anywhere}
+.ui-archive-list .rowsub{font-size:10px;line-height:1.55;margin-top:5px;color:#aec0cc}
+.ui-archive-list .tag{padding:3px 5px;font-size:9px;letter-spacing:.2px}
+.ui-archive-list .rightr{text-align:right;min-width:77px;max-width:33%}
+.ui-archive-list .profit{font-size:11px;line-height:1.5}
+.ui-archive-list .rightr .rowsub{font-size:11px;margin-top:5px;font-weight:700}
+.ui-archive-footnote{line-height:1.65;margin:12px 1px}
+.ui-archive-public-summary{padding:14px}
+.ui-archive-public-summary>.muted{line-height:1.55}
+.ui-archive-public-filters{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;align-items:end;gap:9px;padding:12px 13px;margin:12px 0}
+.ui-archive-public-filters label{min-width:0;flex:initial}
+.ui-archive-public-filters .button{min-height:39px}
+.ui-archive .reg-summary-grid{gap:7px}
+.ui-archive .reg-summary-grid>div{padding:10px 9px}
+.ui-archive .reg-summary-grid>div b{font-size:17px}
+.ui-archive .reg-group-title{margin:20px 1px 8px}
+.ui-archive .reg-group-title h3{font-size:14px}
+.ui-archive .reg-date-heading{margin:14px 3px 8px;font-size:11px}
+.ui-archive .register-record{padding:13px 14px;margin:8px 0;border-radius:12px}
+.ui-archive .register-record h3{font-size:13px;margin:9px 0 4px;line-height:1.35}
+.ui-archive .register-record p{font-size:10px;line-height:1.5;margin:4px 0}
+.ui-archive .reg-record-pick{margin-top:8px;padding:9px 10px;font-size:11px}
+.ui-archive .reg-record-bottom{margin-top:7px;font-size:10px;line-height:1.5}
+.ui-lab-overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.ui-lab-kpi{min-width:0;padding:16px 15px;border-radius:14px}
+.ui-lab-kpi-head{display:flex;justify-content:space-between;align-items:center;gap:7px;flex-wrap:wrap;color:#cddce5;font-size:12px;font-weight:750}
+.ui-lab-pill{display:inline-flex;border:1px solid #3a7866;background:rgba(64,154,123,.12);border-radius:30px;padding:4px 7px;font-size:9px;line-height:1;color:#8ce7c2;white-space:nowrap}
+.ui-lab-pill.quiet{color:#b2c2ce;border-color:#4b6271;background:rgba(86,113,129,.13)}
+.ui-lab-kpi>strong{display:block;font-size:clamp(24px,3.3vw,32px);letter-spacing:-.6px;line-height:1.15;margin:15px 0 8px;overflow-wrap:anywhere}
+.ui-lab-kpi>strong.positive{color:var(--mint)}
+.ui-lab-kpi>strong.negative{color:var(--red)}
+.ui-lab-kpi>p{font-size:11px;line-height:1.4;margin:0 0 7px}
+.ui-lab-kpi>small{font-size:10px;line-height:1.4;display:block}
+.ui-lab-overview-note{margin:12px 2px 19px;line-height:1.6}
+.ui-lab-detail-heading{margin-top:24px}
+.ui-lab .ui-lab-drawer{margin:10px 0}
+.ui-lab .ui-lab-drawer>summary{padding:15px 16px;min-height:68px}
+.ui-lab .ui-lab-drawer>summary strong{font-size:13px}
+.ui-lab .ui-lab-drawer .ui-drawer-content{padding:12px 14px 16px}
+.ui-lab-drawer-action{display:flex;justify-content:flex-end;align-items:center;gap:7px;flex-wrap:wrap;margin:0 0 12px}
+.ui-lab-drawer-action .button{font-size:11px}
+.ui-lab .ui-lab-drawer #daily-virtual-panel{padding:13px}
+.ui-lab .ui-lab-drawer #lab-auto-info{padding:13px}
+.ui-lab .ui-lab-drawer .lab-auto-stats{gap:6px}
+.ui-lab .ui-lab-drawer .lab-auto-stats>div{padding:10px 9px}
+.ui-lab .ui-lab-drawer .lab-auto-stats strong{font-size:17px}
+.ui-lab .ui-lab-drawer .candidate{padding:12px}
+.ui-lab .ui-lab-drawer .candidate h3{font-size:13px}
+.ui-lab .ui-lab-drawer .strategy-grid{gap:8px}
+.ui-lab .ui-lab-drawer .strategy-grid .surface{padding:13px}
+.ui-lab .ui-lab-drawer .strategy-grid .st-title{font-size:20px}
+.ui-lab .ui-lab-drawer .scan-audit-status{font-size:11px}
+.ui-lab .ui-lab-drawer .scan-audit-box{padding:12px}
+.ui-lab .ui-lab-drawer .scan-audit-note{line-height:1.55}
+.ui-lab .ui-lab-drawer .rules{padding:12px}
+@media(max-width:660px){
+ .ui-archive .ui-register-tabs{grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}
+ .ui-archive .ui-register-tabs button{grid-column:span 2;font-size:11px;min-height:46px;padding:9px 6px}
+ .ui-archive .ui-register-tabs button:nth-child(4),.ui-archive .ui-register-tabs button:nth-child(5){grid-column:span 3}
+ .ui-archive .ui-register-tabs button:last-child{grid-column:span 3}
+ .ui-lab-overview{grid-template-columns:1fr}
+ .ui-lab-kpi>strong{font-size:27px;margin:11px 0 6px}
+ .ui-lab-kpi{padding:14px 15px}
+ .ui-archive-public-filters{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .ui-archive-public-filters label{min-width:0}
+ .ui-archive-public-filters .button{grid-column:1/-1;width:100%;min-height:37px}
+}
+@media(max-width:420px){
+ .ui-subpage-head{padding:10px 0 8px}
+ .ui-subpage-head h1{font-size:30px}
+ .ui-archive-filters{grid-template-columns:minmax(0,1fr) 124px;gap:10px;padding:12px}
+ .ui-archive .ui-register-tabs button{font-size:10px}
+ .ui-archive .ui-register-tabs button:nth-child(3){font-size:10px}
+ .ui-archive-list .rowitem{padding:11px 10px}
+ .ui-archive-list .rowtitle{font-size:12px}
+ .ui-archive-list .rightr{min-width:72px}
+ .ui-lab .ui-lab-drawer .ui-drawer-content{padding:11px}
+}
