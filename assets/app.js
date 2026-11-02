@@ -202,6 +202,10 @@ async function reconcilePendingFixtures(){
     continue;
    }
    const fixture=finalResults[0];
+   // Anche con una fonte che sbaglia lo stato, non chiudere una partita
+   // ancora in programma o troppo vicina all'orario di inizio.
+   if(fixture.verification!=='official'&&
+      Date.parse(fixture.kickoff)>Date.now()-115*60000)continue;
    if(!Number.isInteger(fixture.home_goals)||!Number.isInteger(fixture.away_goals))continue;
    const won=scoreSelection(record.selection,fixture.home_goals,fixture.away_goals);
    if(won===null){unsupported++;continue}
