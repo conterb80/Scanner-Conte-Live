@@ -389,3 +389,9 @@
  .ui-drawer-content{padding-left:11px;padding-right:11px}
 }
 @media(prefers-reduced-motion:reduce){.ui-drawer-arrow{transition:none}}
+
+/* V0.9.5 — rifinitura messaggi senza candidate */
+.ui-scanner .candidate-review-empty{display:block;margin:10px 0 12px;padding:16px}
+.ui-scanner .candidate-review-empty strong{display:block;font-size:12px;margin-bottom:6px;color:#e0eaf0}
+.ui-scanner .candidate-review-empty span{display:block;font-size:11px;color:var(--soft);line-height:1.6}
+.ui-scanner .candidate-review-emphasis{margin-top:11px}
