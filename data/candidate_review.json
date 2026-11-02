@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-02T17:27:59.188Z",
+  "generated_at": "2026-11-02T19:37:36.981Z",
   "status": "PRELIMINARY_CANDIDATES",
   "source_last_check": "2026-11-02T17:27:57.835Z",
   "source_max_age_hours": 36,
@@ -22,8 +22,8 @@
     "eligible_observations": 1,
     "eligible_core": 0,
     "eligible_value": 1,
-    "settled_paper_samples": 95,
-    "settled_paper_roi_pct": 3.4
+    "settled_paper_samples": 96,
+    "settled_paper_roi_pct": 2.4
   },
   "shortlist": [
     {
@@ -40,7 +40,7 @@
       "external_fair_odds": 3,
       "external_benchmark_probability_pct": 33.3,
       "external_reference_gap_pct": 3.33,
-      "relative_screening_score": 51,
+      "relative_screening_score": 50,
       "captured_at": "2026-11-02T17:27:57.835Z",
       "reference_link": "https://tipsaudit.com/match/14020/athletic-club-vs-ceara-2026-11-02",
       "source": "TipsAudit public pre-match paper signals",
@@ -52,7 +52,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 51 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 50 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
