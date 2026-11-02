@@ -1,4 +1,4 @@
-/* Scanner Conte LIVE V0.9.6 — sola presentazione delle sezioni Storico e LAB.
+/* Scanner Conte LIVE V0.9.7 — sola presentazione delle sezioni Storico e LAB.
  * Legge gli archivi pubblici gia prodotti da GitHub. Non crea/aggiorna test,
  * non tocca localStorage, non calcola nuove probabilita e non scrive REAL.
  */
@@ -15,10 +15,12 @@
   auto:'LAB auto · test pubblici del laboratorio pilota precedente. Nessuna puntata REAL.',
   daily:'LAB 1X2 · test pubblici quotidiani sulle quote osservate. Nessuna puntata REAL.'
  };
- document.querySelectorAll('[data-register-tab]').forEach(b=>b.addEventListener('click',()=>{
-  const n=b.dataset.registerTab;
-  if(note&&notes[n])note.textContent=notes[n];
- }));
+ const showRegisterNote=tab=>{if(note&&notes[tab])note.textContent=notes[tab];};
+ document.querySelectorAll('[data-register-tab]').forEach(b=>b.addEventListener('click',()=>showRegisterNote(b.dataset.registerTab)));
+ // I collegamenti dal LAB selezionano il registro tramite lo script esistente,
+ // senza simulare un clic sul tab: aggiorna comunque la descrizione visiva.
+ document.querySelectorAll('[data-open-register]').forEach(b=>b.addEventListener('click',()=>showRegisterNote(b.dataset.openRegister)));
+
  if(!dt||!dc||!ds||!at||!ac||!as)return;
  const money=n=>new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR',minimumFractionDigits:2,maximumFractionDigits:2}).format(n);
  const stamped=s=>{
