@@ -8,6 +8,10 @@ on:
       - 'scripts/collect-daily-virtual.mjs'
       - 'scripts/build-candidate-review.mjs'
       - 'scripts/test-candidate-review.mjs'
+      - 'scripts/daily-window.mjs'
+      - 'scripts/test-daily-window.mjs'
+      - 'scripts/build-weekly-lab-summary.mjs'
+      - 'scripts/test-weekly-lab-summary.mjs'
       - '.github/workflows/daily-virtual.yml'
   schedule:
     - cron: "50 8,15 * * *"
@@ -29,19 +33,25 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Testa finestra giornaliera e archivio statistico
+        run: |
+          node scripts/test-daily-window.mjs
+          node scripts/test-weekly-lab-summary.mjs
       - name: Registra solo prove 1X2 future con quote pubbliche verificate
         run: node scripts/collect-daily-virtual.mjs
       - name: Testa il motore di screening senza effettuare giocate REAL
         run: node scripts/test-candidate-review.mjs
       - name: Aggiorna le candidate dalle nuove osservazioni del LAB
         run: node scripts/build-candidate-review.mjs
+      - name: Prepara riepilogo virtuale settimanale senza eliminare dati
+        run: node scripts/build-weekly-lab-summary.mjs
       - name: Pubblica LAB e rapporto sperimentale separati
         run: |
           if [ ! -f data/daily_virtual_lab.json ]; then
             echo "Nessun dato valido: archivio invariato"
             exit 0
           fi
-          git add data/daily_virtual_lab.json data/candidate_review.json
+          git add data/daily_virtual_lab.json data/candidate_review.json data/weekly_lab_stats.json
           if git diff --cached --quiet; then
             echo "Nessuna modifica"
             exit 0
