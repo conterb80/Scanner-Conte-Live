@@ -81,9 +81,20 @@ export function mergeResults(previous,received,now=new Date()){
  };
  const key=r=>r.league_code+'|'+r.kickoff.slice(0,10)+'|'+team(r.home)+'|'+team(r.away);
  const m=new Map();
- for(const r of [...previous.fixtures,...received]){
-  if(!r?.id||!r.kickoff||!r.home||!r.away)continue;
-  if(r.verification!=='official'&&Date.parse(r.kickoff)<keepAfter)continue;
+ const postponed=previous.fixtures.filter(r=>r.status==='PST'&&r.verification==='official'&&r.original_local_date);
+ for(const item of [...previous.fixtures,...received]){
+  if(!item?.id||!item.kickoff||!item.home||!item.away)continue;
+  if(item.verification!=='official'&&Date.parse(item.kickoff)<keepAfter)continue;
+  let r=item;
+  // Una partita ufficialmente rimandata e disputata entro 5 giorni
+  // mantiene anche la data del biglietto originale (senza inventare esiti).
+  if(r.status==='FT'&&r.verification!=='official'){
+   const matches=postponed.filter(p=>p.league_code===r.league_code&&
+    team(p.home)===team(r.home)&&team(p.away)===team(r.away)&&
+    Date.parse(r.kickoff)>=Date.parse(p.kickoff)&&
+    Date.parse(r.kickoff)-Date.parse(p.kickoff)<=5*86400000);
+   if(matches.length===1)r={...r,original_local_date:matches[0].original_local_date};
+  }
   const k=key(r),old=m.get(k);
   if(old?.verification==='official')continue;
   if(r.verification==='official'||!old||r.status==='FT'||old.status!=='FT')m.set(k,r);
