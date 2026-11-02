@@ -237,10 +237,10 @@
    <section class="surface ui-settings-backup" aria-labelledby="settings-backup-heading">
     <div class="ui-settings-heading"><div class="ui-settings-symbol" aria-hidden="true">↧</div><div><h2 id="settings-backup-heading">Proteggi il tuo storico</h2><p>Le REAL e gli archivi locali sono salvati in questo browser. Conserva una copia fuori dal telefono.</p></div></div>
     <div class="ui-settings-backup-actions">
-     <button id="export-json" class="button ui-settings-primary" type="button">↓ Scarica backup completo JSON</button>
+     <button id="export-json" class="button ui-settings-primary" type="button">↓ Backup registri JSON</button>
      <button id="export-csv" class="button secondary ui-settings-secondary" type="button">↓ Esporta storico CSV</button>
     </div>
-    <p class="muted tiny ui-settings-smallnote">Il JSON è il file da conservare per ripristinare le registrazioni locali. Il CSV è per consultare i dati. I LAB pubblici vengono letti separatamente da GitHub.</p>
+    <p class="muted tiny ui-settings-smallnote">Il JSON ripristina il registro principale (REAL, Principale, LAB storico). Le quote annotate e il taccuino nello Scanner sono salvati separatamente in questo browser e non sono inclusi nel JSON. Il CSV serve a consultare lo storico; i LAB pubblici restano su GitHub.</p>
    </section>
    <section class="surface ui-settings-system" aria-labelledby="settings-system-heading">
     <div class="ui-settings-headrow"><h2 id="settings-system-heading">Stato del sistema</h2><button type="button" id="data-status-refresh" class="button secondary thin">Aggiorna</button></div>
@@ -271,7 +271,7 @@
    <details class="ui-drawer ui-settings-drawer">
     <summary><span><strong>Importa o trasferisci un backup</strong><small>Recupera i dati locali da un file JSON</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
     <div class="ui-drawer-content ui-settings-drawer-content">
-     <p class="muted small ui-settings-caution">Attenzione: importare un backup sostituisce l'archivio locale attuale. Prima scarica sempre un backup recente.</p>
+     <p class="muted small ui-settings-caution">Attenzione: importare un backup sostituisce il registro principale locale attuale. Prima scarica sempre un backup recente. Gli appunti Scanner sono separati.</p>
      <label for="import-file" class="button secondary upload ui-settings-import">↑ Seleziona backup JSON<input type="file" id="import-file" accept="application/json,.json" hidden></label>
      <p class="muted tiny">Ti verrà richiesta una conferma prima della sostituzione. I LAB pubblici non vengono sovrascritti da questa operazione.</p>
     </div>
@@ -288,7 +288,7 @@
    <details class="ui-drawer ui-settings-drawer ui-settings-danger">
     <summary><span><strong>Ripristino iniziale e informazioni</strong><small>Operazioni delicate e versione dell'app</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
     <div class="ui-drawer-content ui-settings-drawer-content">
-     <p class="muted small ui-settings-caution">Il ripristino iniziale elimina le modifiche locali se non hai salvato un backup. Non è necessario per aggiornare l'app.</p>
+     <p class="muted small ui-settings-caution">Il ripristino iniziale sostituisce il registro principale locale con il dataset iniziale: potresti perdere modifiche non salvate. Non è necessario per aggiornare l'app.</p>
      <button id="reset-local" type="button" class="button danger-outline ui-settings-reset">Ripristina il dataset iniziale</button>
      <p class="muted tiny">Priorità del progetto: dati verificabili, raccolta automatica gratuita quando possibile, test indipendenti e registrazione REAL sempre manuale.</p>
     </div>
