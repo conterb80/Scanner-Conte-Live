@@ -26,4 +26,17 @@ assert.equal(buildCandidateReview({...lab,records:[{...row,captured_at:'2026-11-
 assert.equal(buildCandidateReview({...lab,records:[{...row,odds:1.50}]},now).shortlist.length,0);
 assert.equal(buildCandidateReview({...lab,records:[row,{...row,id:'test-observation-2'}]},now).shortlist.length,1);
 assert.equal(buildCandidateReview({...lab,records:[]},now).shortlist.length,0);
+// Anche nei feriali devono apparire candidate LAB, ma mai l'invito a registrare REAL.
+const mondayNow='2026-11-02T10:00:00.000Z';
+const mondayRow={...row,kickoff:'2026-11-02T13:00:00.000Z',
+ captured_at:'2026-11-02T09:00:00.000Z',benchmark_read_at:'2026-11-02T08:30:00.000Z'};
+const mondayLab={...lab,last_check:'2026-11-02T09:00:00.000Z',records:[mondayRow]};
+const monday=buildCandidateReview(mondayLab,mondayNow);
+assert.equal(monday.shortlist.length,1);
+assert.equal(monday.allow_manual_real_registration_today,false);
+assert.equal(out.allow_manual_real_registration_today,true);
+assert.equal(buildCandidateReview({...mondayLab,records:[{...mondayRow,kickoff:'2026-11-03T13:00:00.000Z'}]},mondayNow).shortlist.length,0);
+assert.equal(buildCandidateReview({...mondayLab,records:[{...mondayRow,
+ captured_at:'2026-11-01T09:00:00.000Z',benchmark_read_at:'2026-11-01T08:30:00.000Z'}]},mondayNow).shortlist.length,0);
+assert.equal(buildCandidateReview({...mondayLab,last_check:'2026-11-01T20:00:00.000Z'},mondayNow).status,'SOURCE_STALE');
 console.log('Candidate screening regression checks passed.');
