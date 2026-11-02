@@ -86,6 +86,10 @@ export function mergeResults(previous,received,now=new Date()){
  for(const item of [...previous.fixtures,...received]){
   if(!item?.id||!item.kickoff||!item.home||!item.away)continue;
   if(item.verification!=='official'&&Date.parse(item.kickoff)<keepAfter)continue;
+  // Difesa da eventuali dati anticipati/incoerenti: il risultato non puo'
+  // essere considerato FT prima di almeno 115 minuti dal calcio d'inizio.
+  if(item.verification!=='official'&&item.status==='FT'&&
+     Date.parse(item.kickoff)>now.getTime()-115*60000)continue;
   let r=item;
   // Una partita ufficialmente rimandata e disputata entro 5 giorni
   // mantiene anche la data del biglietto originale (senza inventare esiti).
