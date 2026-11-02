@@ -138,50 +138,96 @@ function scoreSelection(selection,home,away){
  if(['ng','nogol','no gol','no goal','entrambe segnano no'].includes(name))return home===0||away===0;
  return null;
 }
+// Feed pubblico FT: ESPN gratuito + risultati ufficiali verificati.
+const canonicalTeam=s=>{
+ const n=normalizeTeamName(s);
+ const aliases={
+  'hamburg':'hamburger sv',
+  'hamburg sv':'hamburger sv',
+  'hsv':'hamburger sv',
+  'frankfurt':'eintracht frankfurt',
+  'cd tenerife':'tenerife',
+  'andorra':'fc andorra'
+ };
+ return aliases[n]||n;
+};
+function sameFixture(record,fixture){
+ if(!fixture.kickoff||localDateInRome(fixture.kickoff)!==record.date)return false;
+ const parts=String(record.match||'').split(/\s+(?:-|–|—|vs\.?)\s+/i);
+ if(parts.length===2){
+  return canonicalTeam(parts[0])===canonicalTeam(fixture.home)&&
+    canonicalTeam(parts[1])===canonicalTeam(fixture.away);
+ }
+ // Vecchi record ricostruiti senza separatore: mantiene il confronto rigoroso precedente.
+ return normalizeTeamName(record.match).replace(/\bvs\b/g,' ')===
+   normalizeTeamName(fixture.home+' '+fixture.away);
+}
 let resultSyncBusy=false;
 async function reconcilePendingFixtures(){
  if(resultSyncBusy)return;
- const status=root('settle-status');
- const btn=root('settle-refresh');
+ const status=root('settle-status'),btn=root('settle-refresh');
  const pending=db.records.filter(r=>r.manual&&r.result==='pending'&&['real','main','lab'].includes(r.book));
  if(!pending.length){if(status)status.textContent='Nessuna registrazione locale in attesa.';return}
  resultSyncBusy=true;if(btn)btn.disabled=true;
  if(status)status.textContent='Verifica risultati delle '+pending.length+' giocate in attesa…';
+ const load=async(path,schema)=>{
+  try{
+   const response=await fetch(path+'?settle='+Date.now(),{cache:'no-store'});
+   if(!response.ok)throw Error('HTTP '+response.status);
+   const value=await response.json();
+   return value.schema===schema&&Array.isArray(value.fixtures)?value:null;
+  }catch{return null}
+ };
  try{
-  const response=await fetch('./data/fixtures_latest.json?settle='+Date.now(),{cache:'no-store'});
-  if(!response.ok)throw Error('HTTP '+response.status);
-  const feed=await response.json();
-  if(feed.schema!=='scanner-conte-fixtures-v1'||feed.status!=='ready'||!Array.isArray(feed.fixtures))throw Error('Feed non valido');
-  let updated=0,unsupported=0,ready=0;
+  // Il vecchio archivio API-Football e' usato solo per match storici gia presenti:
+  // non costituisce piu' una fonte aggiornata.
+  const [publicFeed,legacyFeed]=await Promise.all([
+   load('./data/results_public.json','scanner-conte-results-public-v1'),
+   load('./data/fixtures_latest.json','scanner-conte-fixtures-v1')
+  ]);
+  if(!publicFeed&&!legacyFeed)throw Error('Nessuna fonte di esiti raggiungibile');
+  let updated=0,unsupported=0,postponed=0,ambiguous=0;
   for(const record of pending){
-   const match=normalizeTeamName(record.match).replace(/\bvs\b/g,' ');
-   const found=feed.fixtures.filter(m=>m.kickoff&&localDateInRome(m.kickoff)===record.date&&
-      normalizeTeamName(m.home+' '+m.away)===match);
-   if(found.length!==1)continue;
-   const fixture=found[0];
+   const available=publicFeed?.fixtures?.filter(f=>sameFixture(record,f))||[];
+   // Se il feed nuovo ha una partita, non usare in contrasto il vecchio feed.
+   const matches=available.length?available:
+     legacyFeed?.fixtures?.filter(f=>sameFixture(record,f))||[];
+   if(matches.length>1){ambiguous++;continue}
+   if(matches.length!==1)continue;
+   const fixture=matches[0];
+   if(['PST','POSTPONED','CANC','CANCELLED'].includes(fixture.status)){postponed++;continue}
    if(fixture.status!=='FT'||!Number.isInteger(fixture.home_goals)||!Number.isInteger(fixture.away_goals))continue;
-   ready++;
    const won=scoreSelection(record.selection,fixture.home_goals,fixture.away_goals);
    if(won===null){unsupported++;continue}
-   // Non sovrascrivere mai un risultato gia aggiornato, manualmente o automaticamente.
+   // Solo risultati FT e solo registrazioni ancora in attesa: mai riscrivere un esito.
    if(record.result!=='pending')continue;
    record.result=won?'won':'lost';
    record.score=fixture.home_goals+'-'+fixture.away_goals;
    record.pnl=won?round((Number(record.odds)-1)*Number(record.stake)):-Number(record.stake);
-   record.settlement_source='API-Football · risultato FT';
+   record.settlement_source=fixture.source||publicFeed?.source||'Risultato FT verificato';
    record.settlement_fixture_id=String(fixture.id);
+   if(typeof fixture.source_url==='string'&&/^https:\/\/(profis\.eintracht\.de|www\.espn\.com)\//.test(fixture.source_url)){
+    record.settlement_reference_url=fixture.source_url;
+   }
    record.settled_at=new Date().toISOString();
    updated++;
   }
   if(updated){persist();renderAll()}
   if(status){
-    const feedDate=feed.last_result_refresh||feed.collected_at;
-    const stamp=feedDate?new Date(feedDate).toLocaleString('it-IT',{timeZone:'Europe/Rome',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}):'—';
-    status.textContent=updated?updated+' esito/i aggiornato/i automaticamente. Feed '+stamp+'.':
-      'Nessun nuovo esito verificabile. Ultimo feed: '+stamp+'.'+(unsupported?' '+unsupported+' mercati da controllare manualmente.':'');
+   const checked=publicFeed?.checked_at;
+   const label=checked?'Ultimo controllo ESPN '+new Date(checked).toLocaleString('it-IT',{
+    timeZone:'Europe/Rome',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'
+   }):publicFeed?'Risultati ufficiali verificati disponibili':'Archivio storico API-Football';
+   status.textContent=(updated?updated+' esito/i aggiornato/i. ':'Nessun nuovo esito FT verificabile. ')+
+    label+'.'+(postponed?' '+postponed+' partita/e rinviata/e: controlla le regole del bookmaker.':'')+
+    (ambiguous?' '+ambiguous+' corrispondenza/e ambigue lasciate in attesa.':'')+
+    (unsupported?' '+unsupported+' mercato/i da verificare manualmente.':'');
   }
- }catch(e){if(status)status.textContent='Verifica non disponibile: '+e.message+'. Le registrazioni sono intatte.'}
- finally{resultSyncBusy=false;if(btn)btn.disabled=false}
+ }catch(e){
+  if(status)status.textContent='Verifica esiti non disponibile: '+e.message+'. Le registrazioni sono intatte.';
+ }finally{
+  resultSyncBusy=false;if(btn)btn.disabled=false;
+ }
 }
 
 function renderAll(){renderHome();renderArchive();renderLab();renderScanner();renderMigration();window.dispatchEvent(new Event('scanner-conte:records-changed'))}
