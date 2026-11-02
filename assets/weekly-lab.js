@@ -19,7 +19,10 @@
     '<div class="scan-audit-scroll"><table class="scan-audit-table"><thead><tr><th>Settimana</th><th>LAB</th><th>Chiusi</th><th>V / P</th><th>P/L virtuale</th><th>ROI</th></tr></thead><tbody>'+
     items.map(w=>'<tr><td>'+esc(label(w.week_start))+'</td><td>'+esc(w.lab==='daily'?'1X2':'Pilota')+'</td><td>'+esc(w.settled)+'</td><td>'+esc(w.won)+' / '+esc(w.lost)+'</td><td>'+esc(euro(w.pnl))+'</td><td>'+esc(w.roi_pct===null?'—':w.roi_pct.toFixed(1).replace('.',',')+'%')+'</td></tr>').join('')+
     '</tbody></table></div>'+
-    '<p class="muted tiny">Le settimane dei due LAB restano distinte. ROI su test conclusi con quota e importo documentati; non prova un vantaggio. Le partite in attesa non sono conteggiate nel ROI.</p>';
+    '<p class="muted tiny">Le settimane dei due LAB restano distinte. ROI su test conclusi con quota e importo documentati; non prova un vantaggio. Le partite in attesa non sono conteggiate nel ROI.</p>'+
+    '<details><summary>Dettaglio per mercato</summary><div class="scan-audit-scroll"><table class="scan-audit-table"><thead><tr><th>Settimana</th><th>LAB</th><th>Mercato</th><th>Test</th><th>V / P</th><th>ROI</th></tr></thead><tbody>'+
+    items.flatMap(w=>(w.by_market||[]).map(m=>'<tr><td>'+esc(label(w.week_start))+'</td><td>'+esc(w.lab==='daily'?'1X2':'Pilota')+'</td><td>'+esc(m.name)+'</td><td>'+esc(m.total)+'</td><td>'+esc(m.won)+' / '+esc(m.lost)+'</td><td>'+esc(m.roi_pct===null?'—':m.roi_pct.toFixed(1).replace('.',',')+'%')+'</td></tr>')).join('')+
+    '</tbody></table></div></details>';
   }catch(e){box.textContent='Riepilogo non disponibile: '+String(e.message||e);}
  }
  window.addEventListener('focus',()=>{if(!document.hidden)load();});
