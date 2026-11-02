@@ -76,10 +76,10 @@ function show(){
  const validFeed=feed.status==='PRELIMINARY_CANDIDATES'&&!stale&&sourceAge>=-120000&&sourceAge<=36*3600000;
  const allShort=validFeed?(feed.shortlist||[]).filter(r=>minutesUntil(r.kickoff)>15):[];
  const alternatives=validFeed?(feed.alternatives||[]).filter(r=>minutesUntil(r.kickoff)>15):[];
- const normalStatus=feed.status==='SOURCE_STALE'?'Dati LAB troppo vecchi: nessuna candidata attiva.':
-  feed.status==='NO_ELIGIBLE_OBSERVATIONS'?'Il filtro non ha trovato osservazioni valide per il prossimo weekend.':
-  stale?'Rapporto scaduto: attendo una nuova scansione, senza mostrare candidate superate.':
-  !validFeed?'Dati non sufficienti per visualizzare nuove candidate.':
+ const normalStatus=feed.status==='SOURCE_STALE'?'I dati della fonte sono troppo vecchi: nessuna candidata attiva.':
+  stale?'Rapporto scaduto: attendo una nuova scansione.':
+  feed.status==='NO_ELIGIBLE_OBSERVATIONS'?'Screening completato il '+date(feed.generated_at)+'.':
+  !validFeed?'Rapporto non utilizzabile: dati da verificare.':
   'Rapporto sperimentale del '+date(feed.generated_at)+' · '+feed.scan_stats.eligible_observations+' osservazioni idonee.';
  status.innerHTML='<strong>'+esc(normalStatus)+'</strong>'+
   '<details class="candidate-source-meta"><summary>Fonte e aggiornamenti</summary>'+
@@ -87,14 +87,20 @@ function show(){
   '. Mercato coperto: 1X2. CORE e VALUE sono fasce di quota, non garanzie di sicurezza.</p></details>'+
   (error?'<p class="muted small">Visualizzo l’ultima copia caricata. Aggiornamento fallito: '+esc(error)+'</p>':'');
  const alternativesWereOpen=Boolean(panel.querySelector('.candidate-review-others')?.open);
- let html='<details class="candidate-review-emphasis"><summary>Come funziona lo screening sperimentale</summary>'+
+ const nothing=allShort.length===0&&alternatives.length===0;
+ let html=nothing?
+  '<p class="muted small candidate-review-empty"><strong>Nessuna candidata disponibile.</strong>'+
+  '<span>Il filtro non ha individuato partite valide da mostrare. Non vengono proposte quote o partite scadute.</span></p>':'';
+ if(!nothing){
+  if(allShort.length)html+='<div class="candidate-review-grid">'+allShort.map(x=>row(x)).join('')+'</div>';
+  else html+='<p class="muted small candidate-review-empty">Nessuna candidata principale al momento. Puoi consultare le alternative disponibili.</p>';
+  if(alternatives.length)html+='<details class="candidate-review-others"><summary>Alternative · '+alternatives.length+' partite</summary>'+
+   '<p class="muted small">Stesso confronto quota e registrazione REAL delle principali. Selezioni sperimentali, non approvate.</p>'+
+   '<div class="candidate-review-grid">'+alternatives.map(x=>row(x,true)).join('')+'</div></details>';
+  html+='<p class="muted tiny">Le quote annotate restano sul dispositivo. Le REAL richiedono sempre una conferma esplicita dopo una puntata effettiva.</p>';
+ }
+ html+='<details class="candidate-review-emphasis"><summary>Come funziona lo screening sperimentale</summary>'+
   '<p class="muted small">Il motore usa quote LAB prepartita e il benchmark della fonte. Non confronta ancora forma, infortuni o formazioni: non è una raccomandazione validata, e non piazza giocate REAL.</p></details>';
- if(!allShort.length)html+='<p class="muted small candidate-review-empty">Nessuna candidata attiva in questo momento. Non vengono mostrate partite iniziate o dati scaduti.</p>';
- else html+='<div class="candidate-review-grid">'+allShort.map(x=>row(x)).join('')+'</div>';
- if(alternatives.length)html+='<details class="candidate-review-others"><summary>Alternative · '+alternatives.length+' partite</summary>'+
-  '<p class="muted small">Stesso confronto quota e registrazione REAL delle principali. Selezioni sperimentali, non approvate.</p>'+
-  '<div class="candidate-review-grid">'+alternatives.map(x=>row(x,true)).join('')+'</div></details>';
- html+='<p class="muted tiny">I confronti inseriti qui rimangono solo in questo browser. Le REAL restano separate nello Storico e richiedono registrazione esplicita dopo un’eventuale puntata effettuata.</p>';
  panel.innerHTML=html;
  if(alternativesWereOpen)panel.querySelector('.candidate-review-others')?.setAttribute('open','');
 }
