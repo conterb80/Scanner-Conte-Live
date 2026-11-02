@@ -7,13 +7,13 @@
   <meta name="description" content="Scanner Conte LIVE · Laboratorio virtuale, storico CORE/VALUE/REAL e analisi verificabile.">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="assets/style.css?v=0.9.7">
+  <link rel="stylesheet" href="assets/style.css?v=0.9.8">
   <title>Scanner Conte LIVE</title>
 </head>
 <body>
  <header class="topbar">
   <div class="brand"><div class="brandmark">SC</div><div><strong>SCANNER CONTE</strong><span>LIVE <i class="onlinepoint"></i> ARCHIVIO LOCALE</span></div></div>
-  <div class="top-actions"><span class="version">V0.9.7 · QUOTE MANUALI</span><button type="button" id="export-top" class="round" aria-label="Esporta backup" title="Esporta backup">↧</button></div>
+  <div class="top-actions"><span class="version">V0.9.8 · QUOTE MANUALI</span><button type="button" id="export-top" class="round" aria-label="Esporta backup" title="Esporta backup">↧</button></div>
  </header>
  <main id="app">
   <section id="view-home" class="view active ui-home">
@@ -61,7 +61,7 @@
 
     </div>
    </details>
-   <details class="ui-drawer ui-home-details">
+   <details class="ui-drawer ui-home-details" data-mode-open="full">
     <summary><span><strong>Stato raccolte e fonti</strong><small>Dettagli tecnici e scansioni LAB</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
     <div class="ui-drawer-content">
      <div id="data-sources-status" class="data-source-strip" role="status">Verifica fonti dati alternative…</div>
@@ -158,7 +158,7 @@
      <div id="strategy-cards" class="strategy-grid"></div>
     </div>
    </details>
-   <details class="ui-drawer ui-lab-drawer">
+   <details class="ui-drawer ui-lab-drawer" data-mode-open="full">
     <summary><span><strong>Registro scansioni e campionati</strong><small>Giorni, partite esaminate e copertura del feed</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
     <div class="ui-drawer-content">
      <div class="ui-lab-drawer-action"><button id="scan-audit-refresh" class="button secondary thin" type="button">Aggiorna scansioni</button></div>
@@ -216,7 +216,7 @@
 
     </div>
    </details>
-   <details class="ui-drawer ui-scanner-drawer">
+   <details class="ui-drawer ui-scanner-drawer" data-mode-open="full">
     <summary><span><strong>Palinsesto e archivi tecnici</strong><small>Quote e partite storiche, non candidate attuali</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
     <div class="ui-drawer-content">
      <p class="muted small ui-legacy-note">Questa sezione conserva gli strumenti precedenti. I dati potrebbero essere storici o non aggiornati: per le candidate nuove usa la sezione sopra.</p>
@@ -232,12 +232,68 @@
     </div>
    </details>
   </section>
-    <section id="view-settings" class="view">
-   <div class="pagelead compact"><div class="eyebrow">SICUREZZA / DATI</div><h1>Lo storico<br><em>appartiene a te.</em></h1><p>Backup esportabile e archiviazione locale sul dispositivo.</p></div>
-   <div class="surface pad settings-panel"><h2>Salvataggio e trasferimento</h2><p class="muted">L'app salva le modifiche in questo browser. Se cancelli i dati del browser senza backup, puoi perderle. Su GitHub Pages servirà poi la sincronizzazione cloud.</p><button id="export-json" class="button">↓ Esporta backup JSON</button><button id="export-csv" class="button secondary">↓ Esporta storico CSV</button><label for="import-file" class="button secondary upload">↑ Importa backup JSON<input type="file" id="import-file" accept="application/json,.json" hidden></label><button id="reset-local" class="button danger-outline">Ripristina il dataset iniziale</button></div>
-   <div class="sectionbar"><h2>Recupero archivio storico</h2></div><div class="surface pad" id="coverage"></div>
-   <div class="surface pad settings-panel"><h2>Stato migrazione</h2><div id="migration-stats"></div><p class="muted tiny">I dati mancanti non vengono completati automaticamente. L'estrazione integrale della vecchia chat permetterà il controllo delle giocate residue e dei conflitti.</p></div>
-   <div class="surface pad settings-panel"><h2>Priorità del progetto</h2><p class="muted">1. Archivio affidabile. 2. Alimentazione automatica dei campionati. 3. Modelli e backtest separati. 4. Conferma manuale delle poche eventuali REAL.</p><div class="version-note">Scanner Conte LIVE · V0.9.7 · 01/11/2026</div></div>
+    <section id="view-settings" class="view ui-settings">
+   <header class="ui-subpage-head"><span class="ui-eyebrow">SISTEMA / ARCHIVI</span><h1>Dati</h1><p>Backup, stato del sistema e preferenze in un solo posto.</p></header>
+   <section class="surface ui-settings-backup" aria-labelledby="settings-backup-heading">
+    <div class="ui-settings-heading"><div class="ui-settings-symbol" aria-hidden="true">↧</div><div><h2 id="settings-backup-heading">Proteggi il tuo storico</h2><p>Le REAL e gli archivi locali sono salvati in questo browser. Conserva una copia fuori dal telefono.</p></div></div>
+    <div class="ui-settings-backup-actions">
+     <button id="export-json" class="button ui-settings-primary" type="button">↓ Scarica backup completo JSON</button>
+     <button id="export-csv" class="button secondary ui-settings-secondary" type="button">↓ Esporta storico CSV</button>
+    </div>
+    <p class="muted tiny ui-settings-smallnote">Il JSON è il file da conservare per ripristinare le registrazioni locali. Il CSV è per consultare i dati. I LAB pubblici vengono letti separatamente da GitHub.</p>
+   </section>
+   <section class="surface ui-settings-system" aria-labelledby="settings-system-heading">
+    <div class="ui-settings-headrow"><h2 id="settings-system-heading">Stato del sistema</h2><button type="button" id="data-status-refresh" class="button secondary thin">Aggiorna</button></div>
+    <div class="ui-settings-statuslist">
+     <div class="ui-settings-statusrow"><span class="ui-status-icon" aria-hidden="true">◉</span><div><strong>Raccolta LAB 1X2</strong><p id="settings-lab-status" role="status">Controllo in corso…</p></div><span id="settings-lab-indicator" class="ui-status-bullet" aria-label="Da verificare"></span></div>
+     <div class="ui-settings-statusrow"><span class="ui-status-icon" aria-hidden="true">◎</span><div><strong>Candidate Scanner</strong><p id="settings-scanner-status" role="status">Controllo in corso…</p></div><span id="settings-scanner-indicator" class="ui-status-bullet" aria-label="Da verificare"></span></div>
+     <div class="ui-settings-statusrow"><span class="ui-status-icon" aria-hidden="true">✓</span><div><strong>Feed verifica esiti</strong><p id="settings-results-status" role="status">Controllo in corso…</p></div><span id="settings-results-indicator" class="ui-status-bullet" aria-label="Da verificare"></span></div>
+    </div>
+    <p class="muted tiny ui-settings-smallnote">Le date indicano l'ultimo dato pubblicato, non una scansione in diretta. Una fonte non aggiornata non modifica gli esiti già registrati.</p>
+   </section>
+   <section class="surface ui-settings-mode" aria-labelledby="settings-mode-heading">
+    <h2 id="settings-mode-heading">Come vuoi vedere l'app?</h2>
+    <div class="ui-mode-choice" role="group" aria-label="Modalità di visualizzazione">
+     <button type="button" data-ui-mode="simple" aria-pressed="true" class="active">Semplice</button>
+     <button type="button" data-ui-mode="full" aria-pressed="false">Completa</button>
+    </div>
+    <p id="settings-mode-description" class="muted small" aria-live="polite">Mostra prima le informazioni essenziali. Tutti i dettagli restano disponibili nei pannelli.</p>
+   </section>
+   <div class="ui-settings-more-heading"><h2>Gestione avanzata</h2><span class="muted small">Apri quando serve</span></div>
+   <details class="ui-drawer ui-settings-drawer" data-mode-open="full">
+    <summary><span><strong>Fonti e aggiornamenti tecnici</strong><small>Provenienza dei dati, copertura e limiti</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
+    <div class="ui-drawer-content ui-settings-drawer-content">
+     <p class="muted small">Quote e osservazioni: TipsAudit; altri feed pubblici quando disponibili. Il servizio API-Football sospeso non è stato riattivato. Nessuna integrazione IA a pagamento è attiva.</p>
+     <div id="settings-source-details" class="ui-settings-source-details" role="status">Verifica fonti pubbliche quando apri Dati…</div>
+     <p class="muted tiny">Anche un rapporto recente può contenere zero candidate: significa che il filtro non ha trovato osservazioni idonee, non necessariamente che il motore sia fermo.</p>
+    </div>
+   </details>
+   <details class="ui-drawer ui-settings-drawer">
+    <summary><span><strong>Importa o trasferisci un backup</strong><small>Recupera i dati locali da un file JSON</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
+    <div class="ui-drawer-content ui-settings-drawer-content">
+     <p class="muted small ui-settings-caution">Attenzione: importare un backup sostituisce l'archivio locale attuale. Prima scarica sempre un backup recente.</p>
+     <label for="import-file" class="button secondary upload ui-settings-import">↑ Seleziona backup JSON<input type="file" id="import-file" accept="application/json,.json" hidden></label>
+     <p class="muted tiny">Ti verrà richiesta una conferma prima della sostituzione. I LAB pubblici non vengono sovrascritti da questa operazione.</p>
+    </div>
+   </details>
+   <details class="ui-drawer ui-settings-drawer">
+    <summary><span><strong>Copertura e migrazione dello storico</strong><small>Schede recuperate, dati parziali e controlli</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
+    <div class="ui-drawer-content ui-settings-drawer-content">
+     <div id="coverage" class="ui-settings-coverage"></div>
+     <h3 class="ui-settings-subhead">Stato migrazione</h3>
+     <div id="migration-stats"></div>
+     <p class="muted tiny">I dati mancanti o discordanti non vengono inventati o completati automaticamente.</p>
+    </div>
+   </details>
+   <details class="ui-drawer ui-settings-drawer ui-settings-danger">
+    <summary><span><strong>Ripristino iniziale e informazioni</strong><small>Operazioni delicate e versione dell'app</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
+    <div class="ui-drawer-content ui-settings-drawer-content">
+     <p class="muted small ui-settings-caution">Il ripristino iniziale elimina le modifiche locali se non hai salvato un backup. Non è necessario per aggiornare l'app.</p>
+     <button id="reset-local" type="button" class="button danger-outline ui-settings-reset">Ripristina il dataset iniziale</button>
+     <p class="muted tiny">Priorità del progetto: dati verificabili, raccolta automatica gratuita quando possibile, test indipendenti e registrazione REAL sempre manuale.</p>
+    </div>
+   </details>
+   <div class="ui-settings-version">Scanner Conte LIVE · <strong>V0.9.8</strong> · Solo restyling, motore invariato</div>
   </section>
  </main>
  <nav class="bottomnav" aria-label="Navigazione principale">
@@ -249,6 +305,6 @@
  </nav>
  <dialog id="record-dialog"><form id="record-form" class="modal" method="dialog"><div class="modalhead"><h2>Nuova registrazione</h2><button id="close-dialog" type="button" class="close" aria-label="Chiudi">✕</button></div><p class="muted small">Registra soltanto una giocata già effettivamente piazzata. Se arrivi dalle candidate dello Scanner, partita, pronostico e quota sono precompilati: controllali, inserisci l’importo effettivo e conferma. Il LAB rimane separato.</p><div class="formgrid"><label>Data<input type="date" name="date" required value="2026-10-25"></label><label>Archivio<select name="book"><option value="lab">LAB virtuale</option><option value="main">Principale virtuale</option><option value="real">REAL (solo già piazzata)</option></select></label><label>Categoria<select name="category"><option>TEST</option><option>CORE</option><option>VALUE</option><option>EXTRA</option></select></label><label>Partita<input name="match" required placeholder="Es. Squadra A – Squadra B"></label><label>Mercato<input name="selection" required placeholder="Es. Over 2,5"></label><label>Quota decimale<input name="odds" required inputmode="decimal" type="number" min="1.01" max="1000" step="0.01"></label><label>Importo €<input name="stake" required inputmode="decimal" type="number" min="0.01" max="10000" step="0.01"></label><label>Esito<select name="result"><option value="pending">In attesa</option><option value="won">Vinta</option><option value="lost">Persa</option><option value="push">Rimborsata</option></select></label><label class="full">Nota / motivazione<input name="note" placeholder="Registrare prima del via, se possibile"></label></div><button type="submit" class="button">Salva registrazione</button></form></dialog>
  <div id="toast" role="status" aria-live="polite"></div>
- <script src="data/seed.js"></script><script src="assets/app.js"></script><script src="assets/home-overview.js"></script><script src="assets/feed.js"></script><script src="assets/lab-pilot.js"></script><script src="assets/daily-virtual.js"></script><script src="assets/scan-audit.js"></script><script src="assets/archive-public.js"></script><script src="assets/archive-lab-overview.js"></script><script src="assets/install.js"></script><script src="assets/bet365.js"></script><script src="assets/candidate-review.js"></script><script src="assets/quote-notebook.js"></script><script src="assets/analytics.js"></script><script src="assets/provider-status.js"></script>
+ <script src="data/seed.js"></script><script src="assets/app.js"></script><script src="assets/home-overview.js"></script><script src="assets/feed.js"></script><script src="assets/lab-pilot.js"></script><script src="assets/daily-virtual.js"></script><script src="assets/scan-audit.js"></script><script src="assets/archive-public.js"></script><script src="assets/archive-lab-overview.js"></script><script src="assets/install.js"></script><script src="assets/bet365.js"></script><script src="assets/candidate-review.js"></script><script src="assets/quote-notebook.js"></script><script src="assets/analytics.js"></script><script src="assets/provider-status.js"></script><script src="assets/settings-ui.js"></script>
 </body>
 </html>
