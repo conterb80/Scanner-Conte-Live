@@ -500,3 +500,102 @@
  .ui-archive-list .rightr{min-width:72px}
  .ui-lab .ui-lab-drawer .ui-drawer-content{padding:11px}
 }
+
+
+/* V0.9.7 — layout mobile rinforzato: intestazioni e filtri sempre ordinati */
+#view-archive.ui-archive .ui-register-tabs{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+}
+#view-archive.ui-archive .ui-archive-filters{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(112px,144px);
+  gap:11px;
+  align-items:end;
+}
+#view-archive.ui-archive .ui-archive-filters>.ui-archive-search,
+#view-archive.ui-archive .ui-archive-filters>.ui-archive-status{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  min-width:0;
+}
+#view-archive.ui-archive .ui-archive-filters>.ui-archive-search input,
+#view-archive.ui-archive .ui-archive-filters>.ui-archive-status select{
+  display:block;
+  width:100%;
+  min-width:0;
+  box-sizing:border-box;
+}
+#view-archive.ui-archive .ui-archive-filters>.ui-small-drawer{
+  grid-column:1 / -1;
+}
+#view-lab.ui-lab .ui-lab-overview{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:11px;
+}
+#view-lab.ui-lab .ui-lab-overview>.ui-lab-kpi{
+  min-width:0;
+  padding:16px;
+  border-radius:14px;
+}
+#view-lab.ui-lab .ui-lab-kpi-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:8px;
+  min-width:0;
+  line-height:1.35;
+}
+#view-lab.ui-lab .ui-lab-kpi-head>span:first-child{
+  display:block;
+  min-width:0;
+  font-size:12px;
+  overflow-wrap:break-word;
+}
+#view-lab.ui-lab .ui-lab-kpi-head>.ui-lab-pill{
+  display:inline-flex;
+  flex-shrink:0;
+  max-width:100%;
+  white-space:nowrap;
+}
+#view-lab.ui-lab .ui-lab-kpi>strong{
+  display:block;
+  margin:12px 0 8px;
+  font-variant-numeric:tabular-nums;
+}
+#view-lab.ui-lab .ui-lab-kpi>p{
+  margin:0 0 8px;
+}
+#view-lab.ui-lab .ui-lab-kpi>small{
+  display:block;
+}
+@media(max-width:660px){
+  #view-archive.ui-archive .ui-register-tabs{
+    grid-template-columns:repeat(6,minmax(0,1fr));
+  }
+  #view-archive.ui-archive .ui-register-tabs button{
+    grid-column:span 2;
+  }
+  #view-archive.ui-archive .ui-register-tabs button:nth-child(4),
+  #view-archive.ui-archive .ui-register-tabs button:nth-child(5){
+    grid-column:span 3;
+  }
+  #view-lab.ui-lab .ui-lab-overview{
+    grid-template-columns:1fr;
+    gap:11px;
+  }
+  #view-lab.ui-lab .ui-lab-overview>.ui-lab-kpi{
+    padding:16px;
+  }
+}
+@media(max-width:360px){
+  #view-archive.ui-archive .ui-archive-filters{
+    grid-template-columns:1fr;
+  }
+  #view-archive.ui-archive .ui-archive-filters>.ui-small-drawer{
+    grid-column:1;
+  }
+}
