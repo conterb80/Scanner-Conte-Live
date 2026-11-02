@@ -152,7 +152,8 @@ const canonicalTeam=s=>{
  return aliases[n]||n;
 };
 function sameFixture(record,fixture){
- if(!fixture.kickoff||localDateInRome(fixture.kickoff)!==record.date)return false;
+ if(!fixture.kickoff||
+    (localDateInRome(fixture.kickoff)!==record.date&&fixture.original_local_date!==record.date))return false;
  const parts=String(record.match||'').split(/\s+(?:-|–|—|vs\.?)\s+/i);
  if(parts.length===2){
   return canonicalTeam(parts[0])===canonicalTeam(fixture.home)&&
@@ -192,11 +193,16 @@ async function reconcilePendingFixtures(){
    // Se il feed nuovo ha una partita, non usare in contrasto il vecchio feed.
    const matches=available.length?available:
      legacyFeed?.fixtures?.filter(f=>sameFixture(record,f))||[];
-   if(matches.length>1){ambiguous++;continue}
-   if(matches.length!==1)continue;
-   const fixture=matches[0];
-   if(['PST','POSTPONED','CANC','CANCELLED'].includes(fixture.status)){postponed++;continue}
-   if(fixture.status!=='FT'||!Number.isInteger(fixture.home_goals)||!Number.isInteger(fixture.away_goals))continue;
+   // Priorita al risultato definitivo di un recupero, se esiste:
+   // la scheda originale rinviata rimane come informazione storica.
+   const finalResults=matches.filter(f=>f.status==='FT');
+   if(finalResults.length>1){ambiguous++;continue}
+   if(finalResults.length===0){
+    if(matches.some(f=>['PST','POSTPONED','CANC','CANCELLED'].includes(f.status)))postponed++;
+    continue;
+   }
+   const fixture=finalResults[0];
+   if(!Number.isInteger(fixture.home_goals)||!Number.isInteger(fixture.away_goals))continue;
    const won=scoreSelection(record.selection,fixture.home_goals,fixture.away_goals);
    if(won===null){unsupported++;continue}
    // Solo risultati FT e solo registrazioni ancora in attesa: mai riscrivere un esito.
@@ -204,7 +210,8 @@ async function reconcilePendingFixtures(){
    record.result=won?'won':'lost';
    record.score=fixture.home_goals+'-'+fixture.away_goals;
    record.pnl=won?round((Number(record.odds)-1)*Number(record.stake)):-Number(record.stake);
-   record.settlement_source=fixture.source||publicFeed?.source||'Risultato FT verificato';
+   record.settlement_source=fixture.source||
+     (available.length?publicFeed?.source:legacyFeed?.source)||'Risultato FT verificato';
    record.settlement_fixture_id=String(fixture.id);
    if(typeof fixture.source_url==='string'&&/^https:\/\/(profis\.eintracht\.de|www\.espn\.com)\//.test(fixture.source_url)){
     record.settlement_reference_url=fixture.source_url;
