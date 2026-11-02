@@ -599,3 +599,105 @@
     grid-column:1;
   }
 }
+
+
+/* Scanner Conte LIVE V0.9.8 — Restyling finale Dati e viste semplice/completa */
+.ui-settings .ui-subpage-head{margin-bottom:16px}
+.ui-settings .ui-subpage-head h1{font-size:clamp(29px,5vw,37px)}
+.ui-settings h2{font-size:15px;line-height:1.35;margin:0}
+.ui-settings .ui-settings-backup,
+.ui-settings .ui-settings-system,
+.ui-settings .ui-settings-mode{
+  padding:18px;
+  margin:13px 0;
+  border-radius:15px;
+  min-width:0;
+}
+.ui-settings .ui-settings-backup{
+  border-color:#32715e;
+  background:linear-gradient(145deg,#163b37,#142734 70%);
+}
+.ui-settings-heading{display:flex;align-items:flex-start;gap:13px}
+.ui-settings-heading>div:last-child{min-width:0;flex:1}
+.ui-settings-symbol{
+  flex:0 0 41px;height:41px;display:grid;place-items:center;
+  background:#215f53;color:#b4ffdc;border:1px solid #459e85;
+  border-radius:12px;font-size:26px;line-height:1;
+}
+.ui-settings-heading h2{color:#e1f9ec;margin:1px 0 6px}
+.ui-settings-heading p{font-size:12px;line-height:1.55;color:#b9cfca;margin:0}
+.ui-settings-backup-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:17px 0 0}
+.ui-settings-backup-actions .button{
+  min-width:0;min-height:45px;line-height:1.4;padding:11px 12px;font-size:12px;
+  margin:0;
+}
+.ui-settings-primary{grid-column:1/-1}
+.ui-settings-secondary{grid-column:1/-1}
+.ui-settings-smallnote{font-size:11px;line-height:1.65;margin:11px 0 0;color:var(--soft)}
+.ui-settings-headrow{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:13px}
+.ui-settings-headrow .button{flex-shrink:0;min-height:36px}
+.ui-settings-statuslist{border:1px solid #2c4350;background:#10212d;border-radius:12px;overflow:hidden}
+.ui-settings-statusrow{
+  display:grid;grid-template-columns:25px minmax(0,1fr) 10px;
+  gap:11px;align-items:center;padding:13px 12px;
+  border-bottom:1px solid #2c4350;min-width:0;
+}
+.ui-settings-statusrow:last-child{border-bottom:0}
+.ui-status-icon{font-size:16px;color:#82cbb0;text-align:center}
+.ui-settings-statusrow strong{font-size:12px;color:#e4eaf0;line-height:1.3}
+.ui-settings-statusrow p{
+  font-size:11px;color:#b0c4cf;margin:5px 0 0;
+  line-height:1.55;overflow-wrap:anywhere;
+}
+.ui-status-bullet{width:9px;height:9px;border-radius:100%;background:#6e8290}
+.ui-status-bullet.ok{background:#55dca5;box-shadow:0 0 0 3px rgba(82,206,152,.11)}
+.ui-status-bullet.warn{background:#edc17d;box-shadow:0 0 0 3px rgba(237,193,125,.11)}
+.ui-status-bullet.neutral{background:#6e8290}
+.ui-settings-mode h2{margin-bottom:13px}
+.ui-mode-choice{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.ui-mode-choice button{
+  min-height:45px;border:1px solid #3a5260;background:#172d3a;
+  border-radius:11px;font-size:12px;font-weight:750;padding:11px 8px;
+}
+.ui-mode-choice button.active{
+  border-color:#59d7aa;color:#8ef5c7;
+  background:rgba(69,207,158,.14);box-shadow:inset 0 0 0 1px rgba(86,213,165,.14);
+}
+.ui-mode-choice button:focus-visible{outline:2px solid var(--mint);outline-offset:2px}
+#settings-mode-description{font-size:11px;line-height:1.6;margin:10px 0 0}
+.ui-settings-more-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:24px 0 11px}
+.ui-settings-more-heading h2{font-size:15px}
+.ui-settings-more-heading .small{font-size:10px}
+.ui-settings .ui-settings-drawer{margin:10px 0;border-radius:13px}
+.ui-settings .ui-settings-drawer>summary{min-height:65px;padding:14px 16px}
+.ui-settings .ui-settings-drawer>summary strong{font-size:13px}
+.ui-settings .ui-settings-drawer .ui-settings-drawer-content{padding:12px 15px 16px}
+.ui-settings .ui-settings-drawer .ui-settings-drawer-content p{line-height:1.65;margin:8px 0}
+.ui-settings-caution{
+ border-left:3px solid #edc17d;padding:10px 12px;
+ background:rgba(143,98,30,.12);border-radius:0 8px 8px 0;
+}
+.ui-settings-import,.ui-settings-reset{display:block;width:100%;text-align:center;min-height:43px;margin:14px 0 8px;padding:12px;font-size:12px;line-height:1.3}
+.ui-settings-source-details{padding:12px;background:#132b36;border:1px solid #2c4f5b;border-radius:10px;font-size:11px;color:#cee0e8;line-height:1.6;overflow-wrap:anywhere}
+.ui-settings-coverage .coverage-row{margin:12px 0}
+.ui-settings-subhead{font-size:12px;font-weight:750;margin:22px 0 7px}
+.ui-settings .ui-settings-drawer .audit-row{font-size:11px;gap:10px}
+.ui-settings .ui-settings-drawer .audit-row>span{flex:0 0 65px}
+.ui-settings-version{
+ text-align:center;font-size:10px;color:var(--soft);line-height:1.6;
+ padding:20px 8px 12px;
+}
+.ui-settings-version strong{color:var(--mint)}
+html[data-ui-view="full"] .ui-settings-more-heading h2{color:#b0f0d2}
+/* Controlled preference: primary information never disappears, only optional panels open on request. */
+@media(max-width:630px){
+ .ui-settings-backup-actions{grid-template-columns:1fr}
+ .ui-settings .ui-settings-backup,.ui-settings .ui-settings-system,.ui-settings .ui-settings-mode{padding:15px}
+}
+@media(max-width:400px){
+ .ui-settings-heading{gap:10px}
+ .ui-settings-symbol{flex-basis:36px;width:36px;height:36px;font-size:22px}
+ .ui-settings-statusrow{grid-template-columns:20px minmax(0,1fr) 9px;gap:9px;padding:12px 10px}
+ .ui-settings-statusrow p{font-size:10px}
+ .ui-settings .ui-settings-drawer>summary{padding:13px 14px}
+}
