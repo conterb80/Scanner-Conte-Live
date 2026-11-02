@@ -276,3 +276,116 @@
 #scan-audit-leagues>p{line-height:1.6;margin:10px 0}
 #scan-audit-leagues>.scan-audit-league-list{margin-bottom:16px}
 .scan-audit-table{min-width:440px}
+
+
+/* Scanner Conte LIVE V0.9.4 · Restyling fase 1: SOLO Home e Scanner */
+.ui-home-intro{margin:17px 0 19px}
+.ui-home-intro h1,.ui-scanner-intro h1{font-size:clamp(28px,5vw,37px);letter-spacing:-.8px;line-height:1.15;margin:0 0 5px}
+.ui-home-intro p,.ui-scanner-intro p{margin:0;color:var(--soft);font-size:12px;line-height:1.55}
+.ui-home .ui-sectionbar{margin:21px 0 9px}
+.ui-sectionbar h2{font-size:15px;letter-spacing:-.2px}
+.ui-home-hint{line-height:1.5;margin:0 0 10px}
+.ui-home .ui-balance-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.ui-home .ui-balance-grid .stat-card{min-height:116px;padding:15px 14px;border-radius:13px}
+.ui-home .ui-balance-grid .stat-top{font-size:10px;line-height:1.4;letter-spacing:.2px}
+.ui-home .ui-balance-grid .stat-value{font-size:clamp(18px,3vw,27px);margin:12px 0 5px;overflow-wrap:anywhere;letter-spacing:-.5px}
+.ui-home .ui-balance-grid .stat-bottom{font-size:10px;line-height:1.4}
+.ui-icon-refresh{border:1px solid #365061;border-radius:9px;background:#1a2b37;color:#d2e7ec;width:36px;height:36px;font-size:23px;line-height:1;display:grid;place-items:center}
+.ui-icon-refresh:disabled{opacity:.45;cursor:wait}
+.ui-today-card{padding:16px 17px;margin-bottom:8px;background:linear-gradient(125deg,#152d36,#122331);border-color:#31525b}
+.ui-today-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.ui-today-grid>div{min-width:0;padding:4px 5px 8px;text-align:center;border-right:1px solid #33505a}
+.ui-today-grid>div:last-child{border-right:0}
+.ui-kpi-label{font-size:10px;line-height:1.3;color:#a7bec7;display:block;min-height:27px}
+.ui-today-grid strong{font-size:27px;font-weight:800;line-height:1.2;display:block;margin-top:4px;font-variant-numeric:tabular-nums}
+.ui-report-state{font-size:11px;line-height:1.5;color:#98e4c7;border-top:1px solid #294451;margin:7px 0 0;padding-top:12px}
+.ui-report-state.is-warning{color:#f0c38a}
+.ui-today-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:13px;margin-top:12px}
+.ui-today-meta{display:flex;flex-direction:column;gap:4px;min-width:0;color:#afc2cc;font-size:10px;line-height:1.4}
+.ui-today-meta>span{overflow-wrap:anywhere}
+.ui-action-main{white-space:nowrap;min-height:39px}
+.ui-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.ui-action-tile{background:#152530;border:1px solid #314554;border-radius:13px;display:flex;align-items:center;justify-content:center;gap:8px;min-width:0;padding:12px 8px;min-height:66px;font-size:11px;font-weight:700;line-height:1.2}
+.ui-action-tile:active{border-color:var(--mint);background:#1c3940}
+.ui-action-icon{font-size:22px;color:var(--mint);font-weight:400}
+.ui-home .ui-settle-control{border:1px solid #293d47;border-radius:12px;padding:9px 11px;background:rgba(18,35,46,.8);margin:16px 0 16px}
+.ui-home .ui-settle-control span{font-size:10px;color:#a9c0ca}
+.ui-drawer{margin:10px 0;border:1px solid #2d404e;border-radius:13px;background:#101f2a;overflow:hidden}
+.ui-drawer>summary{display:flex;align-items:center;justify-content:space-between;gap:14px;cursor:pointer;padding:15px 16px;list-style:none}
+.ui-drawer>summary::-webkit-details-marker{display:none}
+.ui-drawer>summary>span:first-child{display:flex;flex-direction:column;gap:5px;min-width:0}
+.ui-drawer>summary strong{font-size:13px;line-height:1.3}
+.ui-drawer>summary small{font-size:10px;color:var(--soft);line-height:1.35}
+.ui-drawer-arrow{font-size:20px;color:var(--mint);transition:transform .18s}
+.ui-drawer[open]>.ui-drawer-arrow,.ui-drawer[open]>summary .ui-drawer-arrow{transform:rotate(180deg)}
+.ui-drawer[open]>summary{border-bottom:1px solid #2d404e}
+.ui-drawer-content{padding:5px 15px 17px;min-width:0}
+.ui-drawer-content>.sectionbar:first-child{margin-top:13px}
+.ui-drawer-content .analytics-tabs{margin-top:8px}
+.ui-drawer-content #analytics-content{min-height:110px}
+.ui-home-details{margin-top:10px}
+.ui-scanner-intro{padding:13px 0 7px}
+.ui-eyebrow{display:block;font-weight:800;font-size:10px;letter-spacing:1.4px;color:var(--mint);margin-bottom:7px}
+.ui-scanner>.ui-sectionbar{margin:15px 0 9px}
+.ui-scanner #candidate-review-status{font-size:11px;line-height:1.45;margin:7px 0 10px;padding:12px 13px}
+.ui-scanner #candidate-review-status strong{display:block;font-size:11px;color:#d7e6ed}
+.candidate-source-meta{margin-top:7px}
+.candidate-source-meta summary,.ui-scanner .candidate-review-emphasis summary{font-size:11px;font-weight:650;color:#9cdbc7;cursor:pointer}
+.candidate-source-meta p{margin:8px 0 0;font-size:10px}
+.ui-scanner .candidate-review-panel{margin-bottom:15px}
+.ui-scanner .candidate-review-emphasis{padding:10px 13px;margin-bottom:11px;border-color:#2c4650;background:#142833}
+.ui-scanner .candidate-review-emphasis p{margin:8px 0 1px}
+.ui-scanner .candidate-review-grid{gap:10px}
+.ui-scanner .candidate-review-card{padding:15px 16px;border-radius:13px}
+.ui-scanner .candidate-review-card h3{font-size:15px;line-height:1.3;margin:12px 0 8px;overflow-wrap:anywhere}
+.ui-scanner .candidate-review-cardtop .tag{font-size:9px;letter-spacing:.25px}
+.ui-scanner .candidate-review-cardtop .muted{font-size:10px}
+.candidate-review-meta{display:flex;align-items:center;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;color:#aebfcb;font-size:11px;line-height:1.4}
+.candidate-review-meta b{font-size:11px;color:#d7efea;white-space:nowrap}
+.candidate-review-price{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#102533;border:1px solid #294452;border-radius:10px;margin:13px 0 5px;padding:11px 13px}
+.candidate-review-price span{font-size:11px;color:#b3c6cf}
+.candidate-review-price strong{font-size:23px;line-height:1;font-variant-numeric:tabular-nums}
+.ui-scanner .candidate-review-manual{padding-top:10px}
+.ui-scanner .candidate-review-manual>label{font-size:11px;font-weight:650;color:#c8dae0}
+.ui-scanner .candidate-review-inputrow input{font-size:16px;min-height:40px}
+.ui-scanner .candidate-review-inputrow .button{min-height:40px;white-space:nowrap}
+.ui-scanner .candidate-review-record{padding-top:11px;margin-top:11px;align-items:stretch}
+.ui-scanner .candidate-review-record .button{width:100%;padding:11px 8px;min-height:41px}
+.ui-scanner .candidate-review-record p{font-size:10px;text-align:center;line-height:1.4;margin:3px 0 0}
+.ui-scanner .candidate-review-why{margin-top:10px;border-top:1px solid #293c48;border-bottom:0;padding:10px 0 0}
+.ui-scanner .candidate-review-why>summary{font-size:11px;color:#95d8c2}
+.ui-scanner .candidate-review-why p{line-height:1.5;margin:9px 0 0}
+.ui-scanner .candidate-review-others{margin:17px 0 13px;padding-top:14px}
+.ui-scanner .candidate-review-others>summary{font-size:14px;color:#9af5c9;list-style:revert}
+.ui-scanner .candidate-review-others>.muted{line-height:1.55}
+.ui-scanner .candidate-review-empty{margin:8px 0 13px}
+.ui-scanner .ui-scanner-drawer{margin-top:10px}
+.ui-scanner .ui-scanner-drawer .sectionbar{margin-top:17px}
+.ui-scanner .ui-scanner-drawer #quote-notebook{margin:0}
+.ui-legacy-note{line-height:1.6;margin:12px 0}
+.ui-scanner .ui-drawer-content .notice{margin:12px 0}
+@media(max-width:700px){
+ .ui-home .ui-balance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .ui-home .ui-balance-grid .stat-card:nth-child(3){grid-column:1/-1;min-height:95px}
+ .ui-home .ui-balance-grid .stat-card:nth-child(3) .stat-value{margin:5px 0}
+ .ui-actions{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .ui-action-tile{justify-content:flex-start;padding:13px 15px;min-height:58px}
+}
+@media(max-width:420px){
+ .ui-home-intro{margin-top:9px}
+ .ui-home-intro h1,.ui-scanner-intro h1{font-size:29px}
+ .ui-home .ui-balance-grid{gap:7px}
+ .ui-home .ui-balance-grid .stat-card{padding:13px 11px;min-height:100px}
+ .ui-home .ui-balance-grid .stat-value{font-size:20px;letter-spacing:-.5px}
+ .ui-today-card{padding:13px 11px}
+ .ui-today-grid strong{font-size:23px}
+ .ui-today-foot{flex-direction:column;align-items:stretch;gap:12px}
+ .ui-action-main{width:100%}
+ .ui-today-meta{font-size:10px}
+ .ui-scanner .candidate-review-card{padding:14px 12px}
+ .ui-scanner .candidate-review-inputrow{flex-wrap:nowrap}
+ .ui-scanner .candidate-review-inputrow input{min-width:0}
+ .ui-scanner .candidate-review-inputrow .button{font-size:11px;padding:9px 10px}
+ .ui-drawer-content{padding-left:11px;padding-right:11px}
+}
+@media(prefers-reduced-motion:reduce){.ui-drawer-arrow{transition:none}}
