@@ -26,6 +26,7 @@ const dayUTC=(dayOffset,now=new Date())=>{
 };
 const toScore=score=>{
  const v=score&&typeof score==='object'?score.displayValue??score.value:score;
+ if(v===null||v===undefined||(typeof v==='string'&&!v.trim()))return null;
  const n=Number(v);return Number.isInteger(n)&&n>=0&&n<=80?n:null;
 };
 const secureLink=(link)=>{
