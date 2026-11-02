@@ -42,6 +42,7 @@ function comparison(record){
 function row(record,secondary=false){
  const savedValue=validOdds(saved[record.id]?.quote);
  const before=minutesUntil(record.kickoff)>15;
+ const realAllowed=before&&feed?.allow_manual_real_registration_today===true;
  const intro=secondary?'ALTERNATIVA · '+record.category:record.category+' · SCREENING';
  const evidence=(Array.isArray(record.why)?record.why:[]).slice(0,3);
  const pick=record.selection==='Home'?'1 · Casa':record.selection==='Away'?'2 · Trasferta':'X · Pareggio';
@@ -57,8 +58,8 @@ function row(record,secondary=false){
     'data-review-input="'+esc(record.id)+'" value="'+(savedValue!==null?esc(String(savedValue)):'')+'" placeholder="Es. 1,90" '+(!before?'disabled':'')+'/>'+
     '<button type="button" class="button secondary thin" data-review-save="'+esc(record.id)+'" '+(!before?'disabled':'')+'>Salva quota</button></div>'+
    (savedValue!==null?'<div class="candidate-review-comparison" data-review-comparison="'+esc(record.id)+'">'+comparison(record)+'</div>':'')+
-   '<div class="candidate-review-record"><button type="button" class="button secondary thin" data-review-register="'+esc(record.id)+'" '+(!before?'disabled':'')+'>Ho già piazzato · registra REAL</button>'+
-   '<p class="muted tiny">Solo dopo una puntata effettiva. L’importo va confermato nel modulo.</p></div></div>'+
+   '<div class="candidate-review-record"><button type="button" class="button secondary thin" data-review-register="'+esc(record.id)+'" '+(!realAllowed?'disabled':'')+'>Ho già piazzato · registra REAL</button>'+
+   '<p class="muted tiny">'+(feed?.allow_manual_real_registration_today===true?'Solo dopo una puntata effettiva. L’importo va confermato nel modulo.':'REAL disabilitate qui nei feriali: oggi è una selezione solo LAB.')+'</p></div></div>'+
   '<details class="candidate-review-why"><summary>Analisi, quote e fonte</summary>'+
    '<p class="muted small">Fonte '+esc(record.reference_bookmaker)+' · quota equa esterna '+esc(fmt(record.external_fair_odds))+
    ' · rilevazione '+esc(quoteFreshness(record.captured_at))+' fa.</p>'+
@@ -84,7 +85,7 @@ function show(){
  status.innerHTML='<strong>'+esc(normalStatus)+'</strong>'+
   '<details class="candidate-source-meta"><summary>Fonte e aggiornamenti</summary>'+
   '<p class="muted small">Ultima raccolta LAB: '+esc(feed.source_last_check?date(feed.source_last_check):'non disponibile')+
-  '. Mercato coperto: 1X2. CORE e VALUE sono fasce di quota, non garanzie di sicurezza.</p></details>'+
+  '. Partite esaminate: oggi (Europe/Rome). Mercato coperto: 1X2. CORE e VALUE sono fasce di quota, non garanzie di sicurezza.</p></details>'+
   (error?'<p class="muted small">Visualizzo l’ultima copia caricata. Aggiornamento fallito: '+esc(error)+'</p>':'');
  const alternativesWereOpen=Boolean(panel.querySelector('.candidate-review-others')?.open);
  const nothing=allShort.length===0&&alternatives.length===0;
@@ -122,6 +123,7 @@ panel.addEventListener('click',event=>{
  const id=button.getAttribute(registration?'data-review-register':'data-review-save');
  const candidate=[...feed.shortlist,...feed.alternatives].find(r=>r.id===id);
  if(!candidate||minutesUntil(candidate.kickoff)<=15)return;
+ if(registration&&feed.allow_manual_real_registration_today!==true)return;
  const i=[...panel.querySelectorAll('[data-review-input]')].find(el=>el.getAttribute('data-review-input')===id);
  if(!i)return;
  const raw=String(i.value??'').trim();
