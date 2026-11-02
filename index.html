@@ -137,7 +137,7 @@
    <p class="muted tiny ui-lab-overview-note">Risultati virtuali, non guadagni reali. I due laboratori non vengono sommati.</p>
    <div class="sectionbar ui-subpage-bar ui-lab-detail-heading"><h2>Apri un approfondimento</h2></div>
    <details class="ui-drawer ui-lab-drawer">
-    <summary><span><strong>LAB quotidiano 1X2</strong><small>Ultime simulazioni e agenda delle prossime partite</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
+    <summary><span><strong>LAB quotidiano 1X2</strong><small>Partite di oggi e ultime simulazioni</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
     <div class="ui-drawer-content">
      <div class="ui-lab-drawer-action"><button class="button secondary thin" type="button" data-open-register="daily">Registro completo LAB 1X2</button></div>
      <div id="daily-virtual-panel" class="surface pad">Verifica nuovi test quotidiani…</div>
@@ -150,6 +150,10 @@
      <div id="lab-auto-info" class="surface pad">Verifica archivio LAB…</div>
      <div id="lab-auto-list" class="candidates"></div>
     </div>
+   </details>
+   <details class="ui-drawer ui-lab-drawer">
+    <summary><span><strong>Statistiche settimanali LAB</strong><small>Risultati compatti, senza elenco delle squadre</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
+    <div class="ui-drawer-content"><div id="lab-weekly-summary" class="surface pad">Caricamento statistiche settimanali…</div></div>
    </details>
    <details class="ui-drawer ui-lab-drawer">
     <summary><span><strong>Strategie e risultati storici</strong><small>CORE, VALUE e LAB storico: bilanci separati</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
@@ -187,7 +191,7 @@
 
   <section id="view-scanner" class="view ui-scanner">
    <header class="ui-scanner-intro"><span class="ui-eyebrow">SCANSIONE / QUOTE</span><h1>Scanner</h1><p>Candidate e alternative in un unico posto. Le quote Bet365 le inserisci tu.</p></header>
-   <div class="sectionbar ui-sectionbar"><h2>Candidate del weekend</h2><button id="candidate-review-refresh" class="button secondary thin" type="button">Aggiorna</button></div>
+   <div class="sectionbar ui-sectionbar"><h2>Candidate di oggi</h2><button id="candidate-review-refresh" class="button secondary thin" type="button">Aggiorna</button></div>
    <div id="candidate-review-status" class="data-source-strip" role="status" aria-live="polite">Preparazione rapporto automatico…</div>
    <div id="candidate-review-panel" class="candidate-review-panel">Caricamento shortlist del motore…</div>
    <details class="ui-drawer ui-scanner-drawer">
@@ -305,6 +309,6 @@
  </nav>
  <dialog id="record-dialog"><form id="record-form" class="modal" method="dialog"><div class="modalhead"><h2>Nuova registrazione</h2><button id="close-dialog" type="button" class="close" aria-label="Chiudi">✕</button></div><p class="muted small">Registra soltanto una giocata già effettivamente piazzata. Se arrivi dalle candidate dello Scanner, partita, pronostico e quota sono precompilati: controllali, inserisci l’importo effettivo e conferma. Il LAB rimane separato.</p><div class="formgrid"><label>Data<input type="date" name="date" required value="2026-10-25"></label><label>Archivio<select name="book"><option value="lab">LAB virtuale</option><option value="main">Principale virtuale</option><option value="real">REAL (solo già piazzata)</option></select></label><label>Categoria<select name="category"><option>TEST</option><option>CORE</option><option>VALUE</option><option>EXTRA</option></select></label><label>Partita<input name="match" required placeholder="Es. Squadra A – Squadra B"></label><label>Mercato<input name="selection" required placeholder="Es. Over 2,5"></label><label>Quota decimale<input name="odds" required inputmode="decimal" type="number" min="1.01" max="1000" step="0.01"></label><label>Importo €<input name="stake" required inputmode="decimal" type="number" min="0.01" max="10000" step="0.01"></label><label>Esito<select name="result"><option value="pending">In attesa</option><option value="won">Vinta</option><option value="lost">Persa</option><option value="push">Rimborsata</option></select></label><label class="full">Nota / motivazione<input name="note" placeholder="Registrare prima del via, se possibile"></label></div><button type="submit" class="button">Salva registrazione</button></form></dialog>
  <div id="toast" role="status" aria-live="polite"></div>
- <script src="data/seed.js"></script><script src="assets/app.js?v=0.9.10"></script><script src="assets/home-overview.js"></script><script src="assets/feed.js"></script><script src="assets/lab-pilot.js"></script><script src="assets/daily-virtual.js"></script><script src="assets/scan-audit.js"></script><script src="assets/archive-public.js"></script><script src="assets/archive-lab-overview.js"></script><script src="assets/install.js"></script><script src="assets/bet365.js"></script><script src="assets/candidate-review.js"></script><script src="assets/quote-notebook.js"></script><script src="assets/analytics.js"></script><script src="assets/provider-status.js"></script><script src="assets/settings-ui.js?v=0.9.9"></script>
+ <script src="data/seed.js"></script><script src="assets/app.js?v=0.9.10"></script><script src="assets/home-overview.js"></script><script src="assets/feed.js"></script><script src="assets/lab-pilot.js"></script><script src="assets/daily-virtual.js"></script><script src="assets/weekly-lab.js"></script><script src="assets/scan-audit.js"></script><script src="assets/archive-public.js"></script><script src="assets/archive-lab-overview.js"></script><script src="assets/install.js"></script><script src="assets/bet365.js"></script><script src="assets/candidate-review.js"></script><script src="assets/quote-notebook.js"></script><script src="assets/analytics.js"></script><script src="assets/provider-status.js"></script><script src="assets/settings-ui.js?v=0.9.9"></script>
 </body>
 </html>
