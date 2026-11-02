@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-results-public-v1",
-  "checked_at": "2026-11-02T05:00:21.559Z",
+  "checked_at": "2026-11-02T17:02:23.216Z",
   "source": "ESPN public scoreboard + verified official match reports",
   "coverage": {
     "leagues": [
@@ -1175,6 +1175,21 @@
       "source": "ESPN public scoreboard",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/401885409/fc-famalicao-braga",
       "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-esp.2-401883144",
+      "kickoff": "2026-11-02T13:00:00.000Z",
+      "status": "FT",
+      "league": "LaLiga Hypermotion",
+      "league_code": "esp.2",
+      "home": "Tenerife",
+      "away": "FC Andorra",
+      "home_goals": 2,
+      "away_goals": 2,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401883144/fc-andorra-tenerife",
+      "verification": "espn_scoreboard",
+      "original_local_date": "2026-11-01"
     }
   ]
 }
