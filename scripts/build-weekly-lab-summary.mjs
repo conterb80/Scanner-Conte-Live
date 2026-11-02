@@ -92,7 +92,14 @@ async function main(){
  const auto=JSON.parse(await readFile('data/lab_auto.json','utf8'));
  if(daily.schema!=='scanner-conte-daily-virtual-v1'||auto.schema!=='scanner-conte-lab-v1')
   throw Error('Schema LAB non riconosciuto: dati invariati');
- const result=buildWeeklySummary(daily,auto);
+ // Timestamp stabile: senza cambi reali non rigenerare commit/notifiche a ogni controllo.
+ const sourceTimes=[
+  ...daily.records.flatMap(r=>[r.captured_at,r.settled_at]),
+  ...auto.records.flatMap(r=>[r.captured_at,r.settled_at]),
+  ...daily.checks.map(ch=>ch.checked_at)
+ ].filter(v=>Number.isFinite(Date.parse(v||''))).map(v=>new Date(v).toISOString()).sort();
+ const stamp=sourceTimes.at(-1)||'1970-01-01T00:00:00.000Z';
+ const result=buildWeeklySummary(daily,auto,stamp);
  await writeFile('data/weekly_lab_stats.json',JSON.stringify(result,null,2)+'\n');
  console.log('Riepilogo settimanale LAB: '+result.weeks.length+' gruppi (nessuna cancellazione).');
 }
