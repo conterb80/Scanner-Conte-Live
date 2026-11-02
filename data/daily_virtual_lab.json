@@ -2905,10 +2905,14 @@
       "reference": "https://tipsaudit.com/match/13992/oviedo-vs-las-palmas-2026-11-02",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-02T18:23:56.827Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-02T18:20:13+00:00"
     },
     {
       "id": "tipsaudit-13681:TIPSAUDIT_VALUE_1X2",
@@ -3620,10 +3624,10 @@
   "last_check": "2026-11-02T17:27:57.835Z",
   "stats": {
     "total": 107,
-    "pending": 12,
+    "pending": 11,
     "won": 47,
-    "lost": 48,
-    "pnl": 3.26
+    "lost": 49,
+    "pnl": 2.26
   },
-  "last_settlement_check": "2026-11-02T11:49:49.457Z"
+  "last_settlement_check": "2026-11-02T18:23:56.827Z"
 }
