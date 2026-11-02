@@ -1,9 +1,9 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-01T20:37:13.820Z",
+  "generated_at": "2026-11-02T11:44:31.361Z",
   "status": "NO_ELIGIBLE_OBSERVATIONS",
-  "source_last_check": "2026-11-01T19:13:20.442Z",
+  "source_last_check": "2026-11-02T11:44:30.487Z",
   "source_max_age_hours": 36,
   "scope": "Solo eventi futuri di sabato e domenica, entro 72 ore.",
   "market_coverage": [
@@ -16,12 +16,12 @@
   "methodology": "Filtro quantitativo predefinito di segnali esterni già acquisiti: divario quota/equo fonte, freschezza, fascia di quota. Non verifica forma, assenze o formazioni.",
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
-    "paper_records": 105,
+    "paper_records": 106,
     "eligible_observations": 0,
     "eligible_core": 0,
     "eligible_value": 0,
-    "settled_paper_samples": 75,
-    "settled_paper_roi_pct": 4.2
+    "settled_paper_samples": 92,
+    "settled_paper_roi_pct": 2.1
   },
   "shortlist": [],
   "alternatives": []
