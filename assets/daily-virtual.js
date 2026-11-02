@@ -24,11 +24,11 @@ async function refresh(){
   const latest=d.checks?.[d.checks.length-1];
   // Agenda puramente informativa dalle osservazioni LAB pre-partita.
   // Non suggerisce puntate REAL e non calcola nuovi pronostici.
-  const inRome=s=>{try{return new Intl.DateTimeFormat('en-US',{timeZone:'Europe/Rome',weekday:'short'}).format(new Date(s));}catch{return '';}};
+  const inRome=s=>{try{return new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(s));}catch{return '';}};
   const now=Date.now();
   const scheduled=records.filter(x=>x.status==='pending'&&
     Number.isFinite(Date.parse(x.kickoff))&&Date.parse(x.kickoff)>now+20*60000&&
-    ['Sat','Sun'].includes(inRome(x.kickoff))).
+    inRome(x.kickoff)===inRome(new Date(now).toISOString())).
     sort((a,b)=>Date.parse(a.kickoff)-Date.parse(b.kickoff));
   const sourceLink=x=>String(x.reference||'').startsWith('https://tipsaudit.com/')?esc(x.reference):'https://tipsaudit.com/api';
   const pick=x=>x.selection==='Home'?'1':x.selection==='Away'?'2':x.selection==='Draw'?'X':String(x.selection||'—');
@@ -44,9 +44,9 @@ async function refresh(){
    '<p class="muted small">Ultimo controllo: '+esc(latest?fmt(latest.checked_at):'—')+
    ' · Candidati verificabili: '+esc(latest?.eligible_actionable??'—')+
    ' · Nuovi test: '+esc(latest?.created??'—')+'.</p>';
-  html+='<div class="sectionbar"><h2>Agenda LAB · eventi futuri del weekend</h2><span class="muted small">'+scheduled.length+' registrati</span></div>'+
+  html+='<div class="sectionbar"><h2>Agenda LAB · partite di oggi</h2><span class="muted small">'+scheduled.length+' registrati</span></div>'+
     '<p class="muted small">Queste sono osservazioni virtuali registrate prima degli eventi: non sono giocate REAL, non sono selezioni CORE/VALUE validate e non sono necessariamente quote Bet365. La lista segue le nuove scansioni senza richiedere la chat.</p>';
-  if(!scheduled.length)html+='<p class="surface pad muted small">Nessun evento futuro del weekend ancora osservato dal LAB. Il motore non crea partite o quote artificiali.</p>';
+  if(!scheduled.length)html+='<p class="surface pad muted small">Nessuna partita futura di oggi ancora selezionata dal LAB. Il motore non crea partite o quote artificiali.</p>';
   else html+=scheduled.slice(0,12).map(x=>
     '<article class="candidate"><div class="ctop"><span class="tag lab">OSSERVAZIONE LAB</span><span class="muted small">'+esc(fmt(x.kickoff))+'</span></div>'+
     '<h3>'+esc(x.match)+'</h3><p class="muted small">'+esc(x.league)+' · '+esc(x.bookmaker)+'</p>'+
