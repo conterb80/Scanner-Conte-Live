@@ -44,28 +44,28 @@ function row(record,secondary=false){
  const before=minutesUntil(record.kickoff)>15;
  const intro=secondary?'ALTERNATIVA · '+record.category:record.category+' · SCREENING';
  const evidence=(Array.isArray(record.why)?record.why:[]).slice(0,3);
+ const pick=record.selection==='Home'?'1 · Casa':record.selection==='Away'?'2 · Trasferta':'X · Pareggio';
  return '<article class="surface pad candidate-review-card">'+
   '<div class="candidate-review-cardtop"><span class="tag '+(record.category==='CORE'?'main':'lab')+'">'+esc(intro)+'</span>'+
    '<span class="muted small">'+esc(date(record.kickoff))+'</span></div>'+
   '<h3>'+esc(record.match)+'</h3>'+
-  '<p class="muted small">'+esc(record.league)+' · 1X2 '+esc(record.selection==='Home'?'1 (casa)':record.selection==='Away'?'2 (trasferta)':'X (pareggio)')+'</p>'+
-  '<div class="candidate-review-stats"><div><span>Quota della fonte</span><strong>'+esc(fmt(record.reference_odds))+'</strong></div>'+
-   '<div><span>Bookmaker fonte</span><strong class="candidate-bookmaker">'+esc(record.reference_bookmaker)+'</strong></div>'+
-   '<div><span>Benchmark esterno</span><strong>'+esc(fmt(record.external_fair_odds))+'</strong></div></div>'+
-  '<p class="muted small">Quota osservata '+esc(quoteFreshness(record.captured_at))+' fa. L’analisi è basata sulla fonte esterna, non su un modello indipendente o su Bet365.</p>'+
-  '<details class="candidate-review-why"><summary>Perché è stata evidenziata?</summary>'+
-   '<ul>'+evidence.map(x=>'<li>'+esc(readable(x))+'</li>').join('')+'</ul>'+
-   '<p class="muted small">Il punteggio tecnico ordina le osservazioni; non indica la probabilità di vincita. I risultati passati non provano che il metodo funzioni.</p>'+
-   '<a href="'+(String(record.reference_link||'').startsWith('https://tipsaudit.com/')?esc(record.reference_link):'https://tipsaudit.com/api')+'" target="_blank" rel="noopener noreferrer">Fonte della quota</a></details>'+
+  '<div class="candidate-review-meta"><span>'+esc(record.league)+'</span><b>1X2 · '+esc(pick)+'</b></div>'+
+  '<div class="candidate-review-price"><span>Quota della fonte</span><strong>'+esc(fmt(record.reference_odds))+'</strong></div>'+
   '<div class="candidate-review-manual">'+
-   '<label for="review-quote-'+esc(record.id)+'">Quota Bet365 osservata da te</label>'+
+   '<label for="review-quote-'+esc(record.id)+'">Quota Bet365 inserita da te</label>'+
    '<div class="candidate-review-inputrow"><input id="review-quote-'+esc(record.id)+'" type="number" min="1.01" max="200" step="0.01" inputmode="decimal" '+
     'data-review-input="'+esc(record.id)+'" value="'+(savedValue!==null?esc(String(savedValue)):'')+'" placeholder="Es. 1,90" '+(!before?'disabled':'')+'/>'+
     '<button type="button" class="button secondary thin" data-review-save="'+esc(record.id)+'" '+(!before?'disabled':'')+'>Salva quota</button></div>'+
-   '<div class="candidate-review-comparison" data-review-comparison="'+esc(record.id)+'">'+comparison(record)+'</div>'+
-   '<div class="candidate-review-record"><button type="button" class="button secondary thin" data-review-register="'+esc(record.id)+'" '+(!before?'disabled':'')+'>Ho già piazzato · registra REAL</button>'+ 
-   '<p class="muted tiny">Apre il modulo precompilato. Non salva alcuna puntata senza la tua conferma.</p></div></div>'+
-  (!before?'<p class="muted small">Partita iniziata o imminente: confronto bloccato per evitare l’uso di riferimenti prepartita non più validi.</p>':'')+
+   (savedValue!==null?'<div class="candidate-review-comparison" data-review-comparison="'+esc(record.id)+'">'+comparison(record)+'</div>':'')+
+   '<div class="candidate-review-record"><button type="button" class="button secondary thin" data-review-register="'+esc(record.id)+'" '+(!before?'disabled':'')+'>Ho già piazzato · registra REAL</button>'+
+   '<p class="muted tiny">Solo dopo una puntata effettiva. L’importo va confermato nel modulo.</p></div></div>'+
+  '<details class="candidate-review-why"><summary>Analisi, quote e fonte</summary>'+
+   '<p class="muted small">Fonte '+esc(record.reference_bookmaker)+' · quota equa esterna '+esc(fmt(record.external_fair_odds))+
+   ' · rilevazione '+esc(quoteFreshness(record.captured_at))+' fa.</p>'+
+   '<ul>'+evidence.map(x=>'<li>'+esc(readable(x))+'</li>').join('')+'</ul>'+
+   '<p class="muted small">Il filtro non verifica ancora forma, infortuni o formazioni. CORE/VALUE indica una fascia di quota, non la sicurezza di una puntata.</p>'+
+   '<a href="'+(String(record.reference_link||'').startsWith('https://tipsaudit.com/')?esc(record.reference_link):'https://tipsaudit.com/api')+'" target="_blank" rel="noopener noreferrer">Apri la fonte della quota</a></details>'+
+  (!before?'<p class="muted small">Partita iniziata o imminente: operazioni sulle quote prepartita disabilitate.</p>':'')+
  '</article>';
 }
 function show(){
@@ -82,17 +82,18 @@ function show(){
   !validFeed?'Dati non sufficienti per visualizzare nuove candidate.':
   'Rapporto sperimentale del '+date(feed.generated_at)+' · '+feed.scan_stats.eligible_observations+' osservazioni idonee.';
  status.innerHTML='<strong>'+esc(normalStatus)+'</strong>'+
+  '<details class="candidate-source-meta"><summary>Fonte e aggiornamenti</summary>'+
   '<p class="muted small">Ultima raccolta LAB: '+esc(feed.source_last_check?date(feed.source_last_check):'non disponibile')+
-  '. Mercato coperto: 1X2. I gruppi CORE e VALUE sono fasce di quota, non garanzie di sicurezza.</p>'+
+  '. Mercato coperto: 1X2. CORE e VALUE sono fasce di quota, non garanzie di sicurezza.</p></details>'+
   (error?'<p class="muted small">Visualizzo l’ultima copia caricata. Aggiornamento fallito: '+esc(error)+'</p>':'');
  const alternativesWereOpen=Boolean(panel.querySelector('.candidate-review-others')?.open);
- let html='<div class="candidate-review-emphasis"><strong>Analisi automatica preliminare, nessuna giocata REAL.</strong>'+
-  '<p class="muted small">Il motore usa quote LAB prepartita e il benchmark della fonte. Per ora NON confronta ancora forma, infortuni o formazioni: non è una raccomandazione validata.</p></div>';
+ let html='<details class="candidate-review-emphasis"><summary>Come funziona lo screening sperimentale</summary>'+
+  '<p class="muted small">Il motore usa quote LAB prepartita e il benchmark della fonte. Non confronta ancora forma, infortuni o formazioni: non è una raccomandazione validata, e non piazza giocate REAL.</p></details>';
  if(!allShort.length)html+='<p class="muted small candidate-review-empty">Nessuna candidata attiva in questo momento. Non vengono mostrate partite iniziate o dati scaduti.</p>';
  else html+='<div class="candidate-review-grid">'+allShort.map(x=>row(x)).join('')+'</div>';
- if(alternatives.length)html+='<details class="candidate-review-others"><summary>Altre '+alternatives.length+' osservazioni del LAB</summary>'+
-  '<p class="muted small">Alternative ordinate dal filtro: non sono scelte approvate.</p>'+
-  '<div class="candidate-review-grid">'+alternatives.slice(0,6).map(x=>row(x,true)).join('')+'</div></details>';
+ if(alternatives.length)html+='<details class="candidate-review-others"><summary>Alternative · '+alternatives.length+' partite</summary>'+
+  '<p class="muted small">Stesso confronto quota e registrazione REAL delle principali. Selezioni sperimentali, non approvate.</p>'+
+  '<div class="candidate-review-grid">'+alternatives.map(x=>row(x,true)).join('')+'</div></details>';
  html+='<p class="muted tiny">I confronti inseriti qui rimangono solo in questo browser. Le REAL restano separate nello Storico e richiedono registrazione esplicita dopo un’eventuale puntata effettuata.</p>';
  panel.innerHTML=html;
  if(alternativesWereOpen)panel.querySelector('.candidate-review-others')?.setAttribute('open','');
