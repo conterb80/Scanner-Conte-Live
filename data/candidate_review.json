@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-02T11:49:16.112Z",
+  "generated_at": "2026-11-02T11:50:36.969Z",
   "status": "NO_ELIGIBLE_OBSERVATIONS",
   "source_last_check": "2026-11-02T11:44:30.487Z",
   "source_max_age_hours": 36,
@@ -22,8 +22,8 @@
     "eligible_observations": 0,
     "eligible_core": 0,
     "eligible_value": 0,
-    "settled_paper_samples": 92,
-    "settled_paper_roi_pct": 2.1
+    "settled_paper_samples": 95,
+    "settled_paper_roi_pct": 3.4
   },
   "shortlist": [],
   "alternatives": []
