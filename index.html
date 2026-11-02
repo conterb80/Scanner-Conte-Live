@@ -13,7 +13,7 @@
 <body>
  <header class="topbar">
   <div class="brand"><div class="brandmark">SC</div><div><strong>SCANNER CONTE</strong><span>LIVE <i class="onlinepoint"></i> ARCHIVIO LOCALE</span></div></div>
-  <div class="top-actions"><span class="version">V0.9.5 · QUOTE MANUALI</span><button type="button" id="export-top" class="round" aria-label="Esporta backup" title="Esporta backup">↧</button></div>
+  <div class="top-actions"><span class="version">V0.9.6 · QUOTE MANUALI</span><button type="button" id="export-top" class="round" aria-label="Esporta backup" title="Esporta backup">↧</button></div>
  </header>
  <main id="app">
   <section id="view-home" class="view active ui-home">
@@ -70,31 +70,40 @@
     </div>
    </details>
   </section>
-    <section id="view-archive" class="view">
-   <div class="pagelead compact"><div class="eyebrow">STORICO / REGISTRO</div><h1>Ogni decisione<br><em>resta tracciata.</em></h1><p>Le operazioni recuperate non modificano il riepilogo consolidato: evitiamo doppi conteggi.</p></div>
-   <div class="sectionbar"><h2>Scegli il registro</h2></div>
-   <div class="register-tabs" role="group" aria-label="Registri indipendenti">
+    <section id="view-archive" class="view ui-archive">
+   <header class="ui-subpage-head"><span class="ui-eyebrow">ARCHIVIO / RISULTATI</span><h1>Storico</h1><p>Ogni registro rimane separato. Scegli cosa vedere, poi eventualmente approfondisci.</p></header>
+   <div class="sectionbar ui-subpage-bar"><h2>I tuoi registri</h2><span class="muted small">5 archivi indipendenti</span></div>
+   <div class="register-tabs ui-register-tabs" role="group" aria-label="Registri indipendenti">
     <button type="button" data-register-tab="real" class="active" aria-pressed="true">REAL</button>
     <button type="button" data-register-tab="main" aria-pressed="false">Principale</button>
     <button type="button" data-register-tab="lab" aria-pressed="false">LAB storico</button>
     <button type="button" data-register-tab="auto" aria-pressed="false">LAB auto</button>
     <button type="button" data-register-tab="daily" aria-pressed="false">LAB 1X2</button>
    </div>
-   <p class="muted small archive-note">Ogni registro ha il proprio storico e bilancio. Le giocate REAL non vengono unite alle simulazioni.</p>
+   <p id="archive-active-note" class="ui-archive-active-note" role="status" aria-live="polite">REAL · giocate effettive salvate sul dispositivo. Nessuna simulazione.</p>
    <div id="archive-local-panel">
-    <div class="surface pad controls">
+    <div class="surface pad ui-archive-filters">
      <div hidden><label for="book-filter">Archivio locale</label><select id="book-filter"><option value="all">Tutti</option><option value="real">REAL Bet365</option><option value="main">Virtuale principale</option><option value="lab">LAB storico</option></select></div>
-     <label for="archive-local-status">Esito</label><select id="archive-local-status"><option value="all">Tutte</option><option value="pending">In attesa</option><option value="closed">Concluse</option></select>
-     <label for="quality-filter">Qualità dei dati</label><select id="quality-filter"><option value="all">Tutte</option><option value="ricostruito">Ricostruite</option><option value="parziale">Parziali</option><option value="conflitto">Da verificare / conflitti</option><option value="manuale">Inserite da me</option></select>
-     <input id="archive-search" placeholder="Cerca squadra o mercato…" aria-label="Cerca nello storico locale">
+     <label class="ui-archive-search">Cerca partita o mercato
+      <input id="archive-search" type="search" placeholder="Es. Roma, Over 2,5…" aria-label="Cerca nello storico locale">
+     </label>
+     <label class="ui-archive-status">Esito
+      <select id="archive-local-status"><option value="all">Tutte</option><option value="pending">In attesa</option><option value="closed">Concluse</option></select>
+     </label>
+     <details class="ui-small-drawer">
+      <summary>Altri filtri <span aria-hidden="true">⌄</span></summary>
+      <label for="quality-filter">Qualità dei dati
+       <select id="quality-filter"><option value="all">Tutte</option><option value="ricostruito">Ricostruite</option><option value="parziale">Parziali</option><option value="conflitto">Da verificare / conflitti</option><option value="manuale">Inserite da me</option></select>
+      </label>
+     </details>
     </div>
-    <div class="sectionbar"><h2 id="archive-label">Registro</h2><button class="button thin" id="add-record">+ Registra</button></div>
-    <div id="archive-list" class="surface"></div>
-    <p class="muted tiny">Archivio locale sul dispositivo. Gli inserimenti manuali non modificano i LAB pubblici.</p>
+    <div class="sectionbar ui-archive-list-head"><h2 id="archive-label">Registro</h2><button class="button thin" id="add-record">+ Registra</button></div>
+    <div id="archive-list" class="surface ui-archive-list"></div>
+    <p class="muted tiny ui-archive-footnote">Archivio locale sul dispositivo. Le registrazioni manuali non modificano i LAB pubblici. Esporta periodicamente un backup dalla scheda Dati.</p>
    </div>
    <div id="archive-public-panel" hidden>
-    <div id="archive-public-summary" class="surface pad" role="status" aria-live="polite">Caricamento registro virtuale…</div>
-    <div class="surface pad archive-public-controls">
+    <div id="archive-public-summary" class="surface pad ui-archive-public-summary" role="status" aria-live="polite">Caricamento registro virtuale…</div>
+    <div class="surface pad archive-public-controls ui-archive-public-filters">
      <label for="public-status-filter">Esito
       <select id="public-status-filter"><option value="all">Tutte</option><option value="pending">In attesa</option><option value="closed">Concluse</option></select>
      </label>
@@ -104,31 +113,78 @@
      <button class="button secondary thin" type="button" id="public-archive-refresh">Aggiorna</button>
     </div>
     <div id="archive-public-results" class="archive-public-results" aria-live="polite"></div>
-    <p class="muted tiny">Solo lettura. I test pubblici sono registrati prima delle partite e non rappresentano scommesse REAL.</p>
+    <p class="muted tiny ui-archive-footnote">Solo lettura. Questi test vengono registrati prima delle partite e non sono giocate REAL.</p>
    </div>
   </section>
-  <section id="view-lab" class="view">
-   <div class="pagelead compact"><div class="eyebrow">RICERCA / LABORATORIO</div><h1>Testare tutto.<br><em>Forzare niente.</em></h1><p>I bilanci restano distinti. Un test non diventa REAL automaticamente.</p></div>
-   <div class="sectionbar"><h2>LAB pilota automatico · V0.4</h2><div class="register-heading-actions"><button class="button secondary thin" type="button" data-open-register="auto">Registro completo</button><button class="button secondary" type="button" id="lab-auto-refresh">Aggiorna</button></div></div><div id="lab-auto-info" class="surface pad">Verifica archivio LAB…</div><div id="lab-auto-list" class="candidates"></div>
-   <div class="sectionbar"><h2>LAB quotidiano · quote 1X2 pubbliche</h2><button class="button secondary thin" type="button" data-open-register="daily">Registro completo</button></div><div id="daily-virtual-panel" class="surface pad">Verifica nuovi test quotidiani…</div>
-   <div class="sectionbar"><h2>Registro scansioni · giorno per giorno</h2><button id="scan-audit-refresh" class="button secondary thin" type="button">Aggiorna</button></div>
-   <div id="scan-audit-status" class="surface pad scan-audit-status" role="status" aria-live="polite">Verifica storico delle scansioni…</div>
-   <div class="surface pad scan-audit-box">
-    <label class="scan-audit-day-label" for="scan-audit-day">Giorno da analizzare
-     <select id="scan-audit-day" aria-label="Seleziona data delle scansioni"></select>
-    </label>
-    <div id="scan-audit-summary" class="scan-audit-summary">Preparazione riepilogo…</div>
-    <div class="sectionbar scan-audit-subhead"><h3>Passaggi effettuati</h3></div>
-    <div id="scan-audit-checks"></div>
-    <div class="sectionbar scan-audit-subhead"><h3>Campionati osservati e test registrati</h3></div>
-    <div id="scan-audit-leagues"></div>
-    <p class="muted tiny scan-audit-note">I segnali letti e quelli idonei possono comparire più volte nelle scansioni dello stesso giorno. I campionati completi del feed sono disponibili soltanto per le scansioni che ne hanno archiviato la distribuzione; quelli storici mostrano le sole partite salvate nel LAB. *Le partite distinte sono deduplicate all’interno del singolo passaggio, non fra passaggi diversi. Nessuna giocata REAL viene registrata qui.</p>
+
+  <section id="view-lab" class="view ui-lab">
+   <header class="ui-subpage-head"><span class="ui-eyebrow">RICERCA / ESPERIMENTI</span><h1>Laboratorio</h1><p>Test virtuali, metodi e scansioni. Tutto separato dalle scommesse REAL.</p></header>
+   <div class="sectionbar ui-subpage-bar"><h2>Situazione dei test</h2><span class="muted small">Archivi distinti</span></div>
+   <div class="ui-lab-overview" id="lab-overview" aria-label="Riepilogo dei laboratori">
+    <article class="surface ui-lab-kpi">
+     <div class="ui-lab-kpi-head"><span>LAB quotidiano 1X2</span><span class="ui-lab-pill">Attuale</span></div>
+     <strong id="lab-daily-pnl">—</strong>
+     <p id="lab-daily-count" class="muted small">Lettura del laboratorio…</p>
+     <small id="lab-daily-stamp" class="muted">Ultimo controllo: —</small>
+    </article>
+    <article class="surface ui-lab-kpi">
+     <div class="ui-lab-kpi-head"><span>LAB pilota</span><span class="ui-lab-pill quiet">Precedente</span></div>
+     <strong id="lab-auto-pnl">—</strong>
+     <p id="lab-auto-count" class="muted small">Lettura del laboratorio…</p>
+     <small id="lab-auto-stamp" class="muted">Ultimo controllo: —</small>
+    </article>
    </div>
-   <div class="sectionbar"><h2>Strategie consolidate</h2></div><div id="strategy-cards" class="strategy-grid"></div>
-   <div class="sectionbar"><h2>Regole di validazione</h2></div>
-   <div class="surface pad rules"><div><b>01</b><span>Registra quota, probabilità e motivo prima del calcio d'inizio.</span></div><div><b>02</b><span>Separa il campione di costruzione da quello di verifica su partite nuove.</span></div><div><b>03</b><span>Misura ROI, calibrazione e confronto con quote di chiusura quando disponibili.</span></div><div><b>04</b><span>Una serie di vincite non prova che il metodo funzioni.</span></div></div>
-   <div class="sectionbar"><h2>Diario ricerca</h2></div><div class="surface pad" id="audit-list"></div>
+   <p class="muted tiny ui-lab-overview-note">Risultati virtuali, non guadagni reali. I due laboratori non vengono sommati.</p>
+   <div class="sectionbar ui-subpage-bar ui-lab-detail-heading"><h2>Apri un approfondimento</h2></div>
+   <details class="ui-drawer ui-lab-drawer">
+    <summary><span><strong>LAB quotidiano 1X2</strong><small>Ultime simulazioni e agenda delle prossime partite</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
+    <div class="ui-drawer-content">
+     <div class="ui-lab-drawer-action"><button class="button secondary thin" type="button" data-open-register="daily">Registro completo LAB 1X2</button></div>
+     <div id="daily-virtual-panel" class="surface pad">Verifica nuovi test quotidiani…</div>
+    </div>
+   </details>
+   <details class="ui-drawer ui-lab-drawer">
+    <summary><span><strong>LAB pilota automatico</strong><small>Esperimenti precedenti e risultati dettagliati</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
+    <div class="ui-drawer-content">
+     <div class="ui-lab-drawer-action"><button class="button secondary thin" type="button" data-open-register="auto">Registro completo LAB auto</button><button class="button secondary thin" type="button" id="lab-auto-refresh">Aggiorna</button></div>
+     <div id="lab-auto-info" class="surface pad">Verifica archivio LAB…</div>
+     <div id="lab-auto-list" class="candidates"></div>
+    </div>
+   </details>
+   <details class="ui-drawer ui-lab-drawer">
+    <summary><span><strong>Strategie e risultati storici</strong><small>CORE, VALUE e LAB storico: bilanci separati</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
+    <div class="ui-drawer-content">
+     <p class="muted small">Questi dati vengono dai bilanci storici del dispositivo, non dai LAB pubblici.</p>
+     <div id="strategy-cards" class="strategy-grid"></div>
+    </div>
+   </details>
+   <details class="ui-drawer ui-lab-drawer">
+    <summary><span><strong>Registro scansioni e campionati</strong><small>Giorni, partite esaminate e copertura del feed</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
+    <div class="ui-drawer-content">
+     <div class="ui-lab-drawer-action"><button id="scan-audit-refresh" class="button secondary thin" type="button">Aggiorna scansioni</button></div>
+     <div id="scan-audit-status" class="surface pad scan-audit-status" role="status" aria-live="polite">Verifica storico delle scansioni…</div>
+     <div class="surface pad scan-audit-box">
+      <label class="scan-audit-day-label" for="scan-audit-day">Giorno da analizzare
+       <select id="scan-audit-day" aria-label="Seleziona data delle scansioni"></select>
+      </label>
+      <div id="scan-audit-summary" class="scan-audit-summary">Preparazione riepilogo…</div>
+      <div class="sectionbar scan-audit-subhead"><h3>Passaggi effettuati</h3></div>
+      <div id="scan-audit-checks"></div>
+      <div class="sectionbar scan-audit-subhead"><h3>Campionati osservati e test registrati</h3></div>
+      <div id="scan-audit-leagues"></div>
+      <p class="muted tiny scan-audit-note">I segnali letti e quelli idonei possono comparire più volte nelle scansioni dello stesso giorno. I campionati completi del feed sono disponibili soltanto per le scansioni che ne hanno archiviato la distribuzione; quelli storici mostrano le sole partite salvate nel LAB. *Le partite distinte sono deduplicate all’interno del singolo passaggio, non fra passaggi diversi. Nessuna giocata REAL viene registrata qui.</p>
+     </div>
+    </div>
+   </details>
+   <details class="ui-drawer ui-lab-drawer">
+    <summary><span><strong>Metodo e diario della ricerca</strong><small>Regole di validazione e annotazioni storiche</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
+    <div class="ui-drawer-content">
+     <div class="surface pad rules"><div><b>01</b><span>Registra quota, probabilità e motivo prima del calcio d'inizio.</span></div><div><b>02</b><span>Separa il campione di costruzione da quello di verifica su partite nuove.</span></div><div><b>03</b><span>Misura ROI, calibrazione e confronto con quote di chiusura quando disponibili.</span></div><div><b>04</b><span>Una serie di vincite non prova che il metodo funzioni.</span></div></div>
+     <div class="sectionbar"><h2>Diario della ricerca</h2></div><div class="surface pad" id="audit-list"></div>
+    </div>
+   </details>
   </section>
+
   <section id="view-scanner" class="view ui-scanner">
    <header class="ui-scanner-intro"><span class="ui-eyebrow">SCANSIONE / QUOTE</span><h1>Scanner</h1><p>Candidate e alternative in un unico posto. Le quote Bet365 le inserisci tu.</p></header>
    <div class="sectionbar ui-sectionbar"><h2>Candidate del weekend</h2><button id="candidate-review-refresh" class="button secondary thin" type="button">Aggiorna</button></div>
@@ -181,7 +237,7 @@
    <div class="surface pad settings-panel"><h2>Salvataggio e trasferimento</h2><p class="muted">L'app salva le modifiche in questo browser. Se cancelli i dati del browser senza backup, puoi perderle. Su GitHub Pages servirà poi la sincronizzazione cloud.</p><button id="export-json" class="button">↓ Esporta backup JSON</button><button id="export-csv" class="button secondary">↓ Esporta storico CSV</button><label for="import-file" class="button secondary upload">↑ Importa backup JSON<input type="file" id="import-file" accept="application/json,.json" hidden></label><button id="reset-local" class="button danger-outline">Ripristina il dataset iniziale</button></div>
    <div class="sectionbar"><h2>Recupero archivio storico</h2></div><div class="surface pad" id="coverage"></div>
    <div class="surface pad settings-panel"><h2>Stato migrazione</h2><div id="migration-stats"></div><p class="muted tiny">I dati mancanti non vengono completati automaticamente. L'estrazione integrale della vecchia chat permetterà il controllo delle giocate residue e dei conflitti.</p></div>
-   <div class="surface pad settings-panel"><h2>Priorità del progetto</h2><p class="muted">1. Archivio affidabile. 2. Alimentazione automatica dei campionati. 3. Modelli e backtest separati. 4. Conferma manuale delle poche eventuali REAL.</p><div class="version-note">Scanner Conte LIVE · V0.9.5 · 01/11/2026</div></div>
+   <div class="surface pad settings-panel"><h2>Priorità del progetto</h2><p class="muted">1. Archivio affidabile. 2. Alimentazione automatica dei campionati. 3. Modelli e backtest separati. 4. Conferma manuale delle poche eventuali REAL.</p><div class="version-note">Scanner Conte LIVE · V0.9.6 · 01/11/2026</div></div>
   </section>
  </main>
  <nav class="bottomnav" aria-label="Navigazione principale">
