@@ -5,6 +5,7 @@
  * Attribution: TipsAudit — https://tipsaudit.com/api
  */
 import {readFile,writeFile} from 'node:fs/promises';
+import {isSameRomeDay} from './daily-window.mjs';
 const PATH='data/daily_virtual_lab.json',URL='https://tipsaudit.com/api/v1/predictions';
 const TZ='Europe/Rome',STRATEGY='TIPSAUDIT_VALUE_1X2';
 const fmtDay=s=>new Intl.DateTimeFormat('sv-SE',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(s));
@@ -47,9 +48,10 @@ async function main(){
  const sourceDate=data.generated_at,now=Date.now();
  if(!validDate(sourceDate)||Math.abs(ageMs(sourceDate))>30*60000)
   throw Error('Feed non aggiornato (supera 30 minuti): niente giocate registrate');
+ // Nuovi test solo per oggi (Europe/Rome), mai per domani o dopodomani.
  const candidates=data.predictions.filter(x=>x.status==='actionable'&&
   validDate(x.kickoff_utc)&&Date.parse(x.kickoff_utc)>now+90*60000&&
-  Date.parse(x.kickoff_utc)<now+48*3600000&&
+  isSameRomeDay(x.kickoff_utc,capturedAt)&&
   x.id!==null&&x.id!==undefined&&
   clean(x.home)&&clean(x.away)&&
   choice(x.value?.selection)&&odd(x.value?.best_soft_odds)&&
@@ -85,9 +87,11 @@ async function main(){
  }
  // Audit completo della singola risposta del fornitore. Non inventare metadati
  // per le scansioni storiche, che non conservavano la lista dei campionati letti.
+ // Audit solo degli eventi della giornata locale: la fonte esterna puo' fornire piu' giorni.
+ const dayFeed=data.predictions.filter(pred=>validDate(pred.kickoff_utc)&&isSameRomeDay(pred.kickoff_utc,capturedAt));
  const feedLeagues={};
  const distinctIds=new Set();
- for(const pred of data.predictions){
+ for(const pred of dayFeed){
   const league=clean(pred.league)||'Campionato non indicato';
   feedLeagues[league]=(feedLeagues[league]||0)+1;
   if(pred.id!==null&&pred.id!==undefined)distinctIds.add(String(pred.id));
@@ -96,7 +100,10 @@ async function main(){
  }
  const sortedLeagues=Object.fromEntries(Object.entries(feedLeagues).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'it')));
  const check={day:today,checked_at:capturedAt,source_generated_at:sourceDate,
-  scanned_predictions:data.predictions.length,
+  scanned_predictions:dayFeed.length,
+  source_total_predictions:data.predictions.length,
+  scope_day:today,
+  scope_timezone:TZ,
   scanned_unique_matches:distinctIds.size,
   scanned_league_counts:sortedLeagues,
   scanned_league_total:Object.keys(sortedLeagues).length,
