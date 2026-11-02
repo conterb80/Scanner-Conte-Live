@@ -1,9 +1,9 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-02T11:51:13.078Z",
-  "status": "NO_ELIGIBLE_OBSERVATIONS",
-  "source_last_check": "2026-11-02T11:44:30.487Z",
+  "generated_at": "2026-11-02T17:27:59.188Z",
+  "status": "PRELIMINARY_CANDIDATES",
+  "source_last_check": "2026-11-02T17:27:57.835Z",
   "source_max_age_hours": 36,
   "scope": "Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.",
   "scope_day": "2026-11-02",
@@ -18,13 +18,50 @@
   "methodology": "Filtro quantitativo predefinito di segnali esterni già acquisiti: divario quota/equo fonte, freschezza, fascia di quota. Non verifica forma, assenze o formazioni.",
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
-    "paper_records": 106,
-    "eligible_observations": 0,
+    "paper_records": 107,
+    "eligible_observations": 1,
     "eligible_core": 0,
-    "eligible_value": 0,
+    "eligible_value": 1,
     "settled_paper_samples": 95,
     "settled_paper_roi_pct": 3.4
   },
-  "shortlist": [],
+  "shortlist": [
+    {
+      "id": "tipsaudit-14020:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Athletic Club - Ceara",
+      "league": "Brazil Serie B",
+      "kickoff": "2026-11-02T21:00:00+00:00",
+      "market": "1X2",
+      "selection": "Draw",
+      "category": "VALUE",
+      "reference_odds": 3.1,
+      "reference_bookmaker": "Unibet (NL)",
+      "external_fair_odds": 3,
+      "external_benchmark_probability_pct": 33.3,
+      "external_reference_gap_pct": 3.33,
+      "relative_screening_score": 51,
+      "captured_at": "2026-11-02T17:27:57.835Z",
+      "reference_link": "https://tipsaudit.com/match/14020/athletic-club-vs-ceara-2026-11-02",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 3.1 contro quota equa 3 stimata dalla fonte esterna (+ 3.3% di scostamento).",
+        "Dato osservato da Unibet (NL) e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 51 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 56,
+        "observed_roi_pct": 10.5,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    }
+  ],
   "alternatives": []
 }

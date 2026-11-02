@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-weekly-lab-v1",
   "version": 1,
-  "generated_at": "2026-11-02T11:49:49.457Z",
+  "generated_at": "2026-11-02T17:27:57.835Z",
   "timezone": "Europe/Rome",
   "scope": "Solo laboratori pubblici e virtuali: daily e auto. REAL e registri locali esclusi.",
   "retention": "Riepilogo addizionale non distruttivo: gli esperimenti originari restano invariati.",
@@ -12,8 +12,8 @@
       "week_start": "2026-11-02",
       "week_end": "2026-11-08",
       "lab": "daily",
-      "total": 13,
-      "pending": 10,
+      "total": 14,
+      "pending": 11,
       "won": 2,
       "lost": 1,
       "push": 0,
@@ -25,8 +25,8 @@
       "by_market": [
         {
           "name": "1X2",
-          "total": 13,
-          "pending": 10,
+          "total": 14,
+          "pending": 11,
           "won": 2,
           "lost": 1,
           "push": 0,
@@ -40,8 +40,8 @@
       "by_strategy": [
         {
           "name": "TIPSAUDIT_VALUE_1X2",
-          "total": 13,
-          "pending": 10,
+          "total": 14,
+          "pending": 11,
           "won": 2,
           "lost": 1,
           "push": 0,
@@ -94,8 +94,8 @@
         },
         {
           "name": "2.50+",
-          "total": 3,
-          "pending": 3,
+          "total": 4,
+          "pending": 4,
           "won": 0,
           "lost": 0,
           "push": 0,
@@ -106,9 +106,9 @@
           "roi_pct": null
         }
       ],
-      "scan_checks": 1,
-      "source_signals_sum": 62,
-      "new_tests_reported": 1
+      "scan_checks": 2,
+      "source_signals_sum": 103,
+      "new_tests_reported": 2
     },
     {
       "week_start": "2026-10-26",
