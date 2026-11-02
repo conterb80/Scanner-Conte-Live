@@ -73,7 +73,7 @@ export function mergeResults(previous,received,now=new Date()){
  const keepAfter=now.getTime()-21*86400000;
  // Due fonti per lo stesso incontro: priorita alla verifica ufficiale.
  const team=s=>{
-  const norm=String(s||'').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'')
+  const norm=String(s||'').toLowerCase().normalize('NFD').replace(/\p{M}/gu,'')
     .replace(/[^a-z0-9]+/g,' ').trim();
   const map={'hamburg sv':'hamburger sv','hamburg':'hamburger sv','hsv':'hamburger sv',
     'frankfurt':'eintracht frankfurt','cd tenerife':'tenerife','andorra':'fc andorra'};
