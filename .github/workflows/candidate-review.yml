@@ -18,7 +18,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: scanner-conte-candidate-review
+  group: scanner-conte-feed
   cancel-in-progress: false
 
 jobs:
