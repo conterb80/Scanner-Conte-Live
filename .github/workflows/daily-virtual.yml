@@ -37,6 +37,9 @@ jobs:
         run: |
           node scripts/test-daily-window.mjs
           node scripts/test-weekly-lab-summary.mjs
+          node --check assets/daily-virtual.js
+          node --check assets/candidate-review.js
+          node --check assets/weekly-lab.js
       - name: Registra solo prove 1X2 future con quote pubbliche verificate
         run: node scripts/collect-daily-virtual.mjs
       - name: Testa il motore di screening senza effettuare giocate REAL
