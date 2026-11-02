@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-02T11:45:10.398Z",
+  "generated_at": "2026-11-02T11:47:05.798Z",
   "status": "NO_ELIGIBLE_OBSERVATIONS",
   "source_last_check": "2026-11-02T11:44:30.487Z",
   "source_max_age_hours": 36,

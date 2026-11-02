@@ -1,0 +1,440 @@
+{
+  "schema": "scanner-conte-weekly-lab-v1",
+  "version": 1,
+  "generated_at": "2026-11-02T11:47:05.867Z",
+  "timezone": "Europe/Rome",
+  "scope": "Solo laboratori pubblici e virtuali: daily e auto. REAL e registri locali esclusi.",
+  "retention": "Riepilogo addizionale non distruttivo: gli esperimenti originari restano invariati.",
+  "caveat": "ROI teorico descrittivo; campioni piccoli e scelte non indipendenti non dimostrano vantaggio.",
+  "scan_note": "I segnali letti sono una somma di scansioni, non partite uniche; possibili ripetizioni.",
+  "weeks": [
+    {
+      "week_start": "2026-11-02",
+      "week_end": "2026-11-08",
+      "lab": "daily",
+      "total": 13,
+      "pending": 13,
+      "won": 0,
+      "lost": 0,
+      "push": 0,
+      "void": 0,
+      "settled": 0,
+      "stake_settled": 0,
+      "pnl": 0,
+      "roi_pct": null,
+      "by_market": [
+        {
+          "name": "1X2",
+          "total": 13,
+          "pending": 13,
+          "won": 0,
+          "lost": 0,
+          "push": 0,
+          "void": 0,
+          "settled": 0,
+          "stake_settled": 0,
+          "pnl": 0,
+          "roi_pct": null
+        }
+      ],
+      "by_strategy": [
+        {
+          "name": "TIPSAUDIT_VALUE_1X2",
+          "total": 13,
+          "pending": 13,
+          "won": 0,
+          "lost": 0,
+          "push": 0,
+          "void": 0,
+          "settled": 0,
+          "stake_settled": 0,
+          "pnl": 0,
+          "roi_pct": null
+        }
+      ],
+      "by_odds_band": [
+        {
+          "name": "<1.50",
+          "total": 2,
+          "pending": 2,
+          "won": 0,
+          "lost": 0,
+          "push": 0,
+          "void": 0,
+          "settled": 0,
+          "stake_settled": 0,
+          "pnl": 0,
+          "roi_pct": null
+        },
+        {
+          "name": "1.50-1.99",
+          "total": 4,
+          "pending": 4,
+          "won": 0,
+          "lost": 0,
+          "push": 0,
+          "void": 0,
+          "settled": 0,
+          "stake_settled": 0,
+          "pnl": 0,
+          "roi_pct": null
+        },
+        {
+          "name": "2.00-2.49",
+          "total": 4,
+          "pending": 4,
+          "won": 0,
+          "lost": 0,
+          "push": 0,
+          "void": 0,
+          "settled": 0,
+          "stake_settled": 0,
+          "pnl": 0,
+          "roi_pct": null
+        },
+        {
+          "name": "2.50+",
+          "total": 3,
+          "pending": 3,
+          "won": 0,
+          "lost": 0,
+          "push": 0,
+          "void": 0,
+          "settled": 0,
+          "stake_settled": 0,
+          "pnl": 0,
+          "roi_pct": null
+        }
+      ],
+      "scan_checks": 1,
+      "source_signals_sum": 62,
+      "new_tests_reported": 1
+    },
+    {
+      "week_start": "2026-10-26",
+      "week_end": "2026-11-01",
+      "lab": "auto",
+      "total": 14,
+      "pending": 0,
+      "won": 8,
+      "lost": 6,
+      "push": 0,
+      "void": 0,
+      "settled": 14,
+      "stake_settled": 14,
+      "pnl": 0.39,
+      "roi_pct": 2.8,
+      "by_market": [
+        {
+          "name": "1X2",
+          "total": 6,
+          "pending": 0,
+          "won": 4,
+          "lost": 2,
+          "push": 0,
+          "void": 0,
+          "settled": 6,
+          "stake_settled": 6,
+          "pnl": 1.11,
+          "roi_pct": 18.5
+        },
+        {
+          "name": "OVER_2_5",
+          "total": 8,
+          "pending": 0,
+          "won": 4,
+          "lost": 4,
+          "push": 0,
+          "void": 0,
+          "settled": 8,
+          "stake_settled": 8,
+          "pnl": -0.72,
+          "roi_pct": -9
+        }
+      ],
+      "by_strategy": [
+        {
+          "name": "FAVORITA_1X2_CONTROLLO",
+          "total": 6,
+          "pending": 0,
+          "won": 4,
+          "lost": 2,
+          "push": 0,
+          "void": 0,
+          "settled": 6,
+          "stake_settled": 6,
+          "pnl": 1.11,
+          "roi_pct": 18.5
+        },
+        {
+          "name": "OVER25_CONTROLLO",
+          "total": 8,
+          "pending": 0,
+          "won": 4,
+          "lost": 4,
+          "push": 0,
+          "void": 0,
+          "settled": 8,
+          "stake_settled": 8,
+          "pnl": -0.72,
+          "roi_pct": -9
+        }
+      ],
+      "by_odds_band": [
+        {
+          "name": "<1.50",
+          "total": 1,
+          "pending": 0,
+          "won": 1,
+          "lost": 0,
+          "push": 0,
+          "void": 0,
+          "settled": 1,
+          "stake_settled": 1,
+          "pnl": 0.46,
+          "roi_pct": 46
+        },
+        {
+          "name": "1.50-1.99",
+          "total": 7,
+          "pending": 0,
+          "won": 6,
+          "lost": 1,
+          "push": 0,
+          "void": 0,
+          "settled": 7,
+          "stake_settled": 7,
+          "pnl": 3.83,
+          "roi_pct": 54.7
+        },
+        {
+          "name": "2.00-2.49",
+          "total": 6,
+          "pending": 0,
+          "won": 1,
+          "lost": 5,
+          "push": 0,
+          "void": 0,
+          "settled": 6,
+          "stake_settled": 6,
+          "pnl": -3.9,
+          "roi_pct": -65
+        }
+      ]
+    },
+    {
+      "week_start": "2026-10-26",
+      "week_end": "2026-11-01",
+      "lab": "daily",
+      "total": 93,
+      "pending": 1,
+      "won": 45,
+      "lost": 47,
+      "push": 0,
+      "void": 0,
+      "settled": 92,
+      "stake_settled": 92,
+      "pnl": 1.94,
+      "roi_pct": 2.1,
+      "by_market": [
+        {
+          "name": "1X2",
+          "total": 93,
+          "pending": 1,
+          "won": 45,
+          "lost": 47,
+          "push": 0,
+          "void": 0,
+          "settled": 92,
+          "stake_settled": 92,
+          "pnl": 1.94,
+          "roi_pct": 2.1
+        }
+      ],
+      "by_strategy": [
+        {
+          "name": "TIPSAUDIT_VALUE_1X2",
+          "total": 93,
+          "pending": 1,
+          "won": 45,
+          "lost": 47,
+          "push": 0,
+          "void": 0,
+          "settled": 92,
+          "stake_settled": 92,
+          "pnl": 1.94,
+          "roi_pct": 2.1
+        }
+      ],
+      "by_odds_band": [
+        {
+          "name": "<1.50",
+          "total": 11,
+          "pending": 0,
+          "won": 9,
+          "lost": 2,
+          "push": 0,
+          "void": 0,
+          "settled": 11,
+          "stake_settled": 11,
+          "pnl": 1.23,
+          "roi_pct": 11.2
+        },
+        {
+          "name": "1.50-1.99",
+          "total": 26,
+          "pending": 0,
+          "won": 13,
+          "lost": 13,
+          "push": 0,
+          "void": 0,
+          "settled": 26,
+          "stake_settled": 26,
+          "pnl": -3.78,
+          "roi_pct": -14.5
+        },
+        {
+          "name": "2.00-2.49",
+          "total": 21,
+          "pending": 1,
+          "won": 13,
+          "lost": 7,
+          "push": 0,
+          "void": 0,
+          "settled": 20,
+          "stake_settled": 20,
+          "pnl": 8.54,
+          "roi_pct": 42.7
+        },
+        {
+          "name": "2.50+",
+          "total": 35,
+          "pending": 0,
+          "won": 10,
+          "lost": 25,
+          "push": 0,
+          "void": 0,
+          "settled": 35,
+          "stake_settled": 35,
+          "pnl": -4.05,
+          "roi_pct": -11.6
+        }
+      ],
+      "scan_checks": 12,
+      "source_signals_sum": 5161,
+      "new_tests_reported": 105
+    },
+    {
+      "week_start": "2026-10-19",
+      "week_end": "2026-10-25",
+      "lab": "auto",
+      "total": 16,
+      "pending": 0,
+      "won": 7,
+      "lost": 9,
+      "push": 0,
+      "void": 0,
+      "settled": 16,
+      "stake_settled": 16,
+      "pnl": -3.47,
+      "roi_pct": -21.7,
+      "by_market": [
+        {
+          "name": "1X2",
+          "total": 9,
+          "pending": 0,
+          "won": 4,
+          "lost": 5,
+          "push": 0,
+          "void": 0,
+          "settled": 9,
+          "stake_settled": 9,
+          "pnl": -2.19,
+          "roi_pct": -24.3
+        },
+        {
+          "name": "OVER_2_5",
+          "total": 7,
+          "pending": 0,
+          "won": 3,
+          "lost": 4,
+          "push": 0,
+          "void": 0,
+          "settled": 7,
+          "stake_settled": 7,
+          "pnl": -1.28,
+          "roi_pct": -18.3
+        }
+      ],
+      "by_strategy": [
+        {
+          "name": "FAVORITA_1X2_CONTROLLO",
+          "total": 9,
+          "pending": 0,
+          "won": 4,
+          "lost": 5,
+          "push": 0,
+          "void": 0,
+          "settled": 9,
+          "stake_settled": 9,
+          "pnl": -2.19,
+          "roi_pct": -24.3
+        },
+        {
+          "name": "OVER25_CONTROLLO",
+          "total": 7,
+          "pending": 0,
+          "won": 3,
+          "lost": 4,
+          "push": 0,
+          "void": 0,
+          "settled": 7,
+          "stake_settled": 7,
+          "pnl": -1.28,
+          "roi_pct": -18.3
+        }
+      ],
+      "by_odds_band": [
+        {
+          "name": "<1.50",
+          "total": 2,
+          "pending": 0,
+          "won": 2,
+          "lost": 0,
+          "push": 0,
+          "void": 0,
+          "settled": 2,
+          "stake_settled": 2,
+          "pnl": 0.96,
+          "roi_pct": 48
+        },
+        {
+          "name": "1.50-1.99",
+          "total": 10,
+          "pending": 0,
+          "won": 3,
+          "lost": 7,
+          "push": 0,
+          "void": 0,
+          "settled": 10,
+          "stake_settled": 10,
+          "pnl": -4.63,
+          "roi_pct": -46.3
+        },
+        {
+          "name": "2.00-2.49",
+          "total": 4,
+          "pending": 0,
+          "won": 2,
+          "lost": 2,
+          "push": 0,
+          "void": 0,
+          "settled": 4,
+          "stake_settled": 4,
+          "pnl": 0.2,
+          "roi_pct": 5
+        }
+      ]
+    }
+  ]
+}
