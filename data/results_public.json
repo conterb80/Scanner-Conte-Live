@@ -1,0 +1,22 @@
+{
+  "schema": "scanner-conte-results-public-v1",
+  "checked_at": null,
+  "source": "official match report (seed) + ESPN public scoreboard (automatic, when verified)",
+  "note": "Only final 90-minute results; recorded independently of the private REAL register. Do not treat postponement as lost/won. Official source entries remain immutable.",
+  "fixtures": [
+    {
+      "id": "official-ger1-20261101-eintracht-hamburger",
+      "kickoff": "2026-11-01T16:30:00Z",
+      "status": "FT",
+      "league": "Bundesliga",
+      "league_code": "ger.1",
+      "home": "Eintracht Frankfurt",
+      "away": "Hamburger SV",
+      "home_goals": 3,
+      "away_goals": 1,
+      "source": "Eintracht Frankfurt (official match report)",
+      "source_url": "https://profis.eintracht.de/news/heimsieg-gegen-hamburg-180166/",
+      "verification": "official"
+    }
+  ]
+}
