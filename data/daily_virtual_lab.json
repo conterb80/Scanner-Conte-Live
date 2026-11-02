@@ -2812,10 +2812,14 @@
       "reference": "https://tipsaudit.com/match/13711/new-england-revolution-vs-inter-miami-2026-11-02",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.41,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-02T11:49:49.457Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-02T11:45:12+00:00"
     },
     {
       "id": "tipsaudit-13714:TIPSAUDIT_VALUE_1X2",
@@ -2839,10 +2843,14 @@
       "reference": "https://tipsaudit.com/match/13714/portland-timbers-vs-houston-dynamo-2026-11-02",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.91,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-02T11:49:49.457Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-02T11:45:12+00:00"
     },
     {
       "id": "tipsaudit-13079:TIPSAUDIT_VALUE_1X2",
@@ -3067,10 +3075,14 @@
       "reference": "https://tipsaudit.com/match/13705/los-angeles-fc-vs-minnesota-united-fc-2026-11-02",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-02T11:49:49.457Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-02T11:45:12+00:00"
     },
     {
       "id": "tipsaudit-13666:TIPSAUDIT_VALUE_1X2",
@@ -3538,10 +3550,10 @@
   "last_check": "2026-11-02T11:44:30.487Z",
   "stats": {
     "total": 106,
-    "pending": 14,
-    "won": 45,
-    "lost": 47,
-    "pnl": 1.94
+    "pending": 11,
+    "won": 47,
+    "lost": 48,
+    "pnl": 3.26
   },
-  "last_settlement_check": "2026-11-02T01:30:16.059Z"
+  "last_settlement_check": "2026-11-02T11:49:49.457Z"
 }
