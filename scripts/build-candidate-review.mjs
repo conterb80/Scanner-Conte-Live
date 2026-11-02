@@ -5,6 +5,7 @@
  * Does not place/register real-world bets.
  */
 import {readFile,writeFile} from 'node:fs/promises';
+import {isSameRomeDay,romeDay} from './daily-window.mjs';
 const TZ='Europe/Rome';
 const round=(x,n=2)=>Math.round((x+Number.EPSILON)*10**n)/10**n;
 const finite=x=>typeof x==='number'&&Number.isFinite(x);
@@ -24,7 +25,7 @@ function historicalFor(group,records){
 function rowCandidate(r,now,records){
  const kickoff=ms(r.kickoff),captured=ms(r.captured_at),bench=ms(r.benchmark_read_at);
  if(r.status!=='pending'||!Number.isFinite(kickoff)||!Number.isFinite(captured)||
-  !Number.isFinite(bench)||!weekend(r.kickoff)||kickoff<=now+3600000||kickoff>now+72*3600000||
+  !Number.isFinite(bench)||!isSameRomeDay(r.kickoff,now)||!isSameRomeDay(r.captured_at,now)||kickoff<=now+3600000||
   captured>=kickoff||captured>now+120000||now-captured>36*3600000||
   bench>captured+120000||captured-bench>90*60000)return null;
  if(r.market!=='1X2'||!['Home','Draw','Away'].includes(r.selection)||
@@ -62,7 +63,7 @@ export function buildCandidateReview(lab,nowISO){
  if(lab?.schema!=='scanner-conte-daily-virtual-v1'||!Array.isArray(lab.records))throw Error('Archivio LAB non valido');
  const now=ms(nowISO),last=ms(lab.last_check);
  if(!Number.isFinite(now))throw Error('Data scansione non valida');
- const sourceFresh=Number.isFinite(last)&&last<=now+120000&&now-last<=36*3600000;
+ const sourceFresh=Number.isFinite(last)&&last<=now+120000&&now-last<=36*3600000&&isSameRomeDay(last,now);
  const raw=sourceFresh?lab.records.map(r=>rowCandidate(r,now,lab.records)).filter(Boolean):[];
  const unique=new Map();
  for(const r of raw){const key=normalize(r.match)+'|'+String(r.kickoff).slice(0,10);
@@ -79,7 +80,9 @@ export function buildCandidateReview(lab,nowISO){
   schema:'scanner-conte-candidate-review-v1',version:1,generated_at:nowISO,
   status:!sourceFresh?'SOURCE_STALE':shortlist.length?'PRELIMINARY_CANDIDATES':'NO_ELIGIBLE_OBSERVATIONS',
   source_last_check:lab.last_check||null,source_max_age_hours:36,
-  scope:'Solo eventi futuri di sabato e domenica, entro 72 ore.',
+  scope:'Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.',
+  scope_day:romeDay(nowISO),
+  allow_manual_real_registration_today:weekend(nowISO),
   market_coverage:['1X2'],other_markets_supported:false,
   mode:'READ_ONLY_PAPER_SCREENING',no_real_bets_placed:true,no_real_bets_registered:true,
   methodology:'Filtro quantitativo predefinito di segnali esterni già acquisiti: divario quota/equo fonte, freschezza, fascia di quota. Non verifica forma, assenze o formazioni.',
