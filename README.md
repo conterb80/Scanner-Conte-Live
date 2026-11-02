@@ -49,3 +49,22 @@ Non utilizzare il progetto per mettere scommesse automatiche su Bet365.
 - **Non è un collegamento al conto Bet365**: l'API pre-match può aggiornarsi ogni 3 ore e mancare per eventi/mercati; non è un quotatore Bet365 in tempo reale. Prima di una puntata reale verificare sempre il prezzo effettivo nell'app Bet365.
 - Le simulazioni LAB e lo storico privato non sono modificate dagli aggiornamenti. Nessun piazzamento reale automatico.
 - Il workflow si avvia anche a seguito di modifiche tecniche ai due script del motore o al workflow; i commit dei feed non lo riattivano per evitare loop.
+
+
+## IA locale (V0.10.0)
+
+La scheda Home → Apri IA legge rapporti prodotti dal motore Termux v1.3, sullo
+stesso telefono. Il collegamento iniziale richiede il pulsante Collega / aggiorna
+IA e una conferma nella pagina locale. Browser o PWA possono chiedere il permesso
+di collegarsi al dispositivo locale. Se il collegamento diretto non è disponibile,
+il pulsante trasferisce il rapporto tramite una pagina locale e ritorna all'app.
+Usare lo stesso browser dell'app. Un popup bloccato va consentito esplicitamente.
+
+Il browser conserva solo endpoint locale di lettura e una copia del rapporto.
+Le credenziali ChatGPT rimangono in Termux. Nessun rapporto viene caricato su GitHub.
+I registri REAL e LAB non vengono scritti dal collegamento. Stato sconosciuto o
+non raggiungibile è distinto dal rapporto salvato; nessun vecchio rapporto diventa
+live. Il motore analizza gli eventi futuri della giornata Europe/Rome; i vecchi
+rapporti restano consultabili con data e ambito originari.
+
+Test interfaccia e renderer: `node --test scripts/test-ai-integration.mjs`.
