@@ -1,4 +1,4 @@
-/* Scanner Conte LIVE V0.9.8
+/* Scanner Conte LIVE V0.9.9
  * SOLO presentazione: modalità semplice/completa e stato dei rapporti pubblici.
  * Non legge né modifica registrazioni, strategie, quote o esiti REAL/LAB.
  */
@@ -82,9 +82,10 @@ async function update(){
  set('lab','Lettura dati pubblicati…');
  set('candidates','Lettura rapporto candidate…');
  set('results','Lettura feed esiti…');
- const [lab,candidates,fixtures,espn,football]=await Promise.all([
+ const [lab,candidates,publicResults,fixtures,espn,football]=await Promise.all([
   get('./data/daily_virtual_lab.json'),
   get('./data/candidate_review.json'),
+  get('./data/results_public.json'),
   get('./data/fixtures_latest.json'),
   get('./data/fallback_status.json'),
   get('./data/football_data_status.json')
@@ -110,10 +111,19 @@ async function update(){
   }else set('candidates','Rapporto del '+fmt(checked)+' · nessuna selezione attiva.','neutral');
  }else set('candidates','Rapporto candidate non disponibile; nessuna quota viene inventata.','neutral');
 
- if(fixtures?.schema==='scanner-conte-fixtures-v1'){
+ if(publicResults?.schema==='scanner-conte-results-public-v1'&&Array.isArray(publicResults.fixtures)){
+  const finished=publicResults.fixtures.filter(f=>f.status==='FT').length;
+  if(publicResults.checked_at){
+   const currentFeed=recentResult(publicResults.checked_at);
+   set('results','ESPN pubblico: '+fmt(publicResults.checked_at)+' · '+finished+' risultati FT archiviati.'+
+    (currentFeed?'':' Controllo non recente.'),currentFeed?'ok':'warn');
+  }else{
+   set('results',finished+' risultato/i ufficiale/i verificato/i disponibili. La raccolta automatica ESPN non è ancora confermata.','warn');
+  }
+ }else if(fixtures?.schema==='scanner-conte-fixtures-v1'){
   const stamp=fixtures.last_result_refresh||fixtures.collected_at;
-  set('results','Ultimo aggiornamento: '+fmt(stamp)+
-   (recentResult(stamp)?'':' · feed non recente; non conferma nuovi esiti.'),recentResult(stamp)?'ok':'warn');
+  set('results','Vecchio feed API-Football: '+fmt(stamp)+
+   (recentResult(stamp)?'':' · non recente; non conferma nuovi esiti.'),recentResult(stamp)?'ok':'warn');
  }else set('results','Feed esiti non verificabile; esiti locali invariati.','neutral');
 
  const bits=[];
