@@ -1,0 +1,46 @@
+name: Scanner Conte - Esiti pubblici gratuiti senza API-Football
+# Nessuna scommessa viene piazzata. Niente segreti o dati REAL privati.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/collect-public-results.mjs'
+      - 'scripts/test-public-results.mjs'
+      - '.github/workflows/public-results.yml'
+  schedule:
+    - cron: '13 7,13,19,23 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scanner-conte-public-results
+  cancel-in-progress: false
+
+jobs:
+  results:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verifica filtri FT e rinvii, preserva risultati ufficiali
+        run: node scripts/test-public-results.mjs
+      - name: Recupera risultati da scoreboard pubblico ESPN (senza chiave)
+        run: node scripts/collect-public-results.mjs
+      - name: Pubblica soltanto il feed sportivo, mai dati REAL
+        run: |
+          git add data/results_public.json
+          if git diff --cached --quiet; then
+            echo 'Nessuna novita nei risultati'
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Aggiorna risultati FT pubblici verificati senza API-Football"
+          git fetch origin main
+          git rebase origin/main
+          git push
