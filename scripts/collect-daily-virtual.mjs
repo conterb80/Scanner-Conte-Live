@@ -32,6 +32,22 @@ function stats(rows){
   won:done.filter(x=>x.status==='won').length,lost:done.filter(x=>x.status==='lost').length,
   pnl:round(done.reduce((n,x)=>n+(typeof x.pnl==='number'?x.pnl:0),0))};
 }
+export function collectionSlotDue(checks,at){
+ const hour=t=>Number(new Intl.DateTimeFormat('en-GB',{timeZone:TZ,hour:'2-digit',hourCycle:'h23'}).format(new Date(t)));
+ const h=hour(at);if(h<8||h>=20)return false;
+ return !checks.some(c=>c.day===fmtDay(at)&&validDate(c.checked_at)&&(hour(c.checked_at)<15)===(h<15));
+}
+export function recordObservation(prior,rec){
+ // Preserve original selection, odds, timestamp and settlement used by the paper bet.
+ const observation={captured_at:rec.captured_at,capture_day:rec.capture_day,
+  provider_generated_at:rec.provider_generated_at,benchmark_read_at:rec.benchmark_read_at,
+  kickoff:rec.kickoff,selection:rec.selection,market:rec.market,odds:rec.odds,
+  fair_odds:rec.fair_odds,edge:rec.edge,bookmaker:rec.bookmaker,reference:rec.reference};
+ prior.observations=prior.observations||[];
+ if(!prior.observations.some(o=>o.captured_at===observation.captured_at))prior.observations.push(observation);
+ prior.latest_observation=observation;
+ return prior;
+}
 async function main(){
  const capturedAt=new Date().toISOString(),today=fmtDay(capturedAt);
  const store=await load(PATH,{schema:'scanner-conte-daily-virtual-v1',version:1,
@@ -40,6 +56,7 @@ async function main(){
  if(store.schema!=='scanner-conte-daily-virtual-v1'||!Array.isArray(store.records)||!Array.isArray(store.checks))
   throw Error('Archivio virtuale inatteso: nessun salvataggio');
  if(store.checks.filter(x=>x.day===today).length>=2){console.log('SKIP: 2 scansioni odierne gia registrate.');return;}
+ if(!collectionSlotDue(store.checks,capturedAt)){console.log('SKIP: fascia gia acquisita o fuori orario.');return;}
  const recent=store.checks.filter(x=>x.day===today).map(x=>Date.parse(x.checked_at)).filter(Number.isFinite);
  if(recent.length && Date.now()-Math.max(...recent)<4*3600000){console.log('SKIP: meno di quattro ore dall’ultima scansione; nessuna chiamata sprecata.');return;}
  const original=await load('data/lab_auto.json',null);
@@ -62,15 +79,14 @@ async function main(){
   day:validDate(x.kickoff)?fmtDay(x.kickoff):'',match:key(x.match)
  }));
  const existing=new Set(store.records.map(x=>x.id));
- let created=0;
+ let created=0,refreshed=0;
  for(const x of candidates){
   const id='tipsaudit-'+String(x.id)+':'+STRATEGY;
-  if(existing.has(id))continue;
   const compound=key(x.home+' - '+x.away);
   const date=fmtDay(x.kickoff_utc);
   if(all.some(r=>r.day===date&&r.match===compound))continue;
-  if(store.records.some(r=>r.kickoff&&fmtDay(r.kickoff)===date&&key(r.match)===compound))continue;
-  if(store.records.filter(r=>r.capture_day===today).length>=20)break;
+  const prior=store.records.find(r=>r.id===id||(r.kickoff&&fmtDay(r.kickoff)===date&&key(r.match)===compound));
+  if(!prior&&store.records.filter(r=>r.capture_day===today).length>=20)continue;
   const price=odd(x.value.best_soft_odds),pick=choice(x.value.selection);
   const referenceOdds=odd(x.value.fair_odds);
   const rec={id,source_id:String(x.id),strategy:STRATEGY,
@@ -83,6 +99,10 @@ async function main(){
     provider:'TipsAudit (external signal, NOT our own betting model)',reference:x.url,
     origin:'live bookmaker observation via TipsAudit public feed',stake_virtual:1,
     status:'pending',pnl:null,score:null,settled_at:null};
+  if(prior){
+   if(prior.status==='pending'){recordObservation(prior,rec);refreshed++;}
+   continue;
+  }
   store.records.push(rec);existing.add(id);created++;
  }
  // Audit completo della singola risposta del fornitore. Non inventare metadati
@@ -114,4 +134,5 @@ async function main(){
  await writeFile(PATH,JSON.stringify(store,null,2)+'\n');
  console.log('DAILY PAPER '+JSON.stringify({check,stats:store.stats}));
 }
-main().catch(e=>{console.error('DAILY PAPER ERROR: '+e.message);process.exitCode=1;});
+if(process.argv[1]?.endsWith('collect-daily-virtual.mjs'))main().catch(e=>{console.error('DAILY PAPER ERROR: '+e.message);process.exitCode=1;});
+

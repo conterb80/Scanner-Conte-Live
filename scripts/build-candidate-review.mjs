@@ -64,7 +64,7 @@ export function buildCandidateReview(lab,nowISO){
  const now=ms(nowISO),last=ms(lab.last_check);
  if(!Number.isFinite(now))throw Error('Data scansione non valida');
  const sourceFresh=Number.isFinite(last)&&last<=now+120000&&now-last<=36*3600000&&isSameRomeDay(last,now);
- const raw=sourceFresh?lab.records.map(r=>rowCandidate(r,now,lab.records)).filter(Boolean):[];
+ const raw=sourceFresh?lab.records.map(r=>rowCandidate({...r,...(r.latest_observation||{})},now,lab.records)).filter(Boolean):[];
  const unique=new Map();
  for(const r of raw){const key=normalize(r.match)+'|'+String(r.kickoff).slice(0,10);
   if(!unique.has(key)||unique.get(key).relative_screening_score<r.relative_screening_score)unique.set(key,r);}
@@ -102,3 +102,4 @@ async function main(){
 }
 if(process.argv[1]&&process.argv[1].endsWith('build-candidate-review.mjs'))
  main().catch(e=>{console.error(e.message);process.exitCode=1;});
+

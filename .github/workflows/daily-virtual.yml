@@ -14,7 +14,8 @@ on:
       - 'scripts/test-weekly-lab-summary.mjs'
       - '.github/workflows/daily-virtual.yml'
   schedule:
-    - cron: "50 8,15 * * *"
+    # Retry hourly in both collection windows; collector enforces max 2 calls/day.
+    - cron: "23 8-12,15-19 * * *"
       timezone: "Europe/Rome"
 
 permissions:
@@ -37,6 +38,7 @@ jobs:
           node-version: '22'
       - name: Testa finestra giornaliera e archivio statistico
         run: |
+          node scripts/test-observation-refresh.mjs
           node scripts/test-daily-window.mjs
           node scripts/test-weekly-lab-summary.mjs
           node --check assets/daily-virtual.js
@@ -67,3 +69,4 @@ jobs:
           git fetch origin main
           git rebase origin/main
           git push
+
