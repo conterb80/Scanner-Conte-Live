@@ -15,7 +15,7 @@
     "eligible_matches": 1081,
     "eligible_competitions": 133,
     "scheduled": 69,
-    "finished": 988
+    "finished": 989
   },
   "api_remaining": 36,
   "note": "Solo partite e risultati. Quote, probabilita, LAB automatico e REAL non sono attivi.",
@@ -12721,14 +12721,14 @@
     {
       "id": "1552206",
       "kickoff": "2026-10-25T20:00:00+01:00",
-      "status": "HT",
+      "status": "FT",
       "league": "Eredivisie",
       "league_id": 88,
       "country": "Netherlands",
       "home": "AZ Alkmaar",
       "away": "Twente",
       "home_goals": 0,
-      "away_goals": 0
+      "away_goals": 2
     },
     {
       "id": "1550166",
@@ -13023,7 +13023,7 @@
       "result_verified_at": "2026-10-27T07:07:39.609Z"
     }
   ],
-  "last_result_refresh": "2026-10-26T13:29:48.104Z",
+  "last_result_refresh": "2026-11-03T20:59:57.665Z",
   "last_open_result_check": "2026-10-29T13:42:05.982Z",
   "fallback_source": "Football-Data.co.uk (league limited, two updates/week)",
   "last_verified_result_audit": "2026-10-27T07:07:39.609Z"
