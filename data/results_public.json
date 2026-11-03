@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-results-public-v1",
-  "checked_at": "2026-11-02T17:02:23.216Z",
+  "checked_at": "2026-11-03T01:33:48.354Z",
   "source": "ESPN public scoreboard + verified official match reports",
   "coverage": {
     "leagues": [
@@ -16,9 +16,9 @@
       "por.1"
     ],
     "days": [
-      "20261031",
       "20261101",
-      "20261102"
+      "20261102",
+      "20261103"
     ],
     "queries": 30,
     "succeeded": 30,
@@ -1190,6 +1190,146 @@
       "source_url": "https://www.espn.com/soccer/match/_/gameId/401883144/fc-andorra-tenerife",
       "verification": "espn_scoreboard",
       "original_local_date": "2026-11-01"
+    },
+    {
+      "id": "espn-esp.2-401883146",
+      "kickoff": "2026-11-02T15:15:00.000Z",
+      "status": "FT",
+      "league": "LaLiga Hypermotion",
+      "league_code": "esp.2",
+      "home": "Real Oviedo",
+      "away": "Las Palmas",
+      "home_goals": 2,
+      "away_goals": 3,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401883146/las-palmas-real-oviedo",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-esp.2-401883123",
+      "kickoff": "2026-11-02T17:30:00.000Z",
+      "status": "FT",
+      "league": "LaLiga Hypermotion",
+      "league_code": "esp.2",
+      "home": "Real Valladolid",
+      "away": "Leganés",
+      "home_goals": 4,
+      "away_goals": 3,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401883123/leganes-real-valladolid",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-ita.1-401874963",
+      "kickoff": "2026-11-02T17:30:00.000Z",
+      "status": "FT",
+      "league": "Serie A",
+      "league_code": "ita.1",
+      "home": "Sassuolo",
+      "away": "Fiorentina",
+      "home_goals": 2,
+      "away_goals": 4,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401874963/fiorentina-sassuolo",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-fra.1-401876419",
+      "kickoff": "2026-11-02T19:45:00.000Z",
+      "status": "FT",
+      "league": "Ligue 1",
+      "league_code": "fra.1",
+      "home": "Lorient",
+      "away": "Brest",
+      "home_goals": 0,
+      "away_goals": 2,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401876419/brest-lorient",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-ita.1-401874971",
+      "kickoff": "2026-11-02T19:45:00.000Z",
+      "status": "FT",
+      "league": "Serie A",
+      "league_code": "ita.1",
+      "home": "Atalanta",
+      "away": "Parma",
+      "home_goals": 0,
+      "away_goals": 3,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401874971/parma-atalanta",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-eng.1-401878762",
+      "kickoff": "2026-11-02T20:00:00.000Z",
+      "status": "FT",
+      "league": "Premier League",
+      "league_code": "eng.1",
+      "home": "Newcastle United",
+      "away": "Everton",
+      "home_goals": 0,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401878762/everton-newcastle-united",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-esp.1-401882824",
+      "kickoff": "2026-11-02T20:00:00.000Z",
+      "status": "FT",
+      "league": "LaLiga",
+      "league_code": "esp.1",
+      "home": "Deportivo",
+      "away": "Osasuna",
+      "home_goals": 2,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401882824/osasuna-deportivo",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-esp.2-401883147",
+      "kickoff": "2026-11-02T20:00:00.000Z",
+      "status": "FT",
+      "league": "LaLiga Hypermotion",
+      "league_code": "esp.2",
+      "home": "Mallorca",
+      "away": "Cádiz",
+      "home_goals": 2,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401883147/cadiz-mallorca",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-por.1-401885403",
+      "kickoff": "2026-11-02T20:15:00.000Z",
+      "status": "FT",
+      "league": "Primeira Liga",
+      "league_code": "por.1",
+      "home": "Benfica",
+      "away": "Alverca",
+      "home_goals": 1,
+      "away_goals": 0,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401885403/alverca-benfica",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-por.1-401885407",
+      "kickoff": "2026-11-02T20:15:00.000Z",
+      "status": "FT",
+      "league": "Primeira Liga",
+      "league_code": "por.1",
+      "home": "Gil Vicente",
+      "away": "Vitória de Guimaraes",
+      "home_goals": 0,
+      "away_goals": 0,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401885407/vitoria-de-guimaraes-gil-vicente",
+      "verification": "espn_scoreboard"
     }
   ]
 }
