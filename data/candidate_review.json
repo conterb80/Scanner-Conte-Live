@@ -1,9 +1,9 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-03T17:10:26.057Z",
+  "generated_at": "2026-11-03T17:10:52.505Z",
   "status": "PRELIMINARY_CANDIDATES",
-  "source_last_check": "2026-11-03T09:20:42.728Z",
+  "source_last_check": "2026-11-03T17:10:51.755Z",
   "source_max_age_hours": 36,
   "scope": "Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.",
   "scope_day": "2026-11-03",
@@ -18,14 +18,88 @@
   "methodology": "Filtro quantitativo predefinito di segnali esterni già acquisiti: divario quota/equo fonte, freschezza, fascia di quota. Non verifica forma, assenze o formazioni.",
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
-    "paper_records": 112,
-    "eligible_observations": 3,
+    "paper_records": 114,
+    "eligible_observations": 4,
     "eligible_core": 1,
-    "eligible_value": 2,
+    "eligible_value": 3,
     "settled_paper_samples": 104,
     "settled_paper_roi_pct": 5.7
   },
   "shortlist": [
+    {
+      "id": "tipsaudit-14141:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Blackburn - Stoke City",
+      "league": "Championship",
+      "kickoff": "2026-11-03T19:45:00+00:00",
+      "market": "1X2",
+      "selection": "Away",
+      "category": "VALUE",
+      "reference_odds": 2.85,
+      "reference_bookmaker": "LeoVegas (SE)",
+      "external_fair_odds": 2.72,
+      "external_benchmark_probability_pct": 36.8,
+      "external_reference_gap_pct": 4.78,
+      "relative_screening_score": 65,
+      "captured_at": "2026-11-03T17:10:51.755Z",
+      "reference_link": "https://tipsaudit.com/match/14141/blackburn-vs-stoke-city-2026-11-03",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 2.85 contro quota equa 2.72 stimata dalla fonte esterna (+ 4.8% di scostamento).",
+        "Dato osservato da LeoVegas (SE) e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 65 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 61,
+        "observed_roi_pct": 16.1,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    },
+    {
+      "id": "tipsaudit-14148:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Bodo/Glimt - Lille",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-03T20:00:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "CORE",
+      "reference_odds": 1.73,
+      "reference_bookmaker": "1xBet",
+      "external_fair_odds": 1.69,
+      "external_benchmark_probability_pct": 59.2,
+      "external_reference_gap_pct": 2.37,
+      "relative_screening_score": 45,
+      "captured_at": "2026-11-03T17:10:51.755Z",
+      "reference_link": "https://tipsaudit.com/match/14148/bodoglimt-vs-lille-2026-11-03",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 1.73 contro quota equa 1.69 stimata dalla fonte esterna (+ 2.4% di scostamento).",
+        "Dato osservato da 1xBet e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 45 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 36,
+        "observed_roi_pct": -17.1,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    }
+  ],
+  "alternatives": [
     {
       "id": "tipsaudit-14139:TIPSAUDIT_VALUE_1X2",
       "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
@@ -63,44 +137,6 @@
       }
     },
     {
-      "id": "tipsaudit-14148:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "Bodo/Glimt - Lille",
-      "league": "UEFA Champions League",
-      "kickoff": "2026-11-03T20:00:00+00:00",
-      "market": "1X2",
-      "selection": "Home",
-      "category": "CORE",
-      "reference_odds": 1.8,
-      "reference_bookmaker": "GTbets",
-      "external_fair_odds": 1.75,
-      "external_benchmark_probability_pct": 57.1,
-      "external_reference_gap_pct": 2.86,
-      "relative_screening_score": 43,
-      "captured_at": "2026-11-03T09:20:42.728Z",
-      "reference_link": "https://tipsaudit.com/match/14148/bodoglimt-vs-lille-2026-11-03",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 1.8 contro quota equa 1.75 stimata dalla fonte esterna (+ 2.9% di scostamento).",
-        "Dato osservato da GTbets e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 43 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 36,
-        "observed_roi_pct": -17.1,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    }
-  ],
-  "alternatives": [
-    {
       "id": "tipsaudit-14138:TIPSAUDIT_VALUE_1X2",
       "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
       "match": "Watford - Lincoln",
@@ -109,24 +145,24 @@
       "market": "1X2",
       "selection": "Away",
       "category": "VALUE",
-      "reference_odds": 2.95,
+      "reference_odds": 2.85,
       "reference_bookmaker": "LeoVegas (SE)",
-      "external_fair_odds": 2.83,
-      "external_benchmark_probability_pct": 35.3,
-      "external_reference_gap_pct": 4.24,
-      "relative_screening_score": 55,
-      "captured_at": "2026-11-03T09:20:42.728Z",
+      "external_fair_odds": 2.74,
+      "external_benchmark_probability_pct": 36.5,
+      "external_reference_gap_pct": 4.01,
+      "relative_screening_score": 59,
+      "captured_at": "2026-11-03T17:10:51.755Z",
       "reference_link": "https://tipsaudit.com/match/14138/watford-vs-lincoln-2026-11-03",
       "source": "TipsAudit public pre-match paper signals",
       "source_is_independent_model": false,
       "why": [
-        "Quota osservata 2.95 contro quota equa 2.83 stimata dalla fonte esterna (+ 4.2% di scostamento).",
+        "Quota osservata 2.85 contro quota equa 2.74 stimata dalla fonte esterna (+ 4% di scostamento).",
         "Dato osservato da LeoVegas (SE) e registrato prima della partita.",
         "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 55 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 59 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
