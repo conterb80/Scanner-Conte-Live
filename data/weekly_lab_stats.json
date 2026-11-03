@@ -1,13 +1,112 @@
 {
   "schema": "scanner-conte-weekly-lab-v1",
   "version": 1,
-  "generated_at": "2026-11-03T17:10:51.755Z",
+  "generated_at": "2026-11-03T20:59:57.665Z",
   "timezone": "Europe/Rome",
   "scope": "Solo laboratori pubblici e virtuali: daily e auto. REAL e registri locali esclusi.",
   "retention": "Riepilogo addizionale non distruttivo: gli esperimenti originari restano invariati.",
   "caveat": "ROI teorico descrittivo; campioni piccoli e scelte non indipendenti non dimostrano vantaggio.",
   "scan_note": "I segnali letti sono una somma di scansioni, non partite uniche; possibili ripetizioni.",
   "weeks": [
+    {
+      "week_start": "2026-11-02",
+      "week_end": "2026-11-08",
+      "lab": "auto",
+      "total": 6,
+      "pending": 6,
+      "won": 0,
+      "lost": 0,
+      "push": 0,
+      "void": 0,
+      "settled": 0,
+      "stake_settled": 0,
+      "pnl": 0,
+      "roi_pct": null,
+      "by_market": [
+        {
+          "name": "1X2",
+          "total": 3,
+          "pending": 3,
+          "won": 0,
+          "lost": 0,
+          "push": 0,
+          "void": 0,
+          "settled": 0,
+          "stake_settled": 0,
+          "pnl": 0,
+          "roi_pct": null
+        },
+        {
+          "name": "OVER_2_5",
+          "total": 3,
+          "pending": 3,
+          "won": 0,
+          "lost": 0,
+          "push": 0,
+          "void": 0,
+          "settled": 0,
+          "stake_settled": 0,
+          "pnl": 0,
+          "roi_pct": null
+        }
+      ],
+      "by_strategy": [
+        {
+          "name": "FAVORITA_1X2_CONTROLLO",
+          "total": 3,
+          "pending": 3,
+          "won": 0,
+          "lost": 0,
+          "push": 0,
+          "void": 0,
+          "settled": 0,
+          "stake_settled": 0,
+          "pnl": 0,
+          "roi_pct": null
+        },
+        {
+          "name": "OVER25_CONTROLLO",
+          "total": 3,
+          "pending": 3,
+          "won": 0,
+          "lost": 0,
+          "push": 0,
+          "void": 0,
+          "settled": 0,
+          "stake_settled": 0,
+          "pnl": 0,
+          "roi_pct": null
+        }
+      ],
+      "by_odds_band": [
+        {
+          "name": "1.50-1.99",
+          "total": 5,
+          "pending": 5,
+          "won": 0,
+          "lost": 0,
+          "push": 0,
+          "void": 0,
+          "settled": 0,
+          "stake_settled": 0,
+          "pnl": 0,
+          "roi_pct": null
+        },
+        {
+          "name": "2.00-2.49",
+          "total": 1,
+          "pending": 1,
+          "won": 0,
+          "lost": 0,
+          "push": 0,
+          "void": 0,
+          "settled": 0,
+          "stake_settled": 0,
+          "pnl": 0,
+          "roi_pct": null
+        }
+      ]
+    },
     {
       "week_start": "2026-11-02",
       "week_end": "2026-11-08",
