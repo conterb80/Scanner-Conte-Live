@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-03T09:21:03.332Z",
+  "generated_at": "2026-11-03T17:10:26.057Z",
   "status": "PRELIMINARY_CANDIDATES",
   "source_last_check": "2026-11-03T09:20:42.728Z",
   "source_max_age_hours": 36,
@@ -40,7 +40,7 @@
       "external_fair_odds": 2.04,
       "external_benchmark_probability_pct": 49,
       "external_reference_gap_pct": 3.92,
-      "relative_screening_score": 65,
+      "relative_screening_score": 61,
       "captured_at": "2026-11-03T09:20:42.728Z",
       "reference_link": "https://tipsaudit.com/match/14139/preston-vs-sheffield-utd-2026-11-03",
       "source": "TipsAudit public pre-match paper signals",
@@ -52,7 +52,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 65 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 61 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -76,7 +76,7 @@
       "external_fair_odds": 1.75,
       "external_benchmark_probability_pct": 57.1,
       "external_reference_gap_pct": 2.86,
-      "relative_screening_score": 47,
+      "relative_screening_score": 43,
       "captured_at": "2026-11-03T09:20:42.728Z",
       "reference_link": "https://tipsaudit.com/match/14148/bodoglimt-vs-lille-2026-11-03",
       "source": "TipsAudit public pre-match paper signals",
@@ -88,7 +88,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 47 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 43 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -114,7 +114,7 @@
       "external_fair_odds": 2.83,
       "external_benchmark_probability_pct": 35.3,
       "external_reference_gap_pct": 4.24,
-      "relative_screening_score": 60,
+      "relative_screening_score": 55,
       "captured_at": "2026-11-03T09:20:42.728Z",
       "reference_link": "https://tipsaudit.com/match/14138/watford-vs-lincoln-2026-11-03",
       "source": "TipsAudit public pre-match paper signals",
@@ -126,7 +126,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 60 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 55 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
