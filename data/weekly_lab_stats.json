@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-weekly-lab-v1",
   "version": 1,
-  "generated_at": "2026-11-03T03:28:50.384Z",
+  "generated_at": "2026-11-03T09:20:42.728Z",
   "timezone": "Europe/Rome",
   "scope": "Solo laboratori pubblici e virtuali: daily e auto. REAL e registri locali esclusi.",
   "retention": "Riepilogo addizionale non distruttivo: gli esperimenti originari restano invariati.",
@@ -12,8 +12,8 @@
       "week_start": "2026-11-02",
       "week_end": "2026-11-08",
       "lab": "daily",
-      "total": 14,
-      "pending": 2,
+      "total": 19,
+      "pending": 7,
       "won": 7,
       "lost": 5,
       "push": 0,
@@ -25,8 +25,8 @@
       "by_market": [
         {
           "name": "1X2",
-          "total": 14,
-          "pending": 2,
+          "total": 19,
+          "pending": 7,
           "won": 7,
           "lost": 5,
           "push": 0,
@@ -40,8 +40,8 @@
       "by_strategy": [
         {
           "name": "TIPSAUDIT_VALUE_1X2",
-          "total": 14,
-          "pending": 2,
+          "total": 19,
+          "pending": 7,
           "won": 7,
           "lost": 5,
           "push": 0,
@@ -55,8 +55,8 @@
       "by_odds_band": [
         {
           "name": "<1.50",
-          "total": 2,
-          "pending": 0,
+          "total": 4,
+          "pending": 2,
           "won": 2,
           "lost": 0,
           "push": 0,
@@ -68,8 +68,8 @@
         },
         {
           "name": "1.50-1.99",
-          "total": 4,
-          "pending": 0,
+          "total": 5,
+          "pending": 1,
           "won": 1,
           "lost": 3,
           "push": 0,
@@ -81,8 +81,8 @@
         },
         {
           "name": "2.00-2.49",
-          "total": 4,
-          "pending": 2,
+          "total": 5,
+          "pending": 3,
           "won": 2,
           "lost": 0,
           "push": 0,
@@ -94,8 +94,8 @@
         },
         {
           "name": "2.50+",
-          "total": 4,
-          "pending": 0,
+          "total": 5,
+          "pending": 1,
           "won": 2,
           "lost": 2,
           "push": 0,
@@ -106,9 +106,9 @@
           "roi_pct": 66.3
         }
       ],
-      "scan_checks": 2,
-      "source_signals_sum": 103,
-      "new_tests_reported": 2
+      "scan_checks": 3,
+      "source_signals_sum": 127,
+      "new_tests_reported": 7
     },
     {
       "week_start": "2026-10-26",
