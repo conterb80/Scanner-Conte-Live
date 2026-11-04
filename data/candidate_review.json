@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-04T15:20:41.918Z",
+  "generated_at": "2026-11-04T17:23:05.742Z",
   "status": "PRELIMINARY_CANDIDATES",
   "source_last_check": "2026-11-04T15:20:40.979Z",
   "source_max_age_hours": 36,
@@ -40,7 +40,7 @@
       "external_fair_odds": 1.37,
       "external_benchmark_probability_pct": 73,
       "external_reference_gap_pct": 2.92,
-      "relative_screening_score": 58,
+      "relative_screening_score": 57,
       "captured_at": "2026-11-04T15:20:40.979Z",
       "reference_link": "https://tipsaudit.com/match/14249/viking-vs-sabah-fa-2026-11-04",
       "source": "TipsAudit public pre-match paper signals",
@@ -52,7 +52,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 58 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 57 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -76,7 +76,7 @@
       "external_fair_odds": 1.96,
       "external_benchmark_probability_pct": 51,
       "external_reference_gap_pct": 3.06,
-      "relative_screening_score": 59,
+      "relative_screening_score": 58,
       "captured_at": "2026-11-04T15:20:40.979Z",
       "reference_link": "https://tipsaudit.com/match/14248/lens-vs-como-2026-11-04",
       "source": "TipsAudit public pre-match paper signals",
@@ -88,7 +88,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 59 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 58 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -114,7 +114,7 @@
       "external_fair_odds": 1.72,
       "external_benchmark_probability_pct": 58.1,
       "external_reference_gap_pct": 1.74,
-      "relative_screening_score": 40,
+      "relative_screening_score": 38,
       "captured_at": "2026-11-04T15:20:40.979Z",
       "reference_link": "https://tipsaudit.com/match/14250/borussia-dortmund-vs-real-betis-2026-11-04",
       "source": "TipsAudit public pre-match paper signals",
@@ -126,7 +126,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 40 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 38 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -150,7 +150,7 @@
       "external_fair_odds": 1.86,
       "external_benchmark_probability_pct": 53.8,
       "external_reference_gap_pct": 1.61,
-      "relative_screening_score": 35,
+      "relative_screening_score": 34,
       "captured_at": "2026-11-04T15:20:40.979Z",
       "reference_link": "https://tipsaudit.com/match/14252/fc-porto-vs-napoli-2026-11-04",
       "source": "TipsAudit public pre-match paper signals",
@@ -162,7 +162,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 35 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 34 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
