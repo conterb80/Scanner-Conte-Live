@@ -1,9 +1,9 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-04T00:42:42.653Z",
-  "status": "SOURCE_STALE",
-  "source_last_check": "2026-11-03T17:10:51.755Z",
+  "generated_at": "2026-11-04T15:20:41.918Z",
+  "status": "PRELIMINARY_CANDIDATES",
+  "source_last_check": "2026-11-04T15:20:40.979Z",
   "source_max_age_hours": 36,
   "scope": "Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.",
   "scope_day": "2026-11-04",
@@ -18,13 +18,159 @@
   "methodology": "Filtro quantitativo predefinito di segnali esterni già acquisiti: divario quota/equo fonte, freschezza, fascia di quota. Non verifica forma, assenze o formazioni.",
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
-    "paper_records": 114,
-    "eligible_observations": 0,
-    "eligible_core": 0,
-    "eligible_value": 0,
-    "settled_paper_samples": 104,
-    "settled_paper_roi_pct": 5.7
+    "paper_records": 118,
+    "eligible_observations": 4,
+    "eligible_core": 3,
+    "eligible_value": 1,
+    "settled_paper_samples": 113,
+    "settled_paper_roi_pct": 8
   },
-  "shortlist": [],
-  "alternatives": []
+  "shortlist": [
+    {
+      "id": "tipsaudit-14249:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Viking - Sabah FA",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-04T20:00:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "CORE",
+      "reference_odds": 1.41,
+      "reference_bookmaker": "Unibet (SE)",
+      "external_fair_odds": 1.37,
+      "external_benchmark_probability_pct": 73,
+      "external_reference_gap_pct": 2.92,
+      "relative_screening_score": 58,
+      "captured_at": "2026-11-04T15:20:40.979Z",
+      "reference_link": "https://tipsaudit.com/match/14249/viking-vs-sabah-fa-2026-11-04",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 1.41 contro quota equa 1.37 stimata dalla fonte esterna (+ 2.9% di scostamento).",
+        "Dato osservato da Unibet (SE) e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 58 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 37,
+        "observed_roi_pct": -19.4,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    },
+    {
+      "id": "tipsaudit-14248:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Lens - Como",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-04T20:00:00+00:00",
+      "market": "1X2",
+      "selection": "Away",
+      "category": "VALUE",
+      "reference_odds": 2.02,
+      "reference_bookmaker": "GTbets",
+      "external_fair_odds": 1.96,
+      "external_benchmark_probability_pct": 51,
+      "external_reference_gap_pct": 3.06,
+      "relative_screening_score": 59,
+      "captured_at": "2026-11-04T15:20:40.979Z",
+      "reference_link": "https://tipsaudit.com/match/14248/lens-vs-como-2026-11-04",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 2.02 contro quota equa 1.96 stimata dalla fonte esterna (+ 3.1% di scostamento).",
+        "Dato osservato da GTbets e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 59 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 67,
+        "observed_roi_pct": 19.6,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "tipsaudit-14250:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Borussia Dortmund - Real Betis",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-04T20:00:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "CORE",
+      "reference_odds": 1.75,
+      "reference_bookmaker": "1xBet",
+      "external_fair_odds": 1.72,
+      "external_benchmark_probability_pct": 58.1,
+      "external_reference_gap_pct": 1.74,
+      "relative_screening_score": 40,
+      "captured_at": "2026-11-04T15:20:40.979Z",
+      "reference_link": "https://tipsaudit.com/match/14250/borussia-dortmund-vs-real-betis-2026-11-04",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 1.75 contro quota equa 1.72 stimata dalla fonte esterna (+ 1.7% di scostamento).",
+        "Dato osservato da 1xBet e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 40 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 37,
+        "observed_roi_pct": -19.4,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    },
+    {
+      "id": "tipsaudit-14252:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "FC Porto - Napoli",
+      "league": "UEFA Champions League",
+      "kickoff": "2026-11-04T20:00:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "CORE",
+      "reference_odds": 1.89,
+      "reference_bookmaker": "Unibet (SE)",
+      "external_fair_odds": 1.86,
+      "external_benchmark_probability_pct": 53.8,
+      "external_reference_gap_pct": 1.61,
+      "relative_screening_score": 35,
+      "captured_at": "2026-11-04T15:20:40.979Z",
+      "reference_link": "https://tipsaudit.com/match/14252/fc-porto-vs-napoli-2026-11-04",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 1.89 contro quota equa 1.86 stimata dalla fonte esterna (+ 1.6% di scostamento).",
+        "Dato osservato da Unibet (SE) e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 35 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 37,
+        "observed_roi_pct": -19.4,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    }
+  ]
 }

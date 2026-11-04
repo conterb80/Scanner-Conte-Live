@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-weekly-lab-v1",
   "version": 1,
-  "generated_at": "2026-11-04T02:21:24.225Z",
+  "generated_at": "2026-11-04T15:20:40.979Z",
   "timezone": "Europe/Rome",
   "scope": "Solo laboratori pubblici e virtuali: daily e auto. REAL e registri locali esclusi.",
   "retention": "Riepilogo addizionale non distruttivo: gli esperimenti originari restano invariati.",
@@ -111,8 +111,8 @@
       "week_start": "2026-11-02",
       "week_end": "2026-11-08",
       "lab": "daily",
-      "total": 21,
-      "pending": 0,
+      "total": 25,
+      "pending": 4,
       "won": 13,
       "lost": 8,
       "push": 0,
@@ -124,8 +124,8 @@
       "by_market": [
         {
           "name": "1X2",
-          "total": 21,
-          "pending": 0,
+          "total": 25,
+          "pending": 4,
           "won": 13,
           "lost": 8,
           "push": 0,
@@ -139,8 +139,8 @@
       "by_strategy": [
         {
           "name": "TIPSAUDIT_VALUE_1X2",
-          "total": 21,
-          "pending": 0,
+          "total": 25,
+          "pending": 4,
           "won": 13,
           "lost": 8,
           "push": 0,
@@ -154,8 +154,8 @@
       "by_odds_band": [
         {
           "name": "<1.50",
-          "total": 4,
-          "pending": 0,
+          "total": 5,
+          "pending": 1,
           "won": 4,
           "lost": 0,
           "push": 0,
@@ -167,8 +167,8 @@
         },
         {
           "name": "1.50-1.99",
-          "total": 5,
-          "pending": 0,
+          "total": 7,
+          "pending": 2,
           "won": 1,
           "lost": 4,
           "push": 0,
@@ -180,8 +180,8 @@
         },
         {
           "name": "2.00-2.49",
-          "total": 5,
-          "pending": 0,
+          "total": 6,
+          "pending": 1,
           "won": 5,
           "lost": 0,
           "push": 0,
@@ -205,9 +205,9 @@
           "roi_pct": 35.7
         }
       ],
-      "scan_checks": 4,
-      "source_signals_sum": 149,
-      "new_tests_reported": 9
+      "scan_checks": 5,
+      "source_signals_sum": 165,
+      "new_tests_reported": 13
     },
     {
       "week_start": "2026-10-26",
