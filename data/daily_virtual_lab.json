@@ -3215,10 +3215,14 @@
       "reference": "https://tipsaudit.com/match/14135/galatasaray-vs-vfb-stuttgart-2026-11-03",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.27,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-04T02:21:24.224Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-04T02:20:13+00:00"
     },
     {
       "id": "tipsaudit-14136:TIPSAUDIT_VALUE_1X2",
@@ -3242,10 +3246,14 @@
       "reference": "https://tipsaudit.com/match/14136/shakhtar-donetsk-vs-sporting-cp-2026-11-03",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.08,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-04T02:21:24.224Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-04T02:20:13+00:00"
     },
     {
       "id": "tipsaudit-13998:TIPSAUDIT_VALUE_1X2",
@@ -3331,10 +3339,10 @@
       "reference": "https://tipsaudit.com/match/14138/watford-vs-lincoln-2026-11-03",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null,
+      "settled_at": "2026-11-04T02:21:24.224Z",
       "observations": [
         {
           "captured_at": "2026-11-03T17:10:51.755Z",
@@ -3364,7 +3372,11 @@
         "edge": 0.039,
         "bookmaker": "LeoVegas (SE)",
         "reference": "https://tipsaudit.com/match/14138/watford-vs-lincoln-2026-11-03"
-      }
+      },
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-04T02:20:13+00:00"
     },
     {
       "id": "tipsaudit-14139:TIPSAUDIT_VALUE_1X2",
@@ -3388,10 +3400,14 @@
       "reference": "https://tipsaudit.com/match/14139/preston-vs-sheffield-utd-2026-11-03",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.12,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-04T02:21:24.224Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-04T02:20:13+00:00"
     },
     {
       "id": "tipsaudit-14148:TIPSAUDIT_VALUE_1X2",
@@ -3415,10 +3431,10 @@
       "reference": "https://tipsaudit.com/match/14148/bodoglimt-vs-lille-2026-11-03",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null,
+      "settled_at": "2026-11-04T02:21:24.224Z",
       "observations": [
         {
           "captured_at": "2026-11-03T17:10:51.755Z",
@@ -3448,7 +3464,11 @@
         "edge": 0.0209,
         "bookmaker": "1xBet",
         "reference": "https://tipsaudit.com/match/14148/bodoglimt-vs-lille-2026-11-03"
-      }
+      },
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-04T02:20:13+00:00"
     },
     {
       "id": "tipsaudit-14149:TIPSAUDIT_VALUE_1X2",
@@ -3472,10 +3492,14 @@
       "reference": "https://tipsaudit.com/match/14149/lask-linz-vs-slovan-bratislava-2026-11-03",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.39,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-04T02:21:24.225Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-04T02:20:13+00:00"
     },
     {
       "id": "tipsaudit-14150:TIPSAUDIT_VALUE_1X2",
@@ -3499,10 +3523,14 @@
       "reference": "https://tipsaudit.com/match/14150/barcelona-vs-aston-villa-2026-11-03",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.32,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-04T02:21:24.225Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-04T02:20:13+00:00"
     },
     {
       "id": "tipsaudit-14141:TIPSAUDIT_VALUE_1X2",
@@ -3526,10 +3554,14 @@
       "reference": "https://tipsaudit.com/match/14141/blackburn-vs-stoke-city-2026-11-03",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.85,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-04T02:21:24.225Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-04T02:20:13+00:00"
     },
     {
       "id": "tipsaudit-14140:TIPSAUDIT_VALUE_1X2",
@@ -3553,10 +3585,14 @@
       "reference": "https://tipsaudit.com/match/14140/west-brom-vs-southampton-2026-11-03",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-04T02:21:24.225Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-04T02:20:13+00:00"
     }
   ],
   "checks": [
@@ -3954,10 +3990,10 @@
   "last_check": "2026-11-03T17:10:51.755Z",
   "stats": {
     "total": 114,
-    "pending": 10,
-    "won": 52,
-    "lost": 52,
-    "pnl": 5.98
+    "pending": 1,
+    "won": 58,
+    "lost": 55,
+    "pnl": 9.01
   },
-  "last_settlement_check": "2026-11-03T03:28:50.384Z"
+  "last_settlement_check": "2026-11-04T02:21:24.225Z"
 }
