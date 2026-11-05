@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-results-public-v1",
-  "checked_at": "2026-11-04T15:24:13.782Z",
+  "checked_at": "2026-11-05T00:22:27.817Z",
   "source": "ESPN public scoreboard + verified official match reports",
   "coverage": {
     "leagues": [
@@ -16,9 +16,9 @@
       "por.1"
     ],
     "days": [
-      "20261102",
       "20261103",
-      "20261104"
+      "20261104",
+      "20261105"
     ],
     "queries": 30,
     "succeeded": 30,
@@ -1455,6 +1455,48 @@
       "away_goals": 0,
       "source": "ESPN public scoreboard",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/401880184/millwall-birmingham-city",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-eng.2-401880173",
+      "kickoff": "2026-11-04T19:45:00.000Z",
+      "status": "FT",
+      "league": "Championship",
+      "league_code": "eng.2",
+      "home": "Wrexham",
+      "away": "Middlesbrough",
+      "home_goals": 2,
+      "away_goals": 0,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401880173/middlesbrough-wrexham",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-eng.2-401880175",
+      "kickoff": "2026-11-04T19:45:00.000Z",
+      "status": "FT",
+      "league": "Championship",
+      "league_code": "eng.2",
+      "home": "Cardiff City",
+      "away": "West Ham United",
+      "home_goals": 3,
+      "away_goals": 3,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401880175/west-ham-united-cardiff-city",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-eng.2-401880176",
+      "kickoff": "2026-11-04T20:00:00.000Z",
+      "status": "FT",
+      "league": "Championship",
+      "league_code": "eng.2",
+      "home": "Bristol City",
+      "away": "Wolverhampton Wanderers",
+      "home_goals": 1,
+      "away_goals": 2,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401880176/wolverhampton-wanderers-bristol-city",
       "verification": "espn_scoreboard"
     }
   ]
