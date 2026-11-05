@@ -1834,6 +1834,13 @@
           "reference_link": "https://tipsaudit.com/match/14437/sturm-graz-vs-celje-2026-11-05"
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-05T19:37:54.737Z",
+      "scope_day": "2026-11-05",
+      "status": "NO_ELIGIBLE_OBSERVATIONS",
+      "source_commit": null,
+      "observations": []
     }
   ],
   "records": [
@@ -2438,7 +2445,7 @@
     "settled": 19,
     "virtual_roi": 11.84
   },
-  "last_snapshot_at": "2026-11-05T18:58:32.328Z",
+  "last_snapshot_at": "2026-11-05T19:37:54.737Z",
   "last_result_check_at": "2026-11-05T02:29:27.393Z",
   "result_note": "Esiti forniti dalla stessa fonte del LAB, non controllati indipendentemente. Quote di riferimento, non Bet365. Nessun dato REAL del telefono."
 }
