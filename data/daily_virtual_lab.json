@@ -3616,10 +3616,14 @@
       "reference": "https://tipsaudit.com/match/14248/lens-vs-como-2026-11-04",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.02,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-05T02:29:27.393Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-05T02:25:11+00:00"
     },
     {
       "id": "tipsaudit-14249:TIPSAUDIT_VALUE_1X2",
@@ -3643,10 +3647,14 @@
       "reference": "https://tipsaudit.com/match/14249/viking-vs-sabah-fa-2026-11-04",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.41,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-05T02:29:27.393Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-05T02:25:11+00:00"
     },
     {
       "id": "tipsaudit-14250:TIPSAUDIT_VALUE_1X2",
@@ -3670,10 +3678,14 @@
       "reference": "https://tipsaudit.com/match/14250/borussia-dortmund-vs-real-betis-2026-11-04",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.75,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-05T02:29:27.393Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-05T02:25:11+00:00"
     },
     {
       "id": "tipsaudit-14252:TIPSAUDIT_VALUE_1X2",
@@ -3697,10 +3709,14 @@
       "reference": "https://tipsaudit.com/match/14252/fc-porto-vs-napoli-2026-11-04",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.89,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-05T02:29:27.393Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-05T02:25:11+00:00"
     }
   ],
   "checks": [
@@ -4121,10 +4137,10 @@
   "last_check": "2026-11-04T15:20:40.979Z",
   "stats": {
     "total": 118,
-    "pending": 5,
-    "won": 58,
+    "pending": 1,
+    "won": 62,
     "lost": 55,
-    "pnl": 9.01
+    "pnl": 12.08
   },
-  "last_settlement_check": "2026-11-04T02:21:24.225Z"
+  "last_settlement_check": "2026-11-05T02:29:27.393Z"
 }
