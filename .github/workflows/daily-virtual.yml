@@ -16,6 +16,7 @@ on:
       - 'assets/ai-candidate-bridge.js'
       - 'assets/candidate-review.js'
       - 'scripts/test-ai-candidate-bridge.mjs'
+      - 'scripts/update-scanner-candidate-history.mjs'
   schedule:
     # Standard UTC trigger. Europe/Rome windows and daily limits are enforced by the collector.
     # Hourly retries recover a missed trigger; outside local 08-20 no provider call is made.
@@ -43,6 +44,7 @@ jobs:
         run: |
           node scripts/test-ai-candidate-bridge.mjs
           node scripts/test-ai-integration.mjs
+          node --check scripts/update-scanner-candidate-history.mjs
           node scripts/test-observation-refresh.mjs
           node scripts/test-daily-window.mjs
           node scripts/test-weekly-lab-summary.mjs
@@ -59,13 +61,15 @@ jobs:
         run: node scripts/build-candidate-review.mjs
       - name: Prepara riepilogo virtuale settimanale senza eliminare dati
         run: node scripts/build-weekly-lab-summary.mjs
+      - name: Archivia candidate della giornata e aggiorna esiti
+        run: node scripts/update-scanner-candidate-history.mjs
       - name: Pubblica LAB e rapporto sperimentale separati
         run: |
           if [ ! -f data/daily_virtual_lab.json ]; then
             echo "Nessun dato valido: archivio invariato"
             exit 0
           fi
-          git add data/daily_virtual_lab.json data/candidate_review.json data/weekly_lab_stats.json
+          git add data/daily_virtual_lab.json data/candidate_review.json data/weekly_lab_stats.json data/scanner_candidate_history.json
           if git diff --cached --quiet; then
             echo "Nessuna modifica"
             exit 0

@@ -7,6 +7,7 @@ on:
     paths:
       - 'scripts/build-candidate-review.mjs'
       - 'scripts/test-candidate-review.mjs'
+      - 'scripts/update-scanner-candidate-history.mjs'
       - 'scripts/daily-window.mjs'
       - 'scripts/test-daily-window.mjs'
       - '.github/workflows/candidate-review.yml'
@@ -38,9 +39,11 @@ jobs:
           node scripts/test-candidate-review.mjs
       - name: Analizza soltanto dati LAB gia registrati prima delle partite
         run: node scripts/build-candidate-review.mjs
+      - name: Conserva candidature e quote prima della partita
+        run: node scripts/update-scanner-candidate-history.mjs
       - name: Pubblica rapporto sperimentale senza scommesse REAL
         run: |
-          git add data/candidate_review.json
+          git add data/candidate_review.json data/scanner_candidate_history.json
           if git diff --cached --quiet; then
             echo "Nessuna variazione del rapporto"
             exit 0
