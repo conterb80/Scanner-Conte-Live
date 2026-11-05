@@ -21,7 +21,8 @@
    el('ai-report-meta').textContent=(r.model||'')+' · '+(r.evidence.completed_search_actions||0)+' ricerche · '+(r.evidence.citation_count||0)+' citazioni. La verifica del calendario non dimostra un vantaggio quantitativo.';
   }
  }
- function accept(p){lastContact=new Date().toISOString();render(p,true);try{localStorage.setItem(CACHE,JSON.stringify({payload:p,last_contact:lastContact}));}catch{}el('ai-feedback').textContent='Rapporti e stato letti dal motore. Nessuna nuova richiesta IA viene avviata da questa pagina.';window.dispatchEvent(new Event('scanner-conte:ai-updated'));}
+ function emit(){if(typeof window.dispatchEvent==='function'&&typeof Event!=='undefined')window.dispatchEvent(new Event('scanner-conte:ai-updated'));}
+ function accept(p){lastContact=new Date().toISOString();render(p,true);try{localStorage.setItem(CACHE,JSON.stringify({payload:p,last_contact:lastContact}));}catch{}el('ai-feedback').textContent='Rapporti e stato letti dal motore. Nessuna nuova richiesta IA viene avviata da questa pagina.';emit();}
  async function refresh(){if(!endpoint)return;try{const r=await fetch(endpoint,{mode:'cors',cache:'no-store',signal:AbortSignal.timeout(5000)});if(!r.ok)throw Error();accept(await r.json());}catch{el('ai-connection-state').textContent='Collegamento non raggiungibile';el('ai-connection-state').className='ai-badge';el('ai-feedback').textContent='Apri Termux e avvia scanner-conte. Se il browser blocca il collegamento locale, usa Collega / aggiorna IA per trasferire il rapporto.';el('ai-home-state').textContent='Collegamento IA da verificare · ultimo rapporto salvato disponibile';}}
  function connect(){
   if(popup&&!popup.closed){popup.focus();return;}
@@ -39,7 +40,7 @@
   accept(e.data.payload);try{localStorage.removeItem(PENDING);}catch{}clearTimeout(timer);popup.postMessage({type:'scanner-ai-received',nonce},ORIGIN);popup=null;nonce=null;refresh();
  });
  el('ai-connect').addEventListener('click',connect);el('ai-refresh').addEventListener('click',()=>endpoint?refresh():connect());
- el('ai-disconnect').addEventListener('click',()=>{endpoint=null;shown='';lastContact=null;try{localStorage.removeItem(CONNECTION);localStorage.removeItem(CACHE);}catch{}el('ai-report-body').replaceChildren();el('ai-observations').replaceChildren();el('ai-report-heading').textContent='Collegamento rimosso da questo browser';el('ai-report-age').textContent='';el('ai-report-meta').textContent='';el('ai-times').textContent='';el('ai-connection-state').textContent='Non collegato';el('ai-home-state').textContent='IA locale · collega il motore';window.dispatchEvent(new Event('scanner-conte:ai-updated'));});
+ el('ai-disconnect').addEventListener('click',()=>{endpoint=null;shown='';lastContact=null;try{localStorage.removeItem(CONNECTION);localStorage.removeItem(CACHE);}catch{}el('ai-report-body').replaceChildren();el('ai-observations').replaceChildren();el('ai-report-heading').textContent='Collegamento rimosso da questo browser';el('ai-report-age').textContent='';el('ai-report-meta').textContent='';el('ai-times').textContent='';el('ai-connection-state').textContent='Non collegato';el('ai-home-state').textContent='IA locale · collega il motore';emit();});
  try{const saved=localStorage.getItem(CONNECTION);if(validEndpoint(saved))endpoint=saved;const cache=JSON.parse(localStorage.getItem(CACHE)||'null');if(cache&&validPayload(cache.payload)){lastContact=cache.last_contact;render(cache.payload,false);}}catch{}
  if(location.hash.startsWith('#scanner-ia=')){
   const fragment=location.hash;history.replaceState(null,'',location.pathname+location.search);

@@ -41,6 +41,7 @@ jobs:
       - name: Testa finestra giornaliera e archivio statistico
         run: |
           node scripts/test-ai-candidate-bridge.mjs
+          node scripts/test-ai-integration.mjs
           node scripts/test-observation-refresh.mjs
           node scripts/test-daily-window.mjs
           node scripts/test-weekly-lab-summary.mjs
