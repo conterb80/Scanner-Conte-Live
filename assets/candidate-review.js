@@ -8,7 +8,20 @@ const panel=document.getElementById('candidate-review-panel');
 const status=document.getElementById('candidate-review-status');
 const btn=document.getElementById('candidate-review-refresh');
 if(!panel||!status||!btn)return;
-const KEY='scanner-conte-candidate-review-odds-v1';
+const KEY='scanner-conte-candidate-review-odds-v1',AI_CACHE='scanner-conte-ai-cache-v1';
+function aiCheck(record){
+ let cache=null;try{cache=JSON.parse(localStorage.getItem(AI_CACHE)||'null');}catch{}
+ const check=window.ScannerAICandidateBridge?.evaluate(record,cache,Date.now());
+ if(!check)return '';
+ const stamp=check.checked_at?' · '+new Date(check.checked_at).toLocaleString('it-IT',{timeZone:'Europe/Rome',hour:'2-digit',minute:'2-digit'}):'';
+ const sources=Array.isArray(check.sources)?check.sources.slice(0,2).map((url,i)=>
+  '<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Fonte IA '+(i+1)+'</a>').join(' · '):'';
+ return '<div class="candidate-ai-check" data-ai-status="'+esc(check.code)+'">'+
+  '<strong>'+esc(check.title)+esc(stamp)+'</strong><p>'+esc(check.detail)+'</p>'+
+  (sources?'<p class="candidate-ai-sources">'+sources+'</p>':'')+
+  '<button type="button" class="inline-link" data-review-open-ai>Apri rapporto IA</button>'+
+  '</div>';
+}
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]));
 const num=n=>typeof n==='number'&&Number.isFinite(n);
 const validOdds=x=>{const n=Number(String(x??'').replace(',','.'));return Number.isFinite(n)&&n>=1.01&&n<=200?n:null;};
@@ -51,7 +64,7 @@ function row(record,secondary=false){
    '<span class="muted small">'+esc(date(record.kickoff))+'</span></div>'+
   '<h3>'+esc(record.match)+'</h3>'+
   '<div class="candidate-review-meta"><span>'+esc(record.league)+'</span><b>1X2 · '+esc(pick)+'</b></div>'+
-  '<div class="candidate-review-price"><span>Quota della fonte</span><strong>'+esc(fmt(record.reference_odds))+'</strong></div>'+
+  '<div class="candidate-review-price"><span>Quota della fonte</span><strong>'+esc(fmt(record.reference_odds))+'</strong></div>'+aiCheck(record)+
   '<div class="candidate-review-manual">'+
    '<label for="review-quote-'+esc(record.id)+'">Quota Bet365 inserita da te</label>'+
    '<div class="candidate-review-inputrow"><input id="review-quote-'+esc(record.id)+'" type="number" min="1.01" max="200" step="0.01" inputmode="decimal" '+
@@ -117,6 +130,7 @@ async function load(){
  finally{btn.disabled=false;show();}
 }
 panel.addEventListener('click',event=>{
+ if(event.target.closest('[data-review-open-ai]')){document.querySelector('[data-goto="ai"]')?.click();return;}
  const button=event.target.closest('[data-review-save],[data-review-register]');
  if(!button||!feed)return;
  const registration=button.hasAttribute('data-review-register');
@@ -143,6 +157,7 @@ panel.addEventListener('click',event=>{
  if(store())show();
 });
 btn.addEventListener('click',load);
+window.addEventListener('scanner-conte:ai-updated',()=>{if(feed)show();});
 window.addEventListener('focus',()=>{if(!document.hidden)load();});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)load();});
 load();

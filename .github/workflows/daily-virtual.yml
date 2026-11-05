@@ -13,6 +13,8 @@ on:
       - 'scripts/build-weekly-lab-summary.mjs'
       - 'scripts/test-weekly-lab-summary.mjs'
       - '.github/workflows/daily-virtual.yml'
+      - 'assets/ai-candidate-bridge.js'
+      - 'scripts/test-ai-candidate-bridge.mjs'
   schedule:
     # Standard UTC trigger. Europe/Rome windows and daily limits are enforced by the collector.
     # Hourly retries recover a missed trigger; outside local 08-20 no provider call is made.
@@ -38,11 +40,14 @@ jobs:
           node-version: '22'
       - name: Testa finestra giornaliera e archivio statistico
         run: |
+          node scripts/test-ai-candidate-bridge.mjs
           node scripts/test-observation-refresh.mjs
           node scripts/test-daily-window.mjs
           node scripts/test-weekly-lab-summary.mjs
           node --check assets/daily-virtual.js
           node --check assets/candidate-review.js
+          node --check assets/ai-candidate-bridge.js
+          node --check assets/ai-app.js
           node --check assets/weekly-lab.js
       - name: Registra solo prove 1X2 future con quote pubbliche verificate
         run: node scripts/collect-daily-virtual.mjs

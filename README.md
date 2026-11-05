@@ -68,3 +68,11 @@ live. Il motore analizza gli eventi futuri della giornata Europe/Rome; i vecchi
 rapporti restano consultabili con data e ambito originari.
 
 Test interfaccia e renderer: `node --test scripts/test-ai-integration.mjs`.
+
+## V0.10.1 — IA accanto alle candidate (ponte di lettura)
+
+- Lo Scanner visualizza lo stato IA per candidata, verificando partita, giorno Europe/Rome, rilevazione e freschezza massima 6 ore.
+- Una partita citata negli input non equivale a una verifica mirata; rapporti scaduti non confermano alcuna candidata.
+- Per il giudizio specifico il futuro produttore Termux deve includere in report.candidate_assessments (oppure report.evidence.candidate_assessments) campi candidate_id/match, checked_at, verdict (SUPPORT/CAUTION/CONTRADICT/INCONCLUSIVE), summary e sources HTTPS pertinenti. Questa modifica non aggiorna Termux.
+- Non cambiano shortlist, scoring e archivi REAL/LAB. I rapporti IA restano soltanto sul dispositivo.
+- Test: node scripts/test-ai-candidate-bridge.mjs.
