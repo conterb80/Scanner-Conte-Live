@@ -14,6 +14,7 @@ on:
       - 'scripts/test-weekly-lab-summary.mjs'
       - '.github/workflows/daily-virtual.yml'
       - 'assets/ai-candidate-bridge.js'
+      - 'assets/candidate-review.js'
       - 'scripts/test-ai-candidate-bridge.mjs'
   schedule:
     # Standard UTC trigger. Europe/Rome windows and daily limits are enforced by the collector.

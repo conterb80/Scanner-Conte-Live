@@ -16,7 +16,7 @@ function aiCheck(record){
  const stamp=check.checked_at?' · '+new Date(check.checked_at).toLocaleString('it-IT',{timeZone:'Europe/Rome',hour:'2-digit',minute:'2-digit'}):'';
  const sources=Array.isArray(check.sources)?check.sources.slice(0,2).map((url,i)=>
   '<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Fonte IA '+(i+1)+'</a>').join(' · '):'';
- return '<div class="candidate-ai-check" data-ai-status="'+esc(check.code)+'">'+
+ return '<div class="candidate-ai-check" data-ai-record="'+esc(record.id)+'" data-ai-status="'+esc(check.code)+'">'+
   '<strong>'+esc(check.title)+esc(stamp)+'</strong><p>'+esc(check.detail)+'</p>'+
   (sources?'<p class="candidate-ai-sources">'+sources+'</p>':'')+
   '<button type="button" class="inline-link" data-review-open-ai>Apri rapporto IA</button>'+
@@ -157,7 +157,14 @@ panel.addEventListener('click',event=>{
  if(store())show();
 });
 btn.addEventListener('click',load);
-window.addEventListener('scanner-conte:ai-updated',()=>{if(feed)show();});
+window.addEventListener('scanner-conte:ai-updated',()=>{
+ if(!feed)return;
+ const all=[...feed.shortlist,...feed.alternatives];
+ for(const node of panel.querySelectorAll('[data-ai-record]')){
+  const record=all.find(r=>r.id===node.getAttribute('data-ai-record'));
+  if(record)node.outerHTML=aiCheck(record);
+ }
+});
 window.addEventListener('focus',()=>{if(!document.hidden)load();});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)load();});
 load();
