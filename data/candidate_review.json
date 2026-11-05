@@ -1,9 +1,9 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-05T00:56:52.834Z",
-  "status": "SOURCE_STALE",
-  "source_last_check": "2026-11-04T15:20:40.979Z",
+  "generated_at": "2026-11-05T14:41:11.173Z",
+  "status": "PRELIMINARY_CANDIDATES",
+  "source_last_check": "2026-11-05T14:41:10.257Z",
   "source_max_age_hours": 36,
   "scope": "Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.",
   "scope_day": "2026-11-05",
@@ -18,13 +18,303 @@
   "methodology": "Filtro quantitativo predefinito di segnali esterni già acquisiti: divario quota/equo fonte, freschezza, fascia di quota. Non verifica forma, assenze o formazioni.",
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
-    "paper_records": 118,
-    "eligible_observations": 0,
-    "eligible_core": 0,
-    "eligible_value": 0,
-    "settled_paper_samples": 113,
-    "settled_paper_roi_pct": 8
+    "paper_records": 130,
+    "eligible_observations": 8,
+    "eligible_core": 7,
+    "eligible_value": 1,
+    "settled_paper_samples": 117,
+    "settled_paper_roi_pct": 10.3
   },
-  "shortlist": [],
-  "alternatives": []
+  "shortlist": [
+    {
+      "id": "tipsaudit-14427:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Levski Sofia - Jagiellonia",
+      "league": "UEFA Europa League",
+      "kickoff": "2026-11-05T17:45:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "VALUE",
+      "reference_odds": 2.14,
+      "reference_bookmaker": "Unibet (NL)",
+      "external_fair_odds": 2.08,
+      "external_benchmark_probability_pct": 48.1,
+      "external_reference_gap_pct": 2.88,
+      "relative_screening_score": 57,
+      "captured_at": "2026-11-05T14:41:10.257Z",
+      "reference_link": "https://tipsaudit.com/match/14427/levski-sofia-vs-jagiellonia-2026-11-05",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 2.14 contro quota equa 2.08 stimata dalla fonte esterna (+ 2.9% di scostamento).",
+        "Dato osservato da Unibet (NL) e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 57 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 68,
+        "observed_roi_pct": 20.8,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    },
+    {
+      "id": "tipsaudit-14444:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Panathinaikos - CSKA Sofia",
+      "league": "UEFA Conference League",
+      "kickoff": "2026-11-05T20:00:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "CORE",
+      "reference_odds": 1.41,
+      "reference_bookmaker": "Unibet (NL)",
+      "external_fair_odds": 1.36,
+      "external_benchmark_probability_pct": 73.5,
+      "external_reference_gap_pct": 3.68,
+      "relative_screening_score": 65,
+      "captured_at": "2026-11-05T14:41:10.257Z",
+      "reference_link": "https://tipsaudit.com/match/14444/panathinaikos-vs-cska-sofia-2026-11-05",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 1.41 contro quota equa 1.36 stimata dalla fonte esterna (+ 3.7% di scostamento).",
+        "Dato osservato da Unibet (NL) e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 65 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 40,
+        "observed_roi_pct": -12.8,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "tipsaudit-14440:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Sunderland - Dinamo Zagreb",
+      "league": "UEFA Europa League",
+      "kickoff": "2026-11-05T20:00:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "CORE",
+      "reference_odds": 1.47,
+      "reference_bookmaker": "1xBet",
+      "external_fair_odds": 1.44,
+      "external_benchmark_probability_pct": 69.4,
+      "external_reference_gap_pct": 2.08,
+      "relative_screening_score": 50,
+      "captured_at": "2026-11-05T14:41:10.257Z",
+      "reference_link": "https://tipsaudit.com/match/14440/sunderland-vs-dinamo-zagreb-2026-11-05",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 1.47 contro quota equa 1.44 stimata dalla fonte esterna (+ 2.1% di scostamento).",
+        "Dato osservato da 1xBet e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 50 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 40,
+        "observed_roi_pct": -12.8,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    },
+    {
+      "id": "tipsaudit-14425:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Real Sociedad - Lyon",
+      "league": "UEFA Europa League",
+      "kickoff": "2026-11-05T17:45:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "CORE",
+      "reference_odds": 1.67,
+      "reference_bookmaker": "1xBet",
+      "external_fair_odds": 1.63,
+      "external_benchmark_probability_pct": 61.3,
+      "external_reference_gap_pct": 2.45,
+      "relative_screening_score": 48,
+      "captured_at": "2026-11-05T14:41:10.257Z",
+      "reference_link": "https://tipsaudit.com/match/14425/real-sociedad-vs-lyon-2026-11-05",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 1.67 contro quota equa 1.63 stimata dalla fonte esterna (+ 2.5% di scostamento).",
+        "Dato osservato da 1xBet e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 48 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 40,
+        "observed_roi_pct": -12.8,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    },
+    {
+      "id": "tipsaudit-14439:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Torreense - Ararat-Armenia",
+      "league": "UEFA Europa League",
+      "kickoff": "2026-11-05T20:00:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "CORE",
+      "reference_odds": 1.81,
+      "reference_bookmaker": "Unibet (NL)",
+      "external_fair_odds": 1.76,
+      "external_benchmark_probability_pct": 56.8,
+      "external_reference_gap_pct": 2.84,
+      "relative_screening_score": 47,
+      "captured_at": "2026-11-05T14:41:10.257Z",
+      "reference_link": "https://tipsaudit.com/match/14439/torreense-vs-ararat-armenia-2026-11-05",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 1.81 contro quota equa 1.76 stimata dalla fonte esterna (+ 2.8% di scostamento).",
+        "Dato osservato da Unibet (NL) e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 47 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 40,
+        "observed_roi_pct": -12.8,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    },
+    {
+      "id": "tipsaudit-14437:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Sturm Graz - Celje",
+      "league": "UEFA Europa League",
+      "kickoff": "2026-11-05T20:00:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "CORE",
+      "reference_odds": 1.57,
+      "reference_bookmaker": "Unibet (NL)",
+      "external_fair_odds": 1.54,
+      "external_benchmark_probability_pct": 64.9,
+      "external_reference_gap_pct": 1.95,
+      "relative_screening_score": 46,
+      "captured_at": "2026-11-05T14:41:10.257Z",
+      "reference_link": "https://tipsaudit.com/match/14437/sturm-graz-vs-celje-2026-11-05",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 1.57 contro quota equa 1.54 stimata dalla fonte esterna (+ 1.9% di scostamento).",
+        "Dato osservato da Unibet (NL) e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 46 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 40,
+        "observed_roi_pct": -12.8,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    },
+    {
+      "id": "tipsaudit-14426:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "NEC Nijmegen - Omonia Nicosia",
+      "league": "UEFA Europa League",
+      "kickoff": "2026-11-05T17:45:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "CORE",
+      "reference_odds": 1.82,
+      "reference_bookmaker": "Unibet (NL)",
+      "external_fair_odds": 1.78,
+      "external_benchmark_probability_pct": 56.2,
+      "external_reference_gap_pct": 2.25,
+      "relative_screening_score": 42,
+      "captured_at": "2026-11-05T14:41:10.257Z",
+      "reference_link": "https://tipsaudit.com/match/14426/nec-nijmegen-vs-omonia-nicosia-2026-11-05",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 1.82 contro quota equa 1.78 stimata dalla fonte esterna (+ 2.2% di scostamento).",
+        "Dato osservato da Unibet (NL) e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 42 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 40,
+        "observed_roi_pct": -12.8,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    },
+    {
+      "id": "tipsaudit-14421:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Crystal Palace - 1899 Hoffenheim",
+      "league": "UEFA Europa League",
+      "kickoff": "2026-11-05T17:45:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "CORE",
+      "reference_odds": 1.9,
+      "reference_bookmaker": "1xBet",
+      "external_fair_odds": 1.87,
+      "external_benchmark_probability_pct": 53.5,
+      "external_reference_gap_pct": 1.6,
+      "relative_screening_score": 34,
+      "captured_at": "2026-11-05T14:41:10.257Z",
+      "reference_link": "https://tipsaudit.com/match/14421/crystal-palace-vs-1899-hoffenheim-2026-11-05",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 1.9 contro quota equa 1.87 stimata dalla fonte esterna (+ 1.6% di scostamento).",
+        "Dato osservato da 1xBet e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 34 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 40,
+        "observed_roi_pct": -12.8,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    }
+  ]
 }
