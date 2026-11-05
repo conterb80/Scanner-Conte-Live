@@ -7,3 +7,24 @@
 .candidate-ai-check [data-review-open-ai]{margin-top:4px;font-size:11px}
 .candidate-ai-check .candidate-ai-sources{display:flex;flex-wrap:wrap;gap:7px}
 .candidate-ai-check a{color:var(--mint);overflow-wrap:anywhere}
+
+/* Archivio candidate separato dal motore e dalle REAL */
+.candidate-hist-box{margin:8px 0 17px}
+.candidate-hist-box>summary{cursor:pointer;padding:12px 2px;color:var(--mint);font-weight:700;font-size:13px}
+.candidate-hist-box .ui-drawer-content{padding:8px 0 14px}
+.candidate-hist-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.candidate-hist-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:13px 0}
+.candidate-hist-kpis>div{padding:10px 8px;background:var(--panel2);border-radius:10px;min-width:0}
+.candidate-hist-kpis strong{display:block;font-size:15px}
+.candidate-hist-kpis span{font-size:10px;color:var(--soft)}
+.candidate-hist-day{margin:10px 0;padding:8px 11px;border:1px solid var(--line);border-radius:11px}
+.candidate-hist-day>summary{cursor:pointer;font-size:12px;font-weight:700;padding:5px 0}
+.candidate-hist-items{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}
+.candidate-hist-item{padding:11px 12px;background:var(--panel2);border-radius:10px;min-width:0}
+.candidate-hist-item-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.candidate-hist-item-head b{font-size:12px;overflow-wrap:anywhere}
+.candidate-hist-status{font-size:10px;flex-shrink:0}
+.candidate-hist-status.win{color:#9bdabb}.candidate-hist-status.loss{color:#f1a4a4}.candidate-hist-status.pending{color:var(--soft)}
+.candidate-hist-item-meta{display:flex;justify-content:space-between;gap:9px;flex-wrap:wrap;margin-top:7px;font-size:10px;color:var(--soft)}
+.candidate-hist-item-note{margin:7px 0 0;color:var(--soft);font-size:10px;line-height:1.45}
+@media(max-width:400px){.candidate-hist-kpis strong{font-size:13px}.candidate-hist-item-head{flex-wrap:wrap}}

@@ -52,6 +52,7 @@ jobs:
           node --check assets/candidate-review.js
           node --check assets/ai-candidate-bridge.js
           node --check assets/ai-app.js
+          node --check assets/candidate-history.js
           node --check assets/weekly-lab.js
       - name: Registra solo prove 1X2 future con quote pubbliche verificate
         run: node scripts/collect-daily-virtual.mjs
