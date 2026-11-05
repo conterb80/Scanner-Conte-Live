@@ -1,0 +1,85 @@
+{
+  "schema": "scanner-conte-candidate-history-v1",
+  "version": 1,
+  "description": "Candidate Scanner pubblicate prima del calcio d'inizio, non scommesse REAL. Storico GitHub, senza ricostruzioni ex post.",
+  "snapshots": [
+    {
+      "generated_at": "2026-11-05T18:58:32.328Z",
+      "scope_day": "2026-11-05",
+      "status": "PRELIMINARY_CANDIDATES",
+      "source_commit": "LATEST_BEFORE_ARCHIVE",
+      "observations": [
+        {
+          "id": "tipsaudit-14444:TIPSAUDIT_VALUE_1X2",
+          "match": "Panathinaikos - CSKA Sofia",
+          "league": "UEFA Conference League",
+          "kickoff": "2026-11-05T20:00:00+00:00",
+          "market": "1X2",
+          "selection": "Home",
+          "category": "CORE",
+          "place": "PRINCIPALE",
+          "rank": 1,
+          "reference_odds": 1.41,
+          "reference_bookmaker": "Unibet (NL)",
+          "external_fair_odds": 1.36,
+          "relative_screening_score": 62,
+          "captured_at": "2026-11-05T14:41:10.257Z",
+          "reference_link": "https://tipsaudit.com/match/14444/panathinaikos-vs-cska-sofia-2026-11-05"
+        },
+        {
+          "id": "tipsaudit-14440:TIPSAUDIT_VALUE_1X2",
+          "match": "Sunderland - Dinamo Zagreb",
+          "league": "UEFA Europa League",
+          "kickoff": "2026-11-05T20:00:00+00:00",
+          "market": "1X2",
+          "selection": "Home",
+          "category": "CORE",
+          "place": "ALTERNATIVA",
+          "rank": 1,
+          "reference_odds": 1.47,
+          "reference_bookmaker": "1xBet",
+          "external_fair_odds": 1.44,
+          "relative_screening_score": 48,
+          "captured_at": "2026-11-05T14:41:10.257Z",
+          "reference_link": "https://tipsaudit.com/match/14440/sunderland-vs-dinamo-zagreb-2026-11-05"
+        },
+        {
+          "id": "tipsaudit-14439:TIPSAUDIT_VALUE_1X2",
+          "match": "Torreense - Ararat-Armenia",
+          "league": "UEFA Europa League",
+          "kickoff": "2026-11-05T20:00:00+00:00",
+          "market": "1X2",
+          "selection": "Home",
+          "category": "CORE",
+          "place": "ALTERNATIVA",
+          "rank": 2,
+          "reference_odds": 1.81,
+          "reference_bookmaker": "Unibet (NL)",
+          "external_fair_odds": 1.76,
+          "relative_screening_score": 45,
+          "captured_at": "2026-11-05T14:41:10.257Z",
+          "reference_link": "https://tipsaudit.com/match/14439/torreense-vs-ararat-armenia-2026-11-05"
+        },
+        {
+          "id": "tipsaudit-14437:TIPSAUDIT_VALUE_1X2",
+          "match": "Sturm Graz - Celje",
+          "league": "UEFA Europa League",
+          "kickoff": "2026-11-05T20:00:00+00:00",
+          "market": "1X2",
+          "selection": "Home",
+          "category": "CORE",
+          "place": "ALTERNATIVA",
+          "rank": 3,
+          "reference_odds": 1.57,
+          "reference_bookmaker": "Unibet (NL)",
+          "external_fair_odds": 1.54,
+          "relative_screening_score": 44,
+          "captured_at": "2026-11-05T14:41:10.257Z",
+          "reference_link": "https://tipsaudit.com/match/14437/sturm-graz-vs-celje-2026-11-05"
+        }
+      ]
+    }
+  ],
+  "records": [],
+  "stats": null
+}
