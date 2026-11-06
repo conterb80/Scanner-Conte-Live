@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-06T12:56:19.016Z",
+  "generated_at": "2026-11-06T14:19:22.755Z",
   "status": "PRELIMINARY_CANDIDATES",
   "source_last_check": "2026-11-06T12:56:18.261Z",
   "source_max_age_hours": 36,
@@ -40,7 +40,7 @@
       "external_fair_odds": 2.78,
       "external_benchmark_probability_pct": 36,
       "external_reference_gap_pct": 3.6,
-      "relative_screening_score": 55,
+      "relative_screening_score": 54,
       "captured_at": "2026-11-06T12:56:18.261Z",
       "reference_link": "https://tipsaudit.com/match/15710/san-lorenzo-vs-platense-2026-11-06",
       "source": "TipsAudit public pre-match paper signals",
@@ -52,7 +52,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 55 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 54 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
