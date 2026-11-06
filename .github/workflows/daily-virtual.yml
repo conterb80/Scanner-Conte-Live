@@ -55,7 +55,10 @@ jobs:
           node --check assets/candidate-history.js
           node --check assets/weekly-lab.js
       - name: Registra solo prove 1X2 future con quote pubbliche verificate
-        run: node scripts/collect-daily-virtual.mjs
+        id: collect
+        run: |
+          set -o pipefail
+          node scripts/collect-daily-virtual.mjs 2>&1 | tee /tmp/scanner-collector.log
       - name: Testa il motore di screening senza effettuare giocate REAL
         run: node scripts/test-candidate-review.mjs
       - name: Aggiorna le candidate dalle nuove osservazioni del LAB
@@ -82,3 +85,16 @@ jobs:
           git rebase origin/main
           git push
 
+      - name: Conserva la diagnosi se il workflow fallisce
+        if: ${{ failure() }}
+        env:
+          COLLECT_OUTCOME: ${{ steps.collect.outcome }}
+        run: |
+          node -e "const fs=require('node:fs');const log=fs.existsSync('/tmp/scanner-collector.log')?fs.readFileSync('/tmp/scanner-collector.log','utf8'):'';fs.writeFileSync('data/scanner_run_health.json',JSON.stringify({status:'WORKFLOW_FAILED',failed_at:new Date().toISOString(),collect_outcome:process.env.COLLECT_OUTCOME,workflow:process.env.GITHUB_WORKFLOW,run_id:process.env.GITHUB_RUN_ID,source:'TipsAudit',error:log.trim().slice(-1000)},null,2)+'\\n')"
+          git add data/scanner_run_health.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Diagnostica Scanner: workflow non completato"
+          git fetch origin main
+          git rebase origin/main
+          git push
