@@ -1912,6 +1912,31 @@
           "reference_link": "https://tipsaudit.com/match/15710/san-lorenzo-vs-platense-2026-11-06"
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-06T16:50:37.679Z",
+      "scope_day": "2026-11-06",
+      "status": "PRELIMINARY_CANDIDATES",
+      "source_commit": null,
+      "observations": [
+        {
+          "id": "tipsaudit-15710:TIPSAUDIT_VALUE_1X2",
+          "match": "San Lorenzo - Platense",
+          "league": "Argentina Liga Profesional",
+          "kickoff": "2026-11-06T22:15:00+00:00",
+          "market": "1X2",
+          "selection": "Draw",
+          "category": "VALUE",
+          "place": "PRINCIPALE",
+          "rank": 1,
+          "reference_odds": 2.88,
+          "reference_bookmaker": "Unibet (SE)",
+          "external_fair_odds": 2.78,
+          "relative_screening_score": 53,
+          "captured_at": "2026-11-06T12:56:18.261Z",
+          "reference_link": "https://tipsaudit.com/match/15710/san-lorenzo-vs-platense-2026-11-06"
+        }
+      ]
     }
   ],
   "records": [
@@ -2513,12 +2538,12 @@
       "selection": "Draw",
       "category": "VALUE",
       "first_seen": "2026-11-06T12:56:19.016Z",
-      "last_seen": "2026-11-06T14:19:22.755Z",
+      "last_seen": "2026-11-06T16:50:37.679Z",
       "first_place": "PRINCIPALE",
       "ever_primary": true,
       "first_odds": 2.88,
       "first_bookmaker": "Unibet (SE)",
-      "appearances": 2,
+      "appearances": 3,
       "result_status": "pending",
       "result_source": "TipsAudit LAB, non verifica indipendente",
       "result_recorded_at": null,
@@ -2537,7 +2562,7 @@
     "settled": 27,
     "virtual_roi": 5.3
   },
-  "last_snapshot_at": "2026-11-06T14:19:22.755Z",
+  "last_snapshot_at": "2026-11-06T16:50:37.679Z",
   "last_result_check_at": "2026-11-06T02:28:04.905Z",
   "result_note": "Esiti forniti dalla stessa fonte del LAB, non controllati indipendentemente. Quote di riferimento, non Bet365. Nessun dato REAL del telefono."
 }
