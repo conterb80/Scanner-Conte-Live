@@ -1862,6 +1862,31 @@
       "status": "SOURCE_STALE",
       "source_commit": null,
       "observations": []
+    },
+    {
+      "generated_at": "2026-11-06T12:56:19.016Z",
+      "scope_day": "2026-11-06",
+      "status": "PRELIMINARY_CANDIDATES",
+      "source_commit": null,
+      "observations": [
+        {
+          "id": "tipsaudit-15710:TIPSAUDIT_VALUE_1X2",
+          "match": "San Lorenzo - Platense",
+          "league": "Argentina Liga Profesional",
+          "kickoff": "2026-11-06T22:15:00+00:00",
+          "market": "1X2",
+          "selection": "Draw",
+          "category": "VALUE",
+          "place": "PRINCIPALE",
+          "rank": 1,
+          "reference_odds": 2.88,
+          "reference_bookmaker": "Unibet (SE)",
+          "external_fair_odds": 2.78,
+          "relative_screening_score": 55,
+          "captured_at": "2026-11-06T12:56:18.261Z",
+          "reference_link": "https://tipsaudit.com/match/15710/san-lorenzo-vs-platense-2026-11-06"
+        }
+      ]
     }
   ],
   "records": [
@@ -2452,21 +2477,42 @@
       "result_source": "TipsAudit LAB, non verifica indipendente",
       "result_recorded_at": "2026-11-06T02:28:04.904Z",
       "virtual_pnl": -1
+    },
+    {
+      "id": "tipsaudit-15710:TIPSAUDIT_VALUE_1X2",
+      "match": "San Lorenzo - Platense",
+      "league": "Argentina Liga Profesional",
+      "day": "2026-11-06",
+      "kickoff": "2026-11-06T22:15:00+00:00",
+      "market": "1X2",
+      "selection": "Draw",
+      "category": "VALUE",
+      "first_seen": "2026-11-06T12:56:19.016Z",
+      "last_seen": "2026-11-06T12:56:19.016Z",
+      "first_place": "PRINCIPALE",
+      "ever_primary": true,
+      "first_odds": 2.88,
+      "first_bookmaker": "Unibet (SE)",
+      "appearances": 1,
+      "result_status": "pending",
+      "result_source": "TipsAudit LAB, non verifica indipendente",
+      "result_recorded_at": null,
+      "virtual_pnl": null
     }
   ],
   "stats": {
-    "total": 28,
-    "primary": 14,
+    "total": 29,
+    "primary": 15,
     "alternatives_only": 14,
     "won": 15,
     "lost": 12,
-    "pending": 1,
+    "pending": 2,
     "unmatched": 0,
     "virtual_pnl": 1.43,
     "settled": 27,
     "virtual_roi": 5.3
   },
-  "last_snapshot_at": "2026-11-06T00:59:09.693Z",
+  "last_snapshot_at": "2026-11-06T12:56:19.016Z",
   "last_result_check_at": "2026-11-06T02:28:04.905Z",
   "result_note": "Esiti forniti dalla stessa fonte del LAB, non controllati indipendentemente. Quote di riferimento, non Bet365. Nessun dato REAL del telefono."
 }
