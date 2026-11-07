@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-results-public-v1",
-  "checked_at": "2026-11-06T23:43:13.186Z",
+  "checked_at": "2026-11-07T13:58:20.554Z",
   "source": "ESPN public scoreboard + verified official match reports",
   "coverage": {
     "leagues": [
@@ -16,9 +16,9 @@
       "por.1"
     ],
     "days": [
-      "20261104",
       "20261105",
-      "20261106"
+      "20261106",
+      "20261107"
     ],
     "queries": 30,
     "succeeded": 30,
@@ -1637,6 +1637,20 @@
       "away_goals": 0,
       "source": "ESPN public scoreboard",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/401885399/arouca-fc-famalicao",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-esp.2-401883142",
+      "kickoff": "2026-11-07T20:00:00.000Z",
+      "status": "PST",
+      "league": "LaLiga Hypermotion",
+      "league_code": "esp.2",
+      "home": "Granada",
+      "away": "Tenerife",
+      "home_goals": null,
+      "away_goals": null,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401883142/tenerife-granada",
       "verification": "espn_scoreboard"
     }
   ]
