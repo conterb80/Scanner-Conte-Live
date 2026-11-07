@@ -1,13 +1,13 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-06T20:54:37.492Z",
-  "status": "PRELIMINARY_CANDIDATES",
+  "generated_at": "2026-11-07T00:09:20.138Z",
+  "status": "SOURCE_STALE",
   "source_last_check": "2026-11-06T12:56:18.261Z",
   "source_max_age_hours": 36,
   "scope": "Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.",
-  "scope_day": "2026-11-06",
-  "allow_manual_real_registration_today": false,
+  "scope_day": "2026-11-07",
+  "allow_manual_real_registration_today": true,
   "market_coverage": [
     "1X2"
   ],
@@ -19,49 +19,12 @@
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
     "paper_records": 133,
-    "eligible_observations": 1,
+    "eligible_observations": 0,
     "eligible_core": 0,
-    "eligible_value": 1,
+    "eligible_value": 0,
     "settled_paper_samples": 129,
     "settled_paper_roi_pct": 11.3
   },
-  "shortlist": [
-    {
-      "id": "tipsaudit-15710:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "San Lorenzo - Platense",
-      "league": "Argentina Liga Profesional",
-      "kickoff": "2026-11-06T22:15:00+00:00",
-      "market": "1X2",
-      "selection": "Draw",
-      "category": "VALUE",
-      "reference_odds": 2.88,
-      "reference_bookmaker": "Unibet (SE)",
-      "external_fair_odds": 2.78,
-      "external_benchmark_probability_pct": 36,
-      "external_reference_gap_pct": 3.6,
-      "relative_screening_score": 51,
-      "captured_at": "2026-11-06T12:56:18.261Z",
-      "reference_link": "https://tipsaudit.com/match/15710/san-lorenzo-vs-platense-2026-11-06",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 2.88 contro quota equa 2.78 stimata dalla fonte esterna (+ 3.6% di scostamento).",
-        "Dato osservato da Unibet (SE) e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 51 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 72,
-        "observed_roi_pct": 27.2,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    }
-  ],
+  "shortlist": [],
   "alternatives": []
 }

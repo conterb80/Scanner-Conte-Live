@@ -1962,6 +1962,13 @@
           "reference_link": "https://tipsaudit.com/match/15710/san-lorenzo-vs-platense-2026-11-06"
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-07T00:09:20.138Z",
+      "scope_day": "2026-11-07",
+      "status": "SOURCE_STALE",
+      "source_commit": null,
+      "observations": []
     }
   ],
   "records": [
@@ -2587,7 +2594,7 @@
     "settled": 27,
     "virtual_roi": 5.3
   },
-  "last_snapshot_at": "2026-11-06T20:54:37.492Z",
+  "last_snapshot_at": "2026-11-07T00:09:20.138Z",
   "last_result_check_at": "2026-11-06T02:28:04.905Z",
   "result_note": "Esiti forniti dalla stessa fonte del LAB, non controllati indipendentemente. Quote di riferimento, non Bet365. Nessun dato REAL del telefono."
 }
