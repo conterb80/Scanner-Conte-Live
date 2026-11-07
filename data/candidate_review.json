@@ -1,12 +1,12 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-07T21:52:34.100Z",
-  "status": "NO_ELIGIBLE_OBSERVATIONS",
+  "generated_at": "2026-11-07T23:41:42.011Z",
+  "status": "SOURCE_STALE",
   "source_last_check": "2026-11-07T15:55:15.173Z",
   "source_max_age_hours": 36,
   "scope": "Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.",
-  "scope_day": "2026-11-07",
+  "scope_day": "2026-11-08",
   "allow_manual_real_registration_today": true,
   "market_coverage": [
     "1X2"

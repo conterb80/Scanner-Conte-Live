@@ -2642,6 +2642,13 @@
       "status": "NO_ELIGIBLE_OBSERVATIONS",
       "source_commit": null,
       "observations": []
+    },
+    {
+      "generated_at": "2026-11-07T23:41:42.011Z",
+      "scope_day": "2026-11-08",
+      "status": "SOURCE_STALE",
+      "source_commit": null,
+      "observations": []
     }
   ],
   "records": [
@@ -3561,7 +3568,7 @@
     "settled": 28,
     "virtual_roi": 1.54
   },
-  "last_snapshot_at": "2026-11-07T21:52:34.100Z",
+  "last_snapshot_at": "2026-11-07T23:41:42.011Z",
   "last_result_check_at": "2026-11-07T01:56:33.333Z",
   "result_note": "Esiti forniti dalla stessa fonte del LAB, non controllati indipendentemente. Quote di riferimento, non Bet365. Nessun dato REAL del telefono."
 }
