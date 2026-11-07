@@ -2576,10 +2576,10 @@
       "first_odds": 2.88,
       "first_bookmaker": "Unibet (SE)",
       "appearances": 4,
-      "result_status": "pending",
+      "result_status": "lost",
       "result_source": "TipsAudit LAB, non verifica indipendente",
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-07T01:56:33.333Z",
+      "virtual_pnl": -1
     }
   ],
   "stats": {
@@ -2587,14 +2587,14 @@
     "primary": 15,
     "alternatives_only": 14,
     "won": 15,
-    "lost": 12,
-    "pending": 2,
+    "lost": 13,
+    "pending": 1,
     "unmatched": 0,
-    "virtual_pnl": 1.43,
-    "settled": 27,
-    "virtual_roi": 5.3
+    "virtual_pnl": 0.43,
+    "settled": 28,
+    "virtual_roi": 1.54
   },
   "last_snapshot_at": "2026-11-07T00:09:20.138Z",
-  "last_result_check_at": "2026-11-06T02:28:04.905Z",
+  "last_result_check_at": "2026-11-07T01:56:33.333Z",
   "result_note": "Esiti forniti dalla stessa fonte del LAB, non controllati indipendentemente. Quote di riferimento, non Bet365. Nessun dato REAL del telefono."
 }

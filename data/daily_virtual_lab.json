@@ -4112,10 +4112,14 @@
       "reference": "https://tipsaudit.com/match/14595/boulogne-vs-annecy-2026-11-06",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-07T01:56:33.333Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-07T01:55:12+00:00"
     },
     {
       "id": "tipsaudit-14600:TIPSAUDIT_VALUE_1X2",
@@ -4139,10 +4143,14 @@
       "reference": "https://tipsaudit.com/match/14600/hamburger-sv-vs-borussia-monchengladbach-2026-11-06",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.45,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-07T01:56:33.333Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-07T01:55:12+00:00"
     },
     {
       "id": "tipsaudit-15710:TIPSAUDIT_VALUE_1X2",
@@ -4166,10 +4174,14 @@
       "reference": "https://tipsaudit.com/match/15710/san-lorenzo-vs-platense-2026-11-06",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-07T01:56:33.333Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-07T01:55:12+00:00"
     }
   ],
   "checks": [
@@ -4660,10 +4672,10 @@
   "last_check": "2026-11-06T12:56:18.261Z",
   "stats": {
     "total": 133,
-    "pending": 4,
-    "won": 69,
-    "lost": 60,
-    "pnl": 14.52
+    "pending": 1,
+    "won": 70,
+    "lost": 62,
+    "pnl": 13.97
   },
-  "last_settlement_check": "2026-11-06T02:28:04.905Z"
+  "last_settlement_check": "2026-11-07T01:56:33.333Z"
 }
