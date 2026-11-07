@@ -2621,6 +2621,13 @@
           "reference_link": "https://tipsaudit.com/match/15116/philadelphia-union-vs-toronto-fc-2026-11-07"
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-07T20:19:03.003Z",
+      "scope_day": "2026-11-07",
+      "status": "NO_ELIGIBLE_OBSERVATIONS",
+      "source_commit": null,
+      "observations": []
     }
   ],
   "records": [
@@ -3540,7 +3547,7 @@
     "settled": 28,
     "virtual_roi": 1.54
   },
-  "last_snapshot_at": "2026-11-07T18:03:34.401Z",
+  "last_snapshot_at": "2026-11-07T20:19:03.003Z",
   "last_result_check_at": "2026-11-07T01:56:33.333Z",
   "result_note": "Esiti forniti dalla stessa fonte del LAB, non controllati indipendentemente. Quote di riferimento, non Bet365. Nessun dato REAL del telefono."
 }
