@@ -21,6 +21,9 @@ on:
     # Standard UTC trigger. Europe/Rome windows and daily limits are enforced by the collector.
     # Hourly retries recover a missed trigger; outside local 08-20 no provider call is made.
     - cron: "17 6-19 * * *"
+    # Recupero aggiuntivo: GitHub puo ritardare o saltare un trigger pianificato.
+    # Il collector registra al massimo due controlli riusciti al giorno.
+    - cron: "43 6-19 * * *"
 
 permissions:
   contents: write
