@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-07T15:55:16.224Z",
+  "generated_at": "2026-11-07T18:03:34.401Z",
   "status": "PRELIMINARY_CANDIDATES",
   "source_last_check": "2026-11-07T15:55:15.173Z",
   "source_max_age_hours": 36,
@@ -19,9 +19,9 @@
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
     "paper_records": 153,
-    "eligible_observations": 8,
-    "eligible_core": 4,
-    "eligible_value": 4,
+    "eligible_observations": 4,
+    "eligible_core": 3,
+    "eligible_value": 1,
     "settled_paper_samples": 132,
     "settled_paper_roi_pct": 10.6
   },
@@ -40,7 +40,7 @@
       "external_fair_odds": 1.39,
       "external_benchmark_probability_pct": 71.9,
       "external_reference_gap_pct": 4.32,
-      "relative_screening_score": 69,
+      "relative_screening_score": 68,
       "captured_at": "2026-11-07T15:55:15.173Z",
       "reference_link": "https://tipsaudit.com/match/15122/inter-miami-vs-charlotte-2026-11-07",
       "source": "TipsAudit public pre-match paper signals",
@@ -52,7 +52,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 69 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 68 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -76,7 +76,7 @@
       "external_fair_odds": 1.9,
       "external_benchmark_probability_pct": 52.6,
       "external_reference_gap_pct": 3.16,
-      "relative_screening_score": 61,
+      "relative_screening_score": 59,
       "captured_at": "2026-11-07T15:55:15.173Z",
       "reference_link": "https://tipsaudit.com/match/15117/new-york-red-bulls-vs-atlanta-united-fc-2026-11-07",
       "source": "TipsAudit public pre-match paper signals",
@@ -88,7 +88,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 61 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 59 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -100,114 +100,6 @@
     }
   ],
   "alternatives": [
-    {
-      "id": "tipsaudit-15086:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "Osasuna - Athletic Club",
-      "league": "La Liga",
-      "kickoff": "2026-11-07T17:30:00+00:00",
-      "market": "1X2",
-      "selection": "Away",
-      "category": "VALUE",
-      "reference_odds": 2.18,
-      "reference_bookmaker": "1xBet",
-      "external_fair_odds": 2.11,
-      "external_benchmark_probability_pct": 47.4,
-      "external_reference_gap_pct": 3.32,
-      "relative_screening_score": 60,
-      "captured_at": "2026-11-07T15:55:15.173Z",
-      "reference_link": "https://tipsaudit.com/match/15086/osasuna-vs-athletic-club-2026-11-07",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 2.18 contro quota equa 2.11 stimata dalla fonte esterna (+ 3.3% di scostamento).",
-        "Dato osservato da 1xBet e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 60 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 75,
-        "observed_roi_pct": 25.3,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    },
-    {
-      "id": "tipsaudit-15706:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "Gimnasia M. - Independ. Rivadavia",
-      "league": "Argentina Liga Profesional",
-      "kickoff": "2026-11-07T18:00:00+00:00",
-      "market": "1X2",
-      "selection": "Draw",
-      "category": "VALUE",
-      "reference_odds": 3,
-      "reference_bookmaker": "Unibet (SE)",
-      "external_fair_odds": 2.9,
-      "external_benchmark_probability_pct": 34.5,
-      "external_reference_gap_pct": 3.45,
-      "relative_screening_score": 53,
-      "captured_at": "2026-11-07T15:55:15.173Z",
-      "reference_link": "https://tipsaudit.com/match/15706/gimnasia-m-vs-independ-rivadavia-2026-11-07",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 3 contro quota equa 2.9 stimata dalla fonte esterna (+ 3.4% di scostamento).",
-        "Dato osservato da Unibet (SE) e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 53 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 75,
-        "observed_roi_pct": 25.3,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    },
-    {
-      "id": "tipsaudit-15098:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "Avai - São Bernardo",
-      "league": "Brazil Serie B",
-      "kickoff": "2026-11-07T19:00:00+00:00",
-      "market": "1X2",
-      "selection": "Home",
-      "category": "VALUE",
-      "reference_odds": 3.2,
-      "reference_bookmaker": "Unibet (NL)",
-      "external_fair_odds": 3.09,
-      "external_benchmark_probability_pct": 32.4,
-      "external_reference_gap_pct": 3.56,
-      "relative_screening_score": 52,
-      "captured_at": "2026-11-07T15:55:15.173Z",
-      "reference_link": "https://tipsaudit.com/match/15098/avai-vs-sao-bernardo-2026-11-07",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 3.2 contro quota equa 3.09 stimata dalla fonte esterna (+ 3.6% di scostamento).",
-        "Dato osservato da Unibet (NL) e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 52 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 75,
-        "observed_roi_pct": 25.3,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    },
     {
       "id": "tipsaudit-15101:TIPSAUDIT_VALUE_1X2",
       "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
@@ -222,7 +114,7 @@
       "external_fair_odds": 1.79,
       "external_benchmark_probability_pct": 55.9,
       "external_reference_gap_pct": 3.35,
-      "relative_screening_score": 50,
+      "relative_screening_score": 49,
       "captured_at": "2026-11-07T15:55:15.173Z",
       "reference_link": "https://tipsaudit.com/match/15101/widzew-lodz-vs-pogon-szczecin-2026-11-07",
       "source": "TipsAudit public pre-match paper signals",
@@ -234,7 +126,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 50 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 49 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -258,7 +150,7 @@
       "external_fair_odds": 1.45,
       "external_benchmark_probability_pct": 69,
       "external_reference_gap_pct": 2.07,
-      "relative_screening_score": 50,
+      "relative_screening_score": 48,
       "captured_at": "2026-11-07T15:55:15.173Z",
       "reference_link": "https://tipsaudit.com/match/15116/philadelphia-union-vs-toronto-fc-2026-11-07",
       "source": "TipsAudit public pre-match paper signals",
@@ -270,43 +162,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 50 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 47,
-        "observed_roi_pct": -15.1,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    },
-    {
-      "id": "tipsaudit-15085:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "Nottingham Forest - Manchester City",
-      "league": "Premier League",
-      "kickoff": "2026-11-07T17:30:00+00:00",
-      "market": "1X2",
-      "selection": "Away",
-      "category": "CORE",
-      "reference_odds": 1.78,
-      "reference_bookmaker": "1xBet",
-      "external_fair_odds": 1.74,
-      "external_benchmark_probability_pct": 57.5,
-      "external_reference_gap_pct": 2.3,
-      "relative_screening_score": 43,
-      "captured_at": "2026-11-07T15:55:15.173Z",
-      "reference_link": "https://tipsaudit.com/match/15085/nottingham-forest-vs-manchester-city-2026-11-07",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 1.78 contro quota equa 1.74 stimata dalla fonte esterna (+ 2.3% di scostamento).",
-        "Dato osservato da 1xBet e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 43 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 48 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
