@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-results-public-v1",
-  "checked_at": "2026-11-08T02:26:27.316Z",
+  "checked_at": "2026-11-08T13:51:44.527Z",
   "source": "ESPN public scoreboard + verified official match reports",
   "coverage": {
     "leagues": [
@@ -2298,6 +2298,34 @@
       "verification": "espn_scoreboard"
     },
     {
+      "id": "espn-ned.1-401875551",
+      "kickoff": "2026-11-08T11:15:00.000Z",
+      "status": "FT",
+      "league": "Eredivisie",
+      "league_code": "ned.1",
+      "home": "Heerenveen",
+      "away": "Feyenoord Rotterdam",
+      "home_goals": 5,
+      "away_goals": 3,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401875551/feyenoord-rotterdam-heerenveen",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-ita.1-401874810",
+      "kickoff": "2026-11-08T11:30:00.000Z",
+      "status": "FT",
+      "league": "Serie A",
+      "league_code": "ita.1",
+      "home": "Napoli",
+      "away": "Lazio",
+      "home_goals": 1,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401874810/lazio-napoli",
+      "verification": "espn_scoreboard"
+    },
+    {
       "id": "espn-esp.2-401883122",
       "kickoff": "2026-11-08T13:00:00.000Z",
       "status": "PST",
@@ -2309,6 +2337,20 @@
       "away_goals": null,
       "source": "ESPN public scoreboard",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/401883122/mallorca-fc-andorra",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-por.1-401885400",
+      "kickoff": "2026-11-08T15:30:00.000Z",
+      "status": "PST",
+      "league": "Primeira Liga",
+      "league_code": "por.1",
+      "home": "Estoril",
+      "away": "Maritimo",
+      "home_goals": null,
+      "away_goals": null,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401885400/maritimo-estoril",
       "verification": "espn_scoreboard"
     }
   ]
