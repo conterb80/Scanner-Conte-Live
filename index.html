@@ -14,7 +14,7 @@
 <body>
  <header class="topbar">
   <div class="brand"><div class="brandmark">SC</div><div><strong>SCANNER CONTE</strong><span>LIVE <i class="onlinepoint"></i> ARCHIVIO LOCALE</span></div></div>
-  <div class="top-actions"><span class="version">V0.10.2 · STORICO SCANNER</span><button type="button" id="export-top" class="round" aria-label="Esporta backup" title="Esporta backup">↧</button></div>
+  <div class="top-actions"><span class="version">V0.11.0 · STORICO SCANNER</span><button type="button" id="export-top" class="round" aria-label="Esporta backup" title="Esporta backup">↧</button></div>
  </header>
  <main id="app">
   <section id="view-home" class="view active ui-home">
@@ -192,7 +192,15 @@
   </section>
 
   <section id="view-scanner" class="view ui-scanner">
-   <header class="ui-scanner-intro"><span class="ui-eyebrow">SCANSIONE / QUOTE</span><h1>Scanner</h1><p>Candidate e alternative in un unico posto. Le quote Bet365 le inserisci tu.</p></header>
+   <header class="ui-scanner-intro"><span class="ui-eyebrow">SCANSIONE / QUOTE</span><h1>Scanner</h1><p>Osservatorio REAL quotidiano e analisi sperimentali separate. Quote Bet365 da verificare prima di ogni giocata.</p></header>
+   <section class="ui-real-observatory" aria-label="REAL osservate e non giocate">
+    <div class="sectionbar ui-sectionbar"><h2>REAL · osservatorio quotidiano</h2><button type="button" class="button secondary thin" id="real-watch-refresh">Aggiorna</button></div>
+    <div id="real-watch-status" class="data-source-strip" role="status" aria-live="polite">Carico la scansione REAL…</div>
+    <div id="real-watch-today" class="candidate-review-panel">Caricamento candidate REAL osservate…</div>
+    <details class="ui-drawer ui-scanner-drawer candidate-hist-box"><summary>Storico REAL osservate · anche non piazzate</summary>
+     <div class="ui-drawer-content"><div id="real-watch-history">Caricamento risultati simulati…</div></div>
+    </details>
+   </section>
    <div class="sectionbar ui-sectionbar"><h2>Candidate di oggi</h2><button id="candidate-review-refresh" class="button secondary thin" type="button">Aggiorna</button></div>
    <div id="candidate-review-status" class="data-source-strip" role="status" aria-live="polite">Preparazione rapporto automatico…</div>
    <div id="candidate-review-panel" class="candidate-review-panel">Caricamento shortlist del motore…</div>
@@ -300,7 +308,7 @@
      <p class="muted tiny">Priorità del progetto: dati verificabili, raccolta automatica gratuita quando possibile, test indipendenti e registrazione REAL sempre manuale.</p>
     </div>
    </details>
-   <div class="ui-settings-version">Scanner Conte LIVE · <strong>V0.10.2</strong> · Archivio candidate</div>
+   <div class="ui-settings-version">Scanner Conte LIVE · <strong>V0.11.0</strong> · Archivio candidate</div>
   </section>
   <section id="view-ai" class="view">
    <header class="ui-subpage-head"><span class="ui-eyebrow">IA / FONTI</span><h1>Verifiche IA</h1><p>Rapporti del motore sul telefono, separati da registri e giocate.</p></header>
@@ -319,7 +327,8 @@
  </nav>
  <dialog id="record-dialog"><form id="record-form" class="modal" method="dialog"><div class="modalhead"><h2>Nuova registrazione</h2><button id="close-dialog" type="button" class="close" aria-label="Chiudi">✕</button></div><p class="muted small">Registra soltanto una giocata già effettivamente piazzata. Se arrivi dalle candidate dello Scanner, partita, pronostico e quota sono precompilati: controllali, inserisci l’importo effettivo e conferma. Il LAB rimane separato.</p><div class="formgrid"><label>Data<input type="date" name="date" required value="2026-10-25"></label><label>Archivio<select name="book"><option value="lab">LAB virtuale</option><option value="main">Principale virtuale</option><option value="real">REAL (solo già piazzata)</option></select></label><label>Categoria<select name="category"><option>TEST</option><option>CORE</option><option>VALUE</option><option>EXTRA</option></select></label><label>Partita<input name="match" required placeholder="Es. Squadra A – Squadra B"></label><label>Mercato<input name="selection" required placeholder="Es. Over 2,5"></label><label>Quota decimale<input name="odds" required inputmode="decimal" type="number" min="1.01" max="1000" step="0.01"></label><label>Importo €<input name="stake" required inputmode="decimal" type="number" min="0.01" max="10000" step="0.01"></label><label>Esito<select name="result"><option value="pending">In attesa</option><option value="won">Vinta</option><option value="lost">Persa</option><option value="push">Rimborsata</option></select></label><label class="full">Nota / motivazione<input name="note" placeholder="Registrare prima del via, se possibile"></label></div><button type="submit" class="button">Salva registrazione</button></form></dialog>
  <div id="toast" role="status" aria-live="polite"></div>
- <script src="data/seed.js"></script><script src="assets/app.js?v=0.9.10"></script><script src="assets/home-overview.js"></script><script src="assets/feed.js"></script><script src="assets/lab-pilot.js"></script><script src="assets/daily-virtual.js"></script><script src="assets/weekly-lab.js"></script><script src="assets/scan-audit.js"></script><script src="assets/archive-public.js"></script><script src="assets/archive-lab-overview.js"></script><script src="assets/install.js"></script><script src="assets/bet365.js"></script><script src="assets/ai-candidate-bridge.js?v=1"></script><script src="assets/candidate-review.js?v=2"></script><script src="assets/candidate-history.js?v=1"></script><script src="assets/quote-notebook.js"></script><script src="assets/analytics.js"></script><script src="assets/provider-status.js"></script><script src="assets/settings-ui.js?v=0.9.9"></script>
+ <script src="data/seed.js"></script><script src="assets/app.js?v=0.9.10"></script><script src="assets/home-overview.js"></script><script src="assets/feed.js"></script><script src="assets/lab-pilot.js"></script><script src="assets/daily-virtual.js"></script><script src="assets/weekly-lab.js"></script><script src="assets/scan-audit.js"></script><script src="assets/archive-public.js"></script><script src="assets/archive-lab-overview.js"></script><script src="assets/install.js"></script><script src="assets/bet365.js"></script><script src="assets/ai-candidate-bridge.js?v=1"></script><script src="assets/candidate-review.js?v=2"></script>
+ <script src="assets/real-watch.js?v=1"></script><script src="assets/candidate-history.js?v=1"></script><script src="assets/quote-notebook.js"></script><script src="assets/analytics.js"></script><script src="assets/provider-status.js"></script><script src="assets/settings-ui.js?v=0.9.9"></script>
  <script src="assets/ai-report-render.js?v=1"></script><script src="assets/ai-app.js?v=2"></script>
 </body>
 </html>
