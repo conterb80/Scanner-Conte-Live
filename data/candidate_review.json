@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-08T13:50:30.619Z",
+  "generated_at": "2026-11-08T16:05:47.824Z",
   "status": "PRELIMINARY_CANDIDATES",
   "source_last_check": "2026-11-08T09:41:56.051Z",
   "source_max_age_hours": 36,
@@ -19,123 +19,13 @@
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
     "paper_records": 165,
-    "eligible_observations": 7,
-    "eligible_core": 5,
-    "eligible_value": 2,
+    "eligible_observations": 4,
+    "eligible_core": 3,
+    "eligible_value": 1,
     "settled_paper_samples": 152,
     "settled_paper_roi_pct": 13.5
   },
   "shortlist": [
-    {
-      "id": "tipsaudit-15637:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "AIK Stockholm - BK Hacken",
-      "league": "Allsvenskan",
-      "kickoff": "2026-11-08T15:30:00+00:00",
-      "market": "1X2",
-      "selection": "Away",
-      "category": "CORE",
-      "reference_odds": 1.66,
-      "reference_bookmaker": "Unibet (SE)",
-      "external_fair_odds": 1.57,
-      "external_benchmark_probability_pct": 63.7,
-      "external_reference_gap_pct": 5.73,
-      "relative_screening_score": 72,
-      "captured_at": "2026-11-08T09:41:56.051Z",
-      "reference_link": "https://tipsaudit.com/match/15637/aik-stockholm-vs-bk-hacken-2026-11-08",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 1.66 contro quota equa 1.57 stimata dalla fonte esterna (+ 5.7% di scostamento).",
-        "Dato osservato da Unibet (SE) e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 72 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 53,
-        "observed_roi_pct": -13.2,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    },
-    {
-      "id": "tipsaudit-15636:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "Kalmar FF - Sirius",
-      "league": "Allsvenskan",
-      "kickoff": "2026-11-08T15:30:00+00:00",
-      "market": "1X2",
-      "selection": "Away",
-      "category": "VALUE",
-      "reference_odds": 2.25,
-      "reference_bookmaker": "Unibet (SE)",
-      "external_fair_odds": 2.13,
-      "external_benchmark_probability_pct": 46.9,
-      "external_reference_gap_pct": 5.63,
-      "relative_screening_score": 76,
-      "captured_at": "2026-11-08T09:41:56.051Z",
-      "reference_link": "https://tipsaudit.com/match/15636/kalmar-ff-vs-sirius-2026-11-08",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 2.25 contro quota equa 2.13 stimata dalla fonte esterna (+ 5.6% di scostamento).",
-        "Dato osservato da Unibet (SE) e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 76 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 87,
-        "observed_roi_pct": 28.6,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    }
-  ],
-  "alternatives": [
-    {
-      "id": "tipsaudit-15687:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "Vicenza Virtus - Cremonese",
-      "league": "Serie B",
-      "kickoff": "2026-11-08T18:30:00+00:00",
-      "market": "1X2",
-      "selection": "Draw",
-      "category": "VALUE",
-      "reference_odds": 3.4,
-      "reference_bookmaker": "Unibet (NL)",
-      "external_fair_odds": 3.21,
-      "external_benchmark_probability_pct": 31.2,
-      "external_reference_gap_pct": 5.92,
-      "relative_screening_score": 67,
-      "captured_at": "2026-11-08T09:41:56.051Z",
-      "reference_link": "https://tipsaudit.com/match/15687/vicenza-virtus-vs-cremonese-2026-11-08",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 3.4 contro quota equa 3.21 stimata dalla fonte esterna (+ 5.9% di scostamento).",
-        "Dato osservato da Unibet (NL) e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 67 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 87,
-        "observed_roi_pct": 28.6,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    },
     {
       "id": "tipsaudit-15686:TIPSAUDIT_VALUE_1X2",
       "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
@@ -150,7 +40,7 @@
       "external_fair_odds": 1.61,
       "external_benchmark_probability_pct": 62.1,
       "external_reference_gap_pct": 3.11,
-      "relative_screening_score": 51,
+      "relative_screening_score": 50,
       "captured_at": "2026-11-08T09:41:56.051Z",
       "reference_link": "https://tipsaudit.com/match/15686/1899-hoffenheim-vs-fc-schalke-04-2026-11-08",
       "source": "TipsAudit public pre-match paper signals",
@@ -162,7 +52,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 51 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 50 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -172,6 +62,44 @@
         "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
       }
     },
+    {
+      "id": "tipsaudit-15687:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Vicenza Virtus - Cremonese",
+      "league": "Serie B",
+      "kickoff": "2026-11-08T18:30:00+00:00",
+      "market": "1X2",
+      "selection": "Draw",
+      "category": "VALUE",
+      "reference_odds": 3.4,
+      "reference_bookmaker": "Unibet (NL)",
+      "external_fair_odds": 3.21,
+      "external_benchmark_probability_pct": 31.2,
+      "external_reference_gap_pct": 5.92,
+      "relative_screening_score": 66,
+      "captured_at": "2026-11-08T09:41:56.051Z",
+      "reference_link": "https://tipsaudit.com/match/15687/vicenza-virtus-vs-cremonese-2026-11-08",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 3.4 contro quota equa 3.21 stimata dalla fonte esterna (+ 5.9% di scostamento).",
+        "Dato osservato da Unibet (NL) e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 66 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 87,
+        "observed_roi_pct": 28.6,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    }
+  ],
+  "alternatives": [
     {
       "id": "tipsaudit-15679:TIPSAUDIT_VALUE_1X2",
       "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
@@ -186,7 +114,7 @@
       "external_fair_odds": 1.58,
       "external_benchmark_probability_pct": 63.3,
       "external_reference_gap_pct": 2.53,
-      "relative_screening_score": 47,
+      "relative_screening_score": 46,
       "captured_at": "2026-11-08T09:41:56.051Z",
       "reference_link": "https://tipsaudit.com/match/15679/vitoria-sc-vs-fc-porto-2026-11-08",
       "source": "TipsAudit public pre-match paper signals",
@@ -198,7 +126,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 47 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 46 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -222,7 +150,7 @@
       "external_fair_odds": 1.86,
       "external_benchmark_probability_pct": 53.8,
       "external_reference_gap_pct": 2.15,
-      "relative_screening_score": 37,
+      "relative_screening_score": 35,
       "captured_at": "2026-11-08T09:41:56.051Z",
       "reference_link": "https://tipsaudit.com/match/15672/celta-vigo-vs-levante-2026-11-08",
       "source": "TipsAudit public pre-match paper signals",
@@ -230,42 +158,6 @@
       "why": [
         "Quota osservata 1.9 contro quota equa 1.86 stimata dalla fonte esterna (+ 2.2% di scostamento).",
         "Dato osservato da 1xBet e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 37 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 53,
-        "observed_roi_pct": -13.2,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    },
-    {
-      "id": "tipsaudit-15647:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "Lillestrom - Aalesund",
-      "league": "Eliteserien",
-      "kickoff": "2026-11-08T16:00:00+00:00",
-      "market": "1X2",
-      "selection": "Home",
-      "category": "CORE",
-      "reference_odds": 1.81,
-      "reference_bookmaker": "LeoVegas (SE)",
-      "external_fair_odds": 1.78,
-      "external_benchmark_probability_pct": 56.2,
-      "external_reference_gap_pct": 1.69,
-      "relative_screening_score": 35,
-      "captured_at": "2026-11-08T09:41:56.051Z",
-      "reference_link": "https://tipsaudit.com/match/15647/lillestrom-vs-aalesund-2026-11-08",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 1.81 contro quota equa 1.78 stimata dalla fonte esterna (+ 1.7% di scostamento).",
-        "Dato osservato da LeoVegas (SE) e registrato prima della partita.",
         "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
       ],
       "cautions": [
