@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-08T09:41:59.226Z",
+  "generated_at": "2026-11-08T13:27:03.592Z",
   "status": "PRELIMINARY_CANDIDATES",
   "source_last_check": "2026-11-08T09:41:56.051Z",
   "source_max_age_hours": 36,
@@ -40,7 +40,7 @@
       "external_fair_odds": 1.57,
       "external_benchmark_probability_pct": 63.7,
       "external_reference_gap_pct": 5.73,
-      "relative_screening_score": 74,
+      "relative_screening_score": 72,
       "captured_at": "2026-11-08T09:41:56.051Z",
       "reference_link": "https://tipsaudit.com/match/15637/aik-stockholm-vs-bk-hacken-2026-11-08",
       "source": "TipsAudit public pre-match paper signals",
@@ -52,7 +52,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 74 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 72 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -76,7 +76,7 @@
       "external_fair_odds": 2.13,
       "external_benchmark_probability_pct": 46.9,
       "external_reference_gap_pct": 5.63,
-      "relative_screening_score": 78,
+      "relative_screening_score": 76,
       "captured_at": "2026-11-08T09:41:56.051Z",
       "reference_link": "https://tipsaudit.com/match/15636/kalmar-ff-vs-sirius-2026-11-08",
       "source": "TipsAudit public pre-match paper signals",
@@ -88,7 +88,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 78 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 76 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -114,7 +114,7 @@
       "external_fair_odds": 3.21,
       "external_benchmark_probability_pct": 31.2,
       "external_reference_gap_pct": 5.92,
-      "relative_screening_score": 69,
+      "relative_screening_score": 67,
       "captured_at": "2026-11-08T09:41:56.051Z",
       "reference_link": "https://tipsaudit.com/match/15687/vicenza-virtus-vs-cremonese-2026-11-08",
       "source": "TipsAudit public pre-match paper signals",
@@ -126,7 +126,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 69 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 67 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -150,7 +150,7 @@
       "external_fair_odds": 1.61,
       "external_benchmark_probability_pct": 62.1,
       "external_reference_gap_pct": 3.11,
-      "relative_screening_score": 53,
+      "relative_screening_score": 51,
       "captured_at": "2026-11-08T09:41:56.051Z",
       "reference_link": "https://tipsaudit.com/match/15686/1899-hoffenheim-vs-fc-schalke-04-2026-11-08",
       "source": "TipsAudit public pre-match paper signals",
@@ -162,7 +162,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 53 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 51 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -186,7 +186,7 @@
       "external_fair_odds": 1.58,
       "external_benchmark_probability_pct": 63.3,
       "external_reference_gap_pct": 2.53,
-      "relative_screening_score": 50,
+      "relative_screening_score": 47,
       "captured_at": "2026-11-08T09:41:56.051Z",
       "reference_link": "https://tipsaudit.com/match/15679/vitoria-sc-vs-fc-porto-2026-11-08",
       "source": "TipsAudit public pre-match paper signals",
@@ -198,7 +198,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 50 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 47 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -222,7 +222,7 @@
       "external_fair_odds": 1.86,
       "external_benchmark_probability_pct": 53.8,
       "external_reference_gap_pct": 2.15,
-      "relative_screening_score": 39,
+      "relative_screening_score": 37,
       "captured_at": "2026-11-08T09:41:56.051Z",
       "reference_link": "https://tipsaudit.com/match/15672/celta-vigo-vs-levante-2026-11-08",
       "source": "TipsAudit public pre-match paper signals",
@@ -234,7 +234,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 39 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 37 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -258,7 +258,7 @@
       "external_fair_odds": 1.78,
       "external_benchmark_probability_pct": 56.2,
       "external_reference_gap_pct": 1.69,
-      "relative_screening_score": 38,
+      "relative_screening_score": 35,
       "captured_at": "2026-11-08T09:41:56.051Z",
       "reference_link": "https://tipsaudit.com/match/15647/lillestrom-vs-aalesund-2026-11-08",
       "source": "TipsAudit public pre-match paper signals",
@@ -270,7 +270,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 38 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 35 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
