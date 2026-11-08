@@ -3106,6 +3106,31 @@
           "reference_link": "https://tipsaudit.com/match/15672/celta-vigo-vs-levante-2026-11-08"
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-08T18:50:46.219Z",
+      "scope_day": "2026-11-08",
+      "status": "PRELIMINARY_CANDIDATES",
+      "source_commit": null,
+      "observations": [
+        {
+          "id": "tipsaudit-15698:TIPSAUDIT_VALUE_1X2",
+          "match": "Rio Ave - SC Braga",
+          "league": "Primeira Liga",
+          "kickoff": "2026-11-08T20:30:00+00:00",
+          "market": "1X2",
+          "selection": "Away",
+          "category": "CORE",
+          "place": "PRINCIPALE",
+          "rank": 1,
+          "reference_odds": 1.56,
+          "reference_bookmaker": "GTbets",
+          "external_fair_odds": 1.53,
+          "relative_screening_score": 47,
+          "captured_at": "2026-11-08T18:50:45.604Z",
+          "reference_link": "https://tipsaudit.com/match/15698/rio-ave-vs-sc-braga-2026-11-08"
+        }
+      ]
     }
   ],
   "records": [
@@ -4158,21 +4183,42 @@
       "result_source": "TipsAudit LAB, non verifica indipendente",
       "result_recorded_at": null,
       "virtual_pnl": null
+    },
+    {
+      "id": "tipsaudit-15698:TIPSAUDIT_VALUE_1X2",
+      "match": "Rio Ave - SC Braga",
+      "league": "Primeira Liga",
+      "day": "2026-11-08",
+      "kickoff": "2026-11-08T20:30:00+00:00",
+      "market": "1X2",
+      "selection": "Away",
+      "category": "CORE",
+      "first_seen": "2026-11-08T18:50:46.219Z",
+      "last_seen": "2026-11-08T18:50:46.219Z",
+      "first_place": "PRINCIPALE",
+      "ever_primary": true,
+      "first_odds": 1.56,
+      "first_bookmaker": "GTbets",
+      "appearances": 1,
+      "result_status": "pending",
+      "result_source": "TipsAudit LAB, non verifica indipendente",
+      "result_recorded_at": null,
+      "virtual_pnl": null
     }
   ],
   "stats": {
-    "total": 50,
-    "primary": 23,
+    "total": 51,
+    "primary": 24,
     "alternatives_only": 27,
     "won": 25,
     "lost": 17,
-    "pending": 8,
+    "pending": 9,
     "unmatched": 0,
     "virtual_pnl": 7.51,
     "settled": 42,
     "virtual_roi": 17.88
   },
-  "last_snapshot_at": "2026-11-08T16:05:47.824Z",
+  "last_snapshot_at": "2026-11-08T18:50:46.219Z",
   "last_result_check_at": "2026-11-08T01:27:33.027Z",
   "result_note": "Esiti forniti dalla stessa fonte del LAB, non controllati indipendentemente. Quote di riferimento, non Bet365. Nessun dato REAL del telefono."
 }
