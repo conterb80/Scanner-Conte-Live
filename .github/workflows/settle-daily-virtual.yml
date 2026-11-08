@@ -9,6 +9,7 @@ on:
       - 'scripts/build-weekly-lab-summary.mjs'
       - 'scripts/test-weekly-lab-summary.mjs'
       - 'scripts/update-scanner-candidate-history.mjs'
+      - 'scripts/build-real-watch.mjs'
   schedule:
     - cron: "18 9,23 * * *"
       timezone: "Europe/Rome"
@@ -39,13 +40,17 @@ jobs:
           node scripts/build-weekly-lab-summary.mjs
       - name: Aggiorna esiti delle candidate gia proposte
         run: node scripts/update-scanner-candidate-history.mjs
+      - name: Chiudi osservazioni REAL non piazzate quando arriva un esito verificabile
+        run: |
+          node scripts/test-real-watch.mjs
+          node scripts/build-real-watch.mjs
       - name: Pubblica unicamente lo storico virtuale aggiornato
         run: |
           if [ ! -f data/daily_virtual_lab.json ]; then
             echo "Nessun archivio pubblico ancora"
             exit 0
           fi
-          git add data/daily_virtual_lab.json data/weekly_lab_stats.json data/scanner_candidate_history.json
+          git add data/daily_virtual_lab.json data/weekly_lab_stats.json data/scanner_candidate_history.json data/real_watch_today.json data/real_watch_history.json
           if git diff --cached --quiet; then
             echo "Nessun risultato sicuro disponibile"
             exit 0
