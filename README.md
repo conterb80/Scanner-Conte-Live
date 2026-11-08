@@ -80,3 +80,16 @@ Test interfaccia e renderer: `node --test scripts/test-ai-integration.mjs`.
 ## V0.10.2 — Archivio candidate Scanner
 
 La sezione Scanner contiene ora lo Storico candidate, distinto dal LAB generale e dalle REAL private. Legge data/scanner_candidate_history.json aggiornato dai workflow esistenti. Conserva 33 rapporti recuperati da GitHub dal 1 novembre 2026 e prosegue automaticamente. Riporta esiti assegnati dalla fonte TipsAudit e quote di riferimento: non equivale a verifica indipendente, disponibilità Bet365 o puntate reali. Non cambia il motore o i criteri delle selezioni.
+
+
+## V0.11.0 — Osservatorio REAL quotidiano, anche non piazzate (08/11/2026)
+
+- Nuova sezione Scanner → REAL osservatorio: due osservazioni principali e fino a tre riserve, congelate prima del calcio d'inizio. Nessuna scommessa viene piazzata.
+- Nuovo storico separato in `data/real_watch_history.json` e rapporto del giorno `data/real_watch_today.json`: partita, mercato, pronostico, quota di riferimento, fonte e ora della prima pubblicazione sono conservati anche senza puntata.
+- Aggiornamento automatico: `.github/workflows/real-watch.yml` cinque volte al giorno (Europe/Rome). Lo scanner LAB quotidiano avvia anche l'aggiornamento REAL dopo una nuova acquisizione, e il workflow esiti aggiorna il registro.
+- Statistiche virtuali separate: 1 € simulato per candidata PRINCIPALE con esito chiuso, senza modificare in alcun modo il bilancio REAL. Riserve archiviate ma escluse dal ROI principale.
+- La schermata legge localmente se esiste una puntata REAL corrispondente nell'archivio del telefono, senza caricare informazioni personali online.
+- Limiti espliciti: la fonte oggi copre soltanto il mercato 1X2 con quote di altri bookmaker (TipsAudit), NON prezzi Bet365. Il confronto quota/equo della stessa fonte non costituisce una probabilità indipendente o vantaggio dimostrato.
+- Il modello ibrido xG/Poisson NON è attivo finché non si dispone di un feed xG verificato. L'osservatorio è un primo passo e non va indicato come strategia 2.0 validata.
+- Se non ci sono osservazioni nuove non vengono create partite né quote artificiali. I consigli in chat non sono registrati automaticamente.
+- Test regressione: `node scripts/test-real-watch.mjs`.
