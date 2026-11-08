@@ -3277,10 +3277,10 @@
       "first_odds": 2.4,
       "first_bookmaker": "Unibet (SE)",
       "appearances": 2,
-      "result_status": "pending",
+      "result_status": "won",
       "result_source": "TipsAudit LAB, non verifica indipendente",
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-08T01:27:33.027Z",
+      "virtual_pnl": 1.4
     },
     {
       "id": "tipsaudit-15122:TIPSAUDIT_VALUE_1X2",
@@ -3298,10 +3298,10 @@
       "first_odds": 1.45,
       "first_bookmaker": "GTbets",
       "appearances": 5,
-      "result_status": "pending",
+      "result_status": "lost",
       "result_source": "TipsAudit LAB, non verifica indipendente",
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-08T01:27:33.027Z",
+      "virtual_pnl": -1
     },
     {
       "id": "tipsaudit-15706:TIPSAUDIT_VALUE_1X2",
@@ -3319,10 +3319,10 @@
       "first_odds": 3,
       "first_bookmaker": "Unibet (SE)",
       "appearances": 4,
-      "result_status": "pending",
+      "result_status": "won",
       "result_source": "TipsAudit LAB, non verifica indipendente",
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-08T01:27:33.027Z",
+      "virtual_pnl": 2
     },
     {
       "id": "tipsaudit-15063:TIPSAUDIT_VALUE_1X2",
@@ -3340,10 +3340,10 @@
       "first_odds": 2.27,
       "first_bookmaker": "Coolbet",
       "appearances": 2,
-      "result_status": "pending",
+      "result_status": "lost",
       "result_source": "TipsAudit LAB, non verifica indipendente",
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-08T01:27:33.026Z",
+      "virtual_pnl": -1
     },
     {
       "id": "tipsaudit-15117:TIPSAUDIT_VALUE_1X2",
@@ -3361,10 +3361,10 @@
       "first_odds": 1.96,
       "first_bookmaker": "GTbets",
       "appearances": 5,
-      "result_status": "pending",
+      "result_status": "won",
       "result_source": "TipsAudit LAB, non verifica indipendente",
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-08T01:27:33.027Z",
+      "virtual_pnl": 0.96
     },
     {
       "id": "tipsaudit-15086:TIPSAUDIT_VALUE_1X2",
@@ -3382,10 +3382,10 @@
       "first_odds": 2.18,
       "first_bookmaker": "1xBet",
       "appearances": 4,
-      "result_status": "pending",
+      "result_status": "lost",
       "result_source": "TipsAudit LAB, non verifica indipendente",
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-08T01:27:33.027Z",
+      "virtual_pnl": -1
     },
     {
       "id": "tipsaudit-15048:TIPSAUDIT_VALUE_1X2",
@@ -3403,10 +3403,10 @@
       "first_odds": 1.48,
       "first_bookmaker": "GTbets",
       "appearances": 2,
-      "result_status": "pending",
+      "result_status": "won",
       "result_source": "TipsAudit LAB, non verifica indipendente",
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-08T01:27:33.026Z",
+      "virtual_pnl": 0.48
     },
     {
       "id": "tipsaudit-15065:TIPSAUDIT_VALUE_1X2",
@@ -3424,10 +3424,10 @@
       "first_odds": 1.61,
       "first_bookmaker": "Unibet (NL)",
       "appearances": 2,
-      "result_status": "pending",
+      "result_status": "won",
       "result_source": "TipsAudit LAB, non verifica indipendente",
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-08T01:27:33.027Z",
+      "virtual_pnl": 0.61
     },
     {
       "id": "tipsaudit-15041:TIPSAUDIT_VALUE_1X2",
@@ -3445,10 +3445,10 @@
       "first_odds": 2.6,
       "first_bookmaker": "Unibet (NL)",
       "appearances": 2,
-      "result_status": "pending",
+      "result_status": "won",
       "result_source": "TipsAudit LAB, non verifica indipendente",
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-08T01:27:33.026Z",
+      "virtual_pnl": 1.6
     },
     {
       "id": "tipsaudit-15005:TIPSAUDIT_VALUE_1X2",
@@ -3466,10 +3466,10 @@
       "first_odds": 1.5,
       "first_bookmaker": "1xBet",
       "appearances": 2,
-      "result_status": "pending",
+      "result_status": "won",
       "result_source": "TipsAudit LAB, non verifica indipendente",
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-08T01:27:33.026Z",
+      "virtual_pnl": 0.5
     },
     {
       "id": "tipsaudit-15098:TIPSAUDIT_VALUE_1X2",
@@ -3487,10 +3487,10 @@
       "first_odds": 3.2,
       "first_bookmaker": "Unibet (NL)",
       "appearances": 1,
-      "result_status": "pending",
+      "result_status": "won",
       "result_source": "TipsAudit LAB, non verifica indipendente",
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-08T01:27:33.027Z",
+      "virtual_pnl": 2.2
     },
     {
       "id": "tipsaudit-15101:TIPSAUDIT_VALUE_1X2",
@@ -3508,10 +3508,10 @@
       "first_odds": 1.85,
       "first_bookmaker": "Unibet (NL)",
       "appearances": 2,
-      "result_status": "pending",
+      "result_status": "won",
       "result_source": "TipsAudit LAB, non verifica indipendente",
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-08T01:27:33.027Z",
+      "virtual_pnl": 0.85
     },
     {
       "id": "tipsaudit-15116:TIPSAUDIT_VALUE_1X2",
@@ -3529,10 +3529,10 @@
       "first_odds": 1.48,
       "first_bookmaker": "1xBet",
       "appearances": 2,
-      "result_status": "pending",
+      "result_status": "won",
       "result_source": "TipsAudit LAB, non verifica indipendente",
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-08T01:27:33.027Z",
+      "virtual_pnl": 0.48
     },
     {
       "id": "tipsaudit-15085:TIPSAUDIT_VALUE_1X2",
@@ -3550,25 +3550,25 @@
       "first_odds": 1.78,
       "first_bookmaker": "1xBet",
       "appearances": 1,
-      "result_status": "pending",
+      "result_status": "lost",
       "result_source": "TipsAudit LAB, non verifica indipendente",
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-08T01:27:33.027Z",
+      "virtual_pnl": -1
     }
   ],
   "stats": {
     "total": 43,
     "primary": 19,
     "alternatives_only": 24,
-    "won": 15,
-    "lost": 13,
-    "pending": 15,
+    "won": 25,
+    "lost": 17,
+    "pending": 1,
     "unmatched": 0,
-    "virtual_pnl": 0.43,
-    "settled": 28,
-    "virtual_roi": 1.54
+    "virtual_pnl": 7.51,
+    "settled": 42,
+    "virtual_roi": 17.88
   },
   "last_snapshot_at": "2026-11-07T23:41:42.011Z",
-  "last_result_check_at": "2026-11-07T01:56:33.333Z",
+  "last_result_check_at": "2026-11-08T01:27:33.027Z",
   "result_note": "Esiti forniti dalla stessa fonte del LAB, non controllati indipendentemente. Quote di riferimento, non Bet365. Nessun dato REAL del telefono."
 }
