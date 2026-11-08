@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-08T18:50:46.219Z",
+  "generated_at": "2026-11-08T19:07:21.937Z",
   "status": "PRELIMINARY_CANDIDATES",
   "source_last_check": "2026-11-08T18:50:45.604Z",
   "source_max_age_hours": 36,
@@ -40,7 +40,7 @@
       "external_fair_odds": 1.53,
       "external_benchmark_probability_pct": 65.4,
       "external_reference_gap_pct": 1.96,
-      "relative_screening_score": 47,
+      "relative_screening_score": 46,
       "captured_at": "2026-11-08T18:50:45.604Z",
       "reference_link": "https://tipsaudit.com/match/15698/rio-ave-vs-sc-braga-2026-11-08",
       "source": "TipsAudit public pre-match paper signals",
@@ -52,7 +52,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 47 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 46 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
