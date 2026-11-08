@@ -1,0 +1,49 @@
+name: Scanner Conte - Osservatorio REAL quotidiano
+# Nessuna scommessa REAL automatica: registra selezioni virtuali anche non piazzate.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build-real-watch.mjs'
+      - 'scripts/test-real-watch.mjs'
+      - '.github/workflows/real-watch.yml'
+  schedule:
+    - cron: "05 9,11,13,16,19 * * *"
+      timezone: "Europe/Rome"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scanner-conte-feed
+  cancel-in-progress: false
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verifica che REAL e LAB rimangano separati
+        run: node scripts/test-real-watch.mjs
+      - name: Analizza e conserva selezioni anche non giocate
+        run: node scripts/build-real-watch.mjs
+      - name: Aggiorna solo osservatorio pubblico
+        run: |
+          git add data/real_watch_today.json data/real_watch_history.json
+          if git diff --cached --quiet; then
+            echo "Nessuna variazione osservatorio"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Aggiorna statistiche candidate REAL osservate"
+          git fetch origin main
+          git rebase origin/main
+          git push
