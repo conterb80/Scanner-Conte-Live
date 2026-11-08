@@ -27,7 +27,7 @@ lab.records[1].status='lost';lab.records[1].settled_at='2026-11-08T17:10:00.000Z
 assert.equal(watch.stats.settled,2);
 assert.equal(watch.stats.won,1);
 assert.equal(watch.stats.lost,1);
-assert.equal(watch.stats.theoretical_pnl,.8-1);
+assert.equal(watch.stats.theoretical_pnl,-.2);
 assert.equal(watch.stats.theoretical_stake,2);
 assert.equal(history.records.length,4);
 const invalid=structuredClone(base);
