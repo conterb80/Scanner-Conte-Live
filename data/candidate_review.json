@@ -1,9 +1,9 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-08T23:07:38.361Z",
-  "status": "SOURCE_STALE",
-  "source_last_check": "2026-11-08T18:50:45.604Z",
+  "generated_at": "2026-11-09T16:23:28.684Z",
+  "status": "NO_ELIGIBLE_OBSERVATIONS",
+  "source_last_check": "2026-11-09T16:23:27.942Z",
   "source_max_age_hours": 36,
   "scope": "Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.",
   "scope_day": "2026-11-09",
@@ -22,8 +22,8 @@
     "eligible_observations": 0,
     "eligible_core": 0,
     "eligible_value": 0,
-    "settled_paper_samples": 152,
-    "settled_paper_roi_pct": 13.5
+    "settled_paper_samples": 165,
+    "settled_paper_roi_pct": 11.3
   },
   "shortlist": [],
   "alternatives": []

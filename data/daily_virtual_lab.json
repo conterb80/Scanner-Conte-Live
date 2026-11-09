@@ -6118,9 +6118,30 @@
       "created": 1,
       "source": "TipsAudit",
       "test_only": true
+    },
+    {
+      "day": "2026-11-09",
+      "checked_at": "2026-11-09T16:23:27.942Z",
+      "source_generated_at": "2026-11-09T16:23:28+00:00",
+      "scanned_predictions": 6,
+      "source_total_predictions": 72,
+      "scope_day": "2026-11-09",
+      "scope_timezone": "Europe/Rome",
+      "scanned_unique_matches": 6,
+      "scanned_league_counts": {
+        "Ecuador LigaPro": 2,
+        "Segunda Division": 2,
+        "Eliteserien": 1,
+        "Romania Liga I": 1
+      },
+      "scanned_league_total": 4,
+      "eligible_actionable": 0,
+      "created": 0,
+      "source": "TipsAudit",
+      "test_only": true
     }
   ],
-  "last_check": "2026-11-08T18:50:45.604Z",
+  "last_check": "2026-11-09T16:23:27.942Z",
   "stats": {
     "total": 166,
     "pending": 1,
