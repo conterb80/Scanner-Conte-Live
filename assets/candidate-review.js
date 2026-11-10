@@ -92,7 +92,8 @@ function show(){
  const alternatives=validFeed?(feed.alternatives||[]).filter(r=>minutesUntil(r.kickoff)>15):[];
  const normalStatus=feed.status==='SOURCE_STALE'?'I dati della fonte sono troppo vecchi: nessuna candidata attiva.':
   stale?'Rapporto scaduto: attendo una nuova scansione.':
-  feed.status==='NO_ELIGIBLE_OBSERVATIONS'?'Screening completato il '+date(feed.generated_at)+'.':
+  feed.status==='NO_ELIGIBLE_OBSERVATIONS'?(feed.scan_stats?.scanned_today===0?'Fonte esterna controllata: 0 partite fornite oggi. Non significa che il palinsesto sia vuoto.':
+   'Screening completato il '+date(feed.generated_at)+' · '+(feed.scan_stats?.scanned_today??'—')+' eventi letti, nessuna candidata idonea.'):
   !validFeed?'Rapporto non utilizzabile: dati da verificare.':
   'Rapporto sperimentale del '+date(feed.generated_at)+' · '+feed.scan_stats.eligible_observations+' osservazioni idonee.';
  status.innerHTML='<strong>'+esc(normalStatus)+'</strong>'+
