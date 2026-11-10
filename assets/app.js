@@ -21,8 +21,8 @@ const round=n=>Math.round((n+Number.EPSILON)*100)/100;
 function renderHome(){const sc=root('summary-cards');sc.innerHTML=['real','main','lab'].map(k=>{let s=db.snapshots[k],x=freshStats(k),current=round(s.pnl+x.pnl),str=k==='real'?'REAL · BET365':k==='main'?'VIRTUALE PRINCIPALE':'LAB · ESPERIMENTI';return `<div class="stat-card"><div class="stat-top">${str}</div><div class="stat-value ${current>=0?'positive':'negative'}">${current>0?'+':''}${money(current)}</div><div class="stat-bottom">${s.total+x.n} giocate · ${x.n?'incluse '+x.n+' nuove':'bilancio consolidato'}</div></div>`}).join('');
 root('coverage').innerHTML=['real','main','lab'].map(k=>{let s=db.snapshots[k],n=db.records.filter(r=>r.book===k&&!r.manual).length,p=s.total?100*Math.min(1,n/s.total):0;return `<div class="coverage-row"><div class="covline"><strong>${escape(s.label)}</strong><span>${n}/${s.total} schede recuperate</span></div><div class="track"><div class="trackfill" style="width:${p}%"></div></div></div>`}).join('')+'<p class="muted tiny" style="margin:13px 0 0">Copertura delle schede, non grado di verifica degli esiti. Alcune righe sono incomplete o discordanti.</p>';
 const newest=[...db.records].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,6);root('home-latest').innerHTML=newest.map(rowHtml).join('')}
-function rowHtml(r){const pl=r.pnl===null||r.pnl===undefined?'Da verificare':`${r.pnl>0?'+':''}${money(r.pnl)}`;let extra=r.quality==='conflitto'?'<span class="tag conflitto">CONFLITTO</span>':r.quality==='parziale'?'<span class="tag parziale">PARZIALE</span>':'';if(r.origin_candidate_id)extra+=' <span class="tag real">DA SCANNER</span>';return `<div class="rowitem"><div><div class="rowtitle">${escape(r.match)}</div><div class="rowsub">${dateStr(r.date)} · ${escape(r.selection)} · @${dec(r.odds)} · ${money(r.stake)}<br><span class="tag ${r.book}">${books[r.book]||r.book}</span> <span class="tag">${escape(r.category)}</span> ${extra}</div></div><div class="rightr"><div class="profit ${resultClass[r.result]||'push'}">${escape(labelResults[r.result]||'—')}</div><div class="rowsub">${pl}</div></div></div>`}
-function renderArchive(){let book=root('book-filter').value,qual=root('quality-filter').value,q=root('archive-search').value.toLowerCase().trim(),status=root('archive-local-status')?.value||'all';let a=db.records.filter(r=>(book==='all'||r.book===book)&&(qual==='all'||r.quality===qual)&&(status==='all'||(status==='pending'&&r.result==='pending')||(status==='closed'&&['won','lost','push'].includes(r.result)))&&(!q||[r.match,r.selection,r.note,r.category].join(' ').toLowerCase().includes(q))).sort((x,y)=>y.date.localeCompare(x.date)||y.id.localeCompare(x.id));const name={real:'REAL Bet365',main:'Virtuale principale',lab:'LAB storico',all:'Archivio locale'};root('archive-label').textContent=`${name[book]||'Archivio'} · ${a.length} schede`;root('archive-list').innerHTML=a.length?a.map(rowHtml).join(''):'<div class="empty">Nessuna scheda con questi filtri.</div>'}
+function rowHtml(r,actions=false){const pl=r.pnl===null||r.pnl===undefined?'Da verificare':`${r.pnl>0?'+':''}${money(r.pnl)}`;let extra=r.quality==='conflitto'?'<span class="tag conflitto">CONFLITTO</span>':r.quality==='parziale'?'<span class="tag parziale">PARZIALE</span>':'';if(r.origin_candidate_id)extra+=' <span class="tag real">DA SCANNER</span>';return `<div class="rowitem"><div><div class="rowtitle">${escape(r.match)}</div><div class="rowsub">${dateStr(r.date)} · ${escape(r.selection)} · @${dec(r.odds)} · ${money(r.stake)}<br><span class="tag ${r.book}">${books[r.book]||r.book}</span> <span class="tag">${escape(r.category)}</span> ${extra}</div></div><div class="rightr"><div class="profit ${resultClass[r.result]||'push'}">${escape(labelResults[r.result]||'—')}</div><div class="rowsub">${pl}</div>${actions&&r.manual&&r.book==='real'?'<button class="button secondary thin" type="button" data-update-real-id="'+escape(r.id)+'">Aggiorna esito</button>':''}</div></div>`}
+function renderArchive(){let book=root('book-filter').value,qual=root('quality-filter').value,q=root('archive-search').value.toLowerCase().trim(),status=root('archive-local-status')?.value||'all';let a=db.records.filter(r=>(book==='all'||r.book===book)&&(qual==='all'||r.quality===qual)&&(status==='all'||(status==='pending'&&r.result==='pending')||(status==='closed'&&['won','lost','push'].includes(r.result)))&&(!q||[r.match,r.selection,r.note,r.category].join(' ').toLowerCase().includes(q))).sort((x,y)=>y.date.localeCompare(x.date)||y.id.localeCompare(x.id));const name={real:'REAL Bet365',main:'Virtuale principale',lab:'LAB storico',all:'Archivio locale'};root('archive-label').textContent=`${name[book]||'Archivio'} · ${a.length} schede`;root('archive-list').innerHTML=a.length?a.map(r=>rowHtml(r,true)).join(''):'<div class="empty">Nessuna scheda con questi filtri.</div>'}
 ['book-filter','quality-filter','archive-search','archive-local-status'].forEach(i=>root(i).addEventListener(i==='archive-search'?'input':'change',renderArchive));
 function renderLab(){const s=db.snapshots;let strats=[{name:'CORE',s:s.main.core,caption:'Virtuale principale'},{name:'VALUE',s:s.main.value,caption:'Virtuale principale'},{name:'LAB',s:s.lab,caption:'Laboratorio separato'}];root('strategy-cards').innerHTML=strats.map(x=>`<div class="surface"><div class="st-label">${x.caption} · ${x.name}</div><div class="st-title" style="color:${x.s.pnl>=0?'var(--mint)':'var(--red)'}">${x.s.pnl>0?'+':''}${money(x.s.pnl)}</div><div class="st-foot">${x.s.total} giocate · ${x.s.wins}V / ${x.s.losses}P${x.s.pushes?' / '+x.s.pushes+'R':''}</div></div>`).join('');root('audit-list').innerHTML=db.notes.audit.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<div class="audit-row"><span>${dateStr(x.date)}</span><div>${escape(x.text)}</div></div>`).join('')}
 function renderScanner(){const list=db.candidates||[];let filtered=list.slice().sort((a,b)=>a.category.localeCompare(b.category));root('scanner-meta').innerHTML=`<b>${list.length}</b> candidate storiche recuperate · <b>${list.filter(x=>x.status==='scartata').length}</b> scartate alla quota. <b>0</b> selezioni del 25/10 confermate come puntate reali. Nessun palinsesto live caricato.`;root('candidate-list').innerHTML=filtered.map(x=>{let pass=x.minimum_odds!=null&&x.bookmaker_odds!=null&&x.bookmaker_odds>=x.minimum_odds;let cls=x.status==='scartata'?'rejected':x.status.startsWith('candidata')?'ok':'';return `<article class="candidate"><div class="ctop"><span class="tag ${x.category==='LAB'?'lab':x.category==='CORE'?'main':'real'}">${escape(x.category)}</span><span class="status ${cls}">${escape(x.status).toUpperCase()}</span></div><h3>${escape(x.match)}</h3><div class="csel">${escape(x.selection)}</div><div class="cprices"><div><span>Quota rilevata</span><strong>${dec(x.bookmaker_odds)}</strong></div><div><span>Quota minima fissata</span><strong>${dec(x.minimum_odds)}</strong></div><div><span>Supera il filtro?</span><strong style="color:${pass?'var(--mint)':'var(--soft)'}">${x.minimum_odds==null?'—':pass?'Sì':'No'}</strong></div></div><p>${escape(x.reason)}</p></article>`}).join('')}
@@ -259,6 +259,43 @@ async function reconcilePendingFixtures(){
   resultSyncBusy=false;if(btn)btn.disabled=false;
  }
 }
+
+
+/* Esiti REAL manuali: correzione della scheda esistente sul dispositivo. */
+root('archive-list').addEventListener('click',event=>{
+ const button=event.target.closest('[data-update-real-id]');
+ if(!button)return;
+ const r=db.records.find(item=>item.id===button.dataset.updateRealId);
+ if(!r||!r.manual||r.book!=='real')return;
+ const dialog=root('real-settle-dialog'),form=root('real-settle-form');
+ dialog.dataset.recordId=r.id;
+ root('real-settle-match').textContent=r.match+' · '+r.selection+' · quota '+dec(r.odds)+' · puntata '+money(r.stake);
+ form.elements.namedItem('result').value=['won','lost','push'].includes(r.result)?r.result:'won';
+ form.elements.namedItem('score').value=r.score||'';
+ form.elements.namedItem('note').value=r.settlement_note||'';
+ dialog.showModal();
+});
+root('real-settle-close').addEventListener('click',()=>root('real-settle-dialog').close());
+root('real-settle-form').addEventListener('submit',event=>{
+ event.preventDefault();
+ const dialog=root('real-settle-dialog'),r=db.records.find(item=>item.id===dialog.dataset.recordId);
+ if(!r||!r.manual||r.book!=='real'){dialog.close();return}
+ const form=event.target,result=form.elements.namedItem('result').value;
+ const score=form.elements.namedItem('score').value.trim();
+ const note=form.elements.namedItem('note').value.trim();
+ if(!['won','lost','push'].includes(result))return;
+ if(score&&!/^\d{1,2}\s*[-:]\s*\d{1,2}$/.test(score)){
+  alert('Inserisci un punteggio del tipo 0-1 oppure lascia il campo vuoto.');return;
+ }
+ r.result=result;
+ r.pnl=result==='won'?round((Number(r.odds)-1)*Number(r.stake)):result==='lost'?-Number(r.stake):0;
+ r.score=score.replace(/\s/g,'').replace(':','-');
+ r.settlement_source='Conferma manuale utente';
+ r.settlement_note=note;
+ r.settled_at=new Date().toISOString();
+ persist();dialog.close();renderAll();
+ toast('Esito REAL aggiornato nello storico locale');
+});
 
 function renderAll(){renderHome();renderArchive();renderLab();renderScanner();renderMigration();window.dispatchEvent(new Event('scanner-conte:records-changed'))}
 renderAll();
