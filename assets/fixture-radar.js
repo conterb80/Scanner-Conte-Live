@@ -18,7 +18,12 @@ function render(data){
  const fresh=Number.isFinite(Date.parse(data.generated_at))&&Date.now()-Date.parse(data.generated_at)<18*3600000;
  const upcoming=rows.filter(r=>Number.isFinite(Date.parse(r.kickoff))&&Date.parse(r.kickoff)>Date.now()+5*60000);
  const nWithSnapshot=upcoming.filter(r=>r.quote_status==='HISTORICAL_SNAPSHOT_NOT_LIVE').length;
- status.textContent='Calendario '+(fresh?'aggiornato':'non recente')+' · '+upcoming.length+' incontri futuri · '+nWithSnapshot+' con quote storiche NON live · Ultima raccolta '+stamp(data.generated_at)+'.';
+ const src=data.source_status||{},additional=src.additional_sources||{};
+ const sources=['OpenLigaDB','TheSportsDB'].map((name,i)=>{
+  const v=additional[i===0?'openligadb':'thesportsdb'];
+  return v?name+' '+(v.ok||0)+'/'+(v.requests||0)+' risposte · '+(v.fixtures||0)+' gare':' '+name+' non ancora verificata';
+ });
+ status.textContent='Calendario '+(fresh?'aggiornato':'non recente')+' · '+upcoming.length+' incontri futuri · '+nWithSnapshot+' con quote storiche NON live · Ultima raccolta '+stamp(data.generated_at)+'. Fonti aggiuntive: '+sources.join('; ')+'.';
  if(!upcoming.length){
   target.innerHTML='<p class="muted small">Nessuna partita futura rilevata dalle fonti coperte in questa finestra. Non significa che non si giochi altrove. Nessuna candidata o quota viene creata artificialmente.</p>';return;
  }
