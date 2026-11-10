@@ -11,6 +11,8 @@ on:
       - '.github/workflows/public-results.yml'
       - 'scripts/settle-chat-analysis.mjs'
       - 'scripts/test-settle-chat-analysis.mjs'
+      - 'scripts/test-real-local-settlement.mjs'
+      - 'assets/app.js'
   schedule:
     - cron: '13 7,13,19,23 * * *'
 
@@ -43,6 +45,7 @@ jobs:
       - name: Verifica esiti del registro REAL CONTE in chat
         run: |
           node scripts/test-settle-chat-analysis.mjs
+          node scripts/test-real-local-settlement.mjs
           node scripts/settle-chat-analysis.mjs
       - name: Pubblica risultati e riepiloghi virtuali
         run: |
