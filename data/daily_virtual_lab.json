@@ -2788,7 +2788,13 @@
       "status": "pending",
       "pnl": null,
       "score": null,
-      "settled_at": null
+      "settled_at": null,
+      "result_review_status": "POSTPONED_REPLAYED",
+      "result_review_note": "Gara inizialmente rinviata il 01/11; recupero del 02/11 terminato 2-2. La fonte virtuale originaria non ha liquidato il test. L'esito del pronostico resta pendente finché non è stabilita la regola di liquidazione della simulazione; non è una giocata REAL.",
+      "official_replay_score": "2-2",
+      "official_replay_date": "2026-11-02",
+      "official_replay_source": "https://www.laliga.com/en-ES/match/temporada-2026-2027-laliga-hypermotion-cd-tenerife-fc-andorra-12",
+      "result_review_checked_at": "2026-11-10T10:20:38.134Z"
     },
     {
       "id": "tipsaudit-13711:TIPSAUDIT_VALUE_1X2",
