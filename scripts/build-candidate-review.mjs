@@ -76,6 +76,7 @@ export function buildCandidateReview(lab,nowISO){
  const settled=lab.records.filter(r=>['won','lost'].includes(r.status));
  const staked=settled.reduce((n,r)=>n+(finite(r.stake_virtual)?r.stake_virtual:1),0);
  const pnl=settled.reduce((n,r)=>n+(finite(r.pnl)?r.pnl:0),0);
+ const lastDayCheck=Array.isArray(lab.checks)?lab.checks.filter(x=>x.day===romeDay(nowISO)).slice(-1)[0]:null;
  return{
   schema:'scanner-conte-candidate-review-v1',version:1,generated_at:nowISO,
   status:!sourceFresh?'SOURCE_STALE':shortlist.length?'PRELIMINARY_CANDIDATES':'NO_ELIGIBLE_OBSERVATIONS',
@@ -87,7 +88,9 @@ export function buildCandidateReview(lab,nowISO){
   mode:'READ_ONLY_PAPER_SCREENING',no_real_bets_placed:true,no_real_bets_registered:true,
   methodology:'Filtro quantitativo predefinito di segnali esterni già acquisiti: divario quota/equo fonte, freschezza, fascia di quota. Non verifica forma, assenze o formazioni.',
   disclaimer:'Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.',
-  scan_stats:{paper_records:lab.records.length,eligible_observations:sorted.length,
+  scan_stats:{paper_records:lab.records.length,scanned_today:lastDayCheck?.scanned_predictions??null,
+    leagues_today:lastDayCheck?.scanned_league_total??null,
+    last_scan_completed_at:lastDayCheck?.checked_at??null,eligible_observations:sorted.length,
     eligible_core:core.length,eligible_value:value.length,
     settled_paper_samples:settled.length,settled_paper_roi_pct:staked?round(100*pnl/staked,1):null},
   shortlist,alternatives:sorted.filter(r=>!keep.has(r.id)).slice(0,8)
