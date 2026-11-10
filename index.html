@@ -10,12 +10,13 @@
   <link rel="stylesheet" href="assets/style.css?v=0.9.8">
   <link rel="stylesheet" href="assets/ai-app.css?v=2">
   <link rel="stylesheet" href="assets/real-conte-chat.css?v=2">
+  <link rel="stylesheet" href="assets/fixture-radar.css?v=1">
   <title>Scanner Conte LIVE</title>
 </head>
 <body>
  <header class="topbar">
   <div class="brand"><div class="brandmark">SC</div><div><strong>SCANNER CONTE</strong><span>LIVE <i class="onlinepoint"></i> ARCHIVIO LOCALE</span></div></div>
-  <div class="top-actions"><span class="version">V0.11.5 · VERIFICA ESITI</span><button type="button" id="export-top" class="round" aria-label="Esporta backup" title="Esporta backup">↧</button></div>
+  <div class="top-actions"><span class="version">V0.11.6 · RADAR FONTI</span><button type="button" id="export-top" class="round" aria-label="Esporta backup" title="Esporta backup">↧</button></div>
  </header>
  <main id="app">
   <section id="view-home" class="view active ui-home">
@@ -202,6 +203,14 @@
 
   <section id="view-scanner" class="view ui-scanner">
    <header class="ui-scanner-intro"><span class="ui-eyebrow">SCANSIONE / QUOTE</span><h1>Scanner</h1><p>Osservatorio REAL quotidiano e analisi sperimentali separate. Quote Bet365 da verificare prima di ogni giocata.</p></header>
+   <details class="ui-drawer ui-scanner-drawer" open>
+    <summary><span><strong>Radar palinsesto · fonti alternative</strong><small>Partite prossime 72 ore, da osservare prima dell'analisi delle quote</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
+    <div class="ui-drawer-content">
+      <div class="fixture-radar-head"><h2>Calendario indipendente</h2><button type="button" class="button secondary thin" id="fixture-radar-refresh">Aggiorna</button></div>
+      <p id="fixture-radar-status" class="muted small fixture-radar-status" role="status">Verifico la fonte calendario…</p>
+      <div id="fixture-radar-list">Caricamento…</div>
+    </div>
+   </details>
    <section class="ui-real-observatory" aria-label="REAL osservate e non giocate">
     <div class="sectionbar ui-sectionbar"><h2>REAL · osservatorio quotidiano</h2><button type="button" class="button secondary thin" id="real-watch-refresh">Aggiorna</button></div>
     <div id="real-watch-status" class="data-source-strip" role="status" aria-live="polite">Carico la scansione REAL…</div>
@@ -349,6 +358,7 @@
  <div id="toast" role="status" aria-live="polite"></div>
  <script src="data/seed.js"></script><script src="assets/app.js?v=0.11.5"></script><script src="assets/home-overview.js"></script><script src="assets/feed.js"></script><script src="assets/lab-pilot.js"></script><script src="assets/daily-virtual.js"></script><script src="assets/weekly-lab.js"></script><script src="assets/scan-audit.js"></script><script src="assets/archive-public.js?v=2"></script><script src="assets/archive-lab-overview.js"></script><script src="assets/install.js"></script><script src="assets/bet365.js"></script><script src="assets/ai-candidate-bridge.js?v=1"></script><script src="assets/candidate-review.js?v=3"></script>
  <script src="assets/real-conte-chat.js?v=3"></script>
+ <script src="assets/fixture-radar.js?v=1"></script>
  <script src="assets/real-watch.js?v=1"></script><script src="assets/candidate-history.js?v=1"></script><script src="assets/quote-notebook.js"></script><script src="assets/analytics.js"></script><script src="assets/provider-status.js"></script><script src="assets/settings-ui.js?v=0.9.9"></script>
  <script src="assets/ai-report-render.js?v=1"></script><script src="assets/ai-app.js?v=2"></script>
 </body>
