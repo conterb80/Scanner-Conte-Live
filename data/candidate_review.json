@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-10T10:23:26.160Z",
+  "generated_at": "2026-11-10T10:25:45.198Z",
   "status": "NO_ELIGIBLE_OBSERVATIONS",
   "source_last_check": "2026-11-10T10:23:25.458Z",
   "source_max_age_hours": 36,
@@ -19,6 +19,9 @@
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
     "paper_records": 166,
+    "scanned_today": 0,
+    "leagues_today": 0,
+    "last_scan_completed_at": "2026-11-10T10:23:25.458Z",
     "eligible_observations": 0,
     "eligible_core": 0,
     "eligible_value": 0,
