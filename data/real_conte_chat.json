@@ -274,7 +274,14 @@
           "kind": "VIRTUALE",
           "reason": "Vis Pesaro ultima e difesa fragile; attacco Pineto limitato e valore atteso non dimostrato.",
           "oddsSource": "Bet365 citata da comparatore, rilevazione pubblicata alle 05:22, NON quota live",
-          "status": "pending"
+          "status": "won",
+          "score": "1-0",
+          "verified_result": true,
+          "result_source": "Pineto Calcio — comunicato ufficiale 09/11/2026",
+          "result_reference": "https://www.pinetocalcio.it/",
+          "settlement_type": "manual_verified_source",
+          "result_checked_at": "2026-11-10T10:13:28.664Z",
+          "pnl": 0.7
         },
         {
           "id": "RC-20261109-02",
@@ -286,7 +293,14 @@
           "kind": "VIRTUALE",
           "reason": "Migliore difesa di Sabadell ma rendimento recente modesto e modelli discordanti.",
           "oddsSource": "Bet365 citata da comparatore il giorno precedente, NON quota live",
-          "status": "pending"
+          "status": "lost",
+          "score": "0-0",
+          "verified_result": true,
+          "result_source": "LaLiga — risultato ufficiale FT 09/11/2026",
+          "result_reference": "https://www.laliga.com/es-GB/partido/temporada-2026-2027-laliga-hypermotion-ce-sabadell-r-sociedad-b-13",
+          "settlement_type": "manual_verified_source",
+          "result_checked_at": "2026-11-10T10:13:28.667Z",
+          "pnl": -1
         },
         {
           "id": "RC-20261109-C1",
@@ -298,9 +312,17 @@
           "kind": "CONTROLLO",
           "reason": "Capolista imbattuta, ma probabilità esterne non sopra la soglia di quota.",
           "oddsSource": "Media quote pubblica, NON Bet365",
-          "status": "pending"
+          "status": "won",
+          "score": "3-0",
+          "verified_result": true,
+          "result_source": "DBU — scheda ufficiale partita 09/11/2026",
+          "result_reference": "https://www.dbu.dk/resultater/kamp/173983_507530/kampinfo",
+          "settlement_type": "manual_verified_source",
+          "result_checked_at": "2026-11-10T10:13:28.667Z",
+          "pnl": null
         }
       ]
     }
-  ]
+  ],
+  "results_policy": "Esiti collegabili solo a risultati finali verificati con data e squadre coerenti. Non modificare le previsioni originali; nessuna modifica ai saldi REAL o LAB."
 }
