@@ -6145,9 +6145,25 @@
       "created": 0,
       "source": "TipsAudit",
       "test_only": true
+    },
+    {
+      "day": "2026-11-10",
+      "checked_at": "2026-11-10T10:23:25.458Z",
+      "source_generated_at": "2026-11-10T10:23:25+00:00",
+      "scanned_predictions": 0,
+      "source_total_predictions": 75,
+      "scope_day": "2026-11-10",
+      "scope_timezone": "Europe/Rome",
+      "scanned_unique_matches": 0,
+      "scanned_league_counts": {},
+      "scanned_league_total": 0,
+      "eligible_actionable": 0,
+      "created": 0,
+      "source": "TipsAudit",
+      "test_only": true
     }
   ],
-  "last_check": "2026-11-09T16:23:27.942Z",
+  "last_check": "2026-11-10T10:23:25.458Z",
   "stats": {
     "total": 166,
     "pending": 1,
