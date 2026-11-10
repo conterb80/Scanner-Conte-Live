@@ -145,9 +145,28 @@ const canonicalTeam=s=>{
   'hamburg':'hamburger sv',
   'hamburg sv':'hamburger sv',
   'hsv':'hamburger sv',
+  'amburgo':'hamburger sv',
   'frankfurt':'eintracht frankfurt',
+  'eintrach':'eintracht frankfurt',
+  'eintracht':'eintracht frankfurt',
   'cd tenerife':'tenerife',
-  'andorra':'fc andorra'
+  'andorra':'fc andorra',
+  // Nomi storici, abbreviazioni e forme dei bookmaker. I due club e la data
+  // devono comunque coincidere: nessun abbinamento con una sola squadra.
+  'vitoria guimaraes':'vitoria sc',
+  'vitoria de guimaraes':'vitoria sc',
+  'vitoria sport clube':'vitoria sc',
+  'guimaraes':'vitoria sc',
+  'vitoria':'vitoria sc',
+  'porto':'fc porto',
+  'fc porto':'fc porto',
+  'portogallo fc porto':'fc porto',
+  'ce sabadell':'sabadell',
+  'cd sabadell':'sabadell',
+  'real sociedad ii':'real sociedad b',
+  'real sociedad b':'real sociedad b',
+  '1 fc union berlin':'union berlin',
+  'sc freiburg':'freiburg'
  };
  return aliases[n]||n;
 };
