@@ -1,0 +1,12 @@
+/* Calendario fonte alternativa, consultazione separata dalle candidate di puntata */
+.fixture-radar-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.fixture-radar-status{margin:8px 0 10px;line-height:1.5}
+.fixture-radar-day{font-size:13px;color:#bce7d5;margin:18px 0 8px;text-transform:capitalize}
+.fixture-radar-league{border:1px solid #2d4b57;border-radius:11px;overflow:hidden;margin:7px 0}
+.fixture-radar-league>summary{cursor:pointer;font-size:12px;font-weight:750;padding:12px 13px}
+.fixture-radar-fixtures{display:grid}
+.fixture-radar-row{display:flex;justify-content:space-between;align-items:center;gap:9px;padding:10px 13px;border-top:1px solid #25414c}
+.fixture-radar-row>div{display:grid;gap:5px;min-width:0}
+.fixture-radar-row strong{font-size:12px;line-height:1.35}
+.fixture-radar-row small{font-size:11px;color:#b4c9d3;line-height:1.4;overflow-wrap:anywhere}
+.fixture-radar-row a{font-size:11px;color:#a7ead2;flex-shrink:0}
