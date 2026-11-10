@@ -9,12 +9,13 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="assets/style.css?v=0.9.8">
   <link rel="stylesheet" href="assets/ai-app.css?v=2">
+  <link rel="stylesheet" href="assets/real-conte-chat.css?v=1">
   <title>Scanner Conte LIVE</title>
 </head>
 <body>
  <header class="topbar">
   <div class="brand"><div class="brandmark">SC</div><div><strong>SCANNER CONTE</strong><span>LIVE <i class="onlinepoint"></i> ARCHIVIO LOCALE</span></div></div>
-  <div class="top-actions"><span class="version">V0.11.0 · STORICO SCANNER</span><button type="button" id="export-top" class="round" aria-label="Esporta backup" title="Esporta backup">↧</button></div>
+  <div class="top-actions"><span class="version">V0.11.1 · STORICO SCANNER</span><button type="button" id="export-top" class="round" aria-label="Esporta backup" title="Esporta backup">↧</button></div>
  </header>
  <main id="app">
   <section id="view-home" class="view active ui-home">
@@ -121,6 +122,14 @@
 
   <section id="view-lab" class="view ui-lab">
    <header class="ui-subpage-head"><span class="ui-eyebrow">RICERCA / ESPERIMENTI</span><h1>Laboratorio</h1><p>Test virtuali, metodi e scansioni. Tutto separato dalle scommesse REAL.</p></header>
+   <details class="ui-drawer ui-lab-drawer" open>
+    <summary><span><strong>REAL CONTE · Analisi svolte in chat</strong><small>Palinsesto, filtri, motivazioni e test virtuali · archivio separato</small></span><span class="ui-drawer-arrow" aria-hidden="true">⌄</span></summary>
+    <div class="ui-drawer-content">
+      <div class="sectionbar"><h2>Registro delle nostre analisi</h2><button type="button" class="button secondary thin" id="chat-analysis-refresh">Aggiorna</button></div>
+      <p class="muted small">Qui puoi seguire i test scelti insieme in chat. Sono simulazioni di ricerca: non entrano nel LAB automatico, nell'osservatorio Scanner né nel saldo delle giocate REAL.</p>
+      <div id="chat-analysis-content" class="chat-analysis-content" aria-live="polite">Caricamento delle analisi in chat…</div>
+    </div>
+   </details>
    <div class="sectionbar ui-subpage-bar"><h2>Situazione dei test</h2><span class="muted small">Archivi distinti</span></div>
    <div class="ui-lab-overview" id="lab-overview" aria-label="Riepilogo dei laboratori">
     <article class="surface ui-lab-kpi">
@@ -328,6 +337,7 @@
  <dialog id="record-dialog"><form id="record-form" class="modal" method="dialog"><div class="modalhead"><h2>Nuova registrazione</h2><button id="close-dialog" type="button" class="close" aria-label="Chiudi">✕</button></div><p class="muted small">Registra soltanto una giocata già effettivamente piazzata. Se arrivi dalle candidate dello Scanner, partita, pronostico e quota sono precompilati: controllali, inserisci l’importo effettivo e conferma. Il LAB rimane separato.</p><div class="formgrid"><label>Data<input type="date" name="date" required value="2026-10-25"></label><label>Archivio<select name="book"><option value="lab">LAB virtuale</option><option value="main">Principale virtuale</option><option value="real">REAL (solo già piazzata)</option></select></label><label>Categoria<select name="category"><option>TEST</option><option>CORE</option><option>VALUE</option><option>EXTRA</option></select></label><label>Partita<input name="match" required placeholder="Es. Squadra A – Squadra B"></label><label>Mercato<input name="selection" required placeholder="Es. Over 2,5"></label><label>Quota decimale<input name="odds" required inputmode="decimal" type="number" min="1.01" max="1000" step="0.01"></label><label>Importo €<input name="stake" required inputmode="decimal" type="number" min="0.01" max="10000" step="0.01"></label><label>Esito<select name="result"><option value="pending">In attesa</option><option value="won">Vinta</option><option value="lost">Persa</option><option value="push">Rimborsata</option></select></label><label class="full">Nota / motivazione<input name="note" placeholder="Registrare prima del via, se possibile"></label></div><button type="submit" class="button">Salva registrazione</button></form></dialog>
  <div id="toast" role="status" aria-live="polite"></div>
  <script src="data/seed.js"></script><script src="assets/app.js?v=0.9.10"></script><script src="assets/home-overview.js"></script><script src="assets/feed.js"></script><script src="assets/lab-pilot.js"></script><script src="assets/daily-virtual.js"></script><script src="assets/weekly-lab.js"></script><script src="assets/scan-audit.js"></script><script src="assets/archive-public.js"></script><script src="assets/archive-lab-overview.js"></script><script src="assets/install.js"></script><script src="assets/bet365.js"></script><script src="assets/ai-candidate-bridge.js?v=1"></script><script src="assets/candidate-review.js?v=2"></script>
+ <script src="assets/real-conte-chat.js?v=1"></script>
  <script src="assets/real-watch.js?v=1"></script><script src="assets/candidate-history.js?v=1"></script><script src="assets/quote-notebook.js"></script><script src="assets/analytics.js"></script><script src="assets/provider-status.js"></script><script src="assets/settings-ui.js?v=0.9.9"></script>
  <script src="assets/ai-report-render.js?v=1"></script><script src="assets/ai-app.js?v=2"></script>
 </body>
