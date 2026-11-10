@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "last_imported": "2026-11-10",
+  "source": "Registrazioni storiche condivise in chat; archivio manuale consultabile, separato da Scanner, LAB automatico e puntate REAL.",
+  "auto_sync": false,
+  "sessions": [
+    {
+      "date": "2026-11-10",
+      "snapshot": "2026-11-10T10:47:20+01:00",
+      "title": "Scansione completa del campione",
+      "checked": 30,
+      "competitions": [
+        [
+          "EFL Trophy",
+          17
+        ],
+        [
+          "Copa del Rey",
+          6
+        ],
+        [
+          "Champions League femminile",
+          5
+        ],
+        [
+          "Europa Cup femminile",
+          1
+        ],
+        [
+          "Romania Liga II",
+          1
+        ]
+      ],
+      "method": "Censimento campione → primo filtro → confronto di forma, motivazioni e quote → due osservazioni virtuali e un controllo. Non tutte le 30 gare hanno ricevuto un'analisi statistica approfondita.",
+      "verification": "Ricostruzione di dati annotati in chat; orari, calendari e quote non verificati indipendentemente dall'app. Nessuna quota Bet365 in tempo reale.",
+      "fixtures": [
+        [
+          "EFL Trophy",
+          "Barnet – Leyton Orient",
+          "Non prioritaria",
+          "Equilibrio nei dati e nelle quote"
+        ],
+        [
+          "EFL Trophy",
+          "Bristol Rovers – Reading",
+          "Controllo",
+          "Modelli esterni discordanti; nessuna puntata"
+        ],
+        [
+          "EFL Trophy",
+          "Burton – Notts County",
+          "Non prioritaria",
+          "Quote equilibrate"
+        ],
+        [
+          "EFL Trophy",
+          "Crewe – Wigan",
+          "Da osservare",
+          "Wigan favorito per girone; altri modelli indicano Crewe"
+        ],
+        [
+          "EFL Trophy",
+          "Grimsby – Nottingham Forest U21",
+          "Da osservare",
+          "Prezzo casa basso e incognita Under 21"
+        ],
+        [
+          "EFL Trophy",
+          "Huddersfield – Liverpool U21",
+          "Da osservare",
+          "Turnover possibile, quota bassa"
+        ],
+        [
+          "EFL Trophy",
+          "Leicester – Walsall",
+          "Da osservare",
+          "Stime discordanti"
+        ],
+        [
+          "EFL Trophy",
+          "Mansfield – Chesterfield",
+          "Non prioritaria",
+          "Motivazioni e turnover"
+        ],
+        [
+          "EFL Trophy",
+          "Northampton – Gillingham",
+          "Non prioritaria",
+          "Equilibrio"
+        ],
+        [
+          "EFL Trophy",
+          "Oxford – Cheltenham",
+          "Da osservare",
+          "Quota casa bassa"
+        ],
+        [
+          "EFL Trophy",
+          "Plymouth – Swindon",
+          "Da osservare",
+          "Quota casa bassa"
+        ],
+        [
+          "EFL Trophy",
+          "Stevenage – Fulham U21",
+          "Da osservare",
+          "Imprevedibilità U21"
+        ],
+        [
+          "EFL Trophy",
+          "Stockport – Tranmere",
+          "Da osservare",
+          "Quota bassa contro stima esterna"
+        ],
+        [
+          "EFL Trophy",
+          "Bradford – York City",
+          "Non prioritaria",
+          "Stima esterna non sostiene il prezzo"
+        ],
+        [
+          "EFL Trophy",
+          "Bromley – MK Dons",
+          "Test virtuale",
+          "Favorita ospite, rischio turnover"
+        ],
+        [
+          "EFL Trophy",
+          "Crawley – Brentford U21",
+          "Non prioritaria",
+          "Valutazione modello non favorevole"
+        ],
+        [
+          "EFL Trophy",
+          "Colchester – Ipswich U21",
+          "Non prioritaria",
+          "Valutazione modello non favorevole"
+        ],
+        [
+          "Copa del Rey",
+          "Pamplona – Eibar",
+          "Da osservare",
+          "Differenza di categoria ma prezzo basso"
+        ],
+        [
+          "Copa del Rey",
+          "Anaitasuna – Alavés",
+          "Non prioritaria",
+          "Quota ospite estremamente bassa"
+        ],
+        [
+          "Copa del Rey",
+          "Mijas Las Lagunas – Real Jaén",
+          "Da osservare",
+          "Richiede dati e quote aggiuntivi"
+        ],
+        [
+          "Copa del Rey",
+          "Trival Valderas – Leganés",
+          "Non prioritaria",
+          "Quota ospite bassa"
+        ],
+        [
+          "Copa del Rey",
+          "Amorebieta – UD Logroñés",
+          "Da osservare",
+          "Equilibrio da approfondire"
+        ],
+        [
+          "Copa del Rey",
+          "Tavernes – Valencia",
+          "Non prioritaria",
+          "Quota ospite estremamente bassa"
+        ],
+        [
+          "Champions League femminile",
+          "Häcken – Chelsea",
+          "Non prioritaria",
+          "Prezzo Chelsea troppo basso"
+        ],
+        [
+          "Champions League femminile",
+          "Real Madrid – Paris FC",
+          "Da osservare",
+          "Tre pareggi europei del Real"
+        ],
+        [
+          "Champions League femminile",
+          "Roma – Servette",
+          "Non prioritaria",
+          "Forma europea Roma e quota bassa"
+        ],
+        [
+          "Champions League femminile",
+          "Inter – Manchester City",
+          "Da osservare",
+          "City favorita ma quota bassa, valutazione incompleta"
+        ],
+        [
+          "Champions League femminile",
+          "PSG – Bayern Monaco",
+          "Da osservare",
+          "Confronto non concluso"
+        ],
+        [
+          "Europa Cup femminile",
+          "Feyenoord – Wolfsburg",
+          "Non prioritaria",
+          "0–7 all'andata: motivazioni e turnover"
+        ],
+        [
+          "Romania Liga II",
+          "Metalul Buzău – CSA Steaua",
+          "Test virtuale",
+          "Dati casa/trasferta favorevoli a Metalul, modelli discordanti"
+        ]
+      ],
+      "picks": [
+        {
+          "id": "RC-20261110-01",
+          "match": "Metalul Buzău – CSA Steaua",
+          "kickoff": "2026-11-10T18:30:00+01:00",
+          "pick": "1 · Metalul",
+          "odds": 2.1,
+          "stake": 1,
+          "kind": "VIRTUALE",
+          "reason": "Rendimento casalingo migliore; quote e probabilità stimate con scarsa concordanza (43–59%).",
+          "oddsSource": "Prezzo pubblico indicativo, NON quota Bet365 confermata",
+          "status": "pending"
+        },
+        {
+          "id": "RC-20261110-02",
+          "match": "Bromley – MK Dons",
+          "kickoff": "2026-11-10T20:30:00+01:00",
+          "pick": "2 · MK Dons",
+          "odds": 1.8,
+          "stake": 1,
+          "kind": "VIRTUALE",
+          "reason": "Modelli favorevoli agli ospiti, ma possibili rotazioni perché già qualificati.",
+          "oddsSource": "Prezzo pubblico indicativo, NON quota Bet365 confermata",
+          "status": "pending"
+        },
+        {
+          "id": "RC-20261110-C1",
+          "match": "Bristol Rovers – Reading",
+          "kickoff": "2026-11-10T20:00:00+01:00",
+          "pick": "2 · Reading",
+          "odds": 1.91,
+          "stake": 0,
+          "kind": "CONTROLLO",
+          "reason": "Due modelli esterni stimano 36% contro 60%: test di discordanza.",
+          "oddsSource": "Quota indicativa pubblica; nessuna puntata",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-09",
+      "snapshot": "2026-11-09T14:18:18+01:00",
+      "title": "Prima selezione a 5 step",
+      "checked": 34,
+      "competitions": [],
+      "fixtures": [],
+      "method": "Primo censimento riportato in chat di 34 partite; 14 segnalate nel filtro sportivo, 8 approfondite, 6 valutate con prezzi, 2 test virtuali e un controllo. Il registro completo delle 34 partite non è disponibile nel file congelato.",
+      "verification": "Le quote erano pubblicate da comparatori, non verificate live su Bet365. Censimento e statistiche non completamente validati con fonti primarie.",
+      "picks": [
+        {
+          "id": "RC-20261109-01",
+          "match": "Pineto – Vis Pesaro",
+          "kickoff": "2026-11-09T20:30:00+01:00",
+          "pick": "1 · Pineto",
+          "odds": 1.7,
+          "stake": 1,
+          "kind": "VIRTUALE",
+          "reason": "Vis Pesaro ultima e difesa fragile; attacco Pineto limitato e valore atteso non dimostrato.",
+          "oddsSource": "Bet365 citata da comparatore, rilevazione pubblicata alle 05:22, NON quota live",
+          "status": "pending"
+        },
+        {
+          "id": "RC-20261109-02",
+          "match": "Sabadell – Real Sociedad B",
+          "kickoff": "2026-11-09T20:30:00+01:00",
+          "pick": "1 · Sabadell",
+          "odds": 1.73,
+          "stake": 1,
+          "kind": "VIRTUALE",
+          "reason": "Migliore difesa di Sabadell ma rendimento recente modesto e modelli discordanti.",
+          "oddsSource": "Bet365 citata da comparatore il giorno precedente, NON quota live",
+          "status": "pending"
+        },
+        {
+          "id": "RC-20261109-C1",
+          "match": "Hvidovre – Aarhus Fremad",
+          "kickoff": "2026-11-09T19:00:00+01:00",
+          "pick": "1 · Hvidovre",
+          "odds": 1.89,
+          "stake": 0,
+          "kind": "CONTROLLO",
+          "reason": "Capolista imbattuta, ma probabilità esterne non sopra la soglia di quota.",
+          "oddsSource": "Media quote pubblica, NON Bet365",
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}
