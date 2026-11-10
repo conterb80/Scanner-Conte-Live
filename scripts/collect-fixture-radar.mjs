@@ -5,6 +5,7 @@
  */
 import {readFile,writeFile} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
+import {collectComplementarySources} from './radar-source-extras.mjs';
 export const LEAGUES=Object.freeze([
  ['ita.1','Italia Serie A'],['ita.2','Italia Serie B'],
  ['eng.1','Premier League'],['eng.2','Championship'],['eng.trophy','EFL Trophy'],
@@ -64,7 +65,8 @@ export function makeRadar(espn,fd,now=new Date(),meta={}){
  return {schema:'scanner-conte-fixture-radar-v1',generated_at:now.toISOString(),
   scope:'Partite future prossime 72 ore; fonti parziali; nessuna quota Bet365 in tempo reale.',
   auto_bets:false,auto_predictions:false,independent_value_model:false,
-  source_status:{espn_requests_ok:meta.ok||0,espn_requests_failed:meta.failed||0,football_data_snapshot_at:meta.fdAt||null},
+  source_status:{espn_requests_ok:meta.ok||0,espn_requests_failed:meta.failed||0,
+   football_data_snapshot_at:meta.fdAt||null,additional_sources:meta.extras||{}},
   stats:{matches:rows.length,days:perDay,with_historical_snapshot:rows.filter(r=>r.quote_status==='HISTORICAL_SNAPSHOT_NOT_LIVE').length},
   fixtures:rows};
 }
@@ -86,10 +88,12 @@ async function run({now=new Date(),fetcher=fetch,write=true}={}){
   }));
   for(const b of batch){if(b.status==='fulfilled'){ok++;received.push(...b.value)}else failed++;}
  }
- if(ok===0&&!saved)throw Error('Nessuna fonte disponibile: archivio precedente preservato');
- const radar=makeRadar(received,fd,now,{ok,failed,fdAt:saved?.generated_at});
+ const extras=await collectComplementarySources({now,fetcher});
+ const validExtra=Object.values(extras.status).some(x=>x.ok>0);
+ if(ok===0&&!saved&&!validExtra)throw Error('Nessuna fonte disponibile: archivio precedente preservato');
+ const radar=makeRadar([...received,...extras.items],fd,now,{ok,failed,fdAt:saved?.generated_at,extras:extras.status});
  if(write)await writeFile(PATH,JSON.stringify(radar,null,2)+'\n','utf8');
- console.log('RADAR '+JSON.stringify({matches:radar.fixtures.length,days:radar.stats.days,ok,failed,fd:fd.length}));
+ console.log('RADAR '+JSON.stringify({matches:radar.fixtures.length,days:radar.stats.days,ok,failed,fd:fd.length,extra:extras.status}));
  return radar;
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)run().catch(e=>{console.error(e);process.exitCode=1});
