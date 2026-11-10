@@ -9,6 +9,8 @@ on:
       - 'scripts/settle-auto-public.mjs'
       - 'scripts/test-public-results.mjs'
       - '.github/workflows/public-results.yml'
+      - 'scripts/settle-chat-analysis.mjs'
+      - 'scripts/test-settle-chat-analysis.mjs'
   schedule:
     - cron: '13 7,13,19,23 * * *'
 
@@ -38,9 +40,13 @@ jobs:
         run: |
           node scripts/settle-auto-public.mjs
           node scripts/build-weekly-lab-summary.mjs
+      - name: Verifica esiti del registro REAL CONTE in chat
+        run: |
+          node scripts/test-settle-chat-analysis.mjs
+          node scripts/settle-chat-analysis.mjs
       - name: Pubblica risultati e riepiloghi virtuali
         run: |
-          git add data/results_public.json data/lab_auto.json data/weekly_lab_stats.json
+          git add data/results_public.json data/lab_auto.json data/weekly_lab_stats.json data/real_conte_chat.json
           if git diff --cached --quiet; then
             echo 'Nessuna novita nei risultati'
             exit 0
