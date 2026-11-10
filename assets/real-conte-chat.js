@@ -24,6 +24,32 @@ function pickCard(p){
  '<details><summary>Motivi, rischi e fonte della quota</summary><p class="muted small">'+esc(p.reason)+'</p><p class="muted tiny">Fonte quota: '+esc(p.oddsSource)+' — non prezzo Bet365 aggiornato.</p></details>'+
  '</article>';
 }
+
+const fmtEuro=v=>(v>0?'+':v<0?'−':'')+Math.abs(v).toLocaleString('it-IT',{minimumFractionDigits:2,maximumFractionDigits:2})+' €';
+function calculateBalance(items){
+ const real=items.filter(p=>p.kind!=='CONTROLLO'&&Number(p.stake)>0);
+ const closed=real.filter(p=>['won','lost','void'].includes(p.status));
+ const stake=closed.reduce((n,p)=>n+Number(p.stake),0);
+ const pnl=closed.reduce((n,p)=>n+(p.status==='won'?Number(p.stake)*(Number(p.odds)-1):p.status==='lost'?-Number(p.stake):0),0);
+ return {closed:closed.length,wins:closed.filter(p=>p.status==='won').length,
+  losses:closed.filter(p=>p.status==='lost').length,
+  pending:real.length-closed.length,stake,pnl:Math.round(pnl*100)/100,
+  roi:stake>0?(pnl/stake)*100:null};
+}
+function balanceView(title,items){
+ const b=calculateBalance(items);
+ const positive=b.pnl>0,negative=b.pnl<0;
+ const cls=b.closed?(positive?'positive':negative?'negative':'neutral'):'neutral';
+ const roi=b.roi===null?'—':(b.roi>0?'+':b.roi<0?'−':'')+Math.abs(b.roi).toLocaleString('it-IT',{maximumFractionDigits:1})+'%';
+ return '<section class="surface pad chat-analysis-balance"><div class="chat-analysis-balance-head"><strong>'+esc(title)+'</strong>'+
+   '<span>'+b.pending+' test in attesa</span></div>'+
+   '<div class="chat-analysis-balance-grid">'+
+   '<div class="chat-analysis-balance-value"><span>Giocate vinte</span><strong>'+b.wins+'/'+b.closed+'</strong></div>'+
+   '<div class="chat-analysis-balance-value '+cls+'"><span>Profitto netto</span><strong>'+(b.closed?esc(fmtEuro(b.pnl)):'—')+'</strong></div>'+
+   '<div class="chat-analysis-balance-value '+cls+'"><span>ROI virtuale</span><strong>'+esc(roi)+'</strong></div>'+
+   '</div><p class="muted tiny">'+(b.closed?esc(b.stake.toLocaleString('it-IT',{minimumFractionDigits:2,maximumFractionDigits:2})+' € virtuali puntati sulle '+b.closed+' giocate concluse. '):'Nessuna giocata conclusa da contabilizzare. ')+
+   'Le partite di controllo sono escluse e i test in attesa non incidono su profitto o ROI.</p></section>';
+}
 function fixtureSection(s){
  if(!Array.isArray(s.fixtures)||!s.fixtures.length)return '<p class="muted small">Elenco completo non contenuto nel registro congelato di questa giornata. Non ricostruito a posteriori.</p>';
  const byCompetition=new Map();
@@ -46,7 +72,9 @@ function show(){
   '<button type="button" data-chat-day="'+esc(x.date)+'" aria-pressed="'+(s.date===x.date)+'" class="'+(s.date===x.date?'active':'')+'">'+esc(day(x.date))+'</button>').join('')+'</div>';
  const competitions=Array.isArray(s.competitions)&&s.competitions.length?s.competitions.map(x=>esc(x[0])+': '+esc(x[1])).join(' · '):'Elenco competizioni non consolidato nel registro di questa data';
  const bets=(s.picks||[]).filter(x=>x.kind!=='CONTROLLO'), controls=(s.picks||[]).filter(x=>x.kind==='CONTROLLO');
- root.innerHTML=tabs+
+ const historyPicks=[...new Map(sessions.flatMap(x=>x.picks||[]).filter(p=>p.id).map(p=>[p.id,p])).values()];
+ root.innerHTML=balanceView('Bilancio virtuale complessivo',historyPicks)+tabs+
+  balanceView('Bilancio del '+day(s.date),bets)+
   '<p class="muted small">Fotografia dell\'analisi in chat alle '+esc(stamp(s.snapshot))+' · Nessuna sincronizzazione automatica dalla conversazione.</p>'+
   '<div class="chat-analysis-kpis">'+stat(s.checked,'Partite nel censimento')+stat(bets.length,'Test virtuali')+stat(controls.length,'Controlli non giocati')+'</div>'+
   '<p class="muted tiny">'+competitions+'</p>'+
