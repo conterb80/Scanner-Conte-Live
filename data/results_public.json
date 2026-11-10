@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-results-public-v1",
-  "checked_at": "2026-11-09T17:27:04.020Z",
+  "checked_at": "2026-11-10T02:04:09.976Z",
   "source": "ESPN public scoreboard + verified official match reports",
   "coverage": {
     "leagues": [
@@ -16,9 +16,9 @@
       "por.1"
     ],
     "days": [
-      "20261107",
       "20261108",
-      "20261109"
+      "20261109",
+      "20261110"
     ],
     "queries": 30,
     "succeeded": 30,
@@ -2869,6 +2869,34 @@
       "away_goals": 3,
       "source": "ESPN public scoreboard",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/401885401/benfica-estrela",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-esp.2-401883139",
+      "kickoff": "2026-11-09T19:30:00.000Z",
+      "status": "FT",
+      "league": "LaLiga Hypermotion",
+      "league_code": "esp.2",
+      "home": "CD Sabadell",
+      "away": "Real Sociedad II",
+      "home_goals": 0,
+      "away_goals": 0,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401883139/real-sociedad-ii-cd-sabadell",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-esp.2-401883140",
+      "kickoff": "2026-11-09T19:30:00.000Z",
+      "status": "FT",
+      "league": "LaLiga Hypermotion",
+      "league_code": "esp.2",
+      "home": "Las Palmas",
+      "away": "Eldense",
+      "home_goals": 2,
+      "away_goals": 0,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401883140/eldense-las-palmas",
       "verification": "espn_scoreboard"
     }
   ]
