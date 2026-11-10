@@ -39,7 +39,7 @@ const safeURL=u=>typeof u==='string'&&/^https:\/\/(tipsaudit\.com\/|www\.tipsaud
 const kickoffTime=r=>Number.isFinite(Date.parse(r.kickoff||''))?Date.parse(r.kickoff):0;
 function recordCard(r){
  const isDone=settled(r),isPast=kickoffTime(r)<Date.now();
- const note=!isDone&&isPast?'Esito ancora da verificare':isDone?'Conclusa':'Da disputare';
+ const note=r.result_review_status==='POSTPONED_REPLAYED'?'Partita rinviata e poi recuperata: liquidazione virtuale da chiarire':!isDone&&isPast?'Esito ancora da verificare':isDone?'Conclusa':'Da disputare';
  const source=safeURL(r.reference);
  const score=r.score?'<span>Risultato '+esc(r.score)+'</span>':r.verified_ft_result?'<span>Esito 1X2: '+esc(r.verified_ft_result)+'</span>':'';
  const settledValue=isDone&&num(r.pnl)?'<strong class="'+(r.pnl>=0?'positive':'negative')+'">'+esc(money(r.pnl))+'</strong>':'';
@@ -52,7 +52,7 @@ function recordCard(r){
      ' <strong>@'+esc(r.odds??'—')+'</strong> · '+esc(money(num(r.stake_virtual)?r.stake_virtual:1).replace('+',''))+' virtuale</div>'+
    '<div class="reg-record-bottom"><span>'+esc(note)+'</span>'+score+settledValue+
    (source?'<a href="'+esc(source)+'" target="_blank" rel="noopener noreferrer">Fonte quota</a>':'')+
-   '</div><p class="muted tiny">Registrata prima della partita: '+esc(stamp(r.captured_at))+'</p></article>';
+   '</div>'+(r.result_review_note?'<p class="muted tiny">'+esc(r.result_review_note)+'</p>':'')+'<p class="muted tiny">Registrata prima della partita: '+esc(stamp(r.captured_at))+'</p></article>';
 }
 function dateGroups(rows){
  let last='',html='';
