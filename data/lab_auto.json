@@ -7,10 +7,10 @@
   "history_quality": "Quote fotografate prima dell’inizio. Controllo su campione, non sistema validato.",
   "stats": {
     "total": 120,
-    "pending": 1,
+    "pending": 0,
     "won": 59,
-    "lost": 60,
-    "pnl": -12.27
+    "lost": 61,
+    "pnl": -13.27
   },
   "records": [
     {
@@ -772,13 +772,16 @@
       "odds": 1.7,
       "market_probability_pct": 55.26,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "lost",
+      "pnl": -1,
+      "score": "2-0",
       "captured_at": "2026-11-03T20:59:57.665Z",
-      "settled_at": null,
+      "settled_at": "2026-11-10T10:18:49.596Z",
       "origin": "Football-Data fixture CSV observed before kickoff",
-      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato."
+      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato.",
+      "settlement_source": "EFL — risultato ufficiale Oxford United 2–0 Reading, 04/11/2026",
+      "settlement_reference": "https://www.efl.com/news/2026/november/04/sky-bet-league-one--oxford-united-reading-report/",
+      "settlement_method": "official_manual_result_audit"
     },
     {
       "id": "fd-D1-20261107-rbleipzig-augsburg:FAVORITA_1X2_CONTROLLO",
@@ -2631,5 +2634,5 @@
   ],
   "last_result_check": "2026-10-25T19:55:52.287Z",
   "last_open_result_check": "2026-11-10T10:17:46.388Z",
-  "last_verified_result_audit": "2026-10-27T07:07:39.609Z"
+  "last_verified_result_audit": "2026-11-10T10:18:49.596Z"
 }
