@@ -1,0 +1,11 @@
+import {settle} from './settle-chat-analysis.mjs';
+import assert from 'node:assert/strict';
+const f={status:'FT',home:'CD Sabadell',away:'Real Sociedad II',kickoff:'2026-11-09T19:30:00.000Z',home_goals:0,away_goals:0,source:'ESPN'};
+const base={status:'pending',match:'Sabadell – Real Sociedad B',pick:'1 · Sabadell',odds:1.73,stake:1,kind:'VIRTUALE',kickoff:'2026-11-09T20:30:00+01:00'};
+assert.equal(settle(base,[f],'2026-11-10T10:00:00+01:00')?.status,'lost');
+assert.equal(settle(base,[f],'2026-11-09T21:00:00+01:00'),null,'no premature result');
+assert.equal(settle({...base,match:'Sabadell – Real Betis'},[f],'2026-11-10T10:00:00+01:00'),null,'no fuzzy team match');
+assert.equal(settle({...base,kickoff:'2026-11-08T20:30:00+01:00'},[f],'2026-11-10T10:00:00+01:00'),null,'no wrong day');
+assert.equal(settle({...base,status:'won'},[f],'2026-11-10T10:00:00+01:00'),null,'do not rewrite result');
+assert.equal(settle({...base,kind:'CONTROLLO',stake:0},[f],'2026-11-10T10:00:00+01:00')?.pnl,null,'control has no stake');
+console.log('OK: settlement REAL CONTE in chat');
