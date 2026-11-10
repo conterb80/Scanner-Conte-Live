@@ -56,7 +56,7 @@ async function main(){
  if(store.schema!=='scanner-conte-daily-virtual-v1'||!Array.isArray(store.records)||!Array.isArray(store.checks))
   throw Error('Archivio virtuale inatteso: nessun salvataggio');
  if(store.checks.filter(x=>x.day===today).length>=2){console.log('SKIP: 2 scansioni odierne gia registrate.');return;}
- if(!collectionSlotDue(store.checks,capturedAt)){console.log('SKIP: fascia gia acquisita o fuori orario.');return;}
+ if(!collectionSlotDue(store.checks,capturedAt)){console.log('SKIP: fascia gia acquisita o fuori orario · giorno '+today+' · ultimo controllo '+(store.last_check||'non disponibile')+'.');return;}
  const recent=store.checks.filter(x=>x.day===today).map(x=>Date.parse(x.checked_at)).filter(Number.isFinite);
  if(recent.length && Date.now()-Math.max(...recent)<4*3600000){console.log('SKIP: meno di quattro ore dall’ultima scansione; nessuna chiamata sprecata.');return;}
  const original=await load('data/lab_auto.json',null);
