@@ -9,7 +9,7 @@ const esc=x=>String(x??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'
 const number=x=>Number(x).toLocaleString('it-IT',{maximumFractionDigits:2});
 const day=x=>/^\d{4}-\d{2}-\d{2}$/.test(String(x))?String(x).split('-').reverse().join('/'):'—';
 const stamp=x=>{const d=new Date(x);return Number.isFinite(d.getTime())?d.toLocaleString('it-IT',{timeZone:'Europe/Rome',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}):'—';};
-const pending=x=>x==='won'?'Vinta virtuale':x==='lost'?'Persa virtuale':x==='void'?'Rimborsata virtuale':'Da verificare';
+const pending=p=>p.status==='won'?'Vinta virtuale':p.status==='lost'?'Persa virtuale':p.status==='void'?'Rimborsata virtuale':Date.parse(p.kickoff)<Date.now()-3*3600000?'Esito non ancora verificato':'In programma';
 const state=x=>x==='won'?'main':x==='lost'?'lab':'';
 const stat=(label,note)=>'<div class="chat-analysis-kpi"><strong>'+esc(label)+'</strong><span>'+esc(note)+'</span></div>';
 function pickCard(p){
@@ -18,8 +18,9 @@ function pickCard(p){
  return '<article class="surface pad chat-analysis-pick">'+
  '<div class="chat-analysis-pick-head"><span class="tag '+(isControl?'lab':'main')+'">'+esc(isControl?'SOLO CONTROLLO':'VIRTUALE · SIMULAZIONE')+'</span><span class="muted tiny">'+esc(stamp(p.kickoff))+'</span></div>'+
  '<h3>'+esc(p.match)+'</h3><div class="chat-analysis-line"><strong>'+esc(p.pick)+'</strong><span>Quota riferimento '+esc(number(odds))+'</span></div>'+
- '<p class="muted small">'+esc(isControl?'Nessuna puntata':'Puntata ipotetica: '+number(stake)+' €')+' · <span class="tag '+state(p.status)+'">'+esc(pending(p.status))+'</span>'+
+ '<p class="muted small">'+esc(isControl?'Nessuna puntata':'Puntata ipotetica: '+number(stake)+' €')+' · <span class="tag '+state(p.status)+'">'+esc(pending(p))+'</span>'+
  (pnl!==null?' · P/L simulato '+esc(number(pnl))+' €':'')+'</p>'+
+ (p.score?'<p class="muted small"><strong>Finale '+esc(p.score)+'</strong> · '+esc(p.result_source||'Fonte non indicata')+'</p>':'')+
  '<details><summary>Motivi, rischi e fonte della quota</summary><p class="muted small">'+esc(p.reason)+'</p><p class="muted tiny">Fonte quota: '+esc(p.oddsSource)+' — non prezzo Bet365 aggiornato.</p></details>'+
  '</article>';
 }
