@@ -8,6 +8,8 @@ on:
       - ".github/workflows/fixture-radar.yml"
       - "scripts/collect-fixture-radar.mjs"
       - "scripts/test-fixture-radar.mjs"
+      - "scripts/radar-source-extras.mjs"
+      - "scripts/test-radar-source-extras.mjs"
   schedule:
     - cron: "15 8,16 * * *"
       timezone: "Europe/Rome"
@@ -31,7 +33,9 @@ jobs:
         with:
           node-version: '22'
       - name: Verifica separazione quote e calendario
-        run: node scripts/test-fixture-radar.mjs
+        run: |
+          node scripts/test-fixture-radar.mjs
+          node scripts/test-radar-source-extras.mjs
       - name: Raccogli palinsesto futuro senza scommesse
         run: node scripts/collect-fixture-radar.mjs
       - name: Pubblica solo radar
