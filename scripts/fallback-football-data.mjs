@@ -9,7 +9,7 @@ import { readFile,writeFile } from 'node:fs/promises';
 const FIXTURES='https://www.football-data.co.uk/fixtures.csv';
 const BASE='https://www.football-data.co.uk/mmz4281';
 const LEAGUES=['I1','I2','E0','E1','E2','D1','SP1','F1','N1'];
-const FILES={feed:'data/fixtures_latest.json',lab:'data/lab_auto.json',status:'data/football_data_status.json'};
+const FILES={feed:'data/fixtures_latest.json',lab:'data/lab_auto.json',status:'data/football_data_status.json',future:'data/football_data_future.json'};
 const TZ='Europe/Rome';
 function today(){return new Intl.DateTimeFormat('sv-SE',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
 function dateCode(date=new Date()){
@@ -267,6 +267,24 @@ async function main(){
    lab.records.push(record);picks.push(record);
   }
  }
+ // Archivio calendari indipendente: comprende tutte le partite future coperte,
+ // anche quelle senza quote. Non inserisce pronostici o puntate nel laboratorio.
+ const divisions={I1:'Serie A',I2:'Serie B',E0:'Premier League',E1:'Championship',
+  E2:'League One',D1:'Bundesliga 2',SP1:'LaLiga',F1:'Ligue 1',N1:'Eredivisie'};
+ const futureArchive={schema:'scanner-conte-football-data-future-v1',generated_at:captured_at,
+  warning:'Quote pubblicate nel CSV come snapshot, mai considerate live o verificate su Bet365.',
+  fixture_source:'https://www.football-data.co.uk/fixtures.csv',
+  fixtures:future.map(row=>{
+   const priceLine={};
+   for(const [col,label] of [['B365H','1'],['B365D','X'],['B365A','2'],
+     ['B365>2.5','Over 2.5'],['B365<2.5','Under 2.5']]){
+    const val=price(row[col]);if(val!==null)priceLine[label]=val;
+   }
+   return {id:'fd-'+row.Div+'-'+gameDate(row)+'-'+slug(row.HomeTeam)+'-'+slug(row.AwayTeam),
+    home:row.HomeTeam,away:row.AwayTeam,kickoff:kickoffISO(row),
+    league:divisions[row.Div]||row.Div,source_code:row.Div,
+    snapshot_at:captured_at,odds:priceLine};
+  })};
  lab.last_run=captured_at;
  lab.stats={total:lab.records.length,pending:lab.records.filter(r=>r.status==='pending').length,
   won:lab.records.filter(r=>r.status==='won').length,lost:lab.records.filter(r=>r.status==='lost').length,
@@ -278,13 +296,14 @@ async function main(){
  const status={schema:'scanner-conte-fallback-v1',provider:'Football-Data.co.uk',mode:'PERSONAL_FALLBACK',
   updated_at:captured_at,feed_date:today(),week_monday:week,weekly_download_sessions:used+1,
   next_update_policy:'Tuesday and Friday only',
-  fixture_rows:fixtureRows.length,result_rows:results.length,leagues_ok:LEAGUES.length-failed.length,
+  fixture_rows:fixtureRows.length,future_fixture_rows:futureArchive.fixtures.length,result_rows:results.length,leagues_ok:LEAGUES.length-failed.length,
   leagues_failed:failed,matched_existing:matched,settled_existing:closed,new_paper_tests:picks.length,
   total_paper_tests:lab.stats.total,pending:lab.stats.pending,
   warning:'Neither live results nor live Bet365 quotes. No personal REAL records are published.'};
  await writeFile(FILES.lab,JSON.stringify(lab,null,2)+'\n');
  await writeFile(FILES.feed,JSON.stringify(feed,null,2)+'\n');
  await writeFile(FILES.status,JSON.stringify(status,null,2)+'\n');
+ await writeFile(FILES.future,JSON.stringify(futureArchive,null,2)+'\n');
  await writeFile('data/historical_baselines.json',JSON.stringify(historical,null,2)+'\n');
  console.log('Fallback OK: '+JSON.stringify(status));
 }
