@@ -7,12 +7,19 @@
   d.toLocaleString('it-IT',{timeZone:'Europe/Rome',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}):'—';};
  const get=async path=>{try{const r=await fetch(path+'?s='+Date.now(),{cache:'no-store'});return r.ok?await r.json():null;}catch{return null}};
  async function show(){
-  const [radar,csv,results,daily]=await Promise.all([
+  const [radar,csv,results,daily,health]=await Promise.all([
    get('./data/fixture_radar.json'),get('./data/football_data_status.json'),
-   get('./data/results_public.json'),get('./data/daily_virtual_lab.json')
+   get('./data/results_public.json'),get('./data/daily_virtual_lab.json'),
+   get('./data/source_health.json')
   ]);
   if(!radar&&!csv&&!results&&!daily){box.textContent='Fonti: controllo non disponibile. Nessun archivio è stato alterato.';return}
   const parts=[];
+  if(health?.schema==='scanner-conte-source-health-v1'){
+   const labels={OPERATIVO:'OPERATIVO',PARZIALE:'PARZIALE (nessuna quota idonea o eventi)',ATTENZIONE:'ATTENZIONE (fonti non aggiornate)'};
+   parts.push('STATO AUTOMATICO '+(labels[health.status]||health.status)+' · verificato '+fmt(health.checked_at));
+   const extra=health.calendar?.sources||{};
+   parts.push('FONTI CALENDARIO: ESPN '+(extra.espn?.ok||0)+' risposte; OpenLigaDB '+(extra.openligadb?.ok||0)+'; TheSportsDB '+(extra.thesportsdb?.ok||0));
+  }
   if(radar?.schema==='scanner-conte-fixture-radar-v1'){
    const future=radar.fixtures.filter(x=>Date.parse(x.kickoff)>Date.now()).length;
    parts.push('CALENDARIO ESPN · '+future+' incontri futuri nella copertura · controllato '+fmt(radar.generated_at));
