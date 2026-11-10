@@ -153,6 +153,10 @@ const canonicalTeam=s=>{
   'andorra':'fc andorra',
   // Nomi storici, abbreviazioni e forme dei bookmaker. I due club e la data
   // devono comunque coincidere: nessun abbinamento con una sola squadra.
+  'victoria guimares':'vitoria sc',
+  'vitoria guimares':'vitoria sc',
+  'vitoria de guimares':'vitoria sc',
+  'victoria guimaraes':'vitoria sc',
   'vitoria guimaraes':'vitoria sc',
   'vitoria de guimaraes':'vitoria sc',
   'vitoria sport clube':'vitoria sc',
@@ -178,9 +182,15 @@ function sameFixture(record,fixture){
   return canonicalTeam(parts[0])===canonicalTeam(fixture.home)&&
     canonicalTeam(parts[1])===canonicalTeam(fixture.away);
  }
- // Vecchi record ricostruiti senza separatore: mantiene il confronto rigoroso precedente.
- return normalizeTeamName(record.match).replace(/\bvs\b/g,' ')===
-   normalizeTeamName(fixture.home+' '+fixture.away);
+ // Schede storiche con nomi scritti senza trattino. Prova soltanto separazioni
+ // che corrispondano ESATTAMENTE a entrambe le squadre, dopo gli alias noti.
+ // Data e doppia identita delle squadre restano obbligatorie.
+ const tokens=normalizeTeamName(record.match).replace(/\bvs\b/g,' ').split(' ');
+ for(let split=1;split<tokens.length;split++){
+   if(canonicalTeam(tokens.slice(0,split).join(' '))===canonicalTeam(fixture.home)&&
+      canonicalTeam(tokens.slice(split).join(' '))===canonicalTeam(fixture.away))return true;
+ }
+ return false;
 }
 let resultSyncBusy=false;
 async function reconcilePendingFixtures(){
