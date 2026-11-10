@@ -53,7 +53,7 @@ function show(){
   '<div class="sectionbar"><h3>'+esc(s.title)+'</h3></div><p class="muted small">'+esc(s.method)+'</p>'+
   '<div class="chat-analysis-picks">'+(s.picks||[]).map(pickCard).join('')+'</div>'+
   '<details class="ui-drawer chat-analysis-register"><summary><span><strong>Palinsesto e motivi delle esclusioni</strong><small>Elenco delle partite esaminate, con lo stato del filtro</small></span></summary><div class="ui-drawer-content">'+fixtureSection(s)+'</div></details>'+
-  '<p class="muted tiny chat-analysis-caution">'+esc(s.verification)+' I risultati dei test non vengono aggiornati automaticamente; nessun dato entra nei saldi REAL o LAB.</p>';
+  '<p class="muted tiny chat-analysis-caution">'+esc(s.verification)+' Le scansioni effettuate in chat vengono importate manualmente; gli esiti si verificano automaticamente quando disponibili nel feed pubblico, altrimenti servono verifiche documentate. Nessun risultato entra nei saldi REAL o LAB.</p>';
  root.querySelectorAll('[data-chat-day]').forEach(btn=>btn.addEventListener('click',()=>{selected=btn.getAttribute('data-chat-day');show();}));
 }
 async function load(){
