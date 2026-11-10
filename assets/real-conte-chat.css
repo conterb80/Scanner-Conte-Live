@@ -25,3 +25,16 @@
 .chat-analysis-match small{font-size:11px;color:#b6c6cf;line-height:1.45}
 .chat-analysis-caution{border-left:3px solid #8f9da9;padding:8px 10px}
 @media(min-width:720px){.chat-analysis-picks{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Bilancio virtuale: cumulativo sopra il selettore giorni; giornaliero sotto. */
+.chat-analysis-balance{display:grid;gap:10px}
+.chat-analysis-balance-head{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.chat-analysis-balance-head strong{font-size:13px;color:#d4f1e3}
+.chat-analysis-balance-head>span{font-size:11px;color:#b5c9d3}
+.chat-analysis-balance-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.chat-analysis-balance-value{display:grid;gap:5px;align-content:start;min-width:0}
+.chat-analysis-balance-value span{font-size:10px;color:#b7cbd3;line-height:1.4}
+.chat-analysis-balance-value strong{font-size:clamp(14px,4vw,22px);font-variant-numeric:tabular-nums;color:#d9efff;overflow-wrap:anywhere}
+.chat-analysis-balance-value.positive strong{color:#70e4a8}
+.chat-analysis-balance-value.negative strong{color:#ff9299}
+.chat-analysis-balance p{margin:0;line-height:1.45}
