@@ -10,6 +10,8 @@ on:
       - "scripts/test-fixture-radar.mjs"
       - "scripts/radar-source-extras.mjs"
       - "scripts/test-radar-source-extras.mjs"
+      - "scripts/check-source-health.mjs"
+      - "scripts/test-source-health.mjs"
   schedule:
     - cron: "15 8,16 * * *"
       timezone: "Europe/Rome"
@@ -36,11 +38,14 @@ jobs:
         run: |
           node scripts/test-fixture-radar.mjs
           node scripts/test-radar-source-extras.mjs
+          node scripts/test-source-health.mjs
       - name: Raccogli palinsesto futuro senza scommesse
         run: node scripts/collect-fixture-radar.mjs
-      - name: Pubblica solo radar
+      - name: Diagnostica automatica delle fonti e dei nuovi test
+        run: node scripts/check-source-health.mjs
+      - name: Pubblica radar e salute delle fonti
         run: |
-          git add data/fixture_radar.json
+          git add data/fixture_radar.json data/source_health.json
           if git diff --cached --quiet; then
             echo "Radar invariato"
             exit 0
