@@ -31,7 +31,7 @@ jobs:
         run: node scripts/fallback-football-data.mjs
       - name: Conserva e pubblica solo riepiloghi del laboratorio virtuale
         run: |
-          git add data/fixtures_latest.json data/lab_auto.json data/football_data_status.json
+          git add data/fixtures_latest.json data/lab_auto.json data/football_data_status.json data/football_data_future.json
           # Nuovo report storico opzionale: non deve fallire nelle sessioni SKIP.
           if [ -f data/historical_baselines.json ]; then
             git add data/historical_baselines.json
