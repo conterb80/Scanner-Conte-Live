@@ -1,0 +1,43 @@
+name: Scanner Conte - Radar palinsesto indipendente
+# Solo scouting di partite future: nessun pronostico, test fittizio o quota live inventata.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 8,16 * * *"
+      timezone: "Europe/Rome"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scanner-conte-feed
+  cancel-in-progress: false
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verifica separazione quote e calendario
+        run: node scripts/test-fixture-radar.mjs
+      - name: Raccogli palinsesto futuro senza scommesse
+        run: node scripts/collect-fixture-radar.mjs
+      - name: Pubblica solo radar
+        run: |
+          git add data/fixture_radar.json
+          if git diff --cached --quiet; then
+            echo "Radar invariato"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Aggiorna radar gare future senza quote live"
+          git fetch origin main
+          git rebase origin/main
+          git push
