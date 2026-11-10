@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-weekly-lab-v1",
   "version": 1,
-  "generated_at": "2026-11-10T10:17:46.388Z",
+  "generated_at": "2026-11-10T10:18:49.596Z",
   "timezone": "Europe/Rome",
   "scope": "Solo laboratori pubblici e virtuali: daily e auto. REAL e registri locali esclusi.",
   "retention": "Riepilogo addizionale non distruttivo: gli esperimenti originari restano invariati.",
@@ -13,15 +13,15 @@
       "week_end": "2026-11-08",
       "lab": "auto",
       "total": 90,
-      "pending": 1,
+      "pending": 0,
       "won": 44,
-      "lost": 45,
+      "lost": 46,
       "push": 0,
       "void": 0,
-      "settled": 89,
-      "stake_settled": 89,
-      "pnl": -9.19,
-      "roi_pct": -10.3,
+      "settled": 90,
+      "stake_settled": 90,
+      "pnl": -10.19,
+      "roi_pct": -11.3,
       "by_market": [
         {
           "name": "1X2",
@@ -39,15 +39,15 @@
         {
           "name": "OVER_2_5",
           "total": 45,
-          "pending": 1,
+          "pending": 0,
           "won": 19,
-          "lost": 25,
+          "lost": 26,
           "push": 0,
           "void": 0,
-          "settled": 44,
-          "stake_settled": 44,
-          "pnl": -9.03,
-          "roi_pct": -20.5
+          "settled": 45,
+          "stake_settled": 45,
+          "pnl": -10.03,
+          "roi_pct": -22.3
         }
       ],
       "by_strategy": [
@@ -67,15 +67,15 @@
         {
           "name": "OVER25_CONTROLLO",
           "total": 45,
-          "pending": 1,
+          "pending": 0,
           "won": 19,
-          "lost": 25,
+          "lost": 26,
           "push": 0,
           "void": 0,
-          "settled": 44,
-          "stake_settled": 44,
-          "pnl": -9.03,
-          "roi_pct": -20.5
+          "settled": 45,
+          "stake_settled": 45,
+          "pnl": -10.03,
+          "roi_pct": -22.3
         }
       ],
       "by_odds_band": [
@@ -95,15 +95,15 @@
         {
           "name": "1.50-1.99",
           "total": 68,
-          "pending": 1,
+          "pending": 0,
           "won": 32,
-          "lost": 35,
+          "lost": 36,
           "push": 0,
           "void": 0,
-          "settled": 67,
-          "stake_settled": 67,
-          "pnl": -10.73,
-          "roi_pct": -16
+          "settled": 68,
+          "stake_settled": 68,
+          "pnl": -11.73,
+          "roi_pct": -17.2
         },
         {
           "name": "2.00-2.49",
