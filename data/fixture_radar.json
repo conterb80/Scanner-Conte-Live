@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-fixture-radar-v1",
-  "generated_at": "2026-11-10T22:10:46.872Z",
+  "generated_at": "2026-11-10T22:29:51.622Z",
   "scope": "Partite future prossime 72 ore; fonti parziali; nessuna quota Bet365 in tempo reale.",
   "auto_bets": false,
   "auto_predictions": false,
@@ -8,7 +8,21 @@
   "source_status": {
     "espn_requests_ok": 36,
     "espn_requests_failed": 0,
-    "football_data_snapshot_at": null
+    "football_data_snapshot_at": null,
+    "additional_sources": {
+      "openligadb": {
+        "requests": 2,
+        "ok": 2,
+        "failed": 0,
+        "fixtures": 0
+      },
+      "thesportsdb": {
+        "requests": 2,
+        "ok": 2,
+        "failed": 0,
+        "fixtures": 0
+      }
+    }
   },
   "stats": {
     "matches": 6,
