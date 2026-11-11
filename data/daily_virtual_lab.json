@@ -6177,9 +6177,28 @@
       "created": 0,
       "source": "TipsAudit",
       "test_only": true
+    },
+    {
+      "day": "2026-11-11",
+      "checked_at": "2026-11-11T14:25:41.162Z",
+      "source_generated_at": "2026-11-11T14:25:41+00:00",
+      "scanned_predictions": 2,
+      "source_total_predictions": 97,
+      "scope_day": "2026-11-11",
+      "scope_timezone": "Europe/Rome",
+      "scanned_unique_matches": 2,
+      "scanned_league_counts": {
+        "Brazil Serie B": 1,
+        "Lithuania 1 Lyga": 1
+      },
+      "scanned_league_total": 2,
+      "eligible_actionable": 0,
+      "created": 0,
+      "source": "TipsAudit",
+      "test_only": true
     }
   ],
-  "last_check": "2026-11-10T14:55:34.659Z",
+  "last_check": "2026-11-11T14:25:41.162Z",
   "stats": {
     "total": 166,
     "pending": 1,

@@ -1,9 +1,9 @@
 {
   "schema": "scanner-conte-real-watch-today-v1",
-  "generated_at": "2026-11-11T01:56:41.841Z",
+  "generated_at": "2026-11-11T14:25:41.955Z",
   "scope_day": "2026-11-11",
   "status": "NO_OBSERVATIONS",
-  "source_last_check": "2026-11-10T14:55:34.659Z",
+  "source_last_check": "2026-11-11T14:25:41.162Z",
   "generated_candidates": 0,
   "methodology": "Selezione automatica prepartita fra osservazioni LAB forward 1X2; ranking basato su quota e benchmark della stessa fonte. Nessuna stima xG indipendente: non considerare queste candidate value verificate.",
   "bet365_quotes_available": false,
