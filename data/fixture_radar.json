@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-fixture-radar-v1",
-  "generated_at": "2026-11-11T15:07:13.994Z",
+  "generated_at": "2026-11-11T21:53:36.549Z",
   "scope": "Partite future prossime 72 ore; fonti parziali; nessuna quota Bet365 in tempo reale.",
   "auto_bets": false,
   "auto_predictions": false,
@@ -25,71 +25,14 @@
     }
   },
   "stats": {
-    "matches": 7,
+    "matches": 3,
     "days": {
-      "2026-11-11": 4,
       "2026-11-12": 2,
       "2026-11-13": 1
     },
     "with_historical_snapshot": 0
   },
   "fixtures": [
-    {
-      "id": "espn-uefa.wchampions-401916985",
-      "home": "OH Leuven",
-      "away": "HB Køge",
-      "match": "OH Leuven – HB Køge",
-      "kickoff": "2026-11-11T17:45:00.000Z",
-      "league": "Champions League femminile",
-      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
-      "source_code": "uefa.wchampions",
-      "market": "NESSUNA QUOTA LIVE",
-      "odds": null,
-      "quote_status": "NOT_AVAILABLE",
-      "source_url": "https://www.espn.com/soccer/scoreboard?league=uefa.wchampions"
-    },
-    {
-      "id": "espn-eng.trophy-401911177",
-      "home": "Barnsley",
-      "away": "Oldham Athletic",
-      "match": "Barnsley – Oldham Athletic",
-      "kickoff": "2026-11-11T19:00:00.000Z",
-      "league": "EFL Trophy",
-      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
-      "source_code": "eng.trophy",
-      "market": "NESSUNA QUOTA LIVE",
-      "odds": null,
-      "quote_status": "NOT_AVAILABLE",
-      "source_url": "https://www.espn.com/soccer/scoreboard?league=eng.trophy"
-    },
-    {
-      "id": "espn-eng.trophy-401906340",
-      "home": "Sheffield Wednesday",
-      "away": "Accrington Stanley",
-      "match": "Sheffield Wednesday – Accrington Stanley",
-      "kickoff": "2026-11-11T19:00:00.000Z",
-      "league": "EFL Trophy",
-      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
-      "source_code": "eng.trophy",
-      "market": "NESSUNA QUOTA LIVE",
-      "odds": null,
-      "quote_status": "NOT_AVAILABLE",
-      "source_url": "https://www.espn.com/soccer/scoreboard?league=eng.trophy"
-    },
-    {
-      "id": "espn-uefa.wchampions-401916984",
-      "home": "Juventus",
-      "away": "OL Lyonnes",
-      "match": "Juventus – OL Lyonnes",
-      "kickoff": "2026-11-11T20:00:00.000Z",
-      "league": "Champions League femminile",
-      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
-      "source_code": "uefa.wchampions",
-      "market": "NESSUNA QUOTA LIVE",
-      "odds": null,
-      "quote_status": "NOT_AVAILABLE",
-      "source_url": "https://www.espn.com/soccer/scoreboard?league=uefa.wchampions"
-    },
     {
       "id": "espn-uefa.wchampions-401916986",
       "home": "Barcelona",
