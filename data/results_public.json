@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-results-public-v1",
-  "checked_at": "2026-11-11T15:09:15.970Z",
+  "checked_at": "2026-11-12T01:31:29.839Z",
   "source": "ESPN public scoreboard + verified official match reports",
   "coverage": {
     "leagues": [
@@ -16,9 +16,9 @@
       "por.1"
     ],
     "days": [
-      "20261109",
       "20261110",
-      "20261111"
+      "20261111",
+      "20261112"
     ],
     "queries": 30,
     "succeeded": 30,
