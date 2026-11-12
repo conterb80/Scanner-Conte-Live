@@ -3324,6 +3324,31 @@
       "status": "SOURCE_STALE",
       "source_commit": null,
       "observations": []
+    },
+    {
+      "generated_at": "2026-11-12T15:17:16.427Z",
+      "scope_day": "2026-11-12",
+      "status": "PRELIMINARY_CANDIDATES",
+      "source_commit": null,
+      "observations": [
+        {
+          "id": "tipsaudit-16389:TIPSAUDIT_VALUE_1X2",
+          "match": "Armenia - Cyprus",
+          "league": "UEFA Nations League",
+          "kickoff": "2026-11-12T17:00:00+00:00",
+          "market": "1X2",
+          "selection": "Away",
+          "category": "VALUE",
+          "place": "PRINCIPALE",
+          "rank": 1,
+          "reference_odds": 2.7,
+          "reference_bookmaker": "Unibet (SE)",
+          "external_fair_odds": 2.62,
+          "relative_screening_score": 53,
+          "captured_at": "2026-11-12T15:17:15.871Z",
+          "reference_link": "https://tipsaudit.com/match/16389/armenia-vs-cyprus-2026-11-12"
+        }
+      ]
     }
   ],
   "records": [
@@ -4397,21 +4422,42 @@
       "result_source": "TipsAudit LAB, non verifica indipendente",
       "result_recorded_at": "2026-11-09T01:44:18.669Z",
       "virtual_pnl": 0.56
+    },
+    {
+      "id": "tipsaudit-16389:TIPSAUDIT_VALUE_1X2",
+      "match": "Armenia - Cyprus",
+      "league": "UEFA Nations League",
+      "day": "2026-11-12",
+      "kickoff": "2026-11-12T17:00:00+00:00",
+      "market": "1X2",
+      "selection": "Away",
+      "category": "VALUE",
+      "first_seen": "2026-11-12T15:17:16.427Z",
+      "last_seen": "2026-11-12T15:17:16.427Z",
+      "first_place": "PRINCIPALE",
+      "ever_primary": true,
+      "first_odds": 2.7,
+      "first_bookmaker": "Unibet (SE)",
+      "appearances": 1,
+      "result_status": "pending",
+      "result_source": "TipsAudit LAB, non verifica indipendente",
+      "result_recorded_at": null,
+      "virtual_pnl": null
     }
   ],
   "stats": {
-    "total": 51,
-    "primary": 24,
+    "total": 52,
+    "primary": 25,
     "alternatives_only": 27,
     "won": 29,
     "lost": 21,
-    "pending": 1,
+    "pending": 2,
     "unmatched": 0,
     "virtual_pnl": 6.16,
     "settled": 50,
     "virtual_roi": 12.32
   },
-  "last_snapshot_at": "2026-11-12T01:56:51.340Z",
+  "last_snapshot_at": "2026-11-12T15:17:16.427Z",
   "last_result_check_at": "2026-11-09T01:44:18.669Z",
   "result_note": "Esiti forniti dalla stessa fonte del LAB, non controllati indipendentemente. Quote di riferimento, non Bet365. Nessun dato REAL del telefono."
 }

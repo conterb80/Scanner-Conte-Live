@@ -5421,6 +5421,33 @@
       "settlement_source": "TipsAudit public record (1X2 FT)",
       "settlement_reference": "https://tipsaudit.com/track-record",
       "settlement_publication": "2026-11-09T01:40:12+00:00"
+    },
+    {
+      "id": "tipsaudit-16389:TIPSAUDIT_VALUE_1X2",
+      "source_id": "16389",
+      "strategy": "TIPSAUDIT_VALUE_1X2",
+      "match": "Armenia - Cyprus",
+      "league": "UEFA Nations League",
+      "kickoff": "2026-11-12T17:00:00+00:00",
+      "selection": "Away",
+      "market": "1X2",
+      "bookmaker": "Unibet (SE)",
+      "odds": 2.7,
+      "fair_odds": 2.62,
+      "edge": 0.0296,
+      "bookmaker_quote_status": "source actionable, not guaranteed executable",
+      "captured_at": "2026-11-12T15:17:15.871Z",
+      "capture_day": "2026-11-12",
+      "provider_generated_at": "2026-11-12T15:17:16+00:00",
+      "benchmark_read_at": "2026-11-12T14:34:43+00:00",
+      "provider": "TipsAudit (external signal, NOT our own betting model)",
+      "reference": "https://tipsaudit.com/match/16389/armenia-vs-cyprus-2026-11-12",
+      "origin": "live bookmaker observation via TipsAudit public feed",
+      "stake_virtual": 1,
+      "status": "pending",
+      "pnl": null,
+      "score": null,
+      "settled_at": null
     }
   ],
   "checks": [
@@ -6196,12 +6223,32 @@
       "created": 0,
       "source": "TipsAudit",
       "test_only": true
+    },
+    {
+      "day": "2026-11-12",
+      "checked_at": "2026-11-12T15:17:15.871Z",
+      "source_generated_at": "2026-11-12T15:17:16+00:00",
+      "scanned_predictions": 10,
+      "source_total_predictions": 109,
+      "scope_day": "2026-11-12",
+      "scope_timezone": "Europe/Rome",
+      "scanned_unique_matches": 10,
+      "scanned_league_counts": {
+        "UEFA Nations League": 8,
+        "Brazil Serie B": 1,
+        "Primera A": 1
+      },
+      "scanned_league_total": 3,
+      "eligible_actionable": 1,
+      "created": 1,
+      "source": "TipsAudit",
+      "test_only": true
     }
   ],
-  "last_check": "2026-11-11T14:25:41.162Z",
+  "last_check": "2026-11-12T15:17:15.871Z",
   "stats": {
-    "total": 166,
-    "pending": 1,
+    "total": 167,
+    "pending": 2,
     "won": 90,
     "lost": 75,
     "pnl": 18.68
