@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-fixture-radar-v1",
-  "generated_at": "2026-11-11T21:53:36.549Z",
+  "generated_at": "2026-11-12T15:56:24.019Z",
   "scope": "Partite future prossime 72 ore; fonti parziali; nessuna quota Bet365 in tempo reale.",
   "auto_bets": false,
   "auto_predictions": false,
@@ -25,10 +25,11 @@
     }
   },
   "stats": {
-    "matches": 3,
+    "matches": 8,
     "days": {
       "2026-11-12": 2,
-      "2026-11-13": 1
+      "2026-11-13": 1,
+      "2026-11-14": 5
     },
     "with_historical_snapshot": 0
   },
@@ -67,6 +68,76 @@
       "away": "Burgos",
       "match": "Leganés – Burgos",
       "kickoff": "2026-11-13T19:30:00.000Z",
+      "league": "Segunda División",
+      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
+      "source_code": "esp.2",
+      "market": "NESSUNA QUOTA LIVE",
+      "odds": null,
+      "quote_status": "NOT_AVAILABLE",
+      "source_url": "https://www.espn.com/soccer/scoreboard?league=esp.2"
+    },
+    {
+      "id": "espn-esp.2-401883114",
+      "home": "Real Valladolid",
+      "away": "Castellón",
+      "match": "Real Valladolid – Castellón",
+      "kickoff": "2026-11-14T13:00:00.000Z",
+      "league": "Segunda División",
+      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
+      "source_code": "esp.2",
+      "market": "NESSUNA QUOTA LIVE",
+      "odds": null,
+      "quote_status": "NOT_AVAILABLE",
+      "source_url": "https://www.espn.com/soccer/scoreboard?league=esp.2"
+    },
+    {
+      "id": "espn-esp.2-401883134",
+      "home": "Real Sociedad II",
+      "away": "Sporting Gijón",
+      "match": "Real Sociedad II – Sporting Gijón",
+      "kickoff": "2026-11-14T15:15:00.000Z",
+      "league": "Segunda División",
+      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
+      "source_code": "esp.2",
+      "market": "NESSUNA QUOTA LIVE",
+      "odds": null,
+      "quote_status": "NOT_AVAILABLE",
+      "source_url": "https://www.espn.com/soccer/scoreboard?league=esp.2"
+    },
+    {
+      "id": "espn-esp.2-401883118",
+      "home": "Almería",
+      "away": "FC Andorra",
+      "match": "Almería – FC Andorra",
+      "kickoff": "2026-11-14T17:30:00.000Z",
+      "league": "Segunda División",
+      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
+      "source_code": "esp.2",
+      "market": "NESSUNA QUOTA LIVE",
+      "odds": null,
+      "quote_status": "NOT_AVAILABLE",
+      "source_url": "https://www.espn.com/soccer/scoreboard?league=esp.2"
+    },
+    {
+      "id": "espn-esp.2-401883135",
+      "home": "Mallorca",
+      "away": "Córdoba",
+      "match": "Mallorca – Córdoba",
+      "kickoff": "2026-11-14T17:30:00.000Z",
+      "league": "Segunda División",
+      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
+      "source_code": "esp.2",
+      "market": "NESSUNA QUOTA LIVE",
+      "odds": null,
+      "quote_status": "NOT_AVAILABLE",
+      "source_url": "https://www.espn.com/soccer/scoreboard?league=esp.2"
+    },
+    {
+      "id": "espn-esp.2-401883115",
+      "home": "Real Oviedo",
+      "away": "Girona",
+      "match": "Real Oviedo – Girona",
+      "kickoff": "2026-11-14T20:00:00.000Z",
       "league": "Segunda División",
       "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
       "source_code": "esp.2",
