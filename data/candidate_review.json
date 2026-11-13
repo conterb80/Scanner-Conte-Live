@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-13T14:37:44.239Z",
+  "generated_at": "2026-11-13T14:54:45.887Z",
   "status": "PRELIMINARY_CANDIDATES",
   "source_last_check": "2026-11-13T14:37:43.124Z",
   "source_max_age_hours": 36,
@@ -43,7 +43,7 @@
       "external_fair_odds": 1.75,
       "external_benchmark_probability_pct": 57.1,
       "external_reference_gap_pct": 1.71,
-      "relative_screening_score": 39,
+      "relative_screening_score": 38,
       "captured_at": "2026-11-13T14:37:43.124Z",
       "reference_link": "https://tipsaudit.com/match/16675/bulgaria-vs-iceland-2026-11-13",
       "source": "TipsAudit public pre-match paper signals",
@@ -55,7 +55,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 39 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 38 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
