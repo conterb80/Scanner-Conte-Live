@@ -10,6 +10,7 @@ export const LEAGUES=Object.freeze([
  ['ita.1','Italia Serie A'],['ita.2','Italia Serie B'],
  ['eng.1','Premier League'],['eng.2','Championship'],['eng.trophy','EFL Trophy'],
  ['esp.1','LaLiga'],['esp.2','Segunda División'],
+ ['uefa.nations','UEFA Nations League'],
  ['uefa.champions','Champions League'],['uefa.europa','Europa League'],
  ['uefa.wchampions','Champions League femminile'],
  ['ger.1','Bundesliga'],['por.1','Primeira Liga']
