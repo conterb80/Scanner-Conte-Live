@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-historical-baselines-v1",
-  "calculated_at": "2026-11-10T21:18:48.084Z",
+  "calculated_at": "2026-11-13T19:55:12.831Z",
   "provider": "Football-Data.co.uk historical CSV",
   "kind": "RETROSPECTIVE_ONLY",
   "disclaimer": "Analisi storica esplorativa con quote archiviate. Non sono test registrati prima delle partite, non sono giocate reali e non dimostrano un vantaggio futuro.",

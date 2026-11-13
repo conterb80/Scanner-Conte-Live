@@ -1,0 +1,88 @@
+{
+  "schema": "scanner-conte-football-data-future-v1",
+  "generated_at": "2026-11-13T19:55:12.831Z",
+  "warning": "Quote pubblicate nel CSV come snapshot, mai considerate live o verificate su Bet365.",
+  "fixture_source": "https://www.football-data.co.uk/fixtures.csv",
+  "fixtures": [
+    {
+      "id": "fd-E2-2026-11-14-afcwimbledon-blackpool",
+      "home": "AFC Wimbledon",
+      "away": "Blackpool",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "league": "League One",
+      "source_code": "E2",
+      "snapshot_at": "2026-11-13T19:55:12.831Z",
+      "odds": {
+        "1": 2.5,
+        "2": 2.5,
+        "X": 3.4,
+        "Over 2.5": 1.8,
+        "Under 2.5": 2
+      }
+    },
+    {
+      "id": "fd-E2-2026-11-14-miltonkeynesdons-burton",
+      "home": "Milton Keynes Dons",
+      "away": "Burton",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "league": "League One",
+      "source_code": "E2",
+      "snapshot_at": "2026-11-13T19:55:12.831Z",
+      "odds": {
+        "1": 1.61,
+        "2": 4.75,
+        "X": 3.8,
+        "Over 2.5": 1.65,
+        "Under 2.5": 2.2
+      }
+    },
+    {
+      "id": "fd-E2-2026-11-14-sheffieldweds-plymouth",
+      "home": "Sheffield Weds",
+      "away": "Plymouth",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "league": "League One",
+      "source_code": "E2",
+      "snapshot_at": "2026-11-13T19:55:12.831Z",
+      "odds": {
+        "1": 2.25,
+        "2": 2.82,
+        "X": 3.5,
+        "Over 2.5": 1.57,
+        "Under 2.5": 2.35
+      }
+    },
+    {
+      "id": "fd-E2-2026-11-14-stockport-reading",
+      "home": "Stockport",
+      "away": "Reading",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "league": "League One",
+      "source_code": "E2",
+      "snapshot_at": "2026-11-13T19:55:12.831Z",
+      "odds": {
+        "1": 1.79,
+        "2": 3.9,
+        "X": 3.7,
+        "Over 2.5": 1.62,
+        "Under 2.5": 2.25
+      }
+    },
+    {
+      "id": "fd-E2-2026-11-14-wigan-barnsley",
+      "home": "Wigan",
+      "away": "Barnsley",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "league": "League One",
+      "source_code": "E2",
+      "snapshot_at": "2026-11-13T19:55:12.831Z",
+      "odds": {
+        "1": 2.25,
+        "2": 2.75,
+        "X": 3.5,
+        "Over 2.5": 1.6,
+        "Under 2.5": 2.3
+      }
+    }
+  ]
+}
