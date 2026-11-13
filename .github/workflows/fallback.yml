@@ -3,6 +3,11 @@ name: Scanner Conte - Fonte alternativa gratuita
 # Nessuna chiave API richiesta; non usa l'account API-Football sospeso.
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/fallback-football-data.mjs'
+      - '.github/workflows/fallback.yml'
   schedule:
     # Football-Data pubblica quote martedi entro le 13 UK e venerdi entro le 17 UK.
     # Download DOPO la pubblicazione: al massimo una volta martedi e una venerdi.
@@ -27,11 +32,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Verifica la sintassi del raccoglitore
+        run: node --check scripts/fallback-football-data.mjs
       - name: Leggi pochi CSV pubblici (fonte alternativa)
         run: node scripts/fallback-football-data.mjs
       - name: Conserva e pubblica solo riepiloghi del laboratorio virtuale
         run: |
-          git add data/fixtures_latest.json data/lab_auto.json data/football_data_status.json data/football_data_future.json
+          git add data/fixtures_latest.json data/lab_auto.json data/football_data_status.json
+          # Il nuovo archivio future può non esistere se una sessione viene saltata.
+          if [ -f data/football_data_future.json ]; then
+            git add data/football_data_future.json
+          fi
           # Nuovo report storico opzionale: non deve fallire nelle sessioni SKIP.
           if [ -f data/historical_baselines.json ]; then
             git add data/historical_baselines.json
