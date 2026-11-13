@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-results-public-v1",
-  "checked_at": "2026-11-13T15:22:18.857Z",
+  "checked_at": "2026-11-13T18:56:40.590Z",
   "source": "ESPN public scoreboard + verified official match reports",
   "coverage": {
     "leagues": [
@@ -13,6 +13,7 @@
       "esp.1",
       "fra.1",
       "ned.1",
+      "uefa.nations",
       "por.1"
     ],
     "days": [
@@ -20,8 +21,8 @@
       "20261112",
       "20261113"
     ],
-    "queries": 30,
-    "succeeded": 30,
+    "queries": 33,
+    "succeeded": 33,
     "failed": 0
   },
   "note": "Only final match scores; no REAL data. Postponements remain pending; bookmaker rules must be checked separately.",
@@ -2897,6 +2898,132 @@
       "away_goals": 0,
       "source": "ESPN public scoreboard",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/401883140/eldense-las-palmas",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861145",
+      "kickoff": "2026-11-12T17:00:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Türkiye",
+      "away": "Belgium",
+      "home_goals": 1,
+      "away_goals": 2,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861145/belgium-turkiye",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861146",
+      "kickoff": "2026-11-12T17:00:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Armenia",
+      "away": "Cyprus",
+      "home_goals": 1,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861146/cyprus-armenia",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861147",
+      "kickoff": "2026-11-12T19:45:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Albania",
+      "away": "Finland",
+      "home_goals": 2,
+      "away_goals": 0,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861147/finland-albania",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861148",
+      "kickoff": "2026-11-12T19:45:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Czechia",
+      "away": "Spain",
+      "home_goals": 0,
+      "away_goals": 2,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861148/spain-czechia",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861149",
+      "kickoff": "2026-11-12T19:45:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "San Marino",
+      "away": "Belarus",
+      "home_goals": 0,
+      "away_goals": 2,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861149/belarus-san-marino",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861150",
+      "kickoff": "2026-11-12T19:45:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "England",
+      "away": "Croatia",
+      "home_goals": 2,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861150/croatia-england",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861151",
+      "kickoff": "2026-11-12T19:45:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Italy",
+      "away": "France",
+      "home_goals": 3,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861151/france-italy",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861152",
+      "kickoff": "2026-11-12T19:45:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Montenegro",
+      "away": "Latvia",
+      "home_goals": 2,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861152/latvia-montenegro",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861162",
+      "kickoff": "2026-11-13T17:00:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Moldova",
+      "away": "Kazakhstan",
+      "home_goals": 2,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861162/kazakhstan-moldova",
       "verification": "espn_scoreboard"
     }
   ]
