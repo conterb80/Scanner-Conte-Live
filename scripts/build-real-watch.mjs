@@ -74,7 +74,9 @@ export function buildRealWatch(lab,previous,nowISO){
      Date.parse(r.kickoff)!==Date.parse(entry.kickoff)||!['won','lost'].includes(r.status))continue;
   entry.result_status=r.status;entry.settled_at=r.settled_at||nowISO;
   entry.virtual_pnl=r.status==='won'?round(entry.reference_odds-1):-1;
-  entry.result_source='TipsAudit LAB, risultato da verificare indipendentemente';
+  entry.result_source=r.settlement_source||
+   'TipsAudit LAB, risultato da verificare indipendentemente';
+  entry.result_verified_independently=r.independent_ft_verification===true;
  }
  const primary=previous.records.filter(r=>r.position==='PRINCIPALE');
  const closed=primary.filter(r=>['won','lost'].includes(r.result_status));
@@ -83,7 +85,8 @@ export function buildRealWatch(lab,previous,nowISO){
   lost:closed.filter(r=>r.result_status==='lost').length,pending:primary.filter(r=>r.result_status==='pending').length,
   theoretical_stake:closed.length,theoretical_pnl:round(closed.reduce((n,r)=>n+r.virtual_pnl,0)),
   theoretical_roi_pct:closed.length?round(100*closed.reduce((n,r)=>n+r.virtual_pnl,0)/closed.length,2):null,
-  independent_result_verification:false};
+  independently_verified_settled:closed.filter(r=>r.result_verified_independently===true).length,
+  independent_result_verification:closed.length>0&&closed.every(r=>r.result_verified_independently===true)};
  const watch={schema:'scanner-conte-real-watch-today-v1',generated_at:nowISO,scope_day:scope,
   status:!sourceFresh?'SOURCE_STALE':todays.length?'OBSERVATIONS_AVAILABLE':'NO_OBSERVATIONS',
   source_last_check:lab.last_check||null,generated_candidates:added.length,
