@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-fixture-radar-v1",
-  "generated_at": "2026-11-13T18:55:54.374Z",
+  "generated_at": "2026-11-13T19:56:29.094Z",
   "scope": "Partite future prossime 72 ore; fonti parziali; nessuna quota Bet365 in tempo reale.",
   "auto_bets": false,
   "auto_predictions": false,
@@ -8,7 +8,7 @@
   "source_status": {
     "espn_requests_ok": 39,
     "espn_requests_failed": 0,
-    "football_data_snapshot_at": null,
+    "football_data_snapshot_at": "2026-11-13T19:55:12.831Z",
     "additional_sources": {
       "openligadb": {
         "requests": 2,
@@ -25,155 +25,14 @@
     }
   },
   "stats": {
-    "matches": 35,
+    "matches": 30,
     "days": {
-      "2026-11-13": 10,
-      "2026-11-14": 13,
+      "2026-11-14": 18,
       "2026-11-15": 12
     },
-    "with_historical_snapshot": 0
+    "with_historical_snapshot": 5
   },
   "fixtures": [
-    {
-      "id": "espn-esp.2-401883136",
-      "home": "Leganés",
-      "away": "Burgos",
-      "match": "Leganés – Burgos",
-      "kickoff": "2026-11-13T19:30:00.000Z",
-      "league": "Segunda División",
-      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
-      "source_code": "esp.2",
-      "market": "NESSUNA QUOTA LIVE",
-      "odds": null,
-      "quote_status": "NOT_AVAILABLE",
-      "source_url": "https://www.espn.com/soccer/scoreboard?league=esp.2"
-    },
-    {
-      "id": "espn-uefa.nations-401861155",
-      "home": "Andorra",
-      "away": "Gibraltar",
-      "match": "Andorra – Gibraltar",
-      "kickoff": "2026-11-13T19:45:00.000Z",
-      "league": "UEFA Nations League",
-      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
-      "source_code": "uefa.nations",
-      "market": "NESSUNA QUOTA LIVE",
-      "odds": null,
-      "quote_status": "NOT_AVAILABLE",
-      "source_url": "https://www.espn.com/soccer/scoreboard?league=uefa.nations"
-    },
-    {
-      "id": "espn-uefa.nations-401861157",
-      "home": "Bulgaria",
-      "away": "Iceland",
-      "match": "Bulgaria – Iceland",
-      "kickoff": "2026-11-13T19:45:00.000Z",
-      "league": "UEFA Nations League",
-      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
-      "source_code": "uefa.nations",
-      "market": "NESSUNA QUOTA LIVE",
-      "odds": null,
-      "quote_status": "NOT_AVAILABLE",
-      "source_url": "https://www.espn.com/soccer/scoreboard?league=uefa.nations"
-    },
-    {
-      "id": "espn-uefa.nations-401861153",
-      "home": "Liechtenstein",
-      "away": "Azerbaijan",
-      "match": "Liechtenstein – Azerbaijan",
-      "kickoff": "2026-11-13T19:45:00.000Z",
-      "league": "UEFA Nations League",
-      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
-      "source_code": "uefa.nations",
-      "market": "NESSUNA QUOTA LIVE",
-      "odds": null,
-      "quote_status": "NOT_AVAILABLE",
-      "source_url": "https://www.espn.com/soccer/scoreboard?league=uefa.nations"
-    },
-    {
-      "id": "espn-uefa.nations-401861154",
-      "home": "Luxembourg",
-      "away": "Estonia",
-      "match": "Luxembourg – Estonia",
-      "kickoff": "2026-11-13T19:45:00.000Z",
-      "league": "UEFA Nations League",
-      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
-      "source_code": "uefa.nations",
-      "market": "NESSUNA QUOTA LIVE",
-      "odds": null,
-      "quote_status": "NOT_AVAILABLE",
-      "source_url": "https://www.espn.com/soccer/scoreboard?league=uefa.nations"
-    },
-    {
-      "id": "espn-uefa.nations-401861159",
-      "home": "Netherlands",
-      "away": "Greece",
-      "match": "Netherlands – Greece",
-      "kickoff": "2026-11-13T19:45:00.000Z",
-      "league": "UEFA Nations League",
-      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
-      "source_code": "uefa.nations",
-      "market": "NESSUNA QUOTA LIVE",
-      "odds": null,
-      "quote_status": "NOT_AVAILABLE",
-      "source_url": "https://www.espn.com/soccer/scoreboard?league=uefa.nations"
-    },
-    {
-      "id": "espn-uefa.nations-401861161",
-      "home": "Scotland",
-      "away": "North Macedonia",
-      "match": "Scotland – North Macedonia",
-      "kickoff": "2026-11-13T19:45:00.000Z",
-      "league": "UEFA Nations League",
-      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
-      "source_code": "uefa.nations",
-      "market": "NESSUNA QUOTA LIVE",
-      "odds": null,
-      "quote_status": "NOT_AVAILABLE",
-      "source_url": "https://www.espn.com/soccer/scoreboard?league=uefa.nations"
-    },
-    {
-      "id": "espn-uefa.nations-401861158",
-      "home": "Serbia",
-      "away": "Germany",
-      "match": "Serbia – Germany",
-      "kickoff": "2026-11-13T19:45:00.000Z",
-      "league": "UEFA Nations League",
-      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
-      "source_code": "uefa.nations",
-      "market": "NESSUNA QUOTA LIVE",
-      "odds": null,
-      "quote_status": "NOT_AVAILABLE",
-      "source_url": "https://www.espn.com/soccer/scoreboard?league=uefa.nations"
-    },
-    {
-      "id": "espn-uefa.nations-401861160",
-      "home": "Slovakia",
-      "away": "Faroe Islands",
-      "match": "Slovakia – Faroe Islands",
-      "kickoff": "2026-11-13T19:45:00.000Z",
-      "league": "UEFA Nations League",
-      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
-      "source_code": "uefa.nations",
-      "market": "NESSUNA QUOTA LIVE",
-      "odds": null,
-      "quote_status": "NOT_AVAILABLE",
-      "source_url": "https://www.espn.com/soccer/scoreboard?league=uefa.nations"
-    },
-    {
-      "id": "espn-uefa.nations-401861156",
-      "home": "Slovenia",
-      "away": "Switzerland",
-      "match": "Slovenia – Switzerland",
-      "kickoff": "2026-11-13T19:45:00.000Z",
-      "league": "UEFA Nations League",
-      "source": "ESPN scoreboard (calendario pubblico non ufficiale)",
-      "source_code": "uefa.nations",
-      "market": "NESSUNA QUOTA LIVE",
-      "odds": null,
-      "quote_status": "NOT_AVAILABLE",
-      "source_url": "https://www.espn.com/soccer/scoreboard?league=uefa.nations"
-    },
     {
       "id": "espn-esp.2-401883114",
       "home": "Real Valladolid",
@@ -201,6 +60,111 @@
       "odds": null,
       "quote_status": "NOT_AVAILABLE",
       "source_url": "https://www.espn.com/soccer/scoreboard?league=uefa.nations"
+    },
+    {
+      "id": "fd-E2-2026-11-14-afcwimbledon-blackpool",
+      "home": "AFC Wimbledon",
+      "away": "Blackpool",
+      "match": "AFC Wimbledon – Blackpool",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "league": "League One",
+      "source": "Football-Data.co.uk fixtures CSV",
+      "source_code": "E2",
+      "source_url": "https://www.football-data.co.uk/fixtures.csv",
+      "market": "QUOTE STORICHE (NON LIVE)",
+      "odds": {
+        "1": 2.5,
+        "2": 2.5,
+        "X": 3.4,
+        "Over 2.5": 1.8,
+        "Under 2.5": 2
+      },
+      "quote_status": "HISTORICAL_SNAPSHOT_NOT_LIVE",
+      "quote_snapshot_at": "2026-11-13T19:55:12.831Z"
+    },
+    {
+      "id": "fd-E2-2026-11-14-miltonkeynesdons-burton",
+      "home": "Milton Keynes Dons",
+      "away": "Burton",
+      "match": "Milton Keynes Dons – Burton",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "league": "League One",
+      "source": "Football-Data.co.uk fixtures CSV",
+      "source_code": "E2",
+      "source_url": "https://www.football-data.co.uk/fixtures.csv",
+      "market": "QUOTE STORICHE (NON LIVE)",
+      "odds": {
+        "1": 1.61,
+        "2": 4.75,
+        "X": 3.8,
+        "Over 2.5": 1.65,
+        "Under 2.5": 2.2
+      },
+      "quote_status": "HISTORICAL_SNAPSHOT_NOT_LIVE",
+      "quote_snapshot_at": "2026-11-13T19:55:12.831Z"
+    },
+    {
+      "id": "fd-E2-2026-11-14-sheffieldweds-plymouth",
+      "home": "Sheffield Weds",
+      "away": "Plymouth",
+      "match": "Sheffield Weds – Plymouth",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "league": "League One",
+      "source": "Football-Data.co.uk fixtures CSV",
+      "source_code": "E2",
+      "source_url": "https://www.football-data.co.uk/fixtures.csv",
+      "market": "QUOTE STORICHE (NON LIVE)",
+      "odds": {
+        "1": 2.25,
+        "2": 2.82,
+        "X": 3.5,
+        "Over 2.5": 1.57,
+        "Under 2.5": 2.35
+      },
+      "quote_status": "HISTORICAL_SNAPSHOT_NOT_LIVE",
+      "quote_snapshot_at": "2026-11-13T19:55:12.831Z"
+    },
+    {
+      "id": "fd-E2-2026-11-14-stockport-reading",
+      "home": "Stockport",
+      "away": "Reading",
+      "match": "Stockport – Reading",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "league": "League One",
+      "source": "Football-Data.co.uk fixtures CSV",
+      "source_code": "E2",
+      "source_url": "https://www.football-data.co.uk/fixtures.csv",
+      "market": "QUOTE STORICHE (NON LIVE)",
+      "odds": {
+        "1": 1.79,
+        "2": 3.9,
+        "X": 3.7,
+        "Over 2.5": 1.62,
+        "Under 2.5": 2.25
+      },
+      "quote_status": "HISTORICAL_SNAPSHOT_NOT_LIVE",
+      "quote_snapshot_at": "2026-11-13T19:55:12.831Z"
+    },
+    {
+      "id": "fd-E2-2026-11-14-wigan-barnsley",
+      "home": "Wigan",
+      "away": "Barnsley",
+      "match": "Wigan – Barnsley",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "league": "League One",
+      "source": "Football-Data.co.uk fixtures CSV",
+      "source_code": "E2",
+      "source_url": "https://www.football-data.co.uk/fixtures.csv",
+      "market": "QUOTE STORICHE (NON LIVE)",
+      "odds": {
+        "1": 2.25,
+        "2": 2.75,
+        "X": 3.5,
+        "Over 2.5": 1.6,
+        "Under 2.5": 2.3
+      },
+      "quote_status": "HISTORICAL_SNAPSHOT_NOT_LIVE",
+      "quote_snapshot_at": "2026-11-13T19:55:12.831Z"
     },
     {
       "id": "espn-esp.2-401883134",
