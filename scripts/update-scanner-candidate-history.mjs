@@ -26,7 +26,10 @@ for(const r of byId.values()){
  const match=paper&&paper.match===r.match&&paper.market===r.market&&paper.selection===r.selection&&Date.parse(paper.kickoff)===Date.parse(r.kickoff);
  const status=match&&['won','lost','pending'].includes(paper.status)?paper.status:'unmatched';
  r.result_status=status;
- r.result_source='TipsAudit LAB, non verifica indipendente';
+ r.result_source=match&&['won','lost'].includes(status)?
+  (paper.settlement_source||'TipsAudit LAB, risultato non verificato indipendentemente'):
+  'Esito non ancora verificato';
+ r.result_verified_independently=Boolean(match&&['won','lost'].includes(status)&&paper.independent_ft_verification===true);
  r.result_recorded_at=match?paper.settled_at||null:null;
  r.virtual_pnl=status==='won'?Math.round((r.first_odds-1)*100)/100:status==='lost'?-1:null;
  stats[status]++;
@@ -38,6 +41,6 @@ history.records=[...byId.values()].sort((a,b)=>Date.parse(a.first_seen)-Date.par
 history.stats=stats;
 history.last_snapshot_at=history.snapshots.at(-1)?.generated_at||null;
 history.last_result_check_at=lab.last_settlement_check||null;
-history.result_note='Esiti forniti dalla stessa fonte del LAB, non controllati indipendentemente. Quote di riferimento, non Bet365. Nessun dato REAL del telefono.';
+history.result_note='Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono.';
 await writeFile(path,JSON.stringify(history,null,2)+'\n');
 console.log('Scanner candidate archiviate:',history.snapshots.length,'rapporti,',stats.total,'proposte distinte;',stats.settled,'esiti chiusi dalla fonte.');
