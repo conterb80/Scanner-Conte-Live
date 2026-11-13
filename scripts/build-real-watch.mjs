@@ -68,10 +68,19 @@ export function buildRealWatch(lab,previous,nowISO){
  // Only settle from the source record, matching all pre-match identifiers.
  const source=new Map(lab.records.map(r=>[String(r.id),r]));
  for(const entry of previous.records){
-  if(['won','lost'].includes(entry.result_status))continue;
   const r=source.get(entry.source_id);
   if(!r||r.match!==entry.match||r.market!==entry.market||r.selection!==entry.selection||
      Date.parse(r.kickoff)!==Date.parse(entry.kickoff)||!['won','lost'].includes(r.status))continue;
+  // Schede gia chiuse: non cambiare MAI esito, quota, puntata o P/L.
+  // Si puo' solo migliorare l'attribuzione quando arriva una verifica FT indipendente.
+  if(['won','lost'].includes(entry.result_status)){
+   if(entry.result_status===r.status&&r.independent_ft_verification===true){
+    entry.result_source=r.settlement_source||entry.result_source;
+    entry.result_verified_independently=true;
+    entry.result_verification_reference=r.settlement_reference||null;
+   }
+   continue;
+  }
   entry.result_status=r.status;entry.settled_at=r.settled_at||nowISO;
   entry.virtual_pnl=r.status==='won'?round(entry.reference_odds-1):-1;
   entry.result_source=r.settlement_source||
