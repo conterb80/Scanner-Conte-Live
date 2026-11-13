@@ -16,6 +16,7 @@ export const LEAGUES = Object.freeze([
  {code:'esp.1',name:'LaLiga'},
  {code:'fra.1',name:'Ligue 1'},
  {code:'ned.1',name:'Eredivisie'},
+ {code:'uefa.nations',name:'UEFA Nations League'},
  {code:'por.1',name:'Primeira Liga'}
 ]);
 const FILE='data/results_public.json';
