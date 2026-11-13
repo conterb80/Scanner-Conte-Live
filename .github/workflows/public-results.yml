@@ -9,6 +9,8 @@ on:
       - 'scripts/settle-auto-public.mjs'
       - 'scripts/settle-daily-public.mjs'
       - 'scripts/test-settle-daily-public.mjs'
+      - 'scripts/update-scanner-candidate-history.mjs'
+      - 'scripts/build-real-watch.mjs'
       - 'scripts/test-public-results.mjs'
       - '.github/workflows/public-results.yml'
       - 'scripts/settle-chat-analysis.mjs'
@@ -48,6 +50,11 @@ jobs:
         run: |
           node scripts/settle-auto-public.mjs
           node scripts/build-weekly-lab-summary.mjs
+      - name: Propaga gli esiti virtuali con fonte verificata agli osservatori
+        run: |
+          node scripts/test-real-watch.mjs
+          node scripts/update-scanner-candidate-history.mjs
+          node scripts/build-real-watch.mjs
       - name: Verifica esiti del registro REAL CONTE in chat
         run: |
           node scripts/test-settle-chat-analysis.mjs
@@ -55,7 +62,7 @@ jobs:
           node scripts/settle-chat-analysis.mjs
       - name: Pubblica risultati e riepiloghi virtuali
         run: |
-          git add data/results_public.json data/daily_virtual_lab.json data/lab_auto.json data/weekly_lab_stats.json data/real_conte_chat.json
+          git add data/results_public.json data/daily_virtual_lab.json data/lab_auto.json data/weekly_lab_stats.json data/real_conte_chat.json data/scanner_candidate_history.json data/real_watch_today.json data/real_watch_history.json
           if git diff --cached --quiet; then
             echo 'Nessuna novita nei risultati'
             exit 0
