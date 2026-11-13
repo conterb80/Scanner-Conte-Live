@@ -1,6 +1,5 @@
 import assert from 'node:assert/strict';
 import {settleWithPublicResult,settleArchive} from './settle-daily-public.mjs';
-import {readFileSync} from 'node:fs';
 const now=new Date('2026-11-13T20:00:00Z');
 const original={id:'test-1',status:'pending',market:'1X2',match:'Armenia - Cyprus',
  league:'UEFA Nations League',kickoff:'2026-11-12T17:00:00Z',
@@ -19,13 +18,17 @@ assert.equal(settleWithPublicResult({...original,kickoff:'2026-11-11T17:00:00Z'}
 assert.equal(settleWithPublicResult({...original,captured_at:'2026-11-12T16:45:00Z'},[fixture],now),null,'Observation too late');
 assert.equal(settleWithPublicResult(original,[fixture,{...fixture,id:'duplicate'}],now),null,'Ambiguous results not closed');
 assert.equal(settleWithPublicResult({...original,kickoff:'2026-11-13T19:45:00Z'},[fixture],now),null,'No FT of future match');
-const data=JSON.parse(readFileSync('data/daily_virtual_lab.json','utf8'));
-const feed=JSON.parse(readFileSync('data/results_public.json','utf8'));
+const data={schema:'scanner-conte-daily-virtual-v1',records:[
+ {...original},
+ {...original,id:'rescheduled',match:'Tenerife - FC Andorra',
+  result_review_status:'POSTPONED_REPLAYED',kickoff:'2026-11-01T20:00:00Z'}
+]};
+const feed={schema:'scanner-conte-results-public-v1',fixtures:[fixture]};
 const copy=structuredClone(data);
 const toClose=settleArchive(copy,feed,now);
-const actual=copy.records.find(r=>r.match==='Armenia - Cyprus');
-assert.equal(actual.status,'lost');assert.equal(actual.score,'1-1');
-assert.equal(toClose,1,'Exactly one currently due and verified fixture should close');
-assert.equal(copy.records.find(r=>r.match==='Tenerife - FC Andorra').status,'pending','Rescheduled fixture remains under review');
-assert.equal(data.records.find(r=>r.match==='Armenia - Cyprus').status,'pending','Original fixture file untouched by test');
-console.log('OK: independent FT settlement, one safe test closed, postponed and real data unchanged.');
+assert.equal(toClose,1,'Exactly one independent test should settle');
+assert.equal(copy.records[0].status,'lost');assert.equal(copy.records[0].score,'1-1');
+assert.equal(copy.records[1].status,'pending','Rescheduled fixture must remain pending');
+assert.equal(settleArchive(copy,feed,now),0,'Idempotent future checks');
+assert.equal(data.records[0].status,'pending','Original input not mutated by isolated test');
+console.log('OK: independent FT settlement is repeatable, exact and safe for postponed fixtures.');
