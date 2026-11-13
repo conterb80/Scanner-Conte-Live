@@ -1,8 +1,8 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-13T17:17:15.718Z",
-  "status": "PRELIMINARY_CANDIDATES",
+  "generated_at": "2026-11-13T19:57:41.911Z",
+  "status": "NO_ELIGIBLE_OBSERVATIONS",
   "source_last_check": "2026-11-13T14:37:43.124Z",
   "source_max_age_hours": 36,
   "scope": "Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.",
@@ -22,49 +22,12 @@
     "scanned_today": 12,
     "leagues_today": 3,
     "last_scan_completed_at": "2026-11-13T14:37:43.124Z",
-    "eligible_observations": 1,
-    "eligible_core": 1,
+    "eligible_observations": 0,
+    "eligible_core": 0,
     "eligible_value": 0,
-    "settled_paper_samples": 165,
-    "settled_paper_roi_pct": 11.3
+    "settled_paper_samples": 166,
+    "settled_paper_roi_pct": 10.7
   },
-  "shortlist": [
-    {
-      "id": "tipsaudit-16675:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "Bulgaria - Iceland",
-      "league": "UEFA Nations League",
-      "kickoff": "2026-11-13T19:45:00+00:00",
-      "market": "1X2",
-      "selection": "Away",
-      "category": "CORE",
-      "reference_odds": 1.78,
-      "reference_bookmaker": "LeoVegas (SE)",
-      "external_fair_odds": 1.75,
-      "external_benchmark_probability_pct": 57.1,
-      "external_reference_gap_pct": 1.71,
-      "relative_screening_score": 37,
-      "captured_at": "2026-11-13T14:37:43.124Z",
-      "reference_link": "https://tipsaudit.com/match/16675/bulgaria-vs-iceland-2026-11-13",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 1.78 contro quota equa 1.75 stimata dalla fonte esterna (+ 1.7% di scostamento).",
-        "Dato osservato da LeoVegas (SE) e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 37 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 59,
-        "observed_roi_pct": -10.8,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    }
-  ],
+  "shortlist": [],
   "alternatives": []
 }
