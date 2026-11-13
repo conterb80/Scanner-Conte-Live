@@ -5444,10 +5444,16 @@
       "reference": "https://tipsaudit.com/match/16389/armenia-vs-cyprus-2026-11-12",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
-      "settled_at": null
+      "status": "lost",
+      "pnl": -1,
+      "score": "1-1",
+      "settled_at": "2026-11-13T19:54:41.342Z",
+      "verified_ft_result": "X",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401861146/cyprus-armenia",
+      "settlement_publication": "2026-11-13T19:54:41.342Z",
+      "settlement_verification": "espn_scoreboard",
+      "independent_ft_verification": true
     },
     {
       "id": "tipsaudit-16675:TIPSAUDIT_VALUE_1X2",
@@ -6322,10 +6328,10 @@
   "last_check": "2026-11-13T14:37:43.124Z",
   "stats": {
     "total": 169,
-    "pending": 4,
+    "pending": 3,
     "won": 90,
-    "lost": 75,
-    "pnl": 18.68
+    "lost": 76,
+    "pnl": 17.68
   },
-  "last_settlement_check": "2026-11-09T01:44:18.669Z"
+  "last_settlement_check": "2026-11-13T19:54:41.342Z"
 }
