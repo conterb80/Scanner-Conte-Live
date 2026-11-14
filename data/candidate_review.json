@@ -1,9 +1,9 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-14T00:55:52.591Z",
-  "status": "SOURCE_STALE",
-  "source_last_check": "2026-11-13T14:37:43.124Z",
+  "generated_at": "2026-11-14T13:33:30.668Z",
+  "status": "PRELIMINARY_CANDIDATES",
+  "source_last_check": "2026-11-14T13:33:29.878Z",
   "source_max_age_hours": 36,
   "scope": "Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.",
   "scope_day": "2026-11-14",
@@ -18,16 +18,126 @@
   "methodology": "Filtro quantitativo predefinito di segnali esterni già acquisiti: divario quota/equo fonte, freschezza, fascia di quota. Non verifica forma, assenze o formazioni.",
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
-    "paper_records": 169,
-    "scanned_today": null,
-    "leagues_today": null,
-    "last_scan_completed_at": null,
-    "eligible_observations": 0,
-    "eligible_core": 0,
-    "eligible_value": 0,
+    "paper_records": 174,
+    "scanned_today": 56,
+    "leagues_today": 12,
+    "last_scan_completed_at": "2026-11-14T13:33:29.878Z",
+    "eligible_observations": 3,
+    "eligible_core": 1,
+    "eligible_value": 2,
     "settled_paper_samples": 168,
     "settled_paper_roi_pct": 11.1
   },
-  "shortlist": [],
-  "alternatives": []
+  "shortlist": [
+    {
+      "id": "tipsaudit-17067:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "America Mineiro - Avai",
+      "league": "Brazil Serie B",
+      "kickoff": "2026-11-14T19:30:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "VALUE",
+      "reference_odds": 3.05,
+      "reference_bookmaker": "Unibet (NL)",
+      "external_fair_odds": 2.93,
+      "external_benchmark_probability_pct": 34.1,
+      "external_reference_gap_pct": 4.1,
+      "relative_screening_score": 58,
+      "captured_at": "2026-11-14T13:33:29.878Z",
+      "reference_link": "https://tipsaudit.com/match/17067/america-mineiro-vs-avai-2026-11-14",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 3.05 contro quota equa 2.93 stimata dalla fonte esterna (+ 4.1% di scostamento).",
+        "Dato osservato da Unibet (NL) e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 58 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 93,
+        "observed_roi_pct": 22.5,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    },
+    {
+      "id": "tipsaudit-17080:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Romania - Poland",
+      "league": "UEFA Nations League",
+      "kickoff": "2026-11-14T19:45:00+00:00",
+      "market": "1X2",
+      "selection": "Away",
+      "category": "CORE",
+      "reference_odds": 1.74,
+      "reference_bookmaker": "Unibet (SE)",
+      "external_fair_odds": 1.7,
+      "external_benchmark_probability_pct": 58.8,
+      "external_reference_gap_pct": 2.35,
+      "relative_screening_score": 45,
+      "captured_at": "2026-11-14T13:33:29.878Z",
+      "reference_link": "https://tipsaudit.com/match/17080/romania-vs-poland-2026-11-14",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 1.74 contro quota equa 1.7 stimata dalla fonte esterna (+ 2.4% di scostamento).",
+        "Dato osservato da Unibet (SE) e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 45 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 60,
+        "observed_roi_pct": -9.3,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "tipsaudit-17082:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Oviedo - Girona",
+      "league": "Segunda Division",
+      "kickoff": "2026-11-14T20:00:00+00:00",
+      "market": "1X2",
+      "selection": "Draw",
+      "category": "VALUE",
+      "reference_odds": 3.3,
+      "reference_bookmaker": "Coolbet",
+      "external_fair_odds": 3.2,
+      "external_benchmark_probability_pct": 31.3,
+      "external_reference_gap_pct": 3.12,
+      "relative_screening_score": 47,
+      "captured_at": "2026-11-14T13:33:29.878Z",
+      "reference_link": "https://tipsaudit.com/match/17082/oviedo-vs-girona-2026-11-14",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 3.3 contro quota equa 3.2 stimata dalla fonte esterna (+ 3.1% di scostamento).",
+        "Dato osservato da Coolbet e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 47 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 93,
+        "observed_roi_pct": 22.5,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    }
+  ]
 }
