@@ -1,0 +1,37 @@
+{
+  "schema": "scanner-conte-manual-paper-real-v1",
+  "date": "2026-11-14",
+  "mode": "VIRTUAL_ONLY_NO_REAL_STAKES",
+  "origin": "user_requested_manual_followup",
+  "notes": "Esperimento separato dal registro REAL e dal motore automatico. Quote solo soglie ipotetiche, non osservate. Verificare calendario e risultato ufficiale prima del settlement; nessun P/L monetario o ROI calcolabile senza quota prepartita verificata.",
+  "selections": [
+    {
+      "id": "manual-paper-20261114-portugal-denmark",
+      "label": "CORE virtuale",
+      "match": "Portogallo - Danimarca",
+      "market": "1X2",
+      "selection": "1",
+      "kickoff_local_claimed": "2026-11-14T20:45:00+01:00",
+      "kickoff_verified": false,
+      "hypothetical_odds_threshold": 1.7,
+      "observed_odds": null,
+      "virtual_stake_eur": 2,
+      "status": "awaiting_fixture_verification",
+      "result": null
+    },
+    {
+      "id": "manual-paper-20261114-norway-wales",
+      "label": "VALUE virtuale",
+      "match": "Norvegia - Galles",
+      "market": "1X2",
+      "selection": "1",
+      "kickoff_local_claimed": "2026-11-14T18:00:00+01:00",
+      "kickoff_verified": false,
+      "hypothetical_odds_threshold": 1.8,
+      "observed_odds": null,
+      "virtual_stake_eur": 1,
+      "status": "awaiting_fixture_verification",
+      "result": null
+    }
+  ]
+}
