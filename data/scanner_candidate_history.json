@@ -3682,6 +3682,13 @@
           "reference_link": "https://tipsaudit.com/match/17082/oviedo-vs-girona-2026-11-14"
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-14T19:11:44.223Z",
+      "scope_day": "2026-11-14",
+      "status": "NO_ELIGIBLE_OBSERVATIONS",
+      "source_commit": null,
+      "observations": []
     }
   ],
   "records": [
@@ -4930,7 +4937,7 @@
     "settled": 52,
     "virtual_roi": 11.42
   },
-  "last_snapshot_at": "2026-11-14T15:53:11.121Z",
+  "last_snapshot_at": "2026-11-14T19:11:44.223Z",
   "last_result_check_at": "2026-11-14T00:19:37.416Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }
