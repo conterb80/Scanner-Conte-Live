@@ -1,9 +1,69 @@
 {
   "schema_version": 1,
-  "last_imported": "2026-11-10",
+  "last_imported": "2026-11-14",
   "source": "Registrazioni storiche condivise in chat; archivio manuale consultabile, separato da Scanner, LAB automatico e puntate REAL.",
   "auto_sync": false,
   "sessions": [
+    {
+      "date": "2026-11-14",
+      "snapshot": "2026-11-14T12:29:00+01:00",
+      "title": "Due candidate non promosse a REAL: simulazione manuale",
+      "checked": 2,
+      "competitions": [
+        [
+          "Nations League",
+          2
+        ]
+      ],
+      "fixtures": [
+        [
+          "Nations League",
+          "Portogallo – Danimarca",
+          "Test virtuale",
+          "Superiorità sportiva non equivale a valore atteso dimostrato"
+        ],
+        [
+          "Nations League",
+          "Norvegia – Galles",
+          "Test virtuale",
+          "Probabilità non validata, classifica equilibrata"
+        ]
+      ],
+      "method": "Simulazione di candidate discusse in chat e non promosse a scommesse REAL; quote ipotetiche usate soltanto come soglie, senza prezzo osservato.",
+      "verification": "Calendario e quote ancora da verificare prima di contabilizzare; le soglie non sono quote pubbliche rilevate né Bet365.",
+      "picks": [
+        {
+          "id": "RC-20261114-01",
+          "match": "Portogallo – Danimarca",
+          "kickoff": "2026-11-14T20:45:00+01:00",
+          "pick": "1 · Portogallo",
+          "odds": null,
+          "hypothetical_odds_threshold": 1.7,
+          "stake": 2,
+          "kind": "VIRTUALE",
+          "reason": "Superiorità sportiva, ma probabilità e quota non verificate.",
+          "oddsSource": "Soglia ipotetica 1,70; nessuna quota prepartita verificata",
+          "status": "pending",
+          "result_verification_required": true,
+          "pnl": null
+        },
+        {
+          "id": "RC-20261114-02",
+          "match": "Norvegia – Galles",
+          "kickoff": "2026-11-14T18:00:00+01:00",
+          "pick": "1 · Norvegia",
+          "odds": null,
+          "hypothetical_odds_threshold": 1.8,
+          "stake": 1,
+          "kind": "VIRTUALE",
+          "reason": "Test esplorativo; non esiste vantaggio statistico dimostrato.",
+          "oddsSource": "Soglia ipotetica 1,80; nessuna quota prepartita verificata",
+          "status": "pending",
+          "result_verification_required": true,
+          "pnl": null
+        }
+      ]
+    },
     {
       "date": "2026-11-10",
       "snapshot": "2026-11-10T10:47:20+01:00",
