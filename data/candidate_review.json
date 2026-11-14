@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-14T13:46:39.742Z",
+  "generated_at": "2026-11-14T15:53:11.121Z",
   "status": "PRELIMINARY_CANDIDATES",
   "source_last_check": "2026-11-14T13:33:29.878Z",
   "source_max_age_hours": 36,
@@ -43,7 +43,7 @@
       "external_fair_odds": 2.93,
       "external_benchmark_probability_pct": 34.1,
       "external_reference_gap_pct": 4.1,
-      "relative_screening_score": 58,
+      "relative_screening_score": 56,
       "captured_at": "2026-11-14T13:33:29.878Z",
       "reference_link": "https://tipsaudit.com/match/17067/america-mineiro-vs-avai-2026-11-14",
       "source": "TipsAudit public pre-match paper signals",
@@ -55,7 +55,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 58 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 56 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -79,7 +79,7 @@
       "external_fair_odds": 1.7,
       "external_benchmark_probability_pct": 58.8,
       "external_reference_gap_pct": 2.35,
-      "relative_screening_score": 45,
+      "relative_screening_score": 44,
       "captured_at": "2026-11-14T13:33:29.878Z",
       "reference_link": "https://tipsaudit.com/match/17080/romania-vs-poland-2026-11-14",
       "source": "TipsAudit public pre-match paper signals",
@@ -91,7 +91,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 45 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 44 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
@@ -117,7 +117,7 @@
       "external_fair_odds": 3.2,
       "external_benchmark_probability_pct": 31.3,
       "external_reference_gap_pct": 3.12,
-      "relative_screening_score": 47,
+      "relative_screening_score": 46,
       "captured_at": "2026-11-14T13:33:29.878Z",
       "reference_link": "https://tipsaudit.com/match/17082/oviedo-vs-girona-2026-11-14",
       "source": "TipsAudit public pre-match paper signals",
@@ -129,7 +129,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 47 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 46 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
