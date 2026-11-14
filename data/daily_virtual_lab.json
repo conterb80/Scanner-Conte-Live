@@ -5624,10 +5624,16 @@
       "reference": "https://tipsaudit.com/match/17080/romania-vs-poland-2026-11-14",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
-      "settled_at": null
+      "status": "lost",
+      "pnl": -1,
+      "score": "2-1",
+      "settled_at": "2026-11-14T22:57:35.115Z",
+      "verified_ft_result": "1",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401861168/poland-romania",
+      "settlement_publication": "2026-11-14T22:57:35.115Z",
+      "settlement_verification": "espn_scoreboard",
+      "independent_ft_verification": true
     },
     {
       "id": "tipsaudit-17082:TIPSAUDIT_VALUE_1X2",
@@ -6504,10 +6510,10 @@
   "last_check": "2026-11-14T13:33:29.878Z",
   "stats": {
     "total": 174,
-    "pending": 6,
+    "pending": 5,
     "won": 92,
-    "lost": 76,
-    "pnl": 18.69
+    "lost": 77,
+    "pnl": 17.69
   },
-  "last_settlement_check": "2026-11-14T00:19:37.416Z"
+  "last_settlement_check": "2026-11-14T22:57:35.115Z"
 }

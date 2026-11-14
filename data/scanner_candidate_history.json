@@ -4910,11 +4910,11 @@
       "first_odds": 1.74,
       "first_bookmaker": "Unibet (SE)",
       "appearances": 3,
-      "result_status": "pending",
-      "result_source": "Esito non ancora verificato",
-      "result_verified_independently": false,
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_status": "lost",
+      "result_source": "ESPN public scoreboard",
+      "result_verified_independently": true,
+      "result_recorded_at": "2026-11-14T22:57:35.115Z",
+      "virtual_pnl": -1
     },
     {
       "id": "tipsaudit-17082:TIPSAUDIT_VALUE_1X2",
@@ -4944,14 +4944,14 @@
     "primary": 28,
     "alternatives_only": 28,
     "won": 30,
-    "lost": 22,
-    "pending": 4,
+    "lost": 23,
+    "pending": 3,
     "unmatched": 0,
-    "virtual_pnl": 5.94,
-    "settled": 52,
-    "virtual_roi": 11.42
+    "virtual_pnl": 4.94,
+    "settled": 53,
+    "virtual_roi": 9.32
   },
   "last_snapshot_at": "2026-11-14T20:48:25.909Z",
-  "last_result_check_at": "2026-11-14T00:19:37.416Z",
+  "last_result_check_at": "2026-11-14T22:57:35.115Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }
