@@ -201,27 +201,28 @@
       "scope_day": "2026-11-13",
       "first_seen": "2026-11-13T14:37:44.451Z",
       "position": "PRINCIPALE",
-      "result_status": "pending",
-      "settled_at": null,
-      "virtual_pnl": null,
-      "result_source": null,
-      "real_bet_status": "NOT_TRACKED_PUBLICLY"
+      "result_status": "won",
+      "settled_at": "2026-11-14T00:19:37.416Z",
+      "virtual_pnl": 0.78,
+      "result_source": "ESPN public scoreboard",
+      "real_bet_status": "NOT_TRACKED_PUBLICLY",
+      "result_verified_independently": true
     }
   ],
   "stats": {
     "observed": 7,
     "main": 4,
     "reserves": 3,
-    "settled": 3,
-    "won": 0,
+    "settled": 4,
+    "won": 1,
     "lost": 3,
-    "pending": 1,
-    "theoretical_stake": 3,
-    "theoretical_pnl": -3,
-    "theoretical_roi_pct": -100,
-    "independently_verified_settled": 1,
+    "pending": 0,
+    "theoretical_stake": 4,
+    "theoretical_pnl": -2.22,
+    "theoretical_roi_pct": -55.5,
+    "independently_verified_settled": 2,
     "independent_result_verification": false
   },
   "created_at": "2026-11-08T09:39:18.978Z",
-  "last_check_at": "2026-11-13T23:27:08.333Z"
+  "last_check_at": "2026-11-14T00:19:37.646Z"
 }

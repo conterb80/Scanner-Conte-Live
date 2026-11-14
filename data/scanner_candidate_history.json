@@ -4661,26 +4661,26 @@
       "first_odds": 1.78,
       "first_bookmaker": "LeoVegas (SE)",
       "appearances": 3,
-      "result_status": "pending",
-      "result_source": "Esito non ancora verificato",
-      "result_verified_independently": false,
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_status": "won",
+      "result_source": "ESPN public scoreboard",
+      "result_verified_independently": true,
+      "result_recorded_at": "2026-11-14T00:19:37.416Z",
+      "virtual_pnl": 0.78
     }
   ],
   "stats": {
     "total": 53,
     "primary": 26,
     "alternatives_only": 27,
-    "won": 29,
+    "won": 30,
     "lost": 22,
-    "pending": 2,
+    "pending": 1,
     "unmatched": 0,
-    "virtual_pnl": 5.16,
-    "settled": 51,
-    "virtual_roi": 10.12
+    "virtual_pnl": 5.94,
+    "settled": 52,
+    "virtual_roi": 11.42
   },
   "last_snapshot_at": "2026-11-13T21:36:53.179Z",
-  "last_result_check_at": "2026-11-13T19:54:41.342Z",
+  "last_result_check_at": "2026-11-14T00:19:37.416Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }

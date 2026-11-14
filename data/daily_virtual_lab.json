@@ -5477,10 +5477,16 @@
       "reference": "https://tipsaudit.com/match/16675/bulgaria-vs-iceland-2026-11-13",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
-      "settled_at": null
+      "status": "won",
+      "pnl": 0.78,
+      "score": "0-5",
+      "settled_at": "2026-11-14T00:19:37.416Z",
+      "verified_ft_result": "2",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401861157/iceland-bulgaria",
+      "settlement_publication": "2026-11-14T00:19:37.416Z",
+      "settlement_verification": "espn_scoreboard",
+      "independent_ft_verification": true
     },
     {
       "id": "tipsaudit-16676:TIPSAUDIT_VALUE_1X2",
@@ -5504,10 +5510,16 @@
       "reference": "https://tipsaudit.com/match/16676/liechtenstein-vs-azerbaijan-2026-11-13",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
-      "settled_at": null
+      "status": "won",
+      "pnl": 0.23,
+      "score": "0-1",
+      "settled_at": "2026-11-14T00:19:37.416Z",
+      "verified_ft_result": "2",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401861153/azerbaijan-liechtenstein",
+      "settlement_publication": "2026-11-14T00:19:37.416Z",
+      "settlement_verification": "espn_scoreboard",
+      "independent_ft_verification": true
     }
   ],
   "checks": [
@@ -6328,10 +6340,10 @@
   "last_check": "2026-11-13T14:37:43.124Z",
   "stats": {
     "total": 169,
-    "pending": 3,
-    "won": 90,
+    "pending": 1,
+    "won": 92,
     "lost": 76,
-    "pnl": 17.68
+    "pnl": 18.69
   },
-  "last_settlement_check": "2026-11-13T19:54:41.342Z"
+  "last_settlement_check": "2026-11-14T00:19:37.416Z"
 }
