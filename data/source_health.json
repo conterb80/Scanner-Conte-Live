@@ -1,12 +1,12 @@
 {
   "schema": "scanner-conte-source-health-v1",
-  "checked_at": "2026-11-14T19:53:47.780Z",
-  "day": "2026-11-14",
+  "checked_at": "2026-11-15T14:42:19.482Z",
+  "day": "2026-11-15",
   "status": "OPERATIVO",
   "calendar": {
     "state": "OK",
-    "last_success": "2026-11-14T19:53:45.033Z",
-    "upcoming": 23,
+    "last_success": "2026-11-15T14:42:17.456Z",
+    "upcoming": 29,
     "sources": {
       "espn": {
         "ok": 39,
@@ -28,14 +28,14 @@
   },
   "quotes": {
     "state": "OBSERVATIONS_AVAILABLE",
-    "last_check": "2026-11-14T13:33:29.878Z",
-    "scanned_matches": 56,
-    "eligible_quotes": 5,
+    "last_check": "2026-11-15T13:57:40.921Z",
+    "scanned_matches": 17,
+    "eligible_quotes": 1,
     "provider": "TipsAudit — quote fonte esterna, non Bet365 live"
   },
   "results": {
     "state": "OK",
-    "last_check": "2026-11-14T14:07:16.700Z",
+    "last_check": "2026-11-15T02:38:21.330Z",
     "scope": "Campionati ESPN coperti, non copertura universale"
   },
   "football_data": {
