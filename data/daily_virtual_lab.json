@@ -5677,6 +5677,33 @@
       "settlement_source": "TipsAudit public record (1X2 FT)",
       "settlement_reference": "https://tipsaudit.com/track-record",
       "settlement_publication": "2026-11-15T01:55:12+00:00"
+    },
+    {
+      "id": "tipsaudit-17568:TIPSAUDIT_VALUE_1X2",
+      "source_id": "17568",
+      "strategy": "TIPSAUDIT_VALUE_1X2",
+      "match": "Eldense - Sabadell",
+      "league": "Segunda Division",
+      "kickoff": "2026-11-15T17:30:00+00:00",
+      "selection": "Draw",
+      "market": "1X2",
+      "bookmaker": "Coolbet",
+      "odds": 3.1,
+      "fair_odds": 3.05,
+      "edge": 0.016,
+      "bookmaker_quote_status": "source actionable, not guaranteed executable",
+      "captured_at": "2026-11-15T13:57:40.921Z",
+      "capture_day": "2026-11-15",
+      "provider_generated_at": "2026-11-15T13:57:41+00:00",
+      "benchmark_read_at": "2026-11-15T13:24:47+00:00",
+      "provider": "TipsAudit (external signal, NOT our own betting model)",
+      "reference": "https://tipsaudit.com/match/17568/eldense-vs-sabadell-2026-11-15",
+      "origin": "live bookmaker observation via TipsAudit public feed",
+      "stake_virtual": 1,
+      "status": "pending",
+      "pnl": null,
+      "score": null,
+      "settled_at": null
     }
   ],
   "checks": [
@@ -6521,12 +6548,35 @@
       "created": 5,
       "source": "TipsAudit",
       "test_only": true
+    },
+    {
+      "day": "2026-11-15",
+      "checked_at": "2026-11-15T13:57:40.921Z",
+      "source_generated_at": "2026-11-15T13:57:41+00:00",
+      "scanned_predictions": 17,
+      "source_total_predictions": 292,
+      "scope_day": "2026-11-15",
+      "scope_timezone": "Europe/Rome",
+      "scanned_unique_matches": 17,
+      "scanned_league_counts": {
+        "UEFA Nations League": 8,
+        "Segunda Division": 3,
+        "Peru Liga 1": 2,
+        "Primera Nacional": 2,
+        "Primera C": 1,
+        "Uruguay Primera Division": 1
+      },
+      "scanned_league_total": 6,
+      "eligible_actionable": 1,
+      "created": 1,
+      "source": "TipsAudit",
+      "test_only": true
     }
   ],
-  "last_check": "2026-11-14T13:33:29.878Z",
+  "last_check": "2026-11-15T13:57:40.921Z",
   "stats": {
-    "total": 174,
-    "pending": 1,
+    "total": 175,
+    "pending": 2,
     "won": 94,
     "lost": 79,
     "pnl": 18.14
