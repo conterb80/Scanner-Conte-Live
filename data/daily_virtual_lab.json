@@ -5543,10 +5543,14 @@
       "reference": "https://tipsaudit.com/match/17066/sport-recife-vs-goias-2026-11-14",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 2.05,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-15T01:56:52.706Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-15T01:55:12+00:00"
     },
     {
       "id": "tipsaudit-17067:TIPSAUDIT_VALUE_1X2",
@@ -5570,10 +5574,14 @@
       "reference": "https://tipsaudit.com/match/17067/america-mineiro-vs-avai-2026-11-14",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-15T01:56:52.706Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-15T01:55:12+00:00"
     },
     {
       "id": "tipsaudit-17073:TIPSAUDIT_VALUE_1X2",
@@ -5597,10 +5605,14 @@
       "reference": "https://tipsaudit.com/match/17073/juventude-vs-botafogo-sp-2026-11-14",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.4,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-15T01:56:52.706Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-15T01:55:12+00:00"
     },
     {
       "id": "tipsaudit-17080:TIPSAUDIT_VALUE_1X2",
@@ -5657,10 +5669,14 @@
       "reference": "https://tipsaudit.com/match/17082/oviedo-vs-girona-2026-11-14",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-15T01:56:52.706Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-15T01:55:12+00:00"
     }
   ],
   "checks": [
@@ -6510,10 +6526,10 @@
   "last_check": "2026-11-14T13:33:29.878Z",
   "stats": {
     "total": 174,
-    "pending": 5,
-    "won": 92,
-    "lost": 77,
-    "pnl": 17.69
+    "pending": 1,
+    "won": 94,
+    "lost": 79,
+    "pnl": 18.14
   },
-  "last_settlement_check": "2026-11-14T22:57:35.115Z"
+  "last_settlement_check": "2026-11-15T01:56:52.706Z"
 }
