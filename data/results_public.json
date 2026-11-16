@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-results-public-v1",
-  "checked_at": "2026-11-15T23:22:36.861Z",
+  "checked_at": "2026-11-16T16:58:40.426Z",
   "source": "ESPN public scoreboard + verified official match reports",
   "coverage": {
     "leagues": [
@@ -17,9 +17,9 @@
       "por.1"
     ],
     "days": [
-      "20261113",
       "20261114",
-      "20261115"
+      "20261115",
+      "20261116"
     ],
     "queries": 33,
     "succeeded": 33,
@@ -3514,6 +3514,34 @@
       "away_goals": 1,
       "source": "ESPN public scoreboard",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/401861178/czechia-croatia",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861180",
+      "kickoff": "2026-11-16T15:00:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Faroe Islands",
+      "away": "Moldova",
+      "home_goals": 1,
+      "away_goals": 0,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861180/moldova-faroe-islands",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861181",
+      "kickoff": "2026-11-16T15:00:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Kazakhstan",
+      "away": "Slovakia",
+      "home_goals": 2,
+      "away_goals": 2,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861181/slovakia-kazakhstan",
       "verification": "espn_scoreboard"
     }
   ]
