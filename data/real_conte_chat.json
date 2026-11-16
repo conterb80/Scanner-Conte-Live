@@ -1,9 +1,84 @@
 {
   "schema_version": 1,
-  "last_imported": "2026-11-14",
+  "last_imported": "2026-11-16",
   "source": "Registrazioni storiche condivise in chat; archivio manuale consultabile, separato da Scanner, LAB automatico e puntate REAL.",
   "auto_sync": false,
   "sessions": [
+    {
+      "date": "2026-11-16",
+      "snapshot": "2026-11-16T15:43:00+01:00",
+      "title": "Due simulazioni virtuali selezionate in chat",
+      "checked": 3,
+      "competitions": [
+        [
+          "UEFA Nations League",
+          3
+        ]
+      ],
+      "fixtures": [
+        [
+          "UEFA Nations League",
+          "Germania – Olanda",
+          "Test virtuale CORE",
+          "Over 2,5 gol, quota non verificata"
+        ],
+        [
+          "UEFA Nations League",
+          "Islanda – Lussemburgo",
+          "Test virtuale VALUE",
+          "Vittoria Islanda, quota non verificata"
+        ],
+        [
+          "Serie C",
+          "Perugia – Torres",
+          "Solo osservazione",
+          "Non selezionata"
+        ]
+      ],
+      "method": "Due ipotesi selezionate in chat prima del calcio d'inizio, senza puntate reali.",
+      "verification": "Presenza e orario verificati nel radar ESPN del repository; non con fonte ufficiale UEFA. Quote non disponibili: nessun ROI o P/L monetario attribuibile.",
+      "picks": [
+        {
+          "id": "RC-20261116-01",
+          "match": "Germania – Olanda",
+          "kickoff": "2026-11-16T20:45:00+01:00",
+          "pick": "Over 2,5 gol",
+          "market": "Over/Under 2.5",
+          "odds": null,
+          "stake": 2,
+          "kind": "VIRTUALE",
+          "reason": "Test del mercato gol, senza probabilità indipendente o quota osservata.",
+          "oddsSource": "Nessuna quota verificata, né Bet365 né pubblica",
+          "status": "pending",
+          "pnl": null
+        },
+        {
+          "id": "RC-20261116-02",
+          "match": "Islanda – Lussemburgo",
+          "kickoff": "2026-11-16T18:00:00+01:00",
+          "pick": "1 · Islanda",
+          "market": "1X2",
+          "odds": null,
+          "stake": 1,
+          "kind": "VIRTUALE",
+          "reason": "Test di superiorità sportiva della squadra di casa; valore non dimostrato.",
+          "oddsSource": "Nessuna quota verificata, né Bet365 né pubblica",
+          "status": "pending",
+          "pnl": null
+        }
+      ]
+    },
+    {
+      "date": "2026-11-15",
+      "snapshot": "2026-11-15T15:08:00+01:00",
+      "title": "Nessuna REAL e nessuna simulazione selezionata",
+      "checked": 0,
+      "competitions": [],
+      "fixtures": [],
+      "method": "Decisione condivisa di osservare l'evoluzione del sistema senza puntate reali.",
+      "verification": "Nessuna selezione virtuale confermata in chat per questa data.",
+      "picks": []
+    },
     {
       "date": "2026-11-14",
       "snapshot": "2026-11-14T12:29:00+01:00",
