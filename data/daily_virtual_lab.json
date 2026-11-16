@@ -5700,10 +5700,14 @@
       "reference": "https://tipsaudit.com/match/17568/eldense-vs-sabadell-2026-11-15",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-16T02:10:43.300Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-16T02:10:12+00:00"
     }
   ],
   "checks": [
@@ -6576,10 +6580,10 @@
   "last_check": "2026-11-15T13:57:40.921Z",
   "stats": {
     "total": 175,
-    "pending": 2,
+    "pending": 1,
     "won": 94,
-    "lost": 79,
-    "pnl": 18.14
+    "lost": 80,
+    "pnl": 17.14
   },
-  "last_settlement_check": "2026-11-15T01:56:52.706Z"
+  "last_settlement_check": "2026-11-16T02:10:43.300Z"
 }
