@@ -3809,6 +3809,13 @@
           "reference_link": "https://tipsaudit.com/match/17893/albacete-vs-celta-de-vigo-ii-2026-11-16"
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-16T19:43:11.351Z",
+      "scope_day": "2026-11-16",
+      "status": "NO_ELIGIBLE_OBSERVATIONS",
+      "source_commit": null,
+      "observations": []
     }
   ],
   "records": [
@@ -5079,7 +5086,7 @@
     "settled": 55,
     "virtual_roi": 5.35
   },
-  "last_snapshot_at": "2026-11-16T16:23:58.082Z",
+  "last_snapshot_at": "2026-11-16T19:43:11.351Z",
   "last_result_check_at": "2026-11-16T02:10:43.300Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }
