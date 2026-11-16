@@ -3759,6 +3759,31 @@
       "status": "SOURCE_STALE",
       "source_commit": null,
       "observations": []
+    },
+    {
+      "generated_at": "2026-11-16T15:49:44.876Z",
+      "scope_day": "2026-11-16",
+      "status": "PRELIMINARY_CANDIDATES",
+      "source_commit": null,
+      "observations": [
+        {
+          "id": "tipsaudit-17893:TIPSAUDIT_VALUE_1X2",
+          "match": "Albacete - Celta de Vigo II",
+          "league": "Segunda Division",
+          "kickoff": "2026-11-16T19:30:00+00:00",
+          "market": "1X2",
+          "selection": "Home",
+          "category": "CORE",
+          "place": "PRINCIPALE",
+          "rank": 1,
+          "reference_odds": 1.68,
+          "reference_bookmaker": "Unibet (SE)",
+          "external_fair_odds": 1.65,
+          "relative_screening_score": 42,
+          "captured_at": "2026-11-16T15:49:44.180Z",
+          "reference_link": "https://tipsaudit.com/match/17893/albacete-vs-celta-de-vigo-ii-2026-11-16"
+        }
+      ]
     }
   ],
   "records": [
@@ -4993,21 +5018,43 @@
       "result_verified_independently": false,
       "result_recorded_at": "2026-11-15T01:56:52.706Z",
       "virtual_pnl": -1
+    },
+    {
+      "id": "tipsaudit-17893:TIPSAUDIT_VALUE_1X2",
+      "match": "Albacete - Celta de Vigo II",
+      "league": "Segunda Division",
+      "day": "2026-11-16",
+      "kickoff": "2026-11-16T19:30:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "CORE",
+      "first_seen": "2026-11-16T15:49:44.876Z",
+      "last_seen": "2026-11-16T15:49:44.876Z",
+      "first_place": "PRINCIPALE",
+      "ever_primary": true,
+      "first_odds": 1.68,
+      "first_bookmaker": "Unibet (SE)",
+      "appearances": 1,
+      "result_status": "pending",
+      "result_source": "Esito non ancora verificato",
+      "result_verified_independently": false,
+      "result_recorded_at": null,
+      "virtual_pnl": null
     }
   ],
   "stats": {
-    "total": 56,
-    "primary": 28,
+    "total": 57,
+    "primary": 29,
     "alternatives_only": 28,
     "won": 30,
     "lost": 25,
-    "pending": 1,
+    "pending": 2,
     "unmatched": 0,
     "virtual_pnl": 2.94,
     "settled": 55,
     "virtual_roi": 5.35
   },
-  "last_snapshot_at": "2026-11-16T00:02:05.893Z",
+  "last_snapshot_at": "2026-11-16T15:49:44.876Z",
   "last_result_check_at": "2026-11-16T02:10:43.300Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }

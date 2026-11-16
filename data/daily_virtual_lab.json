@@ -5708,6 +5708,33 @@
       "settlement_source": "TipsAudit public record (1X2 FT)",
       "settlement_reference": "https://tipsaudit.com/track-record",
       "settlement_publication": "2026-11-16T02:10:12+00:00"
+    },
+    {
+      "id": "tipsaudit-17893:TIPSAUDIT_VALUE_1X2",
+      "source_id": "17893",
+      "strategy": "TIPSAUDIT_VALUE_1X2",
+      "match": "Albacete - Celta de Vigo II",
+      "league": "Segunda Division",
+      "kickoff": "2026-11-16T19:30:00+00:00",
+      "selection": "Home",
+      "market": "1X2",
+      "bookmaker": "Unibet (SE)",
+      "odds": 1.68,
+      "fair_odds": 1.65,
+      "edge": 0.0189,
+      "bookmaker_quote_status": "source actionable, not guaranteed executable",
+      "captured_at": "2026-11-16T15:49:44.180Z",
+      "capture_day": "2026-11-16",
+      "provider_generated_at": "2026-11-16T15:49:44+00:00",
+      "benchmark_read_at": "2026-11-16T14:34:52+00:00",
+      "provider": "TipsAudit (external signal, NOT our own betting model)",
+      "reference": "https://tipsaudit.com/match/17893/albacete-vs-celta-de-vigo-ii-2026-11-16",
+      "origin": "live bookmaker observation via TipsAudit public feed",
+      "stake_virtual": 1,
+      "status": "pending",
+      "pnl": null,
+      "score": null,
+      "settled_at": null
     }
   ],
   "checks": [
@@ -6575,12 +6602,34 @@
       "created": 1,
       "source": "TipsAudit",
       "test_only": true
+    },
+    {
+      "day": "2026-11-16",
+      "checked_at": "2026-11-16T15:49:44.180Z",
+      "source_generated_at": "2026-11-16T15:49:44+00:00",
+      "scanned_predictions": 14,
+      "source_total_predictions": 288,
+      "scope_day": "2026-11-16",
+      "scope_timezone": "Europe/Rome",
+      "scanned_unique_matches": 14,
+      "scanned_league_counts": {
+        "UEFA Nations League": 8,
+        "Peru Liga 1": 3,
+        "Primera C": 1,
+        "Segunda Division": 1,
+        "Slovakia 2. Liga": 1
+      },
+      "scanned_league_total": 5,
+      "eligible_actionable": 1,
+      "created": 1,
+      "source": "TipsAudit",
+      "test_only": true
     }
   ],
-  "last_check": "2026-11-15T13:57:40.921Z",
+  "last_check": "2026-11-16T15:49:44.180Z",
   "stats": {
-    "total": 175,
-    "pending": 1,
+    "total": 176,
+    "pending": 2,
     "won": 94,
     "lost": 80,
     "pnl": 17.14
