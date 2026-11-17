@@ -1,12 +1,12 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-17T18:39:55.143Z",
-  "status": "PRELIMINARY_CANDIDATES",
+  "generated_at": "2026-11-17T23:31:31.610Z",
+  "status": "SOURCE_STALE",
   "source_last_check": "2026-11-17T16:02:04.268Z",
   "source_max_age_hours": 36,
   "scope": "Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.",
-  "scope_day": "2026-11-17",
+  "scope_day": "2026-11-18",
   "allow_manual_real_registration_today": false,
   "market_coverage": [
     "1X2"
@@ -19,52 +19,15 @@
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
     "paper_records": 177,
-    "scanned_today": 8,
-    "leagues_today": 1,
-    "last_scan_completed_at": "2026-11-17T16:02:04.268Z",
-    "eligible_observations": 1,
+    "scanned_today": null,
+    "leagues_today": null,
+    "last_scan_completed_at": null,
+    "eligible_observations": 0,
     "eligible_core": 0,
-    "eligible_value": 1,
+    "eligible_value": 0,
     "settled_paper_samples": 175,
     "settled_paper_roi_pct": 10.2
   },
-  "shortlist": [
-    {
-      "id": "tipsaudit-17943:TIPSAUDIT_VALUE_1X2",
-      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
-      "match": "Denmark - Norway",
-      "league": "UEFA Nations League",
-      "kickoff": "2026-11-17T19:45:00+00:00",
-      "market": "1X2",
-      "selection": "Away",
-      "category": "VALUE",
-      "reference_odds": 2.57,
-      "reference_bookmaker": "1xBet",
-      "external_fair_odds": 2.49,
-      "external_benchmark_probability_pct": 40.2,
-      "external_reference_gap_pct": 3.21,
-      "relative_screening_score": 54,
-      "captured_at": "2026-11-17T16:02:04.268Z",
-      "reference_link": "https://tipsaudit.com/match/17943/denmark-vs-norway-2026-11-17",
-      "source": "TipsAudit public pre-match paper signals",
-      "source_is_independent_model": false,
-      "why": [
-        "Quota osservata 2.57 contro quota equa 2.49 stimata dalla fonte esterna (+ 3.2% di scostamento).",
-        "Dato osservato da 1xBet e registrato prima della partita.",
-        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
-      ],
-      "cautions": [
-        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 54 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
-        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
-      ],
-      "historical": {
-        "settled": 97,
-        "observed_roi_pct": 20.6,
-        "reliable_edge_validation": false,
-        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
-      }
-    }
-  ],
+  "shortlist": [],
   "alternatives": []
 }
