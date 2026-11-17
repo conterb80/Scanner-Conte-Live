@@ -5739,6 +5739,33 @@
       "settlement_source": "TipsAudit public record (1X2 FT)",
       "settlement_reference": "https://tipsaudit.com/track-record",
       "settlement_publication": "2026-11-17T04:25:12+00:00"
+    },
+    {
+      "id": "tipsaudit-17943:TIPSAUDIT_VALUE_1X2",
+      "source_id": "17943",
+      "strategy": "TIPSAUDIT_VALUE_1X2",
+      "match": "Denmark - Norway",
+      "league": "UEFA Nations League",
+      "kickoff": "2026-11-17T19:45:00+00:00",
+      "selection": "Away",
+      "market": "1X2",
+      "bookmaker": "1xBet",
+      "odds": 2.57,
+      "fair_odds": 2.49,
+      "edge": 0.0302,
+      "bookmaker_quote_status": "source actionable, not guaranteed executable",
+      "captured_at": "2026-11-17T16:02:04.268Z",
+      "capture_day": "2026-11-17",
+      "provider_generated_at": "2026-11-17T16:02:04+00:00",
+      "benchmark_read_at": "2026-11-17T14:35:00+00:00",
+      "provider": "TipsAudit (external signal, NOT our own betting model)",
+      "reference": "https://tipsaudit.com/match/17943/denmark-vs-norway-2026-11-17",
+      "origin": "live bookmaker observation via TipsAudit public feed",
+      "stake_virtual": 1,
+      "status": "pending",
+      "pnl": null,
+      "score": null,
+      "settled_at": null
     }
   ],
   "checks": [
@@ -6628,12 +6655,30 @@
       "created": 1,
       "source": "TipsAudit",
       "test_only": true
+    },
+    {
+      "day": "2026-11-17",
+      "checked_at": "2026-11-17T16:02:04.268Z",
+      "source_generated_at": "2026-11-17T16:02:04+00:00",
+      "scanned_predictions": 8,
+      "source_total_predictions": 298,
+      "scope_day": "2026-11-17",
+      "scope_timezone": "Europe/Rome",
+      "scanned_unique_matches": 8,
+      "scanned_league_counts": {
+        "UEFA Nations League": 8
+      },
+      "scanned_league_total": 1,
+      "eligible_actionable": 1,
+      "created": 1,
+      "source": "TipsAudit",
+      "test_only": true
     }
   ],
-  "last_check": "2026-11-16T15:49:44.180Z",
+  "last_check": "2026-11-17T16:02:04.268Z",
   "stats": {
-    "total": 176,
-    "pending": 1,
+    "total": 177,
+    "pending": 2,
     "won": 95,
     "lost": 80,
     "pnl": 17.82
