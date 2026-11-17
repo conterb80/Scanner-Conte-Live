@@ -5731,10 +5731,14 @@
       "reference": "https://tipsaudit.com/match/17893/albacete-vs-celta-de-vigo-ii-2026-11-16",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.68,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-17T04:29:25.339Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-17T04:25:12+00:00"
     }
   ],
   "checks": [
@@ -6629,10 +6633,10 @@
   "last_check": "2026-11-16T15:49:44.180Z",
   "stats": {
     "total": 176,
-    "pending": 2,
-    "won": 94,
+    "pending": 1,
+    "won": 95,
     "lost": 80,
-    "pnl": 17.14
+    "pnl": 17.82
   },
-  "last_settlement_check": "2026-11-16T02:10:43.300Z"
+  "last_settlement_check": "2026-11-17T04:29:25.339Z"
 }
