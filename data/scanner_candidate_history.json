@@ -3887,6 +3887,31 @@
           "reference_link": "https://tipsaudit.com/match/17943/denmark-vs-norway-2026-11-17"
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-17T18:39:55.143Z",
+      "scope_day": "2026-11-17",
+      "status": "PRELIMINARY_CANDIDATES",
+      "source_commit": null,
+      "observations": [
+        {
+          "id": "tipsaudit-17943:TIPSAUDIT_VALUE_1X2",
+          "match": "Denmark - Norway",
+          "league": "UEFA Nations League",
+          "kickoff": "2026-11-17T19:45:00+00:00",
+          "market": "1X2",
+          "selection": "Away",
+          "category": "VALUE",
+          "place": "PRINCIPALE",
+          "rank": 1,
+          "reference_odds": 2.57,
+          "reference_bookmaker": "1xBet",
+          "external_fair_odds": 2.49,
+          "relative_screening_score": 54,
+          "captured_at": "2026-11-17T16:02:04.268Z",
+          "reference_link": "https://tipsaudit.com/match/17943/denmark-vs-norway-2026-11-17"
+        }
+      ]
     }
   ],
   "records": [
@@ -5154,12 +5179,12 @@
       "selection": "Away",
       "category": "VALUE",
       "first_seen": "2026-11-17T16:02:05.034Z",
-      "last_seen": "2026-11-17T16:28:17.072Z",
+      "last_seen": "2026-11-17T18:39:55.143Z",
       "first_place": "PRINCIPALE",
       "ever_primary": true,
       "first_odds": 2.57,
       "first_bookmaker": "1xBet",
-      "appearances": 2,
+      "appearances": 3,
       "result_status": "pending",
       "result_source": "Esito non ancora verificato",
       "result_verified_independently": false,
@@ -5179,7 +5204,7 @@
     "settled": 56,
     "virtual_roi": 6.46
   },
-  "last_snapshot_at": "2026-11-17T16:28:17.072Z",
+  "last_snapshot_at": "2026-11-17T18:39:55.143Z",
   "last_result_check_at": "2026-11-17T04:29:25.339Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }
