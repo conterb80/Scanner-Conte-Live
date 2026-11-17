@@ -2,15 +2,15 @@
   "schema": "scanner-conte-lab-v1",
   "version": "0.4",
   "status": "pilot",
-  "last_run": "2026-11-13T19:55:12.831Z",
+  "last_run": "2026-11-17T22:53:01.473Z",
   "last_fixture_snapshot": "2026-10-25T19:38:17.694Z",
   "history_quality": "Quote fotografate prima dell’inizio. Controllo su campione, non sistema validato.",
   "stats": {
     "total": 126,
-    "pending": 6,
-    "won": 59,
-    "lost": 61,
-    "pnl": -13.27
+    "pending": 0,
+    "won": 64,
+    "lost": 62,
+    "pnl": -11
   },
   "records": [
     {
@@ -2643,13 +2643,14 @@
       "odds": 1.8,
       "market_probability_pct": 52.63,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "lost",
+      "pnl": -1,
+      "score": "1-0",
       "captured_at": "2026-11-13T19:55:12.831Z",
-      "settled_at": null,
+      "settled_at": "2026-11-17T22:53:08.076Z",
       "origin": "Football-Data fixture CSV observed before kickoff",
-      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato."
+      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato.",
+      "settlement_source": "Football-Data.co.uk FT (matched by date and both teams)"
     },
     {
       "id": "fd-E2-20261114-miltonkeynesdons-burton:FAVORITA_1X2_CONTROLLO",
@@ -2663,13 +2664,14 @@
       "odds": 1.61,
       "market_probability_pct": 56.73,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "won",
+      "pnl": 0.61,
+      "score": "6-2",
       "captured_at": "2026-11-13T19:55:12.831Z",
-      "settled_at": null,
+      "settled_at": "2026-11-17T22:53:08.076Z",
       "origin": "Football-Data fixture CSV observed before kickoff",
-      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato."
+      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato.",
+      "settlement_source": "Football-Data.co.uk FT (matched by date and both teams)"
     },
     {
       "id": "fd-E2-20261114-miltonkeynesdons-burton:OVER25_CONTROLLO",
@@ -2683,13 +2685,14 @@
       "odds": 1.65,
       "market_probability_pct": 57.14,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "won",
+      "pnl": 0.65,
+      "score": "6-2",
       "captured_at": "2026-11-13T19:55:12.831Z",
-      "settled_at": null,
+      "settled_at": "2026-11-17T22:53:08.076Z",
       "origin": "Football-Data fixture CSV observed before kickoff",
-      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato."
+      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato.",
+      "settlement_source": "Football-Data.co.uk FT (matched by date and both teams)"
     },
     {
       "id": "fd-E2-20261114-stockport-reading:FAVORITA_1X2_CONTROLLO",
@@ -2703,13 +2706,14 @@
       "odds": 1.79,
       "market_probability_pct": 51.47,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "won",
+      "pnl": 0.79,
+      "score": "3-1",
       "captured_at": "2026-11-13T19:55:12.831Z",
-      "settled_at": null,
+      "settled_at": "2026-11-17T22:53:08.076Z",
       "origin": "Football-Data fixture CSV observed before kickoff",
-      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato."
+      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato.",
+      "settlement_source": "Football-Data.co.uk FT (matched by date and both teams)"
     },
     {
       "id": "fd-E2-20261114-stockport-reading:OVER25_CONTROLLO",
@@ -2723,13 +2727,14 @@
       "odds": 1.62,
       "market_probability_pct": 58.14,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "won",
+      "pnl": 0.62,
+      "score": "3-1",
       "captured_at": "2026-11-13T19:55:12.831Z",
-      "settled_at": null,
+      "settled_at": "2026-11-17T22:53:08.076Z",
       "origin": "Football-Data fixture CSV observed before kickoff",
-      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato."
+      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato.",
+      "settlement_source": "Football-Data.co.uk FT (matched by date and both teams)"
     },
     {
       "id": "fd-E2-20261114-wigan-barnsley:OVER25_CONTROLLO",
@@ -2743,13 +2748,14 @@
       "odds": 1.6,
       "market_probability_pct": 58.97,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "won",
+      "pnl": 0.6,
+      "score": "2-1",
       "captured_at": "2026-11-13T19:55:12.831Z",
-      "settled_at": null,
+      "settled_at": "2026-11-17T22:53:08.076Z",
       "origin": "Football-Data fixture CSV observed before kickoff",
-      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato."
+      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato.",
+      "settlement_source": "Football-Data.co.uk FT (matched by date and both teams)"
     }
   ],
   "last_result_check": "2026-10-25T19:55:52.287Z",
