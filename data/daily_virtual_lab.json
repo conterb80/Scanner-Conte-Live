@@ -5772,6 +5772,33 @@
       "settlement_publication": "2026-11-18T01:36:00.909Z",
       "settlement_verification": "espn_scoreboard",
       "independent_ft_verification": true
+    },
+    {
+      "id": "tipsaudit-17965:TIPSAUDIT_VALUE_1X2",
+      "source_id": "17965",
+      "strategy": "TIPSAUDIT_VALUE_1X2",
+      "match": "Coritiba - Santos",
+      "league": "Brazil Serie A",
+      "kickoff": "2026-11-18T22:30:00+00:00",
+      "selection": "Away",
+      "market": "1X2",
+      "bookmaker": "Unibet (NL)",
+      "odds": 2.14,
+      "fair_odds": 2.09,
+      "edge": 0.0216,
+      "bookmaker_quote_status": "source actionable, not guaranteed executable",
+      "captured_at": "2026-11-18T15:41:15.612Z",
+      "capture_day": "2026-11-18",
+      "provider_generated_at": "2026-11-18T15:41:16+00:00",
+      "benchmark_read_at": "2026-11-18T14:34:42+00:00",
+      "provider": "TipsAudit (external signal, NOT our own betting model)",
+      "reference": "https://tipsaudit.com/match/17965/coritiba-vs-santos-2026-11-18",
+      "origin": "live bookmaker observation via TipsAudit public feed",
+      "stake_virtual": 1,
+      "status": "pending",
+      "pnl": null,
+      "score": null,
+      "settled_at": null
     }
   ],
   "checks": [
@@ -6679,12 +6706,31 @@
       "created": 1,
       "source": "TipsAudit",
       "test_only": true
+    },
+    {
+      "day": "2026-11-18",
+      "checked_at": "2026-11-18T15:41:15.612Z",
+      "source_generated_at": "2026-11-18T15:41:16+00:00",
+      "scanned_predictions": 2,
+      "source_total_predictions": 344,
+      "scope_day": "2026-11-18",
+      "scope_timezone": "Europe/Rome",
+      "scanned_unique_matches": 2,
+      "scanned_league_counts": {
+        "Brazil Serie A": 1,
+        "Peru Liga 1": 1
+      },
+      "scanned_league_total": 2,
+      "eligible_actionable": 1,
+      "created": 1,
+      "source": "TipsAudit",
+      "test_only": true
     }
   ],
-  "last_check": "2026-11-17T16:02:04.268Z",
+  "last_check": "2026-11-18T15:41:15.612Z",
   "stats": {
-    "total": 177,
-    "pending": 1,
+    "total": 178,
+    "pending": 2,
     "won": 96,
     "lost": 80,
     "pnl": 19.39
