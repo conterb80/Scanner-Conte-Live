@@ -5762,10 +5762,16 @@
       "reference": "https://tipsaudit.com/match/17943/denmark-vs-norway-2026-11-17",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
-      "settled_at": null
+      "status": "won",
+      "pnl": 1.57,
+      "score": "2-3",
+      "settled_at": "2026-11-18T01:36:00.909Z",
+      "verified_ft_result": "2",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401861194/norway-denmark",
+      "settlement_publication": "2026-11-18T01:36:00.909Z",
+      "settlement_verification": "espn_scoreboard",
+      "independent_ft_verification": true
     }
   ],
   "checks": [
@@ -6678,10 +6684,10 @@
   "last_check": "2026-11-17T16:02:04.268Z",
   "stats": {
     "total": 177,
-    "pending": 2,
-    "won": 95,
+    "pending": 1,
+    "won": 96,
     "lost": 80,
-    "pnl": 17.82
+    "pnl": 19.39
   },
-  "last_settlement_check": "2026-11-17T04:29:25.339Z"
+  "last_settlement_check": "2026-11-18T01:36:00.909Z"
 }

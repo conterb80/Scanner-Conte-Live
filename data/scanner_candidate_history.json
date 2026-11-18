@@ -5199,26 +5199,26 @@
       "first_odds": 2.57,
       "first_bookmaker": "1xBet",
       "appearances": 3,
-      "result_status": "pending",
-      "result_source": "Esito non ancora verificato",
-      "result_verified_independently": false,
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_status": "won",
+      "result_source": "ESPN public scoreboard",
+      "result_verified_independently": true,
+      "result_recorded_at": "2026-11-18T01:36:00.909Z",
+      "virtual_pnl": 1.57
     }
   ],
   "stats": {
     "total": 58,
     "primary": 30,
     "alternatives_only": 28,
-    "won": 31,
+    "won": 32,
     "lost": 25,
-    "pending": 2,
+    "pending": 1,
     "unmatched": 0,
-    "virtual_pnl": 3.62,
-    "settled": 56,
-    "virtual_roi": 6.46
+    "virtual_pnl": 5.19,
+    "settled": 57,
+    "virtual_roi": 9.11
   },
   "last_snapshot_at": "2026-11-17T23:39:28.258Z",
-  "last_result_check_at": "2026-11-17T04:29:25.339Z",
+  "last_result_check_at": "2026-11-18T01:36:00.909Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }

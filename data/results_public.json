@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-results-public-v1",
-  "checked_at": "2026-11-17T16:51:48.830Z",
+  "checked_at": "2026-11-18T01:36:00.064Z",
   "source": "ESPN public scoreboard + verified official match reports",
   "coverage": {
     "leagues": [
@@ -17,9 +17,9 @@
       "por.1"
     ],
     "days": [
-      "20261115",
       "20261116",
-      "20261117"
+      "20261117",
+      "20261118"
     ],
     "queries": 33,
     "succeeded": 33,
@@ -3668,6 +3668,118 @@
       "away_goals": 0,
       "source": "ESPN public scoreboard",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/401861188/serbia-greece",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861189",
+      "kickoff": "2026-11-17T19:45:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Wales",
+      "away": "Portugal",
+      "home_goals": 2,
+      "away_goals": 3,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861189/portugal-wales",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861190",
+      "kickoff": "2026-11-17T19:45:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Ukraine",
+      "away": "Georgia",
+      "home_goals": 1,
+      "away_goals": 0,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861190/georgia-ukraine",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861191",
+      "kickoff": "2026-11-17T19:45:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Hungary",
+      "away": "Northern Ireland",
+      "home_goals": 1,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861191/northern-ireland-hungary",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861192",
+      "kickoff": "2026-11-17T19:45:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Republic of Ireland",
+      "away": "Kosovo",
+      "home_goals": 3,
+      "away_goals": 0,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861192/kosovo-republic-of-ireland",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861193",
+      "kickoff": "2026-11-17T19:45:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Israel",
+      "away": "Austria",
+      "home_goals": 1,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861193/austria-israel",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861194",
+      "kickoff": "2026-11-17T19:45:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Denmark",
+      "away": "Norway",
+      "home_goals": 2,
+      "away_goals": 3,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861194/norway-denmark",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861195",
+      "kickoff": "2026-11-17T19:45:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Poland",
+      "away": "Sweden",
+      "home_goals": 1,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861195/sweden-poland",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-uefa.nations-401861196",
+      "kickoff": "2026-11-17T19:45:00.000Z",
+      "status": "FT",
+      "league": "UEFA Nations League",
+      "league_code": "uefa.nations",
+      "home": "Bosnia-Herzegovina",
+      "away": "Romania",
+      "home_goals": 2,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401861196/romania-bosnia-herzegovina",
       "verification": "espn_scoreboard"
     }
   ]
