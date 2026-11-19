@@ -480,16 +480,45 @@
       "result_source": "TipsAudit public record (1X2 FT)",
       "real_bet_status": "NOT_TRACKED_PUBLICLY",
       "result_verified_independently": false
+    },
+    {
+      "id": "tipsaudit-18020:TIPSAUDIT_VALUE_1X2|2026-11-19T22:30:00+00:00|1X2|Home",
+      "source_id": "tipsaudit-18020:TIPSAUDIT_VALUE_1X2",
+      "match": "Vasco DA Gama - Internacional",
+      "league": "Brazil Serie A",
+      "kickoff": "2026-11-19T22:30:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "CORE",
+      "reference_odds": 1.62,
+      "reference_bookmaker": "1xBet",
+      "captured_at": "2026-11-19T15:46:11.915Z",
+      "reference_link": "https://tipsaudit.com/match/18020/vasco-da-gama-vs-internacional-2026-11-19",
+      "external_fair_odds": 1.6,
+      "external_reference_gap_pct": 1.25,
+      "rank_score": 5,
+      "model_probability_pct": null,
+      "model_status": "XG_NOT_AVAILABLE",
+      "is_bet365_quote": false,
+      "kind": "OBSERVATION_ONLY",
+      "scope_day": "2026-11-19",
+      "first_seen": "2026-11-19T15:46:13.263Z",
+      "position": "PRINCIPALE",
+      "result_status": "pending",
+      "settled_at": null,
+      "virtual_pnl": null,
+      "result_source": null,
+      "real_bet_status": "NOT_TRACKED_PUBLICLY"
     }
   ],
   "stats": {
-    "observed": 16,
-    "main": 10,
+    "observed": 17,
+    "main": 11,
     "reserves": 6,
     "settled": 10,
     "won": 4,
     "lost": 6,
-    "pending": 0,
+    "pending": 1,
     "theoretical_stake": 10,
     "theoretical_pnl": -1.83,
     "theoretical_roi_pct": -18.3,
@@ -497,5 +526,5 @@
     "independent_result_verification": false
   },
   "created_at": "2026-11-08T09:39:18.978Z",
-  "last_check_at": "2026-11-19T03:29:53.662Z"
+  "last_check_at": "2026-11-19T15:46:13.263Z"
 }

@@ -1,9 +1,9 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-19T01:55:14.540Z",
-  "status": "SOURCE_STALE",
-  "source_last_check": "2026-11-18T15:41:15.612Z",
+  "generated_at": "2026-11-19T15:46:13.096Z",
+  "status": "NO_ELIGIBLE_OBSERVATIONS",
+  "source_last_check": "2026-11-19T15:46:11.915Z",
   "source_max_age_hours": 36,
   "scope": "Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.",
   "scope_day": "2026-11-19",
@@ -18,15 +18,15 @@
   "methodology": "Filtro quantitativo predefinito di segnali esterni già acquisiti: divario quota/equo fonte, freschezza, fascia di quota. Non verifica forma, assenze o formazioni.",
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
-    "paper_records": 178,
-    "scanned_today": null,
-    "leagues_today": null,
-    "last_scan_completed_at": null,
+    "paper_records": 179,
+    "scanned_today": 5,
+    "leagues_today": 2,
+    "last_scan_completed_at": "2026-11-19T15:46:11.915Z",
     "eligible_observations": 0,
     "eligible_core": 0,
     "eligible_value": 0,
-    "settled_paper_samples": 176,
-    "settled_paper_roi_pct": 11
+    "settled_paper_samples": 177,
+    "settled_paper_roi_pct": 11.6
   },
   "shortlist": [],
   "alternatives": []
