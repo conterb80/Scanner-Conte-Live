@@ -5795,10 +5795,14 @@
       "reference": "https://tipsaudit.com/match/17965/coritiba-vs-santos-2026-11-18",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.14,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-19T03:29:53.127Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-19T03:25:12+00:00"
     }
   ],
   "checks": [
@@ -6730,10 +6734,10 @@
   "last_check": "2026-11-18T15:41:15.612Z",
   "stats": {
     "total": 178,
-    "pending": 2,
-    "won": 96,
+    "pending": 1,
+    "won": 97,
     "lost": 80,
-    "pnl": 19.39
+    "pnl": 20.53
   },
-  "last_settlement_check": "2026-11-18T01:36:00.909Z"
+  "last_settlement_check": "2026-11-19T03:29:53.127Z"
 }

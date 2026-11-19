@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-real-watch-today-v1",
-  "generated_at": "2026-11-19T01:11:51.415Z",
+  "generated_at": "2026-11-19T03:29:53.662Z",
   "scope_day": "2026-11-19",
   "status": "NO_OBSERVATIONS",
   "source_last_check": "2026-11-18T15:41:15.612Z",
@@ -16,13 +16,13 @@
     "observed": 16,
     "main": 10,
     "reserves": 6,
-    "settled": 9,
-    "won": 3,
+    "settled": 10,
+    "won": 4,
     "lost": 6,
-    "pending": 1,
-    "theoretical_stake": 9,
-    "theoretical_pnl": -2.97,
-    "theoretical_roi_pct": -33,
+    "pending": 0,
+    "theoretical_stake": 10,
+    "theoretical_pnl": -1.83,
+    "theoretical_roi_pct": -18.3,
     "independently_verified_settled": 3,
     "independent_result_verification": false
   }
