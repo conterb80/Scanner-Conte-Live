@@ -5826,10 +5826,14 @@
       "reference": "https://tipsaudit.com/match/18020/vasco-da-gama-vs-internacional-2026-11-19",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.62,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-20T16:58:28.239Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-20T16:55:12+00:00"
     },
     {
       "id": "tipsaudit-18152:TIPSAUDIT_VALUE_1X2",
@@ -6874,10 +6878,10 @@
   "last_check": "2026-11-20T15:29:00.977Z",
   "stats": {
     "total": 181,
-    "pending": 4,
-    "won": 97,
+    "pending": 3,
+    "won": 98,
     "lost": 80,
-    "pnl": 20.53
+    "pnl": 21.15
   },
-  "last_settlement_check": "2026-11-19T03:29:53.127Z"
+  "last_settlement_check": "2026-11-20T16:58:28.239Z"
 }
