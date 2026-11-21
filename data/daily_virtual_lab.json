@@ -6000,10 +6000,16 @@
       "reference": "https://tipsaudit.com/match/18552/real-madrid-vs-celta-vigo-2026-11-21",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
-      "settled_at": null
+      "status": "won",
+      "pnl": 0.21,
+      "score": "2-1",
+      "settled_at": "2026-11-21T23:47:12.441Z",
+      "verified_ft_result": "1",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401882798/celta-vigo-real-madrid",
+      "settlement_publication": "2026-11-21T23:47:12.441Z",
+      "settlement_verification": "espn_scoreboard",
+      "independent_ft_verification": true
     },
     {
       "id": "tipsaudit-18553:TIPSAUDIT_VALUE_1X2",
@@ -6027,10 +6033,16 @@
       "reference": "https://tipsaudit.com/match/18553/tenerife-vs-mallorca-2026-11-21",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
-      "settled_at": null
+      "status": "won",
+      "pnl": 2.12,
+      "score": "0-0",
+      "settled_at": "2026-11-21T23:47:12.441Z",
+      "verified_ft_result": "X",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401883107/mallorca-tenerife",
+      "settlement_publication": "2026-11-21T23:47:12.441Z",
+      "settlement_verification": "espn_scoreboard",
+      "independent_ft_verification": true
     },
     {
       "id": "tipsaudit-18555:TIPSAUDIT_VALUE_1X2",
@@ -7110,10 +7122,10 @@
   "last_check": "2026-11-21T14:41:30.515Z",
   "stats": {
     "total": 187,
-    "pending": 7,
-    "won": 100,
+    "pending": 5,
+    "won": 102,
     "lost": 80,
-    "pnl": 22.69
+    "pnl": 25.02
   },
-  "last_settlement_check": "2026-11-21T03:13:53.451Z"
+  "last_settlement_check": "2026-11-21T23:47:12.441Z"
 }
