@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-results-public-v1",
-  "checked_at": "2026-11-20T16:07:16.931Z",
+  "checked_at": "2026-11-21T00:47:36.072Z",
   "source": "ESPN public scoreboard + verified official match reports",
   "coverage": {
     "leagues": [
@@ -17,9 +17,9 @@
       "por.1"
     ],
     "days": [
-      "20261118",
       "20261119",
-      "20261120"
+      "20261120",
+      "20261121"
     ],
     "queries": 33,
     "succeeded": 33,
@@ -3780,6 +3780,76 @@
       "away_goals": 1,
       "source": "ESPN public scoreboard",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/401861196/romania-bosnia-herzegovina",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-esp.2-401883112",
+      "kickoff": "2026-11-20T19:30:00.000Z",
+      "status": "FT",
+      "league": "LaLiga Hypermotion",
+      "league_code": "esp.2",
+      "home": "FC Andorra",
+      "away": "Leganés",
+      "home_goals": 1,
+      "away_goals": 3,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401883112/leganes-fc-andorra",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-ger.1-401884736",
+      "kickoff": "2026-11-20T19:30:00.000Z",
+      "status": "FT",
+      "league": "Bundesliga",
+      "league_code": "ger.1",
+      "home": "Bayern Munich",
+      "away": "FC Cologne",
+      "home_goals": 1,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401884736/fc-cologne-bayern-munich",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-ita.2-401899543",
+      "kickoff": "2026-11-20T19:30:00.000Z",
+      "status": "FT",
+      "league": "Serie B",
+      "league_code": "ita.2",
+      "home": "Hellas Verona",
+      "away": "Cesena",
+      "home_goals": 0,
+      "away_goals": 2,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401899543/cesena-hellas-verona",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-fra.1-401876395",
+      "kickoff": "2026-11-20T19:45:00.000Z",
+      "status": "FT",
+      "league": "Ligue 1",
+      "league_code": "fra.1",
+      "home": "Troyes",
+      "away": "Le Havre AC",
+      "home_goals": 3,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401876395/le-havre-ac-troyes",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-esp.1-401882805",
+      "kickoff": "2026-11-20T20:00:00.000Z",
+      "status": "FT",
+      "league": "LaLiga",
+      "league_code": "esp.1",
+      "home": "Athletic Club",
+      "away": "Espanyol",
+      "home_goals": 0,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401882805/espanyol-athletic-club",
       "verification": "espn_scoreboard"
     }
   ]
