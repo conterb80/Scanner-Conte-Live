@@ -1,9 +1,9 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-21T01:36:14.267Z",
-  "status": "SOURCE_STALE",
-  "source_last_check": "2026-11-20T15:29:00.977Z",
+  "generated_at": "2026-11-21T14:41:31.773Z",
+  "status": "PRELIMINARY_CANDIDATES",
+  "source_last_check": "2026-11-21T14:41:30.515Z",
   "source_max_age_hours": 36,
   "scope": "Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.",
   "scope_day": "2026-11-21",
@@ -18,16 +18,53 @@
   "methodology": "Filtro quantitativo predefinito di segnali esterni già acquisiti: divario quota/equo fonte, freschezza, fascia di quota. Non verifica forma, assenze o formazioni.",
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
-    "paper_records": 181,
-    "scanned_today": null,
-    "leagues_today": null,
-    "last_scan_completed_at": null,
-    "eligible_observations": 0,
-    "eligible_core": 0,
+    "paper_records": 187,
+    "scanned_today": 113,
+    "leagues_today": 45,
+    "last_scan_completed_at": "2026-11-21T14:41:30.515Z",
+    "eligible_observations": 1,
+    "eligible_core": 1,
     "eligible_value": 0,
-    "settled_paper_samples": 178,
-    "settled_paper_roi_pct": 11.9
+    "settled_paper_samples": 180,
+    "settled_paper_roi_pct": 12.6
   },
-  "shortlist": [],
+  "shortlist": [
+    {
+      "id": "tipsaudit-18505:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Zaglebie Lubin - Gornik Zabrze",
+      "league": "Ekstraklasa",
+      "kickoff": "2026-11-21T16:30:00+00:00",
+      "market": "1X2",
+      "selection": "Away",
+      "category": "CORE",
+      "reference_odds": 1.73,
+      "reference_bookmaker": "Unibet (NL)",
+      "external_fair_odds": 1.7,
+      "external_benchmark_probability_pct": 58.8,
+      "external_reference_gap_pct": 1.76,
+      "relative_screening_score": 40,
+      "captured_at": "2026-11-21T14:41:30.515Z",
+      "reference_link": "https://tipsaudit.com/match/18505/zaglebie-lubin-vs-gornik-zabrze-2026-11-21",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 1.73 contro quota equa 1.7 stimata dalla fonte esterna (+ 1.8% di scostamento).",
+        "Dato osservato da Unibet (NL) e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 40 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 66,
+        "observed_roi_pct": -5.1,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    }
+  ],
   "alternatives": []
 }
