@@ -4154,6 +4154,31 @@
           "reference_link": "https://tipsaudit.com/match/18505/zaglebie-lubin-vs-gornik-zabrze-2026-11-21"
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-21T14:55:31.324Z",
+      "scope_day": "2026-11-21",
+      "status": "PRELIMINARY_CANDIDATES",
+      "source_commit": null,
+      "observations": [
+        {
+          "id": "tipsaudit-18505:TIPSAUDIT_VALUE_1X2",
+          "match": "Zaglebie Lubin - Gornik Zabrze",
+          "league": "Ekstraklasa",
+          "kickoff": "2026-11-21T16:30:00+00:00",
+          "market": "1X2",
+          "selection": "Away",
+          "category": "CORE",
+          "place": "PRINCIPALE",
+          "rank": 1,
+          "reference_odds": 1.73,
+          "reference_bookmaker": "Unibet (NL)",
+          "external_fair_odds": 1.7,
+          "relative_screening_score": 40,
+          "captured_at": "2026-11-21T14:41:30.515Z",
+          "reference_link": "https://tipsaudit.com/match/18505/zaglebie-lubin-vs-gornik-zabrze-2026-11-21"
+        }
+      ]
     }
   ],
   "records": [
@@ -5487,12 +5512,12 @@
       "selection": "Away",
       "category": "CORE",
       "first_seen": "2026-11-21T14:41:31.773Z",
-      "last_seen": "2026-11-21T14:41:31.773Z",
+      "last_seen": "2026-11-21T14:55:31.324Z",
       "first_place": "PRINCIPALE",
       "ever_primary": true,
       "first_odds": 1.73,
       "first_bookmaker": "Unibet (NL)",
-      "appearances": 1,
+      "appearances": 2,
       "result_status": "pending",
       "result_source": "Esito non ancora verificato",
       "result_verified_independently": false,
@@ -5512,7 +5537,7 @@
     "settled": 59,
     "virtual_roi": 11.41
   },
-  "last_snapshot_at": "2026-11-21T14:41:31.773Z",
+  "last_snapshot_at": "2026-11-21T14:55:31.324Z",
   "last_result_check_at": "2026-11-21T03:13:53.451Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }
