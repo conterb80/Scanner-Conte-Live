@@ -5857,10 +5857,14 @@
       "reference": "https://tipsaudit.com/match/18152/molde-vs-bodoglimt-2026-11-20",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.77,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-21T03:13:53.451Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-21T03:10:15+00:00"
     },
     {
       "id": "tipsaudit-18154:TIPSAUDIT_VALUE_1X2",
@@ -5884,10 +5888,14 @@
       "reference": "https://tipsaudit.com/match/18154/aarhus-vs-lyngby-2026-11-20",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.77,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-21T03:13:53.451Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-21T03:10:15+00:00"
     }
   ],
   "checks": [
@@ -6878,10 +6886,10 @@
   "last_check": "2026-11-20T15:29:00.977Z",
   "stats": {
     "total": 181,
-    "pending": 3,
-    "won": 98,
+    "pending": 1,
+    "won": 100,
     "lost": 80,
-    "pnl": 21.15
+    "pnl": 22.69
   },
-  "last_settlement_check": "2026-11-20T16:58:28.239Z"
+  "last_settlement_check": "2026-11-21T03:13:53.451Z"
 }
