@@ -5919,10 +5919,14 @@
       "reference": "https://tipsaudit.com/match/18505/zaglebie-lubin-vs-gornik-zabrze-2026-11-21",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-22T02:15:29.542Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-22T02:15:12+00:00"
     },
     {
       "id": "tipsaudit-18814:TIPSAUDIT_VALUE_1X2",
@@ -5946,10 +5950,14 @@
       "reference": "https://tipsaudit.com/match/18814/defensa-y-justicia-vs-barracas-central-2026-11-21",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-22T02:15:29.542Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-22T02:15:12+00:00"
     },
     {
       "id": "tipsaudit-18548:TIPSAUDIT_VALUE_1X2",
@@ -5973,10 +5981,14 @@
       "reference": "https://tipsaudit.com/match/18548/strasbourg-vs-stade-brestois-29-2026-11-21",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-22T02:15:29.542Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-22T02:15:12+00:00"
     },
     {
       "id": "tipsaudit-18552:TIPSAUDIT_VALUE_1X2",
@@ -6066,10 +6078,14 @@
       "reference": "https://tipsaudit.com/match/18555/atletico-mg-vs-boca-juniors-2026-11-21",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-22T02:15:29.542Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-22T02:15:12+00:00"
     }
   ],
   "checks": [
@@ -7122,10 +7138,10 @@
   "last_check": "2026-11-21T14:41:30.515Z",
   "stats": {
     "total": 187,
-    "pending": 5,
+    "pending": 1,
     "won": 102,
-    "lost": 80,
-    "pnl": 25.02
+    "lost": 84,
+    "pnl": 21.02
   },
-  "last_settlement_check": "2026-11-21T23:47:12.441Z"
+  "last_settlement_check": "2026-11-22T02:15:29.542Z"
 }

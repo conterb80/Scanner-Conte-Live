@@ -594,11 +594,12 @@
       "scope_day": "2026-11-21",
       "first_seen": "2026-11-21T14:41:31.938Z",
       "position": "PRINCIPALE",
-      "result_status": "pending",
-      "settled_at": null,
-      "virtual_pnl": null,
-      "result_source": null,
-      "real_bet_status": "NOT_TRACKED_PUBLICLY"
+      "result_status": "lost",
+      "settled_at": "2026-11-22T02:15:29.542Z",
+      "virtual_pnl": -1,
+      "result_source": "TipsAudit public record (1X2 FT)",
+      "real_bet_status": "NOT_TRACKED_PUBLICLY",
+      "result_verified_independently": false
     },
     {
       "id": "tipsaudit-18814:TIPSAUDIT_VALUE_1X2|2026-11-21T18:00:00+00:00|1X2|Home",
@@ -623,11 +624,12 @@
       "scope_day": "2026-11-21",
       "first_seen": "2026-11-21T14:41:31.938Z",
       "position": "PRINCIPALE",
-      "result_status": "pending",
-      "settled_at": null,
-      "virtual_pnl": null,
-      "result_source": null,
-      "real_bet_status": "NOT_TRACKED_PUBLICLY"
+      "result_status": "lost",
+      "settled_at": "2026-11-22T02:15:29.542Z",
+      "virtual_pnl": -1,
+      "result_source": "TipsAudit public record (1X2 FT)",
+      "real_bet_status": "NOT_TRACKED_PUBLICLY",
+      "result_verified_independently": false
     },
     {
       "id": "tipsaudit-18553:TIPSAUDIT_VALUE_1X2|2026-11-21T20:00:00+00:00|1X2|Draw",
@@ -657,7 +659,8 @@
       "virtual_pnl": 2.12,
       "result_source": "ESPN public scoreboard",
       "real_bet_status": "NOT_TRACKED_PUBLICLY",
-      "result_verified_independently": true
+      "result_verified_independently": true,
+      "result_verification_reference": "https://www.espn.com/soccer/match/_/gameId/401883107/mallorca-tenerife"
     },
     {
       "id": "tipsaudit-18505:TIPSAUDIT_VALUE_1X2|2026-11-21T16:30:00+00:00|1X2|Away",
@@ -682,11 +685,12 @@
       "scope_day": "2026-11-21",
       "first_seen": "2026-11-21T14:41:31.938Z",
       "position": "RISERVA",
-      "result_status": "pending",
-      "settled_at": null,
-      "virtual_pnl": null,
-      "result_source": null,
-      "real_bet_status": "NOT_TRACKED_PUBLICLY"
+      "result_status": "lost",
+      "settled_at": "2026-11-22T02:15:29.542Z",
+      "virtual_pnl": -1,
+      "result_source": "TipsAudit public record (1X2 FT)",
+      "real_bet_status": "NOT_TRACKED_PUBLICLY",
+      "result_verified_independently": false
     },
     {
       "id": "tipsaudit-18548:TIPSAUDIT_VALUE_1X2|2026-11-21T19:45:00+00:00|1X2|Home",
@@ -711,27 +715,28 @@
       "scope_day": "2026-11-21",
       "first_seen": "2026-11-21T14:41:31.938Z",
       "position": "RISERVA",
-      "result_status": "pending",
-      "settled_at": null,
-      "virtual_pnl": null,
-      "result_source": null,
-      "real_bet_status": "NOT_TRACKED_PUBLICLY"
+      "result_status": "lost",
+      "settled_at": "2026-11-22T02:15:29.542Z",
+      "virtual_pnl": -1,
+      "result_source": "TipsAudit public record (1X2 FT)",
+      "real_bet_status": "NOT_TRACKED_PUBLICLY",
+      "result_verified_independently": false
     }
   ],
   "stats": {
     "observed": 24,
     "main": 15,
     "reserves": 9,
-    "settled": 13,
+    "settled": 15,
     "won": 7,
-    "lost": 6,
-    "pending": 2,
-    "theoretical_stake": 13,
-    "theoretical_pnl": 0.33,
-    "theoretical_roi_pct": 2.54,
+    "lost": 8,
+    "pending": 0,
+    "theoretical_stake": 15,
+    "theoretical_pnl": -1.67,
+    "theoretical_roi_pct": -11.13,
     "independently_verified_settled": 3,
     "independent_result_verification": false
   },
   "created_at": "2026-11-08T09:39:18.978Z",
-  "last_check_at": "2026-11-21T23:47:12.667Z"
+  "last_check_at": "2026-11-22T02:15:29.898Z"
 }
