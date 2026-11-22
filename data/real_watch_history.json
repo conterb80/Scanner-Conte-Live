@@ -721,16 +721,45 @@
       "result_source": "TipsAudit public record (1X2 FT)",
       "real_bet_status": "NOT_TRACKED_PUBLICLY",
       "result_verified_independently": false
+    },
+    {
+      "id": "tipsaudit-18821:TIPSAUDIT_VALUE_1X2|2026-11-22T22:30:00+00:00|1X2|Away",
+      "source_id": "tipsaudit-18821:TIPSAUDIT_VALUE_1X2",
+      "match": "RB Bragantino - Vasco DA Gama",
+      "league": "Brazil Serie A",
+      "kickoff": "2026-11-22T22:30:00+00:00",
+      "market": "1X2",
+      "selection": "Away",
+      "category": "VALUE",
+      "reference_odds": 2.7,
+      "reference_bookmaker": "Unibet (NL)",
+      "captured_at": "2026-11-22T14:36:27.994Z",
+      "reference_link": "https://tipsaudit.com/match/18821/rb-bragantino-vs-vasco-da-gama-2026-11-22",
+      "external_fair_odds": 2.65,
+      "external_reference_gap_pct": 1.89,
+      "rank_score": 7.56,
+      "model_probability_pct": null,
+      "model_status": "XG_NOT_AVAILABLE",
+      "is_bet365_quote": false,
+      "kind": "OBSERVATION_ONLY",
+      "scope_day": "2026-11-22",
+      "first_seen": "2026-11-22T14:36:28.822Z",
+      "position": "PRINCIPALE",
+      "result_status": "pending",
+      "settled_at": null,
+      "virtual_pnl": null,
+      "result_source": null,
+      "real_bet_status": "NOT_TRACKED_PUBLICLY"
     }
   ],
   "stats": {
-    "observed": 24,
-    "main": 15,
+    "observed": 25,
+    "main": 16,
     "reserves": 9,
     "settled": 15,
     "won": 7,
     "lost": 8,
-    "pending": 0,
+    "pending": 1,
     "theoretical_stake": 15,
     "theoretical_pnl": -1.67,
     "theoretical_roi_pct": -11.13,
@@ -738,5 +767,5 @@
     "independent_result_verification": false
   },
   "created_at": "2026-11-08T09:39:18.978Z",
-  "last_check_at": "2026-11-22T02:15:29.898Z"
+  "last_check_at": "2026-11-22T14:36:28.822Z"
 }
