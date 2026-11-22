@@ -7,10 +7,10 @@
   "history_quality": "Quote fotografate prima dell’inizio. Controllo su campione, non sistema validato.",
   "stats": {
     "total": 216,
-    "pending": 51,
-    "won": 80,
-    "lost": 85,
-    "pnl": -21.91
+    "pending": 48,
+    "won": 82,
+    "lost": 86,
+    "pnl": -21.56
   },
   "records": [
     {
@@ -3367,13 +3367,15 @@
       "odds": 1.85,
       "market_probability_pct": 50.67,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "lost",
+      "pnl": -1,
+      "score": "2-2",
       "captured_at": "2026-11-20T23:58:00.681Z",
-      "settled_at": null,
+      "settled_at": "2026-11-22T15:15:42.637Z",
       "origin": "Football-Data fixture CSV observed before kickoff",
-      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato."
+      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato.",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401880159/blackburn-rovers-burnley"
     },
     {
       "id": "fd-E1-20261122-burnley-blackburn:OVER25_CONTROLLO",
@@ -3387,13 +3389,15 @@
       "odds": 1.73,
       "market_probability_pct": 54.83,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "won",
+      "pnl": 0.73,
+      "score": "2-2",
       "captured_at": "2026-11-20T23:58:00.681Z",
-      "settled_at": null,
+      "settled_at": "2026-11-22T15:15:42.637Z",
       "origin": "Football-Data fixture CSV observed before kickoff",
-      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato."
+      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato.",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401880159/blackburn-rovers-burnley"
     },
     {
       "id": "fd-E2-20261121-blackpool-wigan:FAVORITA_1X2_CONTROLLO",
@@ -3899,13 +3903,15 @@
       "odds": 1.62,
       "market_probability_pct": 58.67,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "won",
+      "pnl": 0.62,
+      "score": "4-0",
       "captured_at": "2026-11-20T23:58:00.681Z",
-      "settled_at": null,
+      "settled_at": "2026-11-22T15:15:42.637Z",
       "origin": "Football-Data fixture CSV observed before kickoff",
-      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato."
+      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato.",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401875008/venezia-juventus"
     },
     {
       "id": "fd-I1-20261122-bologna-udinese:FAVORITA_1X2_CONTROLLO",
@@ -4637,6 +4643,6 @@
     }
   ],
   "last_result_check": "2026-10-25T19:55:52.287Z",
-  "last_open_result_check": "2026-11-21T23:47:12.507Z",
+  "last_open_result_check": "2026-11-22T15:15:42.637Z",
   "last_verified_result_audit": "2026-11-10T10:18:49.596Z"
 }
