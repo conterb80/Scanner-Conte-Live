@@ -6109,10 +6109,14 @@
       "reference": "https://tipsaudit.com/match/18821/rb-bragantino-vs-vasco-da-gama-2026-11-22",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-23T02:46:19.398Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-23T02:45:11+00:00"
     }
   ],
   "checks": [
@@ -7219,10 +7223,10 @@
   "last_check": "2026-11-22T14:36:27.994Z",
   "stats": {
     "total": 188,
-    "pending": 2,
+    "pending": 1,
     "won": 102,
-    "lost": 84,
-    "pnl": 21.02
+    "lost": 85,
+    "pnl": 20.02
   },
-  "last_settlement_check": "2026-11-22T02:15:29.542Z"
+  "last_settlement_check": "2026-11-23T02:46:19.398Z"
 }
