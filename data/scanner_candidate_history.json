@@ -4320,6 +4320,31 @@
       "status": "SOURCE_STALE",
       "source_commit": null,
       "observations": []
+    },
+    {
+      "generated_at": "2026-11-24T17:48:15.701Z",
+      "scope_day": "2026-11-24",
+      "status": "PRELIMINARY_CANDIDATES",
+      "source_commit": null,
+      "observations": [
+        {
+          "id": "tipsaudit-18980:TIPSAUDIT_VALUE_1X2",
+          "match": "Charlton - Lincoln",
+          "league": "Championship",
+          "kickoff": "2026-11-24T19:45:00+00:00",
+          "market": "1X2",
+          "selection": "Away",
+          "category": "VALUE",
+          "place": "PRINCIPALE",
+          "rank": 1,
+          "reference_odds": 2.75,
+          "reference_bookmaker": "LeoVegas (SE)",
+          "external_fair_odds": 2.63,
+          "relative_screening_score": 64,
+          "captured_at": "2026-11-24T17:48:14.974Z",
+          "reference_link": "https://tipsaudit.com/match/18980/charlton-vs-lincoln-2026-11-24"
+        }
+      ]
     }
   ],
   "records": [
@@ -5686,21 +5711,43 @@
       "result_verified_independently": false,
       "result_recorded_at": "2026-11-24T06:04:18.999Z",
       "virtual_pnl": -1
+    },
+    {
+      "id": "tipsaudit-18980:TIPSAUDIT_VALUE_1X2",
+      "match": "Charlton - Lincoln",
+      "league": "Championship",
+      "day": "2026-11-24",
+      "kickoff": "2026-11-24T19:45:00+00:00",
+      "market": "1X2",
+      "selection": "Away",
+      "category": "VALUE",
+      "first_seen": "2026-11-24T17:48:15.701Z",
+      "last_seen": "2026-11-24T17:48:15.701Z",
+      "first_place": "PRINCIPALE",
+      "ever_primary": true,
+      "first_odds": 2.75,
+      "first_bookmaker": "LeoVegas (SE)",
+      "appearances": 1,
+      "result_status": "pending",
+      "result_source": "Esito non ancora verificato",
+      "result_verified_independently": false,
+      "result_recorded_at": null,
+      "virtual_pnl": null
     }
   ],
   "stats": {
-    "total": 62,
-    "primary": 33,
+    "total": 63,
+    "primary": 34,
     "alternatives_only": 29,
     "won": 34,
     "lost": 27,
-    "pending": 1,
+    "pending": 2,
     "unmatched": 0,
     "virtual_pnl": 4.73,
     "settled": 61,
     "virtual_roi": 7.75
   },
-  "last_snapshot_at": "2026-11-24T04:26:02.880Z",
+  "last_snapshot_at": "2026-11-24T17:48:15.701Z",
   "last_result_check_at": "2026-11-24T06:04:19.000Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }
