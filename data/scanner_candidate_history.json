@@ -4370,6 +4370,13 @@
           "reference_link": "https://tipsaudit.com/match/18980/charlton-vs-lincoln-2026-11-24"
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-24T20:14:25.023Z",
+      "scope_day": "2026-11-24",
+      "status": "NO_ELIGIBLE_OBSERVATIONS",
+      "source_commit": null,
+      "observations": []
     }
   ],
   "records": [
@@ -5772,7 +5779,7 @@
     "settled": 61,
     "virtual_roi": 7.75
   },
-  "last_snapshot_at": "2026-11-24T18:16:46.508Z",
+  "last_snapshot_at": "2026-11-24T20:14:25.023Z",
   "last_result_check_at": "2026-11-24T06:04:19.000Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }
