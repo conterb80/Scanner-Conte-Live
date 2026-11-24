@@ -1,74 +1,74 @@
 {
   "schema": "scanner-conte-historical-baselines-v1",
-  "calculated_at": "2026-11-20T23:58:00.681Z",
+  "calculated_at": "2026-11-24T23:54:03.640Z",
   "provider": "Football-Data.co.uk historical CSV",
   "kind": "RETROSPECTIVE_ONLY",
   "disclaimer": "Analisi storica esplorativa con quote archiviate. Non sono test registrati prima delle partite, non sono giocate reali e non dimostrano un vantaggio futuro.",
   "methodology": "Regole fisse del LAB: favorite 1X2 quota 1,45-2,10 e Over 2,5 quota 1,60-2,20. Una puntata virtuale teorica di 1 euro per selezione. Nessuna commissione. Segmentazione temporale 70/30 descrittiva, NON validazione fuori campione.",
-  "source_completed_matches": 1061,
-  "retrospective_selections": 1235,
+  "source_completed_matches": 1152,
+  "retrospective_selections": 1331,
   "by_strategy": {
     "FAVORITA_1X2_CONTROLLO": {
       "all": {
-        "tests": 540,
-        "wins": 293,
-        "losses": 247,
-        "win_rate_pct": 54.26,
-        "virtual_stake_eur": 540,
-        "virtual_pnl_eur": -19.18,
-        "roi_pct": -3.55,
+        "tests": 585,
+        "wins": 315,
+        "losses": 270,
+        "win_rate_pct": 53.85,
+        "virtual_stake_eur": 585,
+        "virtual_pnl_eur": -27.09,
+        "roi_pct": -4.63,
         "mean_odds": 1.79
       },
       "early_70pct": {
-        "tests": 378,
-        "wins": 201,
-        "losses": 177,
-        "win_rate_pct": 53.17,
-        "virtual_stake_eur": 378,
-        "virtual_pnl_eur": -18.54,
-        "roi_pct": -4.9,
-        "mean_odds": 1.8
+        "tests": 409,
+        "wins": 214,
+        "losses": 195,
+        "win_rate_pct": 52.32,
+        "virtual_stake_eur": 409,
+        "virtual_pnl_eur": -27.77,
+        "roi_pct": -6.79,
+        "mean_odds": 1.79
       },
       "recent_30pct": {
-        "tests": 162,
-        "wins": 92,
-        "losses": 70,
-        "win_rate_pct": 56.79,
-        "virtual_stake_eur": 162,
-        "virtual_pnl_eur": -0.64,
-        "roi_pct": -0.4,
-        "mean_odds": 1.79
+        "tests": 176,
+        "wins": 101,
+        "losses": 75,
+        "win_rate_pct": 57.39,
+        "virtual_stake_eur": 176,
+        "virtual_pnl_eur": 0.68,
+        "roi_pct": 0.39,
+        "mean_odds": 1.78
       }
     },
     "OVER25_CONTROLLO": {
       "all": {
-        "tests": 695,
-        "wins": 376,
-        "losses": 319,
-        "win_rate_pct": 54.1,
-        "virtual_stake_eur": 695,
-        "virtual_pnl_eur": -3.83,
-        "roi_pct": -0.55,
+        "tests": 746,
+        "wins": 400,
+        "losses": 346,
+        "win_rate_pct": 53.62,
+        "virtual_stake_eur": 746,
+        "virtual_pnl_eur": -12.03,
+        "roi_pct": -1.61,
         "mean_odds": 1.86
       },
       "early_70pct": {
-        "tests": 486,
-        "wins": 278,
-        "losses": 208,
-        "win_rate_pct": 57.2,
-        "virtual_stake_eur": 486,
-        "virtual_pnl_eur": 27.5,
-        "roi_pct": 5.66,
+        "tests": 522,
+        "wins": 297,
+        "losses": 225,
+        "win_rate_pct": 56.9,
+        "virtual_stake_eur": 522,
+        "virtual_pnl_eur": 26.58,
+        "roi_pct": 5.09,
         "mean_odds": 1.87
       },
       "recent_30pct": {
-        "tests": 209,
-        "wins": 98,
-        "losses": 111,
-        "win_rate_pct": 46.89,
-        "virtual_stake_eur": 209,
-        "virtual_pnl_eur": -31.33,
-        "roi_pct": -14.99,
+        "tests": 224,
+        "wins": 103,
+        "losses": 121,
+        "win_rate_pct": 45.98,
+        "virtual_stake_eur": 224,
+        "virtual_pnl_eur": -38.61,
+        "roi_pct": -17.24,
         "mean_odds": 1.83
       }
     }
@@ -76,13 +76,13 @@
   "by_league": {
     "D1": {
       "FAVORITA_1X2_CONTROLLO": {
-        "tests": 40,
-        "wins": 21,
-        "losses": 19,
-        "win_rate_pct": 52.5,
-        "virtual_stake_eur": 40,
-        "virtual_pnl_eur": -4.19,
-        "roi_pct": -10.48,
+        "tests": 45,
+        "wins": 25,
+        "losses": 20,
+        "win_rate_pct": 55.56,
+        "virtual_stake_eur": 45,
+        "virtual_pnl_eur": -2.5,
+        "roi_pct": -5.56,
         "mean_odds": 1.76
       },
       "OVER25_CONTROLLO": {
@@ -98,177 +98,177 @@
     },
     "E0": {
       "FAVORITA_1X2_CONTROLLO": {
-        "tests": 57,
-        "wins": 29,
-        "losses": 28,
-        "win_rate_pct": 50.88,
-        "virtual_stake_eur": 57,
-        "virtual_pnl_eur": -5.69,
-        "roi_pct": -9.98,
-        "mean_odds": 1.81
+        "tests": 64,
+        "wins": 32,
+        "losses": 32,
+        "win_rate_pct": 50,
+        "virtual_stake_eur": 64,
+        "virtual_pnl_eur": -7.55,
+        "roi_pct": -11.8,
+        "mean_odds": 1.8
       },
       "OVER25_CONTROLLO": {
-        "tests": 68,
-        "wins": 30,
-        "losses": 38,
-        "win_rate_pct": 44.12,
-        "virtual_stake_eur": 68,
-        "virtual_pnl_eur": -15.05,
-        "roi_pct": -22.13,
-        "mean_odds": 1.8
+        "tests": 75,
+        "wins": 34,
+        "losses": 41,
+        "win_rate_pct": 45.33,
+        "virtual_stake_eur": 75,
+        "virtual_pnl_eur": -15.06,
+        "roi_pct": -20.08,
+        "mean_odds": 1.79
       }
     },
     "E1": {
       "FAVORITA_1X2_CONTROLLO": {
-        "tests": 98,
-        "wins": 55,
-        "losses": 43,
-        "win_rate_pct": 56.12,
-        "virtual_stake_eur": 98,
-        "virtual_pnl_eur": 1.37,
-        "roi_pct": 1.4,
-        "mean_odds": 1.8
+        "tests": 101,
+        "wins": 57,
+        "losses": 44,
+        "win_rate_pct": 56.44,
+        "virtual_stake_eur": 101,
+        "virtual_pnl_eur": 1.69,
+        "roi_pct": 1.67,
+        "mean_odds": 1.79
       },
       "OVER25_CONTROLLO": {
-        "tests": 160,
-        "wins": 97,
-        "losses": 63,
-        "win_rate_pct": 60.62,
-        "virtual_stake_eur": 160,
-        "virtual_pnl_eur": 21.4,
-        "roi_pct": 13.37,
+        "tests": 168,
+        "wins": 101,
+        "losses": 67,
+        "win_rate_pct": 60.12,
+        "virtual_stake_eur": 168,
+        "virtual_pnl_eur": 20.55,
+        "roi_pct": 12.23,
         "mean_odds": 1.87
       }
     },
     "E2": {
       "FAVORITA_1X2_CONTROLLO": {
-        "tests": 88,
-        "wins": 45,
-        "losses": 43,
-        "win_rate_pct": 51.14,
-        "virtual_stake_eur": 88,
-        "virtual_pnl_eur": -8.19,
-        "roi_pct": -9.31,
+        "tests": 96,
+        "wins": 49,
+        "losses": 47,
+        "win_rate_pct": 51.04,
+        "virtual_stake_eur": 96,
+        "virtual_pnl_eur": -8.84,
+        "roi_pct": -9.21,
         "mean_odds": 1.8
       },
       "OVER25_CONTROLLO": {
-        "tests": 137,
-        "wins": 71,
-        "losses": 66,
-        "win_rate_pct": 51.82,
-        "virtual_stake_eur": 137,
-        "virtual_pnl_eur": -9.84,
-        "roi_pct": -7.18,
+        "tests": 145,
+        "wins": 77,
+        "losses": 68,
+        "win_rate_pct": 53.1,
+        "virtual_stake_eur": 145,
+        "virtual_pnl_eur": -7.63,
+        "roi_pct": -5.26,
         "mean_odds": 1.81
       }
     },
     "F1": {
       "FAVORITA_1X2_CONTROLLO": {
-        "tests": 42,
-        "wins": 23,
-        "losses": 19,
-        "win_rate_pct": 54.76,
-        "virtual_stake_eur": 42,
-        "virtual_pnl_eur": 0.45,
-        "roi_pct": 1.07,
-        "mean_odds": 1.84
+        "tests": 44,
+        "wins": 24,
+        "losses": 20,
+        "win_rate_pct": 54.55,
+        "virtual_stake_eur": 44,
+        "virtual_pnl_eur": -0.1,
+        "roi_pct": -0.23,
+        "mean_odds": 1.83
       },
       "OVER25_CONTROLLO": {
-        "tests": 63,
-        "wins": 34,
-        "losses": 29,
-        "win_rate_pct": 53.97,
-        "virtual_stake_eur": 63,
-        "virtual_pnl_eur": -2.59,
-        "roi_pct": -4.11,
-        "mean_odds": 1.81
+        "tests": 69,
+        "wins": 36,
+        "losses": 33,
+        "win_rate_pct": 52.17,
+        "virtual_stake_eur": 69,
+        "virtual_pnl_eur": -5.06,
+        "roi_pct": -7.33,
+        "mean_odds": 1.8
       }
     },
     "I1": {
       "FAVORITA_1X2_CONTROLLO": {
-        "tests": 60,
-        "wins": 38,
-        "losses": 22,
-        "win_rate_pct": 63.33,
-        "virtual_stake_eur": 60,
-        "virtual_pnl_eur": 6.42,
-        "roi_pct": 10.7,
-        "mean_odds": 1.76
+        "tests": 65,
+        "wins": 40,
+        "losses": 25,
+        "win_rate_pct": 61.54,
+        "virtual_stake_eur": 65,
+        "virtual_pnl_eur": 4.43,
+        "roi_pct": 6.82,
+        "mean_odds": 1.75
       },
       "OVER25_CONTROLLO": {
-        "tests": 80,
-        "wins": 50,
-        "losses": 30,
-        "win_rate_pct": 62.5,
-        "virtual_stake_eur": 80,
-        "virtual_pnl_eur": 13.03,
-        "roi_pct": 16.29,
-        "mean_odds": 1.89
+        "tests": 85,
+        "wins": 52,
+        "losses": 33,
+        "win_rate_pct": 61.18,
+        "virtual_stake_eur": 85,
+        "virtual_pnl_eur": 11.27,
+        "roi_pct": 13.26,
+        "mean_odds": 1.88
       }
     },
     "I2": {
       "FAVORITA_1X2_CONTROLLO": {
-        "tests": 56,
-        "wins": 30,
-        "losses": 26,
-        "win_rate_pct": 53.57,
-        "virtual_stake_eur": 56,
-        "virtual_pnl_eur": -0.69,
-        "roi_pct": -1.23,
-        "mean_odds": 1.83
+        "tests": 61,
+        "wins": 32,
+        "losses": 29,
+        "win_rate_pct": 52.46,
+        "virtual_stake_eur": 61,
+        "virtual_pnl_eur": -2.37,
+        "roi_pct": -3.89,
+        "mean_odds": 1.82
       },
       "OVER25_CONTROLLO": {
-        "tests": 94,
-        "wins": 43,
-        "losses": 51,
-        "win_rate_pct": 45.74,
-        "virtual_stake_eur": 94,
-        "virtual_pnl_eur": -10.18,
-        "roi_pct": -10.83,
-        "mean_odds": 1.97
+        "tests": 103,
+        "wins": 46,
+        "losses": 57,
+        "win_rate_pct": 44.66,
+        "virtual_stake_eur": 103,
+        "virtual_pnl_eur": -13.35,
+        "roi_pct": -12.96,
+        "mean_odds": 1.96
       }
     },
     "N1": {
       "FAVORITA_1X2_CONTROLLO": {
-        "tests": 53,
-        "wins": 27,
-        "losses": 26,
-        "win_rate_pct": 50.94,
-        "virtual_stake_eur": 53,
-        "virtual_pnl_eur": -8.63,
-        "roi_pct": -16.28,
-        "mean_odds": 1.71
+        "tests": 58,
+        "wins": 29,
+        "losses": 29,
+        "win_rate_pct": 50,
+        "virtual_stake_eur": 58,
+        "virtual_pnl_eur": -10.17,
+        "roi_pct": -17.53,
+        "mean_odds": 1.72
       },
       "OVER25_CONTROLLO": {
-        "tests": 10,
-        "wins": 7,
+        "tests": 11,
+        "wins": 8,
         "losses": 3,
-        "win_rate_pct": 70,
-        "virtual_stake_eur": 10,
-        "virtual_pnl_eur": 1.74,
-        "roi_pct": 17.4,
+        "win_rate_pct": 72.73,
+        "virtual_stake_eur": 11,
+        "virtual_pnl_eur": 2.39,
+        "roi_pct": 21.73,
         "mean_odds": 1.66
       }
     },
     "SP1": {
       "FAVORITA_1X2_CONTROLLO": {
-        "tests": 46,
-        "wins": 25,
-        "losses": 21,
-        "win_rate_pct": 54.35,
-        "virtual_stake_eur": 46,
-        "virtual_pnl_eur": -0.03,
-        "roi_pct": -0.07,
+        "tests": 51,
+        "wins": 27,
+        "losses": 24,
+        "win_rate_pct": 52.94,
+        "virtual_stake_eur": 51,
+        "virtual_pnl_eur": -1.68,
+        "roi_pct": -3.29,
         "mean_odds": 1.82
       },
       "OVER25_CONTROLLO": {
-        "tests": 70,
-        "wins": 37,
-        "losses": 33,
-        "win_rate_pct": 52.86,
-        "virtual_stake_eur": 70,
-        "virtual_pnl_eur": -1.17,
-        "roi_pct": -1.67,
+        "tests": 77,
+        "wins": 39,
+        "losses": 38,
+        "win_rate_pct": 50.65,
+        "virtual_stake_eur": 77,
+        "virtual_pnl_eur": -3.97,
+        "roi_pct": -5.16,
         "mean_odds": 1.91
       }
     }

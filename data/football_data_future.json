@@ -1,1383 +1,151 @@
 {
   "schema": "scanner-conte-football-data-future-v1",
-  "generated_at": "2026-11-20T23:58:00.681Z",
+  "generated_at": "2026-11-24T23:54:03.640Z",
   "warning": "Quote pubblicate nel CSV come snapshot, mai considerate live o verificate su Bet365.",
   "fixture_source": "https://www.football-data.co.uk/fixtures.csv",
   "fixtures": [
     {
-      "id": "fd-D1-2026-11-21-einfrankfurt-hoffenheim",
-      "home": "Ein Frankfurt",
-      "away": "Hoffenheim",
-      "kickoff": "2026-11-21T14:30:00.000Z",
-      "league": "Bundesliga 2",
-      "source_code": "D1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.3,
-        "2": 2.7,
-        "X": 4,
-        "Over 2.5": 1.33,
-        "Under 2.5": 3.4
-      }
-    },
-    {
-      "id": "fd-D1-2026-11-21-elversberg-freiburg",
-      "home": "Elversberg",
-      "away": "Freiburg",
-      "kickoff": "2026-11-21T14:30:00.000Z",
-      "league": "Bundesliga 2",
-      "source_code": "D1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 3.6,
-        "2": 1.95,
-        "X": 3.75,
-        "Over 2.5": 1.57,
-        "Under 2.5": 2.38
-      }
-    },
-    {
-      "id": "fd-D1-2026-11-21-leverkusen-paderborn",
-      "home": "Leverkusen",
-      "away": "Paderborn",
-      "kickoff": "2026-11-21T14:30:00.000Z",
-      "league": "Bundesliga 2",
-      "source_code": "D1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.29,
-        "2": 8,
-        "X": 6.5,
-        "Over 2.5": 1.36,
-        "Under 2.5": 3.2
-      }
-    },
-    {
-      "id": "fd-D1-2026-11-21-mgladbach-dortmund",
-      "home": "M'gladbach",
-      "away": "Dortmund",
-      "kickoff": "2026-11-21T14:30:00.000Z",
-      "league": "Bundesliga 2",
-      "source_code": "D1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 5.25,
-        "2": 1.57,
-        "X": 4.33,
-        "Over 2.5": 1.5,
-        "Under 2.5": 2.63
-      }
-    },
-    {
-      "id": "fd-D1-2026-11-21-unionberlin-rbleipzig",
-      "home": "Union Berlin",
-      "away": "RB Leipzig",
-      "kickoff": "2026-11-21T14:30:00.000Z",
-      "league": "Bundesliga 2",
-      "source_code": "D1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 5.5,
-        "2": 1.5,
-        "X": 4.75,
-        "Over 2.5": 1.44,
-        "Under 2.5": 2.75
-      }
-    },
-    {
-      "id": "fd-D1-2026-11-21-schalke04-stuttgart",
-      "home": "Schalke 04",
-      "away": "Stuttgart",
-      "kickoff": "2026-11-21T17:30:00.000Z",
-      "league": "Bundesliga 2",
-      "source_code": "D1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 4.1,
-        "2": 1.8,
-        "X": 4,
-        "Over 2.5": 1.5,
-        "Under 2.5": 2.63
-      }
-    },
-    {
-      "id": "fd-D1-2026-11-22-augsburg-mainz",
-      "home": "Augsburg",
-      "away": "Mainz",
-      "kickoff": "2026-11-22T14:30:00.000Z",
-      "league": "Bundesliga 2",
-      "source_code": "D1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.7,
-        "2": 2.38,
-        "X": 3.8,
-        "Over 2.5": 1.4,
-        "Under 2.5": 3
-      }
-    },
-    {
-      "id": "fd-D1-2026-11-22-werderbremen-hamburg",
-      "home": "Werder Bremen",
-      "away": "Hamburg",
-      "kickoff": "2026-11-22T16:30:00.000Z",
-      "league": "Bundesliga 2",
-      "source_code": "D1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.67,
-        "2": 4.5,
-        "X": 4.2,
-        "Over 2.5": 1.53,
-        "Under 2.5": 2.5
-      }
-    },
-    {
-      "id": "fd-E0-2026-11-21-mancity-fulham",
-      "home": "Man City",
-      "away": "Fulham",
-      "kickoff": "2026-11-21T12:30:00.000Z",
-      "league": "Premier League",
-      "source_code": "E0",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.36,
-        "2": 7,
-        "X": 5.25,
-        "Over 2.5": 1.5,
-        "Under 2.5": 2.63
-      }
-    },
-    {
-      "id": "fd-E0-2026-11-21-astonvilla-sunderland",
-      "home": "Aston Villa",
-      "away": "Sunderland",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "Premier League",
-      "source_code": "E0",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.75,
-        "2": 4.5,
-        "X": 3.8,
-        "Over 2.5": 1.8,
-        "Under 2.5": 2
-      }
-    },
-    {
-      "id": "fd-E0-2026-11-21-bournemouth-nottmforest",
-      "home": "Bournemouth",
-      "away": "Nott'm Forest",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "Premier League",
-      "source_code": "E0",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.91,
-        "2": 4,
-        "X": 3.5,
-        "Over 2.5": 1.91,
-        "Under 2.5": 1.91
-      }
-    },
-    {
-      "id": "fd-E0-2026-11-21-chelsea-leeds",
-      "home": "Chelsea",
-      "away": "Leeds",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "Premier League",
-      "source_code": "E0",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.85,
-        "2": 4,
-        "X": 3.7,
-        "Over 2.5": 1.8,
-        "Under 2.5": 2
-      }
-    },
-    {
-      "id": "fd-E0-2026-11-21-coventry-crystalpalace",
-      "home": "Coventry",
-      "away": "Crystal Palace",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "Premier League",
-      "source_code": "E0",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.5,
-        "2": 2.75,
-        "X": 3.5,
-        "Over 2.5": 1.73,
-        "Under 2.5": 2.1
-      }
-    },
-    {
-      "id": "fd-E0-2026-11-21-tottenham-ipswich",
-      "home": "Tottenham",
-      "away": "Ipswich",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "Premier League",
-      "source_code": "E0",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.53,
-        "2": 5.5,
-        "X": 4.33,
-        "Over 2.5": 1.57,
-        "Under 2.5": 2.38
-      }
-    },
-    {
-      "id": "fd-E0-2026-11-21-newcastle-arsenal",
-      "home": "Newcastle",
-      "away": "Arsenal",
-      "kickoff": "2026-11-21T17:30:00.000Z",
-      "league": "Premier League",
-      "source_code": "E0",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 5.75,
-        "2": 1.57,
-        "X": 4.2,
-        "Over 2.5": 1.73,
-        "Under 2.5": 2.1
-      }
-    },
-    {
-      "id": "fd-E0-2026-11-22-hull-brighton",
-      "home": "Hull",
-      "away": "Brighton",
-      "kickoff": "2026-11-22T14:00:00.000Z",
-      "league": "Premier League",
-      "source_code": "E0",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 6.5,
-        "2": 1.5,
-        "X": 4.33,
-        "Over 2.5": 1.67,
-        "Under 2.5": 2.2
-      }
-    },
-    {
-      "id": "fd-E0-2026-11-22-liverpool-manunited",
-      "home": "Liverpool",
-      "away": "Man United",
-      "kickoff": "2026-11-22T16:30:00.000Z",
-      "league": "Premier League",
-      "source_code": "E0",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.7,
-        "2": 4.33,
-        "X": 4.2,
-        "Over 2.5": 1.5,
-        "Under 2.5": 2.63
-      }
-    },
-    {
-      "id": "fd-E0-2026-11-23-brentford-everton",
-      "home": "Brentford",
-      "away": "Everton",
-      "kickoff": "2026-11-23T20:00:00.000Z",
-      "league": "Premier League",
-      "source_code": "E0",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.15,
-        "2": 3.3,
-        "X": 3.5,
-        "Over 2.5": 1.73,
-        "Under 2.5": 2.1
-      }
-    },
-    {
-      "id": "fd-E1-2026-11-21-millwall-qpr",
-      "home": "Millwall",
-      "away": "QPR",
-      "kickoff": "2026-11-21T12:30:00.000Z",
-      "league": "Championship",
-      "source_code": "E1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.6,
-        "2": 2.6,
-        "X": 3.5,
-        "Over 2.5": 1.73,
-        "Under 2.5": 2.1
-      }
-    },
-    {
-      "id": "fd-E1-2026-11-21-norwich-cardiff",
-      "home": "Norwich",
-      "away": "Cardiff",
-      "kickoff": "2026-11-21T12:30:00.000Z",
-      "league": "Championship",
-      "source_code": "E1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.75,
-        "2": 4,
-        "X": 4.2,
-        "Over 2.5": 1.36,
-        "Under 2.5": 3.2
-      }
-    },
-    {
-      "id": "fd-E1-2026-11-21-southampton-derby",
-      "home": "Southampton",
-      "away": "Derby",
-      "kickoff": "2026-11-21T12:30:00.000Z",
-      "league": "Championship",
-      "source_code": "E1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.38,
-        "2": 7.5,
-        "X": 5,
-        "Over 2.5": 1.53,
-        "Under 2.5": 2.5
-      }
-    },
-    {
-      "id": "fd-E1-2026-11-21-bolton-portsmouth",
+      "id": "fd-E1-2026-11-25-bolton-westbrom",
       "home": "Bolton",
-      "away": "Portsmouth",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "Championship",
-      "source_code": "E1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.75,
-        "2": 2.45,
-        "X": 3.4,
-        "Over 2.5": 1.91,
-        "Under 2.5": 1.91
-      }
-    },
-    {
-      "id": "fd-E1-2026-11-21-lincoln-wrexham",
-      "home": "Lincoln",
-      "away": "Wrexham",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "Championship",
-      "source_code": "E1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.75,
-        "2": 2.6,
-        "X": 3.25,
-        "Over 2.5": 2.1,
-        "Under 2.5": 1.73
-      }
-    },
-    {
-      "id": "fd-E1-2026-11-21-middlesbrough-bristolcity",
-      "home": "Middlesbrough",
-      "away": "Bristol City",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "Championship",
-      "source_code": "E1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.38,
-        "2": 7,
-        "X": 5,
-        "Over 2.5": 1.53,
-        "Under 2.5": 2.5
-      }
-    },
-    {
-      "id": "fd-E1-2026-11-21-sheffieldunited-watford",
-      "home": "Sheffield United",
-      "away": "Watford",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "Championship",
-      "source_code": "E1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.57,
-        "2": 5.25,
-        "X": 4.1,
-        "Over 2.5": 1.8,
-        "Under 2.5": 2
-      }
-    },
-    {
-      "id": "fd-E1-2026-11-21-stoke-birmingham",
-      "home": "Stoke",
-      "away": "Birmingham",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "Championship",
-      "source_code": "E1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.88,
-        "2": 2.45,
-        "X": 3.3,
-        "Over 2.5": 2.2,
-        "Under 2.5": 1.67
-      }
-    },
-    {
-      "id": "fd-E1-2026-11-21-swansea-westbrom",
-      "home": "Swansea",
       "away": "West Brom",
-      "kickoff": "2026-11-21T15:00:00.000Z",
+      "kickoff": "2026-11-25T19:45:00.000Z",
       "league": "Championship",
       "source_code": "E1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
+      "snapshot_at": "2026-11-24T23:54:03.640Z",
       "odds": {
-        "1": 2.6,
-        "2": 2.7,
-        "X": 3.3,
-        "Over 2.5": 2,
-        "Under 2.5": 1.8
-      }
-    },
-    {
-      "id": "fd-E1-2026-11-21-westham-preston",
-      "home": "West Ham",
-      "away": "Preston",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "Championship",
-      "source_code": "E1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.2,
-        "2": 11,
-        "X": 7,
-        "Over 2.5": 1.36,
-        "Under 2.5": 3.2
-      }
-    },
-    {
-      "id": "fd-E1-2026-11-21-wolves-charlton",
-      "home": "Wolves",
-      "away": "Charlton",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "Championship",
-      "source_code": "E1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.33,
-        "2": 8,
-        "X": 5.5,
-        "Over 2.5": 1.62,
-        "Under 2.5": 2.3
-      }
-    },
-    {
-      "id": "fd-E1-2026-11-22-burnley-blackburn",
-      "home": "Burnley",
-      "away": "Blackburn",
-      "kickoff": "2026-11-22T12:00:00.000Z",
-      "league": "Championship",
-      "source_code": "E1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.85,
-        "2": 3.8,
-        "X": 3.8,
-        "Over 2.5": 1.73,
-        "Under 2.5": 2.1
-      }
-    },
-    {
-      "id": "fd-E2-2026-11-21-blackpool-wigan",
-      "home": "Blackpool",
-      "away": "Wigan",
-      "kickoff": "2026-11-21T12:30:00.000Z",
-      "league": "League One",
-      "source_code": "E2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.1,
-        "2": 3.25,
-        "X": 3.5,
-        "Over 2.5": 1.73,
-        "Under 2.5": 2.08
-      }
-    },
-    {
-      "id": "fd-E2-2026-11-21-reading-bromley",
-      "home": "Reading",
-      "away": "Bromley",
-      "kickoff": "2026-11-21T12:30:00.000Z",
-      "league": "League One",
-      "source_code": "E2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.36,
-        "2": 8,
-        "X": 4.75,
-        "Over 2.5": 1.5,
-        "Under 2.5": 2.5
-      }
-    },
-    {
-      "id": "fd-E2-2026-11-21-bradford-doncaster",
-      "home": "Bradford",
-      "away": "Doncaster",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "League One",
-      "source_code": "E2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.62,
-        "2": 5.25,
-        "X": 3.8,
-        "Over 2.5": 1.73,
-        "Under 2.5": 2.08
-      }
-    },
-    {
-      "id": "fd-E2-2026-11-21-burton-luton",
-      "home": "Burton",
-      "away": "Luton",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "League One",
-      "source_code": "E2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 4.75,
-        "2": 1.67,
-        "X": 4,
-        "Over 2.5": 1.65,
-        "Under 2.5": 2.2
-      }
-    },
-    {
-      "id": "fd-E2-2026-11-21-cambridge-stockport",
-      "home": "Cambridge",
-      "away": "Stockport",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "League One",
-      "source_code": "E2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 3.75,
-        "2": 1.85,
-        "X": 3.75,
-        "Over 2.5": 1.67,
-        "Under 2.5": 2.15
-      }
-    },
-    {
-      "id": "fd-E2-2026-11-21-huddersfield-leicester",
-      "home": "Huddersfield",
-      "away": "Leicester",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "League One",
-      "source_code": "E2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.95,
-        "2": 3.4,
-        "X": 3.8,
-        "Over 2.5": 1.53,
-        "Under 2.5": 2.4
-      }
-    },
-    {
-      "id": "fd-E2-2026-11-21-leytonorient-afcwimbledon",
-      "home": "Leyton Orient",
-      "away": "AFC Wimbledon",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "League One",
-      "source_code": "E2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.73,
-        "2": 4.33,
-        "X": 3.8,
-        "Over 2.5": 1.73,
-        "Under 2.5": 2.08
-      }
-    },
-    {
-      "id": "fd-E2-2026-11-21-mansfield-miltonkeynesdons",
-      "home": "Mansfield",
-      "away": "Milton Keynes Dons",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "League One",
-      "source_code": "E2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.55,
-        "2": 2.55,
+        "1": 3.7,
+        "2": 1.95,
         "X": 3.6,
-        "Over 2.5": 1.62,
-        "Under 2.5": 2.25
-      }
-    },
-    {
-      "id": "fd-E2-2026-11-21-nottscounty-stevenage",
-      "home": "Notts County",
-      "away": "Stevenage",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "League One",
-      "source_code": "E2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.25,
-        "2": 3.1,
-        "X": 3.3,
-        "Over 2.5": 2.08,
-        "Under 2.5": 1.73
-      }
-    },
-    {
-      "id": "fd-E2-2026-11-21-oxford-wycombe",
-      "home": "Oxford",
-      "away": "Wycombe",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "League One",
-      "source_code": "E2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.3,
-        "2": 2.88,
-        "X": 3.5,
-        "Over 2.5": 1.7,
+        "Over 2.5": 1.73,
         "Under 2.5": 2.1
       }
     },
     {
-      "id": "fd-E2-2026-11-21-plymouth-peterboro",
-      "home": "Plymouth",
-      "away": "Peterboro",
-      "kickoff": "2026-11-21T15:00:00.000Z",
-      "league": "League One",
-      "source_code": "E2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
+      "id": "fd-E1-2026-11-25-burnley-birmingham",
+      "home": "Burnley",
+      "away": "Birmingham",
+      "kickoff": "2026-11-25T19:45:00.000Z",
+      "league": "Championship",
+      "source_code": "E1",
+      "snapshot_at": "2026-11-24T23:54:03.640Z",
       "odds": {
-        "1": 1.75,
-        "2": 4.1,
-        "X": 3.9,
-        "Over 2.5": 1.44,
-        "Under 2.5": 2.7
-      }
-    },
-    {
-      "id": "fd-F1-2026-11-21-nice-parissg",
-      "home": "Nice",
-      "away": "Paris SG",
-      "kickoff": "2026-11-21T16:15:00.000Z",
-      "league": "Ligue 1",
-      "source_code": "F1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 6,
-        "2": 1.45,
-        "X": 5,
-        "Over 2.5": 1.4,
-        "Under 2.5": 3
-      }
-    },
-    {
-      "id": "fd-F1-2026-11-21-lens-toulouse",
-      "home": "Lens",
-      "away": "Toulouse",
-      "kickoff": "2026-11-21T19:45:00.000Z",
-      "league": "Ligue 1",
-      "source_code": "F1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.85,
-        "2": 3.8,
-        "X": 3.9,
-        "Over 2.5": 1.67,
-        "Under 2.5": 2.2
-      }
-    },
-    {
-      "id": "fd-F1-2026-11-21-lille-lyon",
-      "home": "Lille",
-      "away": "Lyon",
-      "kickoff": "2026-11-21T19:45:00.000Z",
-      "league": "Ligue 1",
-      "source_code": "F1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.25,
-        "2": 3.3,
-        "X": 3.3,
-        "Over 2.5": 2,
-        "Under 2.5": 1.8
-      }
-    },
-    {
-      "id": "fd-F1-2026-11-21-monaco-auxerre",
-      "home": "Monaco",
-      "away": "Auxerre",
-      "kickoff": "2026-11-21T19:45:00.000Z",
-      "league": "Ligue 1",
-      "source_code": "F1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.42,
-        "2": 7,
-        "X": 5,
-        "Over 2.5": 1.5,
-        "Under 2.5": 2.63
-      }
-    },
-    {
-      "id": "fd-F1-2026-11-21-strasbourg-brest",
-      "home": "Strasbourg",
-      "away": "Brest",
-      "kickoff": "2026-11-21T19:45:00.000Z",
-      "league": "Ligue 1",
-      "source_code": "F1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.2,
-        "2": 3,
-        "X": 3.8,
-        "Over 2.5": 1.67,
-        "Under 2.5": 2.2
-      }
-    },
-    {
-      "id": "fd-F1-2026-11-22-parisfc-angers",
-      "home": "Paris FC",
-      "away": "Angers",
-      "kickoff": "2026-11-22T14:00:00.000Z",
-      "league": "Ligue 1",
-      "source_code": "F1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.33,
-        "2": 8.5,
-        "X": 5.5,
-        "Over 2.5": 1.62,
-        "Under 2.5": 2.3
-      }
-    },
-    {
-      "id": "fd-F1-2026-11-22-lorient-rennes",
-      "home": "Lorient",
-      "away": "Rennes",
-      "kickoff": "2026-11-22T16:15:00.000Z",
-      "league": "Ligue 1",
-      "source_code": "F1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.8,
-        "2": 2.45,
-        "X": 3.5,
-        "Over 2.5": 1.91,
-        "Under 2.5": 1.91
-      }
-    },
-    {
-      "id": "fd-F1-2026-11-22-marseille-lemans",
-      "home": "Marseille",
-      "away": "Le Mans",
-      "kickoff": "2026-11-22T19:45:00.000Z",
-      "league": "Ligue 1",
-      "source_code": "F1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.44,
-        "2": 6.5,
-        "X": 4.75,
-        "Over 2.5": 1.5,
-        "Under 2.5": 2.63
-      }
-    },
-    {
-      "id": "fd-I1-2026-11-21-como-cagliari",
-      "home": "Como",
-      "away": "Cagliari",
-      "kickoff": "2026-11-21T14:00:00.000Z",
-      "league": "Serie A",
-      "source_code": "I1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.27,
-        "2": 10,
-        "X": 6,
-        "Over 2.5": 1.53,
-        "Under 2.5": 2.5
-      }
-    },
-    {
-      "id": "fd-I1-2026-11-21-lazio-lecce",
-      "home": "Lazio",
-      "away": "Lecce",
-      "kickoff": "2026-11-21T14:00:00.000Z",
-      "league": "Serie A",
-      "source_code": "I1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.36,
-        "2": 8,
-        "X": 5.25,
-        "Over 2.5": 1.57,
-        "Under 2.5": 2.38
-      }
-    },
-    {
-      "id": "fd-I1-2026-11-21-parma-roma",
-      "home": "Parma",
-      "away": "Roma",
-      "kickoff": "2026-11-21T17:00:00.000Z",
-      "league": "Serie A",
-      "source_code": "I1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 10,
-        "2": 1.27,
-        "X": 5.5,
-        "Over 2.5": 1.53,
-        "Under 2.5": 2.5
-      }
-    },
-    {
-      "id": "fd-I1-2026-11-21-napoli-torino",
-      "home": "Napoli",
-      "away": "Torino",
-      "kickoff": "2026-11-21T19:45:00.000Z",
-      "league": "Serie A",
-      "source_code": "I1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.48,
-        "2": 6.5,
-        "X": 4.5,
-        "Over 2.5": 1.67,
-        "Under 2.5": 2.2
-      }
-    },
-    {
-      "id": "fd-I1-2026-11-22-juventus-venezia",
-      "home": "Juventus",
-      "away": "Venezia",
-      "kickoff": "2026-11-22T11:30:00.000Z",
-      "league": "Serie A",
-      "source_code": "I1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.36,
-        "2": 8.5,
-        "X": 5.25,
-        "Over 2.5": 1.62,
-        "Under 2.5": 2.3
-      }
-    },
-    {
-      "id": "fd-I1-2026-11-22-bologna-udinese",
-      "home": "Bologna",
-      "away": "Udinese",
-      "kickoff": "2026-11-22T14:00:00.000Z",
-      "league": "Serie A",
-      "source_code": "I1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.7,
-        "2": 5,
-        "X": 3.75,
-        "Over 2.5": 1.91,
-        "Under 2.5": 1.91
-      }
-    },
-    {
-      "id": "fd-I1-2026-11-22-sassuolo-genoa",
-      "home": "Sassuolo",
-      "away": "Genoa",
-      "kickoff": "2026-11-22T14:00:00.000Z",
-      "league": "Serie A",
-      "source_code": "I1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.7,
-        "2": 2.45,
-        "X": 3.3,
-        "Over 2.5": 1.91,
-        "Under 2.5": 1.91
-      }
-    },
-    {
-      "id": "fd-I1-2026-11-22-milan-frosinone",
-      "home": "Milan",
-      "away": "Frosinone",
-      "kickoff": "2026-11-22T17:00:00.000Z",
-      "league": "Serie A",
-      "source_code": "I1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.53,
-        "2": 5.25,
-        "X": 4.5,
-        "Over 2.5": 1.36,
-        "Under 2.5": 3.2
-      }
-    },
-    {
-      "id": "fd-I1-2026-11-22-atalanta-inter",
-      "home": "Atalanta",
-      "away": "Inter",
-      "kickoff": "2026-11-22T19:45:00.000Z",
-      "league": "Serie A",
-      "source_code": "I1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 5,
-        "2": 1.6,
-        "X": 4.33,
-        "Over 2.5": 1.4,
-        "Under 2.5": 3
-      }
-    },
-    {
-      "id": "fd-I1-2026-11-23-monza-fiorentina",
-      "home": "Monza",
-      "away": "Fiorentina",
-      "kickoff": "2026-11-23T19:45:00.000Z",
-      "league": "Serie A",
-      "source_code": "I1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 3.75,
-        "2": 1.91,
-        "X": 3.8,
-        "Over 2.5": 1.62,
-        "Under 2.5": 2.3
-      }
-    },
-    {
-      "id": "fd-I2-2026-11-21-ascoli-vicenza",
-      "home": "Ascoli",
-      "away": "Vicenza",
-      "kickoff": "2026-11-21T14:00:00.000Z",
-      "league": "Serie B",
-      "source_code": "I2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.76,
-        "2": 4.33,
-        "X": 3.5,
-        "Over 2.5": 1.8,
-        "Under 2.5": 2
-      }
-    },
-    {
-      "id": "fd-I2-2026-11-21-carrarese-virtusentella",
-      "home": "Carrarese",
-      "away": "Virtus Entella",
-      "kickoff": "2026-11-21T14:00:00.000Z",
-      "league": "Serie B",
-      "source_code": "I2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.3,
-        "2": 3.1,
-        "X": 3,
-        "Over 2.5": 2.15,
-        "Under 2.5": 1.67
-      }
-    },
-    {
-      "id": "fd-I2-2026-11-21-modena-juvestabia",
-      "home": "Modena",
-      "away": "Juve Stabia",
-      "kickoff": "2026-11-21T14:00:00.000Z",
-      "league": "Serie B",
-      "source_code": "I2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.53,
-        "2": 5.5,
-        "X": 3.75,
-        "Over 2.5": 1.7,
+        "1": 2.63,
+        "2": 2.55,
+        "X": 3.4,
+        "Over 2.5": 1.73,
         "Under 2.5": 2.1
       }
     },
     {
-      "id": "fd-I2-2026-11-21-sampdoria-benevento",
-      "home": "Sampdoria",
-      "away": "Benevento",
-      "kickoff": "2026-11-21T14:00:00.000Z",
-      "league": "Serie B",
-      "source_code": "I2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.6,
-        "2": 2.6,
-        "X": 3.2,
-        "Over 2.5": 2.08,
-        "Under 2.5": 1.73
-      }
-    },
-    {
-      "id": "fd-I2-2026-11-21-sudtirol-cremonese",
-      "home": "Sudtirol",
-      "away": "Cremonese",
-      "kickoff": "2026-11-21T14:00:00.000Z",
-      "league": "Serie B",
-      "source_code": "I2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 3.4,
-        "2": 2.15,
-        "X": 3,
-        "Over 2.5": 2.15,
-        "Under 2.5": 1.67
-      }
-    },
-    {
-      "id": "fd-I2-2026-11-21-catanzaro-palermo",
-      "home": "Catanzaro",
-      "away": "Palermo",
-      "kickoff": "2026-11-21T16:15:00.000Z",
-      "league": "Serie B",
-      "source_code": "I2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 4.33,
-        "2": 1.66,
-        "X": 3.7,
-        "Over 2.5": 1.57,
-        "Under 2.5": 2.35
-      }
-    },
-    {
-      "id": "fd-I2-2026-11-21-empoli-pisa",
-      "home": "Empoli",
-      "away": "Pisa",
-      "kickoff": "2026-11-21T18:30:00.000Z",
-      "league": "Serie B",
-      "source_code": "I2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 4.1,
-        "2": 1.79,
-        "X": 3.5,
-        "Over 2.5": 1.75,
-        "Under 2.5": 2.05
-      }
-    },
-    {
-      "id": "fd-I2-2026-11-22-avellino-mantova",
-      "home": "Avellino",
-      "away": "Mantova",
-      "kickoff": "2026-11-22T14:00:00.000Z",
-      "league": "Serie B",
-      "source_code": "I2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.2,
-        "2": 3.1,
-        "X": 3.1,
-        "Over 2.5": 1.95,
-        "Under 2.5": 1.85
-      }
-    },
-    {
-      "id": "fd-I2-2026-11-22-arezzo-padova",
-      "home": "Arezzo",
-      "away": "Padova",
-      "kickoff": "2026-11-22T16:15:00.000Z",
-      "league": "Serie B",
-      "source_code": "I2",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.3,
-        "2": 3,
-        "X": 3.1,
-        "Over 2.5": 2.05,
-        "Under 2.5": 1.75
-      }
-    },
-    {
-      "id": "fd-N1-2026-11-21-nijmegen-psveindhoven",
-      "home": "Nijmegen",
-      "away": "PSV Eindhoven",
-      "kickoff": "2026-11-21T15:30:00.000Z",
-      "league": "Eredivisie",
-      "source_code": "N1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 4,
-        "2": 1.73,
-        "X": 4.33,
-        "Over 2.5": 1.29,
-        "Under 2.5": 3.6
-      }
-    },
-    {
-      "id": "fd-N1-2026-11-21-feyenoord-excelsior",
-      "home": "Feyenoord",
-      "away": "Excelsior",
-      "kickoff": "2026-11-21T17:45:00.000Z",
-      "league": "Eredivisie",
-      "source_code": "N1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.2,
-        "2": 10,
-        "X": 7.5,
-        "Over 2.5": 1.33,
-        "Under 2.5": 3.4
-      }
-    },
-    {
-      "id": "fd-N1-2026-11-21-utrecht-cambuur",
-      "home": "Utrecht",
-      "away": "Cambuur",
-      "kickoff": "2026-11-21T17:45:00.000Z",
-      "league": "Eredivisie",
-      "source_code": "N1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.91,
-        "2": 3.5,
-        "X": 4,
-        "Over 2.5": 1.4,
-        "Under 2.5": 2.88
-      }
-    },
-    {
-      "id": "fd-N1-2026-11-21-groningen-heerenveen",
-      "home": "Groningen",
-      "away": "Heerenveen",
-      "kickoff": "2026-11-21T20:00:00.000Z",
-      "league": "Eredivisie",
-      "source_code": "N1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
+      "id": "fd-E1-2026-11-25-watford-blackburn",
+      "home": "Watford",
+      "away": "Blackburn",
+      "kickoff": "2026-11-25T19:45:00.000Z",
+      "league": "Championship",
+      "source_code": "E1",
+      "snapshot_at": "2026-11-24T23:54:03.640Z",
       "odds": {
         "1": 2.5,
-        "2": 2.63,
-        "X": 3.6,
-        "Over 2.5": 1.44,
-        "Under 2.5": 2.7
-      }
-    },
-    {
-      "id": "fd-N1-2026-11-21-telstar-zwolle",
-      "home": "Telstar",
-      "away": "Zwolle",
-      "kickoff": "2026-11-21T20:00:00.000Z",
-      "league": "Eredivisie",
-      "source_code": "N1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.1,
-        "2": 3.4,
-        "X": 3.5,
-        "Over 2.5": 1.65,
-        "Under 2.5": 2.2
-      }
-    },
-    {
-      "id": "fd-N1-2026-11-22-twente-willemii",
-      "home": "Twente",
-      "away": "Willem II",
-      "kickoff": "2026-11-22T11:15:00.000Z",
-      "league": "Eredivisie",
-      "source_code": "N1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.1,
-        "2": 21,
-        "X": 10,
-        "Over 2.5": 1.22,
-        "Under 2.5": 4.2
-      }
-    },
-    {
-      "id": "fd-N1-2026-11-22-ajax-denhaag",
-      "home": "Ajax",
-      "away": "Den Haag",
-      "kickoff": "2026-11-22T13:30:00.000Z",
-      "league": "Eredivisie",
-      "source_code": "N1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.18,
-        "2": 13,
-        "X": 7,
-        "Over 2.5": 1.29,
-        "Under 2.5": 3.6
-      }
-    },
-    {
-      "id": "fd-N1-2026-11-22-spartarotterdam-azalkmaar",
-      "home": "Sparta Rotterdam",
-      "away": "AZ Alkmaar",
-      "kickoff": "2026-11-22T13:30:00.000Z",
-      "league": "Eredivisie",
-      "source_code": "N1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 4.33,
-        "2": 1.73,
-        "X": 4,
-        "Over 2.5": 1.44,
-        "Under 2.5": 2.7
-      }
-    },
-    {
-      "id": "fd-N1-2026-11-22-goaheadeagles-forsittard",
-      "home": "Go Ahead Eagles",
-      "away": "For Sittard",
-      "kickoff": "2026-11-22T15:45:00.000Z",
-      "league": "Eredivisie",
-      "source_code": "N1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.62,
-        "2": 5,
-        "X": 4.2,
-        "Over 2.5": 1.48,
-        "Under 2.5": 2.6
-      }
-    },
-    {
-      "id": "fd-SP1-2026-11-21-alaves-lacoruna",
-      "home": "Alaves",
-      "away": "La Coruna",
-      "kickoff": "2026-11-21T13:00:00.000Z",
-      "league": "LaLiga",
-      "source_code": "SP1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.2,
-        "2": 3.4,
-        "X": 3.3,
-        "Over 2.5": 2.2,
-        "Under 2.5": 1.67
-      }
-    },
-    {
-      "id": "fd-SP1-2026-11-21-vallecano-valencia",
-      "home": "Vallecano",
-      "away": "Valencia",
-      "kickoff": "2026-11-21T15:15:00.000Z",
-      "league": "LaLiga",
-      "source_code": "SP1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.91,
-        "2": 4.1,
-        "X": 3.5,
-        "Over 2.5": 2,
-        "Under 2.5": 1.8
-      }
-    },
-    {
-      "id": "fd-SP1-2026-11-21-sevilla-betis",
-      "home": "Sevilla",
-      "away": "Betis",
-      "kickoff": "2026-11-21T17:30:00.000Z",
-      "league": "LaLiga",
-      "source_code": "SP1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 3,
-        "2": 2.38,
+        "2": 2.7,
         "X": 3.4,
         "Over 2.5": 1.91,
         "Under 2.5": 1.91
       }
     },
     {
-      "id": "fd-SP1-2026-11-21-realmadrid-celta",
-      "home": "Real Madrid",
-      "away": "Celta",
-      "kickoff": "2026-11-21T20:00:00.000Z",
-      "league": "LaLiga",
-      "source_code": "SP1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
+      "id": "fd-E1-2026-11-25-stoke-millwall",
+      "home": "Stoke",
+      "away": "Millwall",
+      "kickoff": "2026-11-25T20:00:00.000Z",
+      "league": "Championship",
+      "source_code": "E1",
+      "snapshot_at": "2026-11-24T23:54:03.640Z",
       "odds": {
-        "1": 1.17,
-        "2": 13,
-        "X": 8,
-        "Over 2.5": 1.36,
-        "Under 2.5": 3.2
-      }
-    },
-    {
-      "id": "fd-SP1-2026-11-22-barcelona-villarreal",
-      "home": "Barcelona",
-      "away": "Villarreal",
-      "kickoff": "2026-11-22T13:00:00.000Z",
-      "league": "LaLiga",
-      "source_code": "SP1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.2,
-        "2": 10,
-        "X": 7.5,
-        "Over 2.5": 1.17,
-        "Under 2.5": 5
-      }
-    },
-    {
-      "id": "fd-SP1-2026-11-22-santander-sociedad",
-      "home": "Santander",
-      "away": "Sociedad",
-      "kickoff": "2026-11-22T15:15:00.000Z",
-      "league": "LaLiga",
-      "source_code": "SP1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 3.25,
-        "2": 2,
-        "X": 4.2,
-        "Over 2.5": 1.33,
-        "Under 2.5": 3.4
-      }
-    },
-    {
-      "id": "fd-SP1-2026-11-22-osasuna-malaga",
-      "home": "Osasuna",
-      "away": "Malaga",
-      "kickoff": "2026-11-22T17:30:00.000Z",
-      "league": "LaLiga",
-      "source_code": "SP1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 1.8,
-        "2": 4.5,
-        "X": 3.5,
-        "Over 2.5": 2,
-        "Under 2.5": 1.8
-      }
-    },
-    {
-      "id": "fd-SP1-2026-11-22-getafe-athmadrid",
-      "home": "Getafe",
-      "away": "Ath Madrid",
-      "kickoff": "2026-11-22T20:00:00.000Z",
-      "league": "LaLiga",
-      "source_code": "SP1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 6.25,
-        "2": 1.55,
-        "X": 3.9,
-        "Over 2.5": 2,
-        "Under 2.5": 1.8
-      }
-    },
-    {
-      "id": "fd-SP1-2026-11-23-levante-elche",
-      "home": "Levante",
-      "away": "Elche",
-      "kickoff": "2026-11-23T20:00:00.000Z",
-      "league": "LaLiga",
-      "source_code": "SP1",
-      "snapshot_at": "2026-11-20T23:58:00.681Z",
-      "odds": {
-        "1": 2.15,
+        "1": 2.2,
         "2": 3.25,
-        "X": 3.6,
-        "Over 2.5": 1.67,
-        "Under 2.5": 2.2
+        "X": 3.3,
+        "Over 2.5": 2,
+        "Under 2.5": 1.8
+      }
+    },
+    {
+      "id": "fd-E2-2026-11-26-doncaster-huddersfield",
+      "home": "Doncaster",
+      "away": "Huddersfield",
+      "kickoff": "2026-11-26T20:00:00.000Z",
+      "league": "League One",
+      "source_code": "E2",
+      "snapshot_at": "2026-11-24T23:54:03.640Z",
+      "odds": {
+        "1": 4.5,
+        "2": 1.73,
+        "X": 3.8,
+        "Over 2.5": 1.6,
+        "Under 2.5": 2.3
+      }
+    },
+    {
+      "id": "fd-I2-2026-11-25-cremonese-avellino",
+      "home": "Cremonese",
+      "away": "Avellino",
+      "kickoff": "2026-11-25T18:00:00.000Z",
+      "league": "Serie B",
+      "source_code": "I2",
+      "snapshot_at": "2026-11-24T23:54:03.640Z",
+      "odds": {
+        "1": 1.9,
+        "2": 4.33,
+        "X": 3.1,
+        "Over 2.5": 2.08,
+        "Under 2.5": 1.73
+      }
+    },
+    {
+      "id": "fd-I2-2026-11-25-mantova-arezzo",
+      "home": "Mantova",
+      "away": "Arezzo",
+      "kickoff": "2026-11-25T19:00:00.000Z",
+      "league": "Serie B",
+      "source_code": "I2",
+      "snapshot_at": "2026-11-24T23:54:03.640Z",
+      "odds": {
+        "1": 1.62,
+        "2": 5,
+        "X": 3.75,
+        "Over 2.5": 1.8,
+        "Under 2.5": 2
+      }
+    },
+    {
+      "id": "fd-I2-2026-11-25-padova-sampdoria",
+      "home": "Padova",
+      "away": "Sampdoria",
+      "kickoff": "2026-11-25T19:00:00.000Z",
+      "league": "Serie B",
+      "source_code": "I2",
+      "snapshot_at": "2026-11-24T23:54:03.640Z",
+      "odds": {
+        "1": 2.87,
+        "2": 2.45,
+        "X": 3.1,
+        "Over 2.5": 2.1,
+        "Under 2.5": 1.7
+      }
+    },
+    {
+      "id": "fd-I2-2026-11-25-pisa-modena",
+      "home": "Pisa",
+      "away": "Modena",
+      "kickoff": "2026-11-25T19:00:00.000Z",
+      "league": "Serie B",
+      "source_code": "I2",
+      "snapshot_at": "2026-11-24T23:54:03.640Z",
+      "odds": {
+        "1": 2.35,
+        "2": 3.1,
+        "X": 3.1,
+        "Over 2.5": 1.8,
+        "Under 2.5": 2
       }
     }
   ]
