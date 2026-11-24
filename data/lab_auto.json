@@ -7,10 +7,10 @@
   "history_quality": "Quote fotografate prima dell’inizio. Controllo su campione, non sistema validato.",
   "stats": {
     "total": 216,
-    "pending": 31,
-    "won": 90,
-    "lost": 95,
-    "pnl": -24.68
+    "pending": 27,
+    "won": 92,
+    "lost": 97,
+    "pnl": -25.33
   },
   "records": [
     {
@@ -3153,13 +3153,15 @@
       "odds": 1.73,
       "market_probability_pct": 54.83,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "won",
+      "pnl": 0.73,
+      "score": "4-0",
       "captured_at": "2026-11-20T23:58:00.681Z",
-      "settled_at": null,
+      "settled_at": "2026-11-24T04:18:34.099Z",
       "origin": "Football-Data fixture CSV observed before kickoff",
-      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato."
+      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato.",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401879237/everton-brentford"
     },
     {
       "id": "fd-E1-20261121-millwall-qpr:OVER25_CONTROLLO",
@@ -4041,13 +4043,15 @@
       "odds": 1.91,
       "market_probability_pct": 49.7,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "lost",
+      "pnl": -1,
+      "score": "3-0",
       "captured_at": "2026-11-20T23:58:00.681Z",
-      "settled_at": null,
+      "settled_at": "2026-11-24T04:18:34.099Z",
       "origin": "Football-Data fixture CSV observed before kickoff",
-      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato."
+      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato.",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401875009/fiorentina-monza"
     },
     {
       "id": "fd-I1-20261123-monza-fiorentina:OVER25_CONTROLLO",
@@ -4061,13 +4065,15 @@
       "odds": 1.62,
       "market_probability_pct": 58.67,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "won",
+      "pnl": 0.62,
+      "score": "3-0",
       "captured_at": "2026-11-20T23:58:00.681Z",
-      "settled_at": null,
+      "settled_at": "2026-11-24T04:18:34.099Z",
       "origin": "Football-Data fixture CSV observed before kickoff",
-      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato."
+      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato.",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401875009/fiorentina-monza"
     },
     {
       "id": "fd-I2-20261121-ascoli-vicenza:FAVORITA_1X2_CONTROLLO",
@@ -4667,16 +4673,18 @@
       "odds": 1.67,
       "market_probability_pct": 56.85,
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
+      "status": "lost",
+      "pnl": -1,
+      "score": "1-1",
       "captured_at": "2026-11-20T23:58:00.681Z",
-      "settled_at": null,
+      "settled_at": "2026-11-24T04:18:34.099Z",
       "origin": "Football-Data fixture CSV observed before kickoff",
-      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato."
+      "note": "Quote di riferimento rilevate in anticipo; disponibilita non garantita e valore atteso non dimostrato.",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401882802/elche-levante"
     }
   ],
   "last_result_check": "2026-10-25T19:55:52.287Z",
-  "last_open_result_check": "2026-11-23T00:17:18.097Z",
+  "last_open_result_check": "2026-11-24T04:18:34.099Z",
   "last_verified_result_audit": "2026-11-10T10:18:49.596Z"
 }
