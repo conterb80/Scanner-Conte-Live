@@ -6171,10 +6171,14 @@
       "reference": "https://tipsaudit.com/match/18980/charlton-vs-lincoln-2026-11-24",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-25T04:53:55.120Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-25T04:50:14+00:00"
     },
     {
       "id": "tipsaudit-18982:TIPSAUDIT_VALUE_1X2",
@@ -6198,10 +6202,14 @@
       "reference": "https://tipsaudit.com/match/18982/wolves-vs-derby-2026-11-24",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.34,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-25T04:53:55.121Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-25T04:50:14+00:00"
     },
     {
       "id": "tipsaudit-18986:TIPSAUDIT_VALUE_1X2",
@@ -6225,10 +6233,14 @@
       "reference": "https://tipsaudit.com/match/18986/como-vs-aek-athens-fc-2026-11-24",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.33,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-25T04:53:55.121Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-25T04:50:14+00:00"
     },
     {
       "id": "tipsaudit-18987:TIPSAUDIT_VALUE_1X2",
@@ -6252,10 +6264,14 @@
       "reference": "https://tipsaudit.com/match/18987/rb-leipzig-vs-lens-2026-11-24",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.38,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-25T04:53:55.121Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-25T04:50:14+00:00"
     }
   ],
   "checks": [
@@ -7412,10 +7428,10 @@
   "last_check": "2026-11-24T17:48:14.974Z",
   "stats": {
     "total": 193,
-    "pending": 5,
-    "won": 102,
-    "lost": 86,
-    "pnl": 19.02
+    "pending": 1,
+    "won": 105,
+    "lost": 87,
+    "pnl": 19.07
   },
-  "last_settlement_check": "2026-11-24T06:04:19.000Z"
+  "last_settlement_check": "2026-11-25T04:53:55.121Z"
 }
