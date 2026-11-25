@@ -4398,6 +4398,31 @@
       "status": "SOURCE_STALE",
       "source_commit": null,
       "observations": []
+    },
+    {
+      "generated_at": "2026-11-25T17:15:19.336Z",
+      "scope_day": "2026-11-25",
+      "status": "PRELIMINARY_CANDIDATES",
+      "source_commit": null,
+      "observations": [
+        {
+          "id": "tipsaudit-19078:TIPSAUDIT_VALUE_1X2",
+          "match": "Shakhtar Donetsk - Fenerbahçe",
+          "league": "UEFA Champions League",
+          "kickoff": "2026-11-25T20:00:00+00:00",
+          "market": "1X2",
+          "selection": "Home",
+          "category": "VALUE",
+          "place": "PRINCIPALE",
+          "rank": 1,
+          "reference_odds": 2.8,
+          "reference_bookmaker": "Unibet (NL)",
+          "external_fair_odds": 2.72,
+          "relative_screening_score": 51,
+          "captured_at": "2026-11-25T17:15:18.155Z",
+          "reference_link": "https://tipsaudit.com/match/19078/shakhtar-donetsk-vs-fenerbahce-2026-11-25"
+        }
+      ]
     }
   ],
   "records": [
@@ -5786,21 +5811,43 @@
       "result_verified_independently": false,
       "result_recorded_at": "2026-11-25T04:53:55.120Z",
       "virtual_pnl": -1
+    },
+    {
+      "id": "tipsaudit-19078:TIPSAUDIT_VALUE_1X2",
+      "match": "Shakhtar Donetsk - Fenerbahçe",
+      "league": "UEFA Champions League",
+      "day": "2026-11-25",
+      "kickoff": "2026-11-25T20:00:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "VALUE",
+      "first_seen": "2026-11-25T17:15:19.336Z",
+      "last_seen": "2026-11-25T17:15:19.336Z",
+      "first_place": "PRINCIPALE",
+      "ever_primary": true,
+      "first_odds": 2.8,
+      "first_bookmaker": "Unibet (NL)",
+      "appearances": 1,
+      "result_status": "pending",
+      "result_source": "Esito non ancora verificato",
+      "result_verified_independently": false,
+      "result_recorded_at": null,
+      "virtual_pnl": null
     }
   ],
   "stats": {
-    "total": 63,
-    "primary": 34,
+    "total": 64,
+    "primary": 35,
     "alternatives_only": 29,
     "won": 34,
     "lost": 28,
-    "pending": 1,
+    "pending": 2,
     "unmatched": 0,
     "virtual_pnl": 3.73,
     "settled": 62,
     "virtual_roi": 6.02
   },
-  "last_snapshot_at": "2026-11-25T03:35:41.231Z",
+  "last_snapshot_at": "2026-11-25T17:15:19.336Z",
   "last_result_check_at": "2026-11-25T04:53:55.121Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }
