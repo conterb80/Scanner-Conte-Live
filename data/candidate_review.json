@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-25T17:15:19.336Z",
+  "generated_at": "2026-11-25T17:37:11.166Z",
   "status": "PRELIMINARY_CANDIDATES",
   "source_last_check": "2026-11-25T17:15:18.155Z",
   "source_max_age_hours": 36,
@@ -43,7 +43,7 @@
       "external_fair_odds": 2.72,
       "external_benchmark_probability_pct": 36.8,
       "external_reference_gap_pct": 2.94,
-      "relative_screening_score": 51,
+      "relative_screening_score": 50,
       "captured_at": "2026-11-25T17:15:18.155Z",
       "reference_link": "https://tipsaudit.com/match/19078/shakhtar-donetsk-vs-fenerbahce-2026-11-25",
       "source": "TipsAudit public pre-match paper signals",
@@ -55,7 +55,7 @@
       ],
       "cautions": [
         "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
-        "Punteggio 51 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Punteggio 50 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
         "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
       ],
       "historical": {
