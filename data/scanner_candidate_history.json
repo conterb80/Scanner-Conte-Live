@@ -4455,6 +4455,13 @@
       "status": "NO_ELIGIBLE_OBSERVATIONS",
       "source_commit": null,
       "observations": []
+    },
+    {
+      "generated_at": "2026-11-26T01:01:38.089Z",
+      "scope_day": "2026-11-26",
+      "status": "SOURCE_STALE",
+      "source_commit": null,
+      "observations": []
     }
   ],
   "records": [
@@ -5879,7 +5886,7 @@
     "settled": 62,
     "virtual_roi": 6.02
   },
-  "last_snapshot_at": "2026-11-25T19:26:50.426Z",
+  "last_snapshot_at": "2026-11-26T01:01:38.089Z",
   "last_result_check_at": "2026-11-25T04:53:55.121Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }
