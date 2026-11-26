@@ -1,9 +1,9 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-26T02:55:08.607Z",
-  "status": "SOURCE_STALE",
-  "source_last_check": "2026-11-25T17:15:18.155Z",
+  "generated_at": "2026-11-26T16:55:54.658Z",
+  "status": "PRELIMINARY_CANDIDATES",
+  "source_last_check": "2026-11-26T16:55:53.607Z",
   "source_max_age_hours": 36,
   "scope": "Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.",
   "scope_day": "2026-11-26",
@@ -18,16 +18,53 @@
   "methodology": "Filtro quantitativo predefinito di segnali esterni già acquisiti: divario quota/equo fonte, freschezza, fascia di quota. Non verifica forma, assenze o formazioni.",
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
-    "paper_records": 196,
-    "scanned_today": null,
-    "leagues_today": null,
-    "last_scan_completed_at": null,
-    "eligible_observations": 0,
+    "paper_records": 199,
+    "scanned_today": 38,
+    "leagues_today": 5,
+    "last_scan_completed_at": "2026-11-26T16:55:53.607Z",
+    "eligible_observations": 1,
     "eligible_core": 0,
-    "eligible_value": 0,
-    "settled_paper_samples": 193,
-    "settled_paper_roi_pct": 10.5
+    "eligible_value": 1,
+    "settled_paper_samples": 195,
+    "settled_paper_roi_pct": 10.1
   },
-  "shortlist": [],
+  "shortlist": [
+    {
+      "id": "tipsaudit-19205:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Gent - FK Crvena Zvezda",
+      "league": "UEFA Conference League",
+      "kickoff": "2026-11-26T20:00:00+00:00",
+      "market": "1X2",
+      "selection": "Away",
+      "category": "VALUE",
+      "reference_odds": 3.4,
+      "reference_bookmaker": "Unibet (NL)",
+      "external_fair_odds": 3.27,
+      "external_benchmark_probability_pct": 30.6,
+      "external_reference_gap_pct": 3.98,
+      "relative_screening_score": 53,
+      "captured_at": "2026-11-26T16:55:53.607Z",
+      "reference_link": "https://tipsaudit.com/match/19205/gent-vs-fk-crvena-zvezda-2026-11-26",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 3.4 contro quota equa 3.27 stimata dalla fonte esterna (+ 4% di scostamento).",
+        "Dato osservato da Unibet (NL) e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 53 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 107,
+        "observed_roi_pct": 18.7,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    }
+  ],
   "alternatives": []
 }
