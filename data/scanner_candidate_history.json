@@ -4501,6 +4501,31 @@
           "reference_link": "https://tipsaudit.com/match/19205/gent-vs-fk-crvena-zvezda-2026-11-26"
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-26T17:17:42.846Z",
+      "scope_day": "2026-11-26",
+      "status": "PRELIMINARY_CANDIDATES",
+      "source_commit": null,
+      "observations": [
+        {
+          "id": "tipsaudit-19205:TIPSAUDIT_VALUE_1X2",
+          "match": "Gent - FK Crvena Zvezda",
+          "league": "UEFA Conference League",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "market": "1X2",
+          "selection": "Away",
+          "category": "VALUE",
+          "place": "PRINCIPALE",
+          "rank": 1,
+          "reference_odds": 3.4,
+          "reference_bookmaker": "Unibet (NL)",
+          "external_fair_odds": 3.27,
+          "relative_screening_score": 53,
+          "captured_at": "2026-11-26T16:55:53.607Z",
+          "reference_link": "https://tipsaudit.com/match/19205/gent-vs-fk-crvena-zvezda-2026-11-26"
+        }
+      ]
     }
   ],
   "records": [
@@ -5922,12 +5947,12 @@
       "selection": "Away",
       "category": "VALUE",
       "first_seen": "2026-11-26T16:55:54.658Z",
-      "last_seen": "2026-11-26T16:55:54.658Z",
+      "last_seen": "2026-11-26T17:17:42.846Z",
       "first_place": "PRINCIPALE",
       "ever_primary": true,
       "first_odds": 3.4,
       "first_bookmaker": "Unibet (NL)",
-      "appearances": 1,
+      "appearances": 2,
       "result_status": "pending",
       "result_source": "Esito non ancora verificato",
       "result_verified_independently": false,
@@ -5947,7 +5972,7 @@
     "settled": 63,
     "virtual_roi": 4.33
   },
-  "last_snapshot_at": "2026-11-26T16:55:54.658Z",
+  "last_snapshot_at": "2026-11-26T17:17:42.846Z",
   "last_result_check_at": "2026-11-26T04:10:07.949Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }
