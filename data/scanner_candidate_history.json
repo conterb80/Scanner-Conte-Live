@@ -4526,6 +4526,13 @@
           "reference_link": "https://tipsaudit.com/match/19205/gent-vs-fk-crvena-zvezda-2026-11-26"
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-26T19:09:22.015Z",
+      "scope_day": "2026-11-26",
+      "status": "NO_ELIGIBLE_OBSERVATIONS",
+      "source_commit": null,
+      "observations": []
     }
   ],
   "records": [
@@ -5972,7 +5979,7 @@
     "settled": 63,
     "virtual_roi": 4.33
   },
-  "last_snapshot_at": "2026-11-26T17:17:42.846Z",
+  "last_snapshot_at": "2026-11-26T19:09:22.015Z",
   "last_result_check_at": "2026-11-26T04:10:07.949Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }
