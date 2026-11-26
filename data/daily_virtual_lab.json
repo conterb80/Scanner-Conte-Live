@@ -6295,10 +6295,16 @@
       "reference": "https://tipsaudit.com/match/19074/stoke-city-vs-millwall-2026-11-25",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
-      "settled_at": null
+      "status": "won",
+      "pnl": 1.2,
+      "score": "2-1",
+      "settled_at": "2026-11-26T02:11:38.353Z",
+      "verified_ft_result": "1",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401880138/millwall-stoke-city",
+      "settlement_publication": "2026-11-26T02:11:38.353Z",
+      "settlement_verification": "espn_scoreboard",
+      "independent_ft_verification": true
     },
     {
       "id": "tipsaudit-19075:TIPSAUDIT_VALUE_1X2",
@@ -7529,10 +7535,10 @@
   "last_check": "2026-11-25T17:15:18.155Z",
   "stats": {
     "total": 196,
-    "pending": 4,
-    "won": 105,
+    "pending": 3,
+    "won": 106,
     "lost": 87,
-    "pnl": 19.07
+    "pnl": 20.27
   },
-  "last_settlement_check": "2026-11-25T04:53:55.121Z"
+  "last_settlement_check": "2026-11-26T02:11:38.353Z"
 }

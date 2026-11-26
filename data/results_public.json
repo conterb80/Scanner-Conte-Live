@@ -1,6 +1,6 @@
 {
   "schema": "scanner-conte-results-public-v1",
-  "checked_at": "2026-11-25T17:56:59.133Z",
+  "checked_at": "2026-11-26T02:11:37.222Z",
   "source": "ESPN public scoreboard + verified official match reports",
   "coverage": {
     "leagues": [
@@ -17,9 +17,9 @@
       "por.1"
     ],
     "days": [
-      "20261123",
       "20261124",
-      "20261125"
+      "20261125",
+      "20261126"
     ],
     "queries": 33,
     "succeeded": 33,
@@ -56,48 +56,6 @@
       "source": "CD Tenerife (official postponement notice)",
       "source_url": "https://www.clubdeportivotenerife.es/noticias/aplazado-el-cd-tenerife-fc-andorra-de-este-domingo",
       "verification": "official"
-    },
-    {
-      "id": "espn-eng.2-401880173",
-      "kickoff": "2026-11-04T19:45:00.000Z",
-      "status": "FT",
-      "league": "Championship",
-      "league_code": "eng.2",
-      "home": "Wrexham",
-      "away": "Middlesbrough",
-      "home_goals": 2,
-      "away_goals": 0,
-      "source": "ESPN public scoreboard",
-      "source_url": "https://www.espn.com/soccer/match/_/gameId/401880173/middlesbrough-wrexham",
-      "verification": "espn_scoreboard"
-    },
-    {
-      "id": "espn-eng.2-401880175",
-      "kickoff": "2026-11-04T19:45:00.000Z",
-      "status": "FT",
-      "league": "Championship",
-      "league_code": "eng.2",
-      "home": "Cardiff City",
-      "away": "West Ham United",
-      "home_goals": 3,
-      "away_goals": 3,
-      "source": "ESPN public scoreboard",
-      "source_url": "https://www.espn.com/soccer/match/_/gameId/401880175/west-ham-united-cardiff-city",
-      "verification": "espn_scoreboard"
-    },
-    {
-      "id": "espn-eng.2-401880176",
-      "kickoff": "2026-11-04T20:00:00.000Z",
-      "status": "FT",
-      "league": "Championship",
-      "league_code": "eng.2",
-      "home": "Bristol City",
-      "away": "Wolverhampton Wanderers",
-      "home_goals": 1,
-      "away_goals": 2,
-      "source": "ESPN public scoreboard",
-      "source_url": "https://www.espn.com/soccer/match/_/gameId/401880176/wolverhampton-wanderers-bristol-city",
-      "verification": "espn_scoreboard"
     },
     {
       "id": "espn-ned.1-401875556",
@@ -3835,6 +3793,118 @@
       "away_goals": 0,
       "source": "ESPN public scoreboard",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/401880141/derby-county-wolverhampton-wanderers",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-ita.2-401899537",
+      "kickoff": "2026-11-25T18:00:00.000Z",
+      "status": "FT",
+      "league": "Serie B",
+      "league_code": "ita.2",
+      "home": "Cremonese",
+      "away": "US Avellino",
+      "home_goals": 0,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401899537/us-avellino-cremonese",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-ita.2-401899531",
+      "kickoff": "2026-11-25T19:00:00.000Z",
+      "status": "FT",
+      "league": "Serie B",
+      "league_code": "ita.2",
+      "home": "Pisa",
+      "away": "Modena",
+      "home_goals": 1,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401899531/modena-pisa",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-ita.2-401899533",
+      "kickoff": "2026-11-25T19:00:00.000Z",
+      "status": "FT",
+      "league": "Serie B",
+      "league_code": "ita.2",
+      "home": "Padova",
+      "away": "Sampdoria",
+      "home_goals": 1,
+      "away_goals": 2,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401899533/sampdoria-padova",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-ita.2-401899534",
+      "kickoff": "2026-11-25T19:00:00.000Z",
+      "status": "FT",
+      "league": "Serie B",
+      "league_code": "ita.2",
+      "home": "Mantova",
+      "away": "Arezzo",
+      "home_goals": 3,
+      "away_goals": 0,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401899534/arezzo-mantova",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-eng.2-401880137",
+      "kickoff": "2026-11-25T19:45:00.000Z",
+      "status": "FT",
+      "league": "Championship",
+      "league_code": "eng.2",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "home_goals": 0,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401880137/blackburn-rovers-watford",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-eng.2-401880139",
+      "kickoff": "2026-11-25T19:45:00.000Z",
+      "status": "FT",
+      "league": "Championship",
+      "league_code": "eng.2",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "home_goals": 0,
+      "away_goals": 2,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401880139/birmingham-city-burnley",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-eng.2-401880140",
+      "kickoff": "2026-11-25T19:45:00.000Z",
+      "status": "FT",
+      "league": "Championship",
+      "league_code": "eng.2",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "home_goals": 1,
+      "away_goals": 3,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401880140/west-bromwich-albion-bolton-wanderers",
+      "verification": "espn_scoreboard"
+    },
+    {
+      "id": "espn-eng.2-401880138",
+      "kickoff": "2026-11-25T20:00:00.000Z",
+      "status": "FT",
+      "league": "Championship",
+      "league_code": "eng.2",
+      "home": "Stoke City",
+      "away": "Millwall",
+      "home_goals": 2,
+      "away_goals": 1,
+      "source": "ESPN public scoreboard",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/401880138/millwall-stoke-city",
       "verification": "espn_scoreboard"
     }
   ]
