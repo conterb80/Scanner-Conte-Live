@@ -6328,10 +6328,14 @@
       "reference": "https://tipsaudit.com/match/19075/inter-vs-vfb-stuttgart-2026-11-25",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 0.47,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-26T04:10:07.949Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-26T04:05:11+00:00"
     },
     {
       "id": "tipsaudit-19078:TIPSAUDIT_VALUE_1X2",
@@ -6355,10 +6359,14 @@
       "reference": "https://tipsaudit.com/match/19078/shakhtar-donetsk-vs-fenerbahce-2026-11-25",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-26T04:10:07.949Z",
+      "verified_ft_result": "2",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-26T04:05:11+00:00"
     }
   ],
   "checks": [
@@ -7535,10 +7543,10 @@
   "last_check": "2026-11-25T17:15:18.155Z",
   "stats": {
     "total": 196,
-    "pending": 3,
-    "won": 106,
-    "lost": 87,
-    "pnl": 20.27
+    "pending": 1,
+    "won": 107,
+    "lost": 88,
+    "pnl": 19.74
   },
-  "last_settlement_check": "2026-11-26T02:11:38.353Z"
+  "last_settlement_check": "2026-11-26T04:10:07.949Z"
 }
