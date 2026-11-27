@@ -4638,6 +4638,13 @@
           "reference_link": "https://tipsaudit.com/match/19230/venezia-vs-bologna-2026-11-27"
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-27T19:04:32.664Z",
+      "scope_day": "2026-11-27",
+      "status": "NO_ELIGIBLE_OBSERVATIONS",
+      "source_commit": null,
+      "observations": []
     }
   ],
   "records": [
@@ -6128,7 +6135,7 @@
     "settled": 64,
     "virtual_roi": 2.7
   },
-  "last_snapshot_at": "2026-11-27T16:58:03.401Z",
+  "last_snapshot_at": "2026-11-27T19:04:32.664Z",
   "last_result_check_at": "2026-11-27T04:16:04.053Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }
