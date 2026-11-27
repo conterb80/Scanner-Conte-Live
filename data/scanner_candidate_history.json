@@ -4596,6 +4596,48 @@
           "reference_link": "https://tipsaudit.com/match/19230/venezia-vs-bologna-2026-11-27"
         }
       ]
+    },
+    {
+      "generated_at": "2026-11-27T16:58:03.401Z",
+      "scope_day": "2026-11-27",
+      "status": "PRELIMINARY_CANDIDATES",
+      "source_commit": null,
+      "observations": [
+        {
+          "id": "tipsaudit-19232:TIPSAUDIT_VALUE_1X2",
+          "match": "Stade Brestois 29 - Paris FC",
+          "league": "Ligue 1",
+          "kickoff": "2026-11-27T19:45:00+00:00",
+          "market": "1X2",
+          "selection": "Away",
+          "category": "VALUE",
+          "place": "PRINCIPALE",
+          "rank": 1,
+          "reference_odds": 2.28,
+          "reference_bookmaker": "LeoVegas (SE)",
+          "external_fair_odds": 2.2,
+          "relative_screening_score": 61,
+          "captured_at": "2026-11-27T16:41:50.437Z",
+          "reference_link": "https://tipsaudit.com/match/19232/stade-brestois-29-vs-paris-fc-2026-11-27"
+        },
+        {
+          "id": "tipsaudit-19230:TIPSAUDIT_VALUE_1X2",
+          "match": "Venezia - Bologna",
+          "league": "Serie A",
+          "kickoff": "2026-11-27T19:45:00+00:00",
+          "market": "1X2",
+          "selection": "Draw",
+          "category": "VALUE",
+          "place": "ALTERNATIVA",
+          "rank": 1,
+          "reference_odds": 3.45,
+          "reference_bookmaker": "Unibet (SE)",
+          "external_fair_odds": 3.33,
+          "relative_screening_score": 50,
+          "captured_at": "2026-11-27T16:41:50.437Z",
+          "reference_link": "https://tipsaudit.com/match/19230/venezia-vs-bologna-2026-11-27"
+        }
+      ]
     }
   ],
   "records": [
@@ -6039,12 +6081,12 @@
       "selection": "Away",
       "category": "VALUE",
       "first_seen": "2026-11-27T16:41:51.186Z",
-      "last_seen": "2026-11-27T16:41:51.186Z",
+      "last_seen": "2026-11-27T16:58:03.401Z",
       "first_place": "PRINCIPALE",
       "ever_primary": true,
       "first_odds": 2.28,
       "first_bookmaker": "LeoVegas (SE)",
-      "appearances": 1,
+      "appearances": 2,
       "result_status": "pending",
       "result_source": "Esito non ancora verificato",
       "result_verified_independently": false,
@@ -6061,12 +6103,12 @@
       "selection": "Draw",
       "category": "VALUE",
       "first_seen": "2026-11-27T16:41:51.186Z",
-      "last_seen": "2026-11-27T16:41:51.186Z",
+      "last_seen": "2026-11-27T16:58:03.401Z",
       "first_place": "ALTERNATIVA",
       "ever_primary": false,
       "first_odds": 3.45,
       "first_bookmaker": "Unibet (SE)",
-      "appearances": 1,
+      "appearances": 2,
       "result_status": "pending",
       "result_source": "Esito non ancora verificato",
       "result_verified_independently": false,
@@ -6086,7 +6128,7 @@
     "settled": 64,
     "virtual_roi": 2.7
   },
-  "last_snapshot_at": "2026-11-27T16:41:51.186Z",
+  "last_snapshot_at": "2026-11-27T16:58:03.401Z",
   "last_result_check_at": "2026-11-27T04:16:04.053Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }
