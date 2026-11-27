@@ -6390,10 +6390,14 @@
       "reference": "https://tipsaudit.com/match/19201/fc-nordsjaelland-vs-panathinaikos-2026-11-26",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "won",
+      "pnl": 1.48,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-27T04:16:04.053Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-27T04:15:13+00:00"
     },
     {
       "id": "tipsaudit-19205:TIPSAUDIT_VALUE_1X2",
@@ -6417,10 +6421,14 @@
       "reference": "https://tipsaudit.com/match/19205/gent-vs-fk-crvena-zvezda-2026-11-26",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-27T04:16:04.053Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-27T04:15:13+00:00"
     },
     {
       "id": "tipsaudit-19195:TIPSAUDIT_VALUE_1X2",
@@ -6444,10 +6452,14 @@
       "reference": "https://tipsaudit.com/match/19195/lyon-vs-lillestrom-2026-11-26",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-27T04:16:04.053Z",
+      "verified_ft_result": "X",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-27T04:15:13+00:00"
     }
   ],
   "checks": [
@@ -7646,10 +7658,10 @@
   "last_check": "2026-11-26T16:55:53.607Z",
   "stats": {
     "total": 199,
-    "pending": 4,
-    "won": 107,
-    "lost": 88,
-    "pnl": 19.74
+    "pending": 1,
+    "won": 108,
+    "lost": 90,
+    "pnl": 19.22
   },
-  "last_settlement_check": "2026-11-26T04:10:07.949Z"
+  "last_settlement_check": "2026-11-27T04:16:04.053Z"
 }
