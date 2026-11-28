@@ -1,7 +1,7 @@
 {
   "schema": "scanner-conte-weekly-lab-v1",
   "version": 1,
-  "generated_at": "2026-11-28T01:56:40.703Z",
+  "generated_at": "2026-11-28T03:54:43.921Z",
   "timezone": "Europe/Rome",
   "scope": "Solo laboratori pubblici e virtuali: daily e auto. REAL e registri locali esclusi.",
   "retention": "Riepilogo addizionale non distruttivo: gli esperimenti originari restano invariati.",
@@ -224,43 +224,43 @@
       "week_end": "2026-11-29",
       "lab": "daily",
       "total": 14,
-      "pending": 1,
+      "pending": 0,
       "won": 7,
-      "lost": 6,
+      "lost": 7,
       "push": 0,
       "void": 0,
-      "settled": 13,
-      "stake_settled": 13,
-      "pnl": 0.65,
-      "roi_pct": 5,
+      "settled": 14,
+      "stake_settled": 14,
+      "pnl": -0.35,
+      "roi_pct": -2.5,
       "by_market": [
         {
           "name": "1X2",
           "total": 14,
-          "pending": 1,
+          "pending": 0,
           "won": 7,
-          "lost": 6,
+          "lost": 7,
           "push": 0,
           "void": 0,
-          "settled": 13,
-          "stake_settled": 13,
-          "pnl": 0.65,
-          "roi_pct": 5
+          "settled": 14,
+          "stake_settled": 14,
+          "pnl": -0.35,
+          "roi_pct": -2.5
         }
       ],
       "by_strategy": [
         {
           "name": "TIPSAUDIT_VALUE_1X2",
           "total": 14,
-          "pending": 1,
+          "pending": 0,
           "won": 7,
-          "lost": 6,
+          "lost": 7,
           "push": 0,
           "void": 0,
-          "settled": 13,
-          "stake_settled": 13,
-          "pnl": 0.65,
-          "roi_pct": 5
+          "settled": 14,
+          "stake_settled": 14,
+          "pnl": -0.35,
+          "roi_pct": -2.5
         }
       ],
       "by_odds_band": [
@@ -293,15 +293,15 @@
         {
           "name": "2.00-2.49",
           "total": 4,
-          "pending": 1,
+          "pending": 0,
           "won": 2,
-          "lost": 1,
+          "lost": 2,
           "push": 0,
           "void": 0,
-          "settled": 3,
-          "stake_settled": 3,
-          "pnl": 1.68,
-          "roi_pct": 56
+          "settled": 4,
+          "stake_settled": 4,
+          "pnl": 0.68,
+          "roi_pct": 17
         },
         {
           "name": "2.50+",

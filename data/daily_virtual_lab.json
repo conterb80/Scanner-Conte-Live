@@ -6516,10 +6516,14 @@
       "reference": "https://tipsaudit.com/match/19232/stade-brestois-29-vs-paris-fc-2026-11-27",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
+      "status": "lost",
+      "pnl": -1,
       "score": null,
-      "settled_at": null
+      "settled_at": "2026-11-28T03:54:43.921Z",
+      "verified_ft_result": "1",
+      "settlement_source": "TipsAudit public record (1X2 FT)",
+      "settlement_reference": "https://tipsaudit.com/track-record",
+      "settlement_publication": "2026-11-28T03:50:16+00:00"
     },
     {
       "id": "tipsaudit-19234:TIPSAUDIT_VALUE_1X2",
@@ -7794,10 +7798,10 @@
   "last_check": "2026-11-27T16:41:50.437Z",
   "stats": {
     "total": 202,
-    "pending": 2,
+    "pending": 1,
     "won": 109,
-    "lost": 91,
-    "pnl": 20.67
+    "lost": 92,
+    "pnl": 19.67
   },
-  "last_settlement_check": "2026-11-28T01:56:40.703Z"
+  "last_settlement_check": "2026-11-28T03:54:43.921Z"
 }

@@ -6115,11 +6115,11 @@
       "first_odds": 2.28,
       "first_bookmaker": "LeoVegas (SE)",
       "appearances": 2,
-      "result_status": "pending",
-      "result_source": "Esito non ancora verificato",
+      "result_status": "lost",
+      "result_source": "TipsAudit public record (1X2 FT)",
       "result_verified_independently": false,
-      "result_recorded_at": null,
-      "virtual_pnl": null
+      "result_recorded_at": "2026-11-28T03:54:43.921Z",
+      "virtual_pnl": -1
     },
     {
       "id": "tipsaudit-19230:TIPSAUDIT_VALUE_1X2",
@@ -6149,14 +6149,14 @@
     "primary": 37,
     "alternatives_only": 30,
     "won": 35,
-    "lost": 30,
-    "pending": 2,
+    "lost": 31,
+    "pending": 1,
     "unmatched": 0,
-    "virtual_pnl": 4.18,
-    "settled": 65,
-    "virtual_roi": 6.43
+    "virtual_pnl": 3.18,
+    "settled": 66,
+    "virtual_roi": 4.82
   },
   "last_snapshot_at": "2026-11-28T02:48:33.654Z",
-  "last_result_check_at": "2026-11-28T01:56:40.703Z",
+  "last_result_check_at": "2026-11-28T03:54:43.921Z",
   "result_note": "Fonte e verifica indipendente riportate per ciascun esito quando disponibili. Le quote sono riferimenti, non Bet365 live. Nessun dato REAL del telefono."
 }
