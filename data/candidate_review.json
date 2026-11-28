@@ -1,9 +1,9 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-28T02:48:33.654Z",
-  "status": "SOURCE_STALE",
-  "source_last_check": "2026-11-27T16:41:50.437Z",
+  "generated_at": "2026-11-28T15:33:15.043Z",
+  "status": "PRELIMINARY_CANDIDATES",
+  "source_last_check": "2026-11-28T15:33:14.004Z",
   "source_max_age_hours": 36,
   "scope": "Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.",
   "scope_day": "2026-11-28",
@@ -18,16 +18,126 @@
   "methodology": "Filtro quantitativo predefinito di segnali esterni già acquisiti: divario quota/equo fonte, freschezza, fascia di quota. Non verifica forma, assenze o formazioni.",
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
-    "paper_records": 202,
-    "scanned_today": null,
-    "leagues_today": null,
-    "last_scan_completed_at": null,
-    "eligible_observations": 0,
-    "eligible_core": 0,
-    "eligible_value": 0,
-    "settled_paper_samples": 200,
-    "settled_paper_roi_pct": 10.3
+    "paper_records": 206,
+    "scanned_today": 59,
+    "leagues_today": 35,
+    "last_scan_completed_at": "2026-11-28T15:33:14.004Z",
+    "eligible_observations": 3,
+    "eligible_core": 2,
+    "eligible_value": 1,
+    "settled_paper_samples": 201,
+    "settled_paper_roi_pct": 9.8
   },
-  "shortlist": [],
-  "alternatives": []
+  "shortlist": [
+    {
+      "id": "tipsaudit-19825:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Palmeiras - Estudiantes L.P.",
+      "league": "Copa Libertadores",
+      "kickoff": "2026-11-28T20:00:00+00:00",
+      "market": "1X2",
+      "selection": "Draw",
+      "category": "VALUE",
+      "reference_odds": 3.22,
+      "reference_bookmaker": "Marathonbet",
+      "external_fair_odds": 3.02,
+      "external_benchmark_probability_pct": 33.1,
+      "external_reference_gap_pct": 6.62,
+      "relative_screening_score": 77,
+      "captured_at": "2026-11-28T15:33:14.004Z",
+      "reference_link": "https://tipsaudit.com/match/19825/palmeiras-vs-estudiantes-lp-2026-11-28",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 3.22 contro quota equa 3.02 stimata dalla fonte esterna (+ 6.6% di scostamento).",
+        "Dato osservato da Marathonbet e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 77 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 112,
+        "observed_roi_pct": 18.7,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    },
+    {
+      "id": "tipsaudit-20409:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "Coquimbo Unido - Deportes Limache",
+      "league": "Primera Division Chile",
+      "kickoff": "2026-11-28T21:00:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "CORE",
+      "reference_odds": 1.76,
+      "reference_bookmaker": "GTbets",
+      "external_fair_odds": 1.71,
+      "external_benchmark_probability_pct": 58.5,
+      "external_reference_gap_pct": 2.92,
+      "relative_screening_score": 49,
+      "captured_at": "2026-11-28T15:33:14.004Z",
+      "reference_link": "https://tipsaudit.com/match/20409/coquimbo-unido-vs-deportes-limache-2026-11-28",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 1.76 contro quota equa 1.71 stimata dalla fonte esterna (+ 2.9% di scostamento).",
+        "Dato osservato da GTbets e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 49 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 69,
+        "observed_roi_pct": -7.1,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "tipsaudit-19802:TIPSAUDIT_VALUE_1X2",
+      "kind": "EXPERIMENTAL_OBSERVATION_NOT_REAL",
+      "match": "VfB Stuttgart - Eintracht Frankfurt",
+      "league": "Bundesliga",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "market": "1X2",
+      "selection": "Home",
+      "category": "CORE",
+      "reference_odds": 1.89,
+      "reference_bookmaker": "1xBet",
+      "external_fair_odds": 1.85,
+      "external_benchmark_probability_pct": 54.1,
+      "external_reference_gap_pct": 2.16,
+      "relative_screening_score": 39,
+      "captured_at": "2026-11-28T15:33:14.004Z",
+      "reference_link": "https://tipsaudit.com/match/19802/vfb-stuttgart-vs-eintracht-frankfurt-2026-11-28",
+      "source": "TipsAudit public pre-match paper signals",
+      "source_is_independent_model": false,
+      "why": [
+        "Quota osservata 1.89 contro quota equa 1.85 stimata dalla fonte esterna (+ 2.2% di scostamento).",
+        "Dato osservato da 1xBet e registrato prima della partita.",
+        "Non sono stati ancora verificati qui forma, formazioni, assenze e quota Bet365 corrente."
+      ],
+      "cautions": [
+        "CORE/VALUE identifica solo una fascia di quota, non un rischio dimostrato.",
+        "Punteggio 39 = ordinamento tecnico delle osservazioni, non probabilità di vincita.",
+        "Il valore equo deriva dalla stessa fonte della quota: nessun vantaggio indipendente confermato."
+      ],
+      "historical": {
+        "settled": 69,
+        "observed_roi_pct": -7.1,
+        "reliable_edge_validation": false,
+        "meaning": "Retrospettiva descrittiva di un campione ancora piccolo, non previsione."
+      }
+    }
+  ]
 }
