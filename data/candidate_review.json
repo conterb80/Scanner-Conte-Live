@@ -1,13 +1,13 @@
 {
   "schema": "scanner-conte-candidate-review-v1",
   "version": 1,
-  "generated_at": "2026-11-27T19:04:32.664Z",
-  "status": "NO_ELIGIBLE_OBSERVATIONS",
+  "generated_at": "2026-11-28T00:32:40.441Z",
+  "status": "SOURCE_STALE",
   "source_last_check": "2026-11-27T16:41:50.437Z",
   "source_max_age_hours": 36,
   "scope": "Solo partite della giornata corrente Europe/Rome, con osservazioni registrate oggi.",
-  "scope_day": "2026-11-27",
-  "allow_manual_real_registration_today": false,
+  "scope_day": "2026-11-28",
+  "allow_manual_real_registration_today": true,
   "market_coverage": [
     "1X2"
   ],
@@ -19,9 +19,9 @@
   "disclaimer": "Candidate sperimentali, non raccomandazioni con vantaggio dimostrato o quote Bet365 correnti.",
   "scan_stats": {
     "paper_records": 202,
-    "scanned_today": 32,
-    "leagues_today": 26,
-    "last_scan_completed_at": "2026-11-27T16:41:50.437Z",
+    "scanned_today": null,
+    "leagues_today": null,
+    "last_scan_completed_at": null,
     "eligible_observations": 0,
     "eligible_core": 0,
     "eligible_value": 0,
