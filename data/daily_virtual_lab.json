@@ -6483,10 +6483,16 @@
       "reference": "https://tipsaudit.com/match/19230/venezia-vs-bologna-2026-11-27",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
-      "settled_at": null
+      "status": "won",
+      "pnl": 2.45,
+      "score": "0-0",
+      "settled_at": "2026-11-28T01:56:40.703Z",
+      "verified_ft_result": "X",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401875004/bologna-venezia",
+      "settlement_publication": "2026-11-28T01:56:40.703Z",
+      "settlement_verification": "espn_scoreboard",
+      "independent_ft_verification": true
     },
     {
       "id": "tipsaudit-19232:TIPSAUDIT_VALUE_1X2",
@@ -6537,10 +6543,16 @@
       "reference": "https://tipsaudit.com/match/19234/levante-vs-racing-santander-2026-11-27",
       "origin": "live bookmaker observation via TipsAudit public feed",
       "stake_virtual": 1,
-      "status": "pending",
-      "pnl": null,
-      "score": null,
-      "settled_at": null
+      "status": "lost",
+      "pnl": -1,
+      "score": "1-3",
+      "settled_at": "2026-11-28T01:56:40.703Z",
+      "verified_ft_result": "2",
+      "settlement_source": "ESPN public scoreboard",
+      "settlement_reference": "https://www.espn.com/soccer/match/_/gameId/401882791/racing-santander-levante",
+      "settlement_publication": "2026-11-28T01:56:40.703Z",
+      "settlement_verification": "espn_scoreboard",
+      "independent_ft_verification": true
     }
   ],
   "checks": [
@@ -7782,10 +7794,10 @@
   "last_check": "2026-11-27T16:41:50.437Z",
   "stats": {
     "total": 202,
-    "pending": 4,
-    "won": 108,
-    "lost": 90,
-    "pnl": 19.22
+    "pending": 2,
+    "won": 109,
+    "lost": 91,
+    "pnl": 20.67
   },
-  "last_settlement_check": "2026-11-27T04:16:04.053Z"
+  "last_settlement_check": "2026-11-28T01:56:40.703Z"
 }
